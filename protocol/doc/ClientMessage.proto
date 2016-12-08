@@ -1,0 +1,33 @@
+package com.randioo.owlofwar_server_simplify_protobuf.protocol;
+import "Login.proto";
+import "Match.proto";
+import "Fight.proto";
+import "Pillage.proto";
+import "Card.proto";
+import "Ping.proto";
+//18
+message CSMessage{
+	optional LoginCheckAccountRequest loginCheckAccountRequest=1;
+	optional LoginCreateRoleRequest loginCreateRoleRequest=2;
+	optional LoginGetRoleDataRequest loginGetRoleDataRequest=3;
+
+	optional FightClientReadyRequest fightClientReadyRequest=4;
+	optional FightLoadResourceCompleteRequest fightLoadResourceCompleteRequest=5;
+	optional FightGameActionRequest fightGameActionRequest = 6;
+	optional FightGameOverRequest fightGameOverRequest = 7;
+	optional FightReadFrameRequest fightReadFrameRequest = 8;
+	optional FightGetGameAwardRequest fightGetGameAwardRequest = 17;
+
+	optional PillageRoleRequest pillageRoleRequest=9;
+	optional PillageCancelRequest pillageCancelRequest =10;
+	optional PillageShowRequest pillageShowRequest=11;
+
+	optional CardGetCardsInfoRequest cardGetCardsInfoRequest = 12;
+	optional CardEditCardListRequest cardEditCardListRequest = 13;
+	optional CardLvUpRequest cardLvUpRequest = 14;
+	optional CardChooseUseCardListRequest cardChooseUseCardListRequest = 15;
+	optional CardChangeMainCardRequest cardChangeMainCardRequest = 18;
+
+	optional PingRequest pingRequest = 16;
+
+}

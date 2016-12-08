@@ -1,0 +1,51 @@
+package com.randioo.owlofwar_server_simplify_protobuf.protocol;
+import "Game.proto";
+
+message RoleData{
+	optional int32 roleId = 1;
+	optional string name =2;
+	repeated CardData cardDatas = 3;
+	repeated CardListData cardListDatas = 4;
+	//是否在战斗中
+	optional bool inFight = 5;
+}
+
+message CardData{
+	optional int32 cardId = 1;
+	optional int32 lv = 2;
+	optional int32 num = 3;
+}
+
+message CardListData{
+	optional int32 cardListIndex =1;
+	optional int32 mainId = 2;
+	repeated int32 cardIds = 3;
+}
+
+message FightCard{
+	optional int32 cardId = 1;
+	optional int32 lv =2;
+}
+
+message RoleResourceInfo{
+	optional string name =1;
+	optional int32 fightPoint = 2;
+	//主帅
+	optional FightCard generalCard = 3;
+	repeated FightCard handCards =4;
+	optional string corpName = 5;
+	optional int32 mainLv = 6;
+	optional int32 playerId = 7;
+	optional int32 campId = 8;
+}
+
+message Frame{
+	optional int32 frameIndex = 1;
+	repeated GameAction gameActions= 2;		
+}
+
+enum GameResult{
+	WIN = 1;
+	LOSS = 2;
+	DOGFALL = 3;
+}

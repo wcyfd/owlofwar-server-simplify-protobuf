@@ -1,0 +1,75 @@
+package com.randioo.owlofwar_server_simplify_protobuf.protocol;
+import "Game.proto";
+import "Entity.proto";
+
+message FightClientReadyRequest{
+	
+}
+
+message FightClientReadyResponse{
+	optional int32 errorCode=1;
+}
+
+message SCFightLoadResource{
+	optional int32 myPlayerId = 1;
+	repeated RoleResourceInfo roleResourceInfo = 2;
+	optional bool isNPCGame = 3;
+	optional int32 NPCMapId = 4;
+}
+
+message FightLoadResourceCompleteRequest{
+	
+}
+
+message FightLoadResourceCompleteResponse{
+
+}
+
+message SCFightStartGame{
+	optional int32 totalTime =1;
+}
+
+message FightGameActionRequest{
+	optional GameAction gameAction = 1;
+}
+
+message FightGameActionResponse{
+}
+
+message FightGameOverRequest{
+	optional int32 score1 = 1;
+	optional int32 score2 = 2;
+	optional GameResult result = 3;
+}
+
+message FightGameOverResponse{
+	optional string award = 1;
+}
+//zuofei
+message SCFightGameOver{
+	optional string award = 1;
+	optional int32 result = 2;
+}
+
+message SCFightKeyFrame{	
+	repeated Frame frames = 1;
+}
+
+//zuo fei
+message FightReadFrameRequest{
+	
+}
+//zuo fei
+message FightReadFrameResponse{
+	repeated Frame frames = 1;
+}
+
+message FightGetGameAwardRequest{
+	optional GameResult gameResult =1;
+	optional int32 score =2;
+}
+
+message FightGetGameAwardResponse{
+	optional int32 point = 1;
+	repeated CardData cardDatas = 2;
+}

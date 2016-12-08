@@ -1,0 +1,9 @@
+package com.randioo.owlofwar_server_simplify_protobuf.protocol;
+
+message SCMatchComplete{
+	
+}
+
+message SCMatchCancel{
+	
+}

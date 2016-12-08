@@ -1,0 +1,40 @@
+package com.randioo.owlofwar_server_simplify_protobuf.protocol;
+import "Login.proto";
+import "Match.proto";
+import "Fight.proto";
+import "Pillage.proto";
+import "Card.proto";
+import "Ping.proto";
+//24
+message SCMessage{
+	optional LoginCheckAccountResponse loginCheckAccountResponse=1;
+	optional LoginCreateRoleResponse loginCreateRoleResponse=2;
+	optional LoginGetRoleDataResponse loginGetRoleDataResponse=3;	
+	
+	optional SCMatchComplete scMatchComplete = 4;
+	optional SCMatchCancel scMatchCancel =5;
+
+	optional FightClientReadyResponse fightClientReadyResponse=6;
+	optional SCFightLoadResource scFightLoadResource=7;
+	optional FightLoadResourceCompleteResponse fightLoadResourceCompleteResponse=8;
+	optional SCFightStartGame scFightStartGame = 9;
+	optional FightGameActionResponse fightGameActionResponse = 10;
+	optional FightGameOverResponse fightGameOverResponse = 11;
+	optional SCFightGameOver scFightGameOver = 12;
+	optional FightReadFrameResponse FightReadFrameResponse = 13;
+	optional SCFightKeyFrame scFightKeyFrame = 14;
+	optional FightGetGameAwardResponse fightGetGameAwardResponse = 23;
+
+	optional PillageRoleResponse pillageRoleResponse = 15;
+	optional PillageCancelResponse pillageCancelResponse = 16;
+	optional PillageShowResponse pillageShowResponse = 17;
+
+	optional CardGetCardsInfoResponse cardGetCardsInfoResponse = 18;
+	optional CardEditCardListResponse cardEditCardListResponse = 19;
+	optional CardLvUpResponse cardLvUpResponse = 20;
+	optional CardChooseUseCardListResponse cardChooseUseCardListResponse = 21;
+	optional CardChangeMainCardResponse cardChangeMainCardResponse = 24;
+
+	optional PingResponse pingResponse = 22;
+
+}

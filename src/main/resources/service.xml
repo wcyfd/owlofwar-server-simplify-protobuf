@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-3.1.xsd 
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd 
+    http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.1.xsd 
+    http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd 
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+	<bean id="loginService" class="com.randioo.owlofwar_server_simplify_protobuf.module.login.service.LoginServiceImpl">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="cardDao" ref="cardDao"></property>
+		<property name="roleDao" ref="roleDao"></property>
+		<property name="cardService" ref="cardService"></property>
+	</bean>
+
+	<bean id="roleService" class="com.randioo.owlofwar_server_simplify_protobuf.module.role.service.RoleServiceImpl">
+		<property name="roleDao" ref="roleDao"></property>
+	</bean>
+	<bean id="fightService" class="com.randioo.owlofwar_server_simplify_protobuf.module.fight.service.FightServiceImpl">
+		<property name="gameStarter" ref="gameStarter"></property>
+	</bean>
+	
+	<bean id="matchService" class="com.randioo.owlofwar_server_simplify_protobuf.module.match.service.MatchServiceImpl">
+		<property name="fightService" ref="fightService"></property>
+		<property name="gameMatcher" ref="gameMatcher"></property>
+	</bean>
+	
+	<bean id="cardService" class="com.randioo.owlofwar_server_simplify_protobuf.module.card.service.CardServiceImpl">
+		<property name="cardDao" ref="cardDao"></property>
+	</bean>
+	
+	<bean id="pillageService" class="com.randioo.owlofwar_server_simplify_protobuf.module.pillage.service.PillageServiceImpl">
+		<property name="cardService" ref="cardService"></property>
+		<property name="matchService" ref="matchService"></property>
+	</bean>
+	
+	<bean id="pingService" class="com.randioo.owlofwar_server_simplify_protobuf.module.ping.service.PingServiceImpl"></bean>
+</beans>

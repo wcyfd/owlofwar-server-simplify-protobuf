@@ -1,0 +1,28 @@
+package com.randioo.owlofwar_server_simplify_protobuf.protocol;
+
+//匹配
+message PillageRoleRequest{	
+	//是否匹配npc
+	optional bool npc = 1;
+}
+
+message PillageRoleResponse{
+	optional int32 errorCode = 1;
+}
+
+//取消匹配
+message PillageCancelRequest{
+	
+}
+message PillageCancelResponse{
+	optional int32 errorCode=1;
+}
+
+//显示匹配信息
+message PillageShowRequest{
+	
+}
+
+message PillageShowResponse{
+	optional int32 point = 1;
+}

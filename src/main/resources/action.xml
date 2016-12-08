@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-3.1.xsd 
+    http://www.springframework.org/schema/tx http://www.springframewor k.org/schema/tx/spring-tx-3.1.xsd 
+    http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.1.xsd 
+    http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd 
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+	<bean id="loginCheckAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.login.action.LoginCheckAction" p:loginService-ref="loginService"></bean>
+	<bean id="loginCreateRoleAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.login.action.LoginCreateRoleAction" p:loginService-ref="loginService"></bean>
+	<bean id="loginGetRoleDataAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.login.action.LoginGetRoleDataAction" p:loginService-ref="loginService"></bean>
+
+	<bean id="fightClientReadyAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.fight.action.FightClientReadyAction" p:fightService-ref="fightService"></bean>
+	<bean id="fightLoadCompleteAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.fight.action.FightLoadCompleteAction" p:fightService-ref="fightService"></bean>
+	<bean id="fightPutMonsterAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.fight.action.FightPutMonsterAction" p:fightService-ref="fightService"></bean>
+	<bean id="fightReceiveEndAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.fight.action.FightReceiveEndAction" p:fightService-ref="fightService"></bean>
+	<bean id="fightReadFramesAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.fight.action.FightReadFramesAction" p:fightService-ref="fightService"></bean>
+	<bean id="fightGetGameAwardAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.fight.action.FightGetGameAwardAction" p:fightService-ref="fightService"></bean>
+
+	<bean id="cardChooseCardListAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.card.action.CardChooseCardListAction" p:cardService-ref="cardService"></bean>
+	<bean id="cardEditCardListAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.card.action.CardEditCardListAction" p:cardService-ref="cardService"></bean>
+	<bean id="cardGetCardInfoAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.card.action.CardGetCardInfoAction" p:cardService-ref="cardService"></bean>
+	<bean id="cardLvUpAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.card.action.CardLvUpAction" p:cardService-ref="cardService"></bean>
+	<bean id="cardChangeHeroAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.card.action.CardChangeHeroAction" p:cardService-ref="cardService"></bean>
+
+	<bean id="pillageCancelAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.pillage.action.PillageCancelAction" p:pillageService-ref="pillageService"></bean>
+	<bean id="pillageRoleAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.pillage.action.PillageRoleAction" p:pillageService-ref="pillageService"></bean>
+	<bean id="pillageShowAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.pillage.action.PillageShowAction" p:pillageService-ref="pillageService"></bean>
+
+	<bean id="pingAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.ping.action.PingAction" p:pingService-ref="pingService"></bean>
+</beans>
