@@ -13,4 +13,8 @@ public class VideoManager {
 	public static Video getVideoById(int gameId){
 		return videoMap.get(gameId);
 	}
+	
+	public static Map<Integer,Video> getAllVideo(){
+		return videoMap;
+	}
 }

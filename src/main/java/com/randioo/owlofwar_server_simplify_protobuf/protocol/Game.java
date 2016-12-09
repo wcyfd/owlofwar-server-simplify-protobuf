@@ -35,36 +35,43 @@ public final class Game {
       return com.randioo.owlofwar_server_simplify_protobuf.protocol.Game.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_GameAction_fieldAccessorTable;
     }
     
-    // optional int32 playerId = 1;
-    public static final int PLAYERID_FIELD_NUMBER = 1;
+    // optional int32 step = 1;
+    public static final int STEP_FIELD_NUMBER = 1;
+    private boolean hasStep;
+    private int step_ = 0;
+    public boolean hasStep() { return hasStep; }
+    public int getStep() { return step_; }
+    
+    // optional int32 playerId = 2;
+    public static final int PLAYERID_FIELD_NUMBER = 2;
     private boolean hasPlayerId;
     private int playerId_ = 0;
     public boolean hasPlayerId() { return hasPlayerId; }
     public int getPlayerId() { return playerId_; }
     
-    // optional int32 cardId = 2;
-    public static final int CARDID_FIELD_NUMBER = 2;
+    // optional int32 cardId = 3;
+    public static final int CARDID_FIELD_NUMBER = 3;
     private boolean hasCardId;
     private int cardId_ = 0;
     public boolean hasCardId() { return hasCardId; }
     public int getCardId() { return cardId_; }
     
-    // optional int32 previewId = 3;
-    public static final int PREVIEWID_FIELD_NUMBER = 3;
+    // optional int32 previewId = 4;
+    public static final int PREVIEWID_FIELD_NUMBER = 4;
     private boolean hasPreviewId;
     private int previewId_ = 0;
     public boolean hasPreviewId() { return hasPreviewId; }
     public int getPreviewId() { return previewId_; }
     
-    // optional int32 x = 4;
-    public static final int X_FIELD_NUMBER = 4;
+    // optional int32 x = 5;
+    public static final int X_FIELD_NUMBER = 5;
     private boolean hasX;
     private int x_ = 0;
     public boolean hasX() { return hasX; }
     public int getX() { return x_; }
     
-    // optional int32 y = 5;
-    public static final int Y_FIELD_NUMBER = 5;
+    // optional int32 y = 6;
+    public static final int Y_FIELD_NUMBER = 6;
     private boolean hasY;
     private int y_ = 0;
     public boolean hasY() { return hasY; }
@@ -79,20 +86,23 @@ public final class Game {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
+      if (hasStep()) {
+        output.writeInt32(1, getStep());
+      }
       if (hasPlayerId()) {
-        output.writeInt32(1, getPlayerId());
+        output.writeInt32(2, getPlayerId());
       }
       if (hasCardId()) {
-        output.writeInt32(2, getCardId());
+        output.writeInt32(3, getCardId());
       }
       if (hasPreviewId()) {
-        output.writeInt32(3, getPreviewId());
+        output.writeInt32(4, getPreviewId());
       }
       if (hasX()) {
-        output.writeInt32(4, getX());
+        output.writeInt32(5, getX());
       }
       if (hasY()) {
-        output.writeInt32(5, getY());
+        output.writeInt32(6, getY());
       }
       getUnknownFields().writeTo(output);
     }
@@ -103,25 +113,29 @@ public final class Game {
       if (size != -1) return size;
     
       size = 0;
+      if (hasStep()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, getStep());
+      }
       if (hasPlayerId()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, getPlayerId());
+          .computeInt32Size(2, getPlayerId());
       }
       if (hasCardId()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, getCardId());
+          .computeInt32Size(3, getCardId());
       }
       if (hasPreviewId()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, getPreviewId());
+          .computeInt32Size(4, getPreviewId());
       }
       if (hasX()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(4, getX());
+          .computeInt32Size(5, getX());
       }
       if (hasY()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(5, getY());
+          .computeInt32Size(6, getY());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -281,6 +295,9 @@ public final class Game {
       
       public Builder mergeFrom(com.randioo.owlofwar_server_simplify_protobuf.protocol.Game.GameAction other) {
         if (other == com.randioo.owlofwar_server_simplify_protobuf.protocol.Game.GameAction.getDefaultInstance()) return this;
+        if (other.hasStep()) {
+          setStep(other.getStep());
+        }
         if (other.hasPlayerId()) {
           setPlayerId(other.getPlayerId());
         }
@@ -322,22 +339,26 @@ public final class Game {
               break;
             }
             case 8: {
-              setPlayerId(input.readInt32());
+              setStep(input.readInt32());
               break;
             }
             case 16: {
-              setCardId(input.readInt32());
+              setPlayerId(input.readInt32());
               break;
             }
             case 24: {
-              setPreviewId(input.readInt32());
+              setCardId(input.readInt32());
               break;
             }
             case 32: {
-              setX(input.readInt32());
+              setPreviewId(input.readInt32());
               break;
             }
             case 40: {
+              setX(input.readInt32());
+              break;
+            }
+            case 48: {
               setY(input.readInt32());
               break;
             }
@@ -346,7 +367,25 @@ public final class Game {
       }
       
       
-      // optional int32 playerId = 1;
+      // optional int32 step = 1;
+      public boolean hasStep() {
+        return result.hasStep();
+      }
+      public int getStep() {
+        return result.getStep();
+      }
+      public Builder setStep(int value) {
+        result.hasStep = true;
+        result.step_ = value;
+        return this;
+      }
+      public Builder clearStep() {
+        result.hasStep = false;
+        result.step_ = 0;
+        return this;
+      }
+      
+      // optional int32 playerId = 2;
       public boolean hasPlayerId() {
         return result.hasPlayerId();
       }
@@ -364,7 +403,7 @@ public final class Game {
         return this;
       }
       
-      // optional int32 cardId = 2;
+      // optional int32 cardId = 3;
       public boolean hasCardId() {
         return result.hasCardId();
       }
@@ -382,7 +421,7 @@ public final class Game {
         return this;
       }
       
-      // optional int32 previewId = 3;
+      // optional int32 previewId = 4;
       public boolean hasPreviewId() {
         return result.hasPreviewId();
       }
@@ -400,7 +439,7 @@ public final class Game {
         return this;
       }
       
-      // optional int32 x = 4;
+      // optional int32 x = 5;
       public boolean hasX() {
         return result.hasX();
       }
@@ -418,7 +457,7 @@ public final class Game {
         return this;
       }
       
-      // optional int32 y = 5;
+      // optional int32 y = 6;
       public boolean hasY() {
         return result.hasY();
       }
@@ -463,9 +502,10 @@ public final class Game {
   static {
     java.lang.String[] descriptorData = {
       "\n\nGame.proto\0226com.randioo.owlofwar_serve" +
-      "r_simplify_protobuf.protocol\"W\n\nGameActi" +
-      "on\022\020\n\010playerId\030\001 \001(\005\022\016\n\006cardId\030\002 \001(\005\022\021\n\t" +
-      "previewId\030\003 \001(\005\022\t\n\001x\030\004 \001(\005\022\t\n\001y\030\005 \001(\005"
+      "r_simplify_protobuf.protocol\"e\n\nGameActi" +
+      "on\022\014\n\004step\030\001 \001(\005\022\020\n\010playerId\030\002 \001(\005\022\016\n\006ca" +
+      "rdId\030\003 \001(\005\022\021\n\tpreviewId\030\004 \001(\005\022\t\n\001x\030\005 \001(\005" +
+      "\022\t\n\001y\030\006 \001(\005"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -477,7 +517,7 @@ public final class Game {
           internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_GameAction_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_GameAction_descriptor,
-              new java.lang.String[] { "PlayerId", "CardId", "PreviewId", "X", "Y", },
+              new java.lang.String[] { "Step", "PlayerId", "CardId", "PreviewId", "X", "Y", },
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Game.GameAction.class,
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Game.GameAction.Builder.class);
           return null;

@@ -1,9 +1,10 @@
 package com.randioo.owlofwar_server_simplify_protobuf.protocol;
 
 message GameAction{
-	optional int32 playerId = 1;
-	optional int32 cardId = 2;
-	optional int32 previewId = 3;
-	optional int32 x = 4;
-	optional int32 y = 5;
+	optional int32 step = 1;
+	optional int32 playerId = 2;
+	optional int32 cardId = 3;
+	optional int32 previewId = 4;
+	optional int32 x = 5;
+	optional int32 y = 6;
 }

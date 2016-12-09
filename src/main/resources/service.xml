@@ -12,6 +12,7 @@
 		<property name="cardDao" ref="cardDao"></property>
 		<property name="roleDao" ref="roleDao"></property>
 		<property name="cardService" ref="cardService"></property>
+		<property name="storeVideoDao" ref="storeVideoDao"></property>
 	</bean>
 
 	<bean id="roleService" class="com.randioo.owlofwar_server_simplify_protobuf.module.role.service.RoleServiceImpl">
@@ -36,4 +37,10 @@
 	</bean>
 	
 	<bean id="pingService" class="com.randioo.owlofwar_server_simplify_protobuf.module.ping.service.PingServiceImpl"></bean>
+	
+	<bean id="gmService" class="com.randioo.owlofwar_server_simplify_protobuf.module.gm.service.GMServiceImpl">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="systemManager" ref="systemManager"></property>
+		<property name="storeVideoDao" ref="storeVideoDao"></property>
+	</bean>
 </beans>

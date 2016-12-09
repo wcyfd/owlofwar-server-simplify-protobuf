@@ -1,8 +1,10 @@
 package com.randioo.owlofwar_server_simplify_protobuf.module.fight.service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.locks.Lock;
 
 import org.apache.mina.core.session.IoSession;
@@ -12,17 +14,16 @@ import com.randioo.owlofwar_server_simplify_protobuf.cache.local.SessionCache;
 import com.randioo.owlofwar_server_simplify_protobuf.common.ErrorCode;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.bo.Card;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.bo.Role;
+import com.randioo.owlofwar_server_simplify_protobuf.entity.bo.StoreVideo;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.CardList;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.FightEventListener;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.MailCard;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.MailCardList;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.OwlofwarGame;
-import com.randioo.owlofwar_server_simplify_protobuf.entity.po.OwlofwarGameInfo;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.Video;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.VideoManager;
 import com.randioo.owlofwar_server_simplify_protobuf.formatter.MailCardListFormatter;
-import com.randioo.owlofwar_server_simplify_protobuf.module.fight.FightConstant;
-import com.randioo.owlofwar_server_simplify_protobuf.module.match.service.MatchService;
+import com.randioo.owlofwar_server_simplify_protobuf.formatter.StoreVideoFormatter;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.FightCard;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.Frame;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResult;
@@ -33,7 +34,6 @@ import com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGameOve
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGetGameAwardResponse;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightLoadResourceCompleteResponse;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightReadFrameResponse;
-import com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightGameOver;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightKeyFrame;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightLoadResource;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightStartGame;
@@ -41,7 +41,6 @@ import com.randioo.owlofwar_server_simplify_protobuf.protocol.Game.GameAction;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.ServerMessage.SCMessage;
 import com.randioo.randioo_server_base.entity.GameEvent;
 import com.randioo.randioo_server_base.module.BaseService;
-import com.randioo.randioo_server_base.net.SpringContext;
 import com.randioo.randioo_server_base.utils.game.game_type.GameBase;
 import com.randioo.randioo_server_base.utils.game.game_type.GameHandler;
 import com.randioo.randioo_server_base.utils.game.game_type.real_time_strategy_game.RTSGame;
@@ -66,19 +65,23 @@ public class FightServiceImpl extends BaseService implements FightService {
 					return;
 				}
 				Lock lock = game.getLock();
+				lock.lock();
 				try {
-					lock.lock();
 					if (game.isEnd() || game.getFrameNumber() > game.getTotalTime() * game.getFrameCountInOneSecond()) {
-						game.setEnd(true);
-						game.getScheduledFuture().cancel(true);
+						gameOver(game);
 						return;
 					}
+					
+					if(game.getStartTime() == 0L){
+						game.setStartTime(System.currentTimeMillis());
+					}
+					
+					sendKeyFrameInfo(game);
 				} catch (Exception e) {
 					e.printStackTrace();
 				} finally {
 					lock.unlock();
 				}
-				sendKeyFrameInfo(game);
 			}
 		});
 	}
@@ -102,6 +105,7 @@ public class FightServiceImpl extends BaseService implements FightService {
 		lock.lock();
 		try {
 			if (this.checkSomeoneOffline(game)) {
+				gameOver(game);
 				return;
 			}
 			game.getReadyRoleIdSet().add(role.getRoleId());
@@ -133,8 +137,8 @@ public class FightServiceImpl extends BaseService implements FightService {
 			mailCardListMap.put(role.getRoleId(), mailCardList);
 		}
 		for (Integer roleId : roleIdList) {
-			SCFightLoadResource.Builder builder = SCFightLoadResource.newBuilder()
-					.setIsNPCGame(game.isAIGame()).setNPCMapId(game.getAiMapsId());
+			SCFightLoadResource.Builder builder = SCFightLoadResource.newBuilder().setIsNPCGame(game.isAIGame())
+					.setNPCMapId(game.getAiMapsId());
 			for (int i = 0, size = roleIdList.size(); i < size; i++) {
 				if (roleId == roleIdList.get(i)) {
 					builder.setMyPlayerId(i + 1);
@@ -148,7 +152,7 @@ public class FightServiceImpl extends BaseService implements FightService {
 				roleResourceInfoBuilder.setGeneralCard(FightCard.newBuilder().setCardId(mainCard.getCardId())
 						.setLv(mainCard.getLv()));
 				List<MailCard> list = mailCardListMap.get(roleIdList.get(i)).getList();
-				for (int index = 1; index < list.size(); index++) {
+				for (int index = 0; index < list.size(); index++) {
 					MailCard mailCard = list.get(index);
 					roleResourceInfoBuilder.addHandCards(FightCard.newBuilder().setCardId(mailCard.getCardId())
 							.setLv(mailCard.getLv()));
@@ -158,20 +162,19 @@ public class FightServiceImpl extends BaseService implements FightService {
 			}
 
 			SCFightLoadResource scFightLoadResource = builder.build();
-			
+
 			/** 添加录像 */
 			Video video = new Video();
 			video.setGameId(game.getGameId());
 			game.setVideo(video);
 			VideoManager.addVideo(game.getVideo());
-			
+
 			// 放入资源表
-			game.getVideo().getRoleResourceInfoMap().put(roleId, scFightLoadResource);
+			game.getVideo().getRoleResourceInfoMap().add(scFightLoadResource);
 
 			IoSession session = SessionCache.getSessionById(roleId);
 			if (session != null) {
-				session.write(SCMessage.newBuilder().setScFightLoadResource(scFightLoadResource)
-						.build());
+				session.write(SCMessage.newBuilder().setScFightLoadResource(scFightLoadResource).build());
 			}
 		}
 	}
@@ -205,88 +208,70 @@ public class FightServiceImpl extends BaseService implements FightService {
 
 	@Override
 	public void loadResourceComplete(Role role, IoSession session) {
-		session.write(SCMessage.newBuilder().setFightLoadResourceCompleteResponse(FightLoadResourceCompleteResponse.newBuilder())
-				.build());
+		session.write(SCMessage.newBuilder()
+				.setFightLoadResourceCompleteResponse(FightLoadResourceCompleteResponse.newBuilder()).build());
 
 		OwlofwarGame owlofwarGame = role.getOwlofwarGame();
-		if (owlofwarGame == null || role.getOwlofwarGame().isEnd()) {
+		if (owlofwarGame == null || owlofwarGame.isEnd()) {
 			return;
 		}
 		Lock lock = owlofwarGame.getLock();
+		lock.lock();
 		try {
-			lock.lock();
-			owlofwarGame = role.getOwlofwarGame();
-			if (owlofwarGame == null || role.getOwlofwarGame().isEnd())
+			if (role.getOwlofwarGame().isEnd())
 				return;
 
-			this.startGame(owlofwarGame);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			lock.unlock();
 		}
 
+		// 如果此时有人离线，给他们获得锁的机会，让比赛不用开始
+		this.startGame(owlofwarGame);
 	}
 
 	private void startGame(OwlofwarGame game) {
-		System.out.println("function startGame()");
 		Lock lock = game.getLock();
-		if (game.isStart())
+		if (game.isStart() || game.isEnd())
 			return;
-		if (lock.tryLock()) {
-			try {
-				if (game.isStart())
-					return;
-				game.setStart(true);
+		lock.lock();
+		try {
+			if (game.isStart() || game.isEnd())
+				return;
+			game.setStart(true);
 
-			} finally {
-				lock.unlock();
+			for (Role role : game.getRoleMap().values()) {
+				int roleId = role.getRoleId();
+				Role otherRole = game.getAnotherRole(role);
+				FightEventListener listener = game.getRoleGameInfoMap().get(roleId).getListener();
+				if (listener != null) {
+					listener.startFight(game, role, otherRole);
+				}
 			}
-		}
 
-		System.out.println("startGame");
-		// int roleId1 = game.getRolePositionList().get(0);
-		// int roleId2 = game.getRolePositionList().get(1);
-		// Role role1 = game.getRoleMap().get(roleId1);
-		// Role role2 = game.getRoleMap().get(roleId2);
-		// FightEventListener listener1 =
-		// game.getRoleGameInfoMap().get(roleId1).getListener();
-		// FightEventListener listener2 =
-		// game.getRoleGameInfoMap().get(roleId2).getListener();
-		//
-		// // 准备战斗邮件信息
-		// listener1.readyFight(game, role1, role2);
-		// if (listener2 != null)
-		// listener2.readyFight(game, role2, role1);
-		//
-		// listener1.startFight(game, role1, role2);
-		// if (listener2 != null)
-		// listener2.startFight(game, role2, role1);
-
-		for (Role role : game.getRoleMap().values()) {
-			int roleId = role.getRoleId();
-			Role otherRole = game.getAnotherRole(role);
-			FightEventListener listener = game.getRoleGameInfoMap().get(roleId).getListener();
-			if (listener != null) {
-				listener.startFight(game, role, otherRole);
+			for (Role x : game.getRoleMap().values()) {
+				IoSession ioSession = SessionCache.getSessionById(x.getRoleId());
+				if (ioSession != null) {
+					ioSession.write(SCMessage.newBuilder()
+							.setScFightStartGame(SCFightStartGame.newBuilder().setTotalTime(game.getTotalTime()))
+							.build());
+				}
 			}
+
+			game.setAddDeltaFrame(2);
+			game.setFrameCountInOneSecond(20);
+			int addDeltaFrame = game.getAddDeltaFrame();
+			int keyFrameDeltaTime = 1000 / ((OwlofwarGame) game).getFrameCountInOneSecond() * addDeltaFrame;
+			game.setFrameNumber(0);
+			game.setNextFrameNumber(game.getFrameNumber() + game.getAddDeltaFrame());
+
+			gameStarter.startRTSGame(game, keyFrameDeltaTime);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			lock.unlock();
 		}
-
-		for (Role x : game.getRoleMap().values()) {
-			IoSession ioSession = SessionCache.getSessionById(x.getRoleId());
-			if (ioSession != null) {
-				ioSession.write(SCMessage.newBuilder()
-						.setScFightStartGame(SCFightStartGame.newBuilder().setTotalTime(game.getTotalTime())).build());
-			}
-		}
-
-		game.setAddDeltaFrame(2);
-		game.setFrameCountInOneSecond(20);
-		int addDeltaFrame = game.getAddDeltaFrame();
-		int keyFrameDeltaTime = 1000/((OwlofwarGame)game).getFrameCountInOneSecond()*addDeltaFrame;
-		
-		gameStarter.startRTSGame(game,keyFrameDeltaTime);
-
 	}
 
 	@Override
@@ -296,8 +281,8 @@ public class FightServiceImpl extends BaseService implements FightService {
 			return;
 		}
 		try {
-			SCMessage sc = SCMessage.newBuilder()
-					.setFightGameActionResponse(FightGameActionResponse.newBuilder()).build();
+			SCMessage sc = SCMessage.newBuilder().setFightGameActionResponse(FightGameActionResponse.newBuilder())
+					.build();
 			IoSession session = SessionCache.getSessionById(role.getRoleId());
 			session.write(sc);
 
@@ -327,20 +312,26 @@ public class FightServiceImpl extends BaseService implements FightService {
 	@Override
 	public void sendKeyFrameInfo(RTSGame game) {
 		List<GameEvent> gameEvents = game.getActionQueue().pollAll(game.getNextFrameNumber());
-
 		// 整合消息
 		SCFightKeyFrame.Builder scFightKeyFrameBuilder = SCFightKeyFrame.newBuilder();
 
 		for (int frame = game.getFrameNumber(), nextFrameNumber = game.getNextFrameNumber(); frame < nextFrameNumber; frame++) {
 			Frame.Builder frameBuilder = Frame.newBuilder();
 			frameBuilder.setFrameIndex(frame);
+			// 已经加入过所以要删除的事件列表
+			List<GameEvent> deleteGameEvents = new ArrayList<>(gameEvents.size());
 			for (int j = 0, gameEventSize = gameEvents.size(); j < gameEventSize; j++) {
 				GameEvent gameEvent = gameEvents.get(j);
 				int frameIndex = gameEvent.getExecuteFrameIndex();
-				if (frameIndex == frame) {
+				if (frameIndex <= frame) {
 					GameAction gameAction = (GameAction) gameEvent.getAction();
 					frameBuilder.addGameActions(gameAction);
+
+					deleteGameEvents.add(gameEvent);
 				}
+			}
+			for (GameEvent needDeleteGameEvent : deleteGameEvents) {
+				gameEvents.remove(needDeleteGameEvent);
 			}
 			Frame f = frameBuilder.build();
 			scFightKeyFrameBuilder.addFrames(f);
@@ -356,6 +347,9 @@ public class FightServiceImpl extends BaseService implements FightService {
 		game.setFrameNumber(game.getNextFrameNumber());
 		game.setNextFrameNumber(game.getNextFrameNumber() + ((OwlofwarGame) game).getAddDeltaFrame());
 
+		if (scFightKeyFrameBuilder.getFramesCount() == 0) {
+			return;
+		}
 		SCMessage sc = SCMessage.newBuilder().setScFightKeyFrame(scFightKeyFrameBuilder).build();
 		// 向各用户发送消息
 		for (Role role : ((OwlofwarGame) game).getRoleMap().values()) {
@@ -379,21 +373,10 @@ public class FightServiceImpl extends BaseService implements FightService {
 
 	@Override
 	public void receiveGameEnd(Role role, IoSession session) {
-		session.write(SCMessage.newBuilder().setFightGameOverResponse(FightGameOverResponse.newBuilder()).build());
+		session.write(SCMessage.newBuilder().setFightGameOverResponse(FightGameOverResponse.newBuilder().setAward(""))
+				.build());
 		OwlofwarGame game = role.getOwlofwarGame();
-		if (game == null || game.isEnd()) {
-			return;
-		}
-		Lock lock = game.getLock();
-		lock.lock();
-		try {
-			if (game.isEnd())
-				return;
-			game.setEnd(true);
-			game.getScheduledFuture().cancel(true);
-		} finally {
-			lock.unlock();
-		}
+		gameOver(game);
 
 		// this.sendEnd(game, role, result, score1, score2);
 	}
@@ -436,136 +419,173 @@ public class FightServiceImpl extends BaseService implements FightService {
 				.setFightGetGameAwardResponse(FightGetGameAwardResponse.newBuilder().setPoint(point)).build();
 	}
 
-	private void sendEnd(OwlofwarGame game, Role role, byte result, int roleScore1, int roleScore2) {
-		System.out.println("function sendEnd()");
-		if (this.decideResultByOnlyOneRole(game, role, result, roleScore1, roleScore2)) {
-			System.out.println("receiveEnd result is:" + game.getResultMap() + " score is" + game.getScoreMap());
-			Map<Integer, Byte> resultMap = game.getResultMap();
-			Map<Role, Byte> roleResultMap = new HashMap<>();
-			for (Role tempRole : game.getRoleMap().values()) {
+	private void gameOver(OwlofwarGame game) {
+		if (game == null)
+			return;
 
-				roleResultMap.put(tempRole, resultMap.get(tempRole.getRoleId()));
-				IoSession ioSession = SessionCache.getSessionById(tempRole.getRoleId());
-				FightEventListener listener = game.getRoleGameInfoMap().get(tempRole.getRoleId()).getListener();
-				if (ioSession != null) {
-					String award = "";
-					Byte tempResult = resultMap.get(tempRole.getRoleId());
-					if (tempResult == FightConstant.WIN) {
-						if (listener != null) {
-							award = listener.getAward();
-						}
-					}
-					ioSession.write(SCMessage.newBuilder()
-							.setScFightGameOver(SCFightGameOver.newBuilder().setAward(award).setResult(tempResult))
-							.build());
-				}
-			}
-
-			// if (!game.isAIGame()) {
-			// int roleId1 = game.getRolePositionList().get(0);
-			// int roleId2 = game.getRolePositionList().get(1);
-			// Role role1 = game.getRoleMap().get(roleId1);
-			// Role role2 = game.getRoleMap().get(roleId2);
-			// OwlofwarGameInfo info1 = game.getRoleGameInfoMap().get(roleId1);
-			// OwlofwarGameInfo info2 = game.getRoleGameInfoMap().get(roleId2);
-			//
-			// }
+		if (game.isEnd()) {
+			return;
 		}
-
-	}
-
-	private boolean decideResultByOnlyOneRole(OwlofwarGame game, Role role, byte result, int roleScore1, int roleScore2) {
-		System.out.println("decideResultByOnlyOneRole");
-		System.out.println("roleScore1:" + roleScore1 + " roleScore2:" + roleScore2);
-		if (game == null || game.isEnd())
-			return false;
 
 		Lock lock = game.getLock();
 		lock.lock();
 		try {
-			if (game == null || game.isEnd())
-				return false;
+			if (game.isEnd()) {
+				return;
+			}
 			// 当游戏结束时就应该获得结果,前提是两者完全同步的情况下,所以只要进入过一次，剩下的所有进入都算返回false
-			game.getScheduledFuture().cancel(true);
 			game.setEnd(true);
+			ScheduledFuture<?> future = game.getScheduledFuture();
+			if (future != null)
+				future.cancel(true);
 
+			for (Role r : game.getRoleMap().values()) {
+				r.setOwlofwarGame(null);
+			}
+			
+			//如果游戏有第一帧事件，则要进行视频记录
+			if (game.getStartTime() != 0L) {
+				Video video = game.getVideo();
+				video.setStartTime(game.getStartTime());
+				video.setGameId(game.getGameId());
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			lock.unlock();
 		}
-
-		Role role2 = game.getAnotherRole(role);
-		try {
-			if (role != null) {
-				// 如果玩家发送结果
-				// 获得双方的通信接口
-				IoSession session = SessionCache.getSessionById(role.getRoleId());
-
-				// 赋予结果，score是比分，result是胜负
-
-				if (session == null || !session.isConnected()) {
-					// 自己掉线了，则判定对面赢
-					this.checkCorrectResult(game, role2);
-				} else {
-					game.getScoreMap().put(role.getRoleId(), roleScore1);
-					game.getScoreMap().put(role2.getRoleId(), roleScore2);
-					game.getResultMap().put(role.getRoleId(), result);
-					game.getResultMap().put(role2.getRoleId(), (byte) -result);
-				}
-
-			} else {
-				// 如果是游戏时间到了
-				int roleId1 = game.getRolePositionList().get(0);
-				int roleId2 = game.getRolePositionList().get(1);
-				// 获取收集到的分数信息
-				OwlofwarGameInfo info1 = game.getRoleGameInfoMap().get(roleId1);
-				OwlofwarGameInfo info2 = game.getRoleGameInfoMap().get(roleId2);
-				Map<Integer, Integer> role1ScoreInfo = info1.getScoreMap();
-				Map<Integer, Integer> role2ScoreInfo = info2.getScoreMap();
-
-				if (game.isAIGame()) {// 如果是npc战斗
-					int score1 = this.nullThen0(role1ScoreInfo, roleId1);
-					int score2 = this.nullThen0(role1ScoreInfo, roleId2);
-					if (score1 > score2) {
-						result = FightConstant.WIN;
-					} else if (score1 == score2) {
-						result = FightConstant.DOGFALL;
-					} else {
-						result = FightConstant.LOSS;
-					}
-					game.getScoreMap().put(roleId1, score1);
-					game.getScoreMap().put(roleId2, score2);
-					game.getResultMap().put(roleId1, result);
-					game.getResultMap().put(roleId2, (byte) -result);
-				} else {
-					// 如果不是npc战斗
-					int role1Score1 = this.nullThen0(role1ScoreInfo, roleId1);
-					int role1Score2 = this.nullThen0(role1ScoreInfo, roleId2);
-					int role2Score1 = this.nullThen0(role2ScoreInfo, roleId1);
-					int role2Score2 = this.nullThen0(role2ScoreInfo, roleId2);
-					if (role1Score1 != role2Score1 || role1Score2 != role2Score2) {
-						this.checkCorrectResult(game, role);
-					}
-				}
-			}
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-		return true;
-
 	}
 
-	private int nullThen0(Map<Integer, Integer> map, int key) {
-		Integer value = map.get(key);
-		if (value == null) {
-			value = 0;
-			map.put(key, value);
-		}
-		return value;
-	}
+//	private void sendEnd(OwlofwarGame game, Role role, byte result, int roleScore1, int roleScore2) {
+//		System.out.println("function sendEnd()");
+//		if (this.decideResultByOnlyOneRole(game, role, result, roleScore1, roleScore2)) {
+//			System.out.println("receiveEnd result is:" + game.getResultMap() + " score is" + game.getScoreMap());
+//			Map<Integer, Byte> resultMap = game.getResultMap();
+//			Map<Role, Byte> roleResultMap = new HashMap<>();
+//			for (Role tempRole : game.getRoleMap().values()) {
+//
+//				roleResultMap.put(tempRole, resultMap.get(tempRole.getRoleId()));
+//				IoSession ioSession = SessionCache.getSessionById(tempRole.getRoleId());
+//				FightEventListener listener = game.getRoleGameInfoMap().get(tempRole.getRoleId()).getListener();
+//				if (ioSession != null) {
+//					String award = "";
+//					Byte tempResult = resultMap.get(tempRole.getRoleId());
+//					if (tempResult == FightConstant.WIN) {
+//						if (listener != null) {
+//							award = listener.getAward();
+//						}
+//					}
+//					ioSession.write(SCMessage.newBuilder()
+//							.setScFightGameOver(SCFightGameOver.newBuilder().setAward(award).setResult(tempResult))
+//							.build());
+//				}
+//			}
+//
+//			// if (!game.isAIGame()) {
+//			// int roleId1 = game.getRolePositionList().get(0);
+//			// int roleId2 = game.getRolePositionList().get(1);
+//			// Role role1 = game.getRoleMap().get(roleId1);
+//			// Role role2 = game.getRoleMap().get(roleId2);
+//			// OwlofwarGameInfo info1 = game.getRoleGameInfoMap().get(roleId1);
+//			// OwlofwarGameInfo info2 = game.getRoleGameInfoMap().get(roleId2);
+//			//
+//			// }
+//		}
+//
+//	}
+//
+//	private boolean decideResultByOnlyOneRole(OwlofwarGame game, Role role, byte result, int roleScore1, int roleScore2) {
+//		System.out.println("decideResultByOnlyOneRole");
+//		System.out.println("roleScore1:" + roleScore1 + " roleScore2:" + roleScore2);
+//		if (game == null || game.isEnd())
+//			return false;
+//
+//		Lock lock = game.getLock();
+//		lock.lock();
+//		try {
+//			if (game == null || game.isEnd())
+//				return false;
+//			// 当游戏结束时就应该获得结果,前提是两者完全同步的情况下,所以只要进入过一次，剩下的所有进入都算返回false
+//			game.getScheduledFuture().cancel(true);
+//			game.setEnd(true);
+//
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		} finally {
+//			lock.unlock();
+//		}
+//
+//		Role role2 = game.getAnotherRole(role);
+//		try {
+//			if (role != null) {
+//				// 如果玩家发送结果
+//				// 获得双方的通信接口
+//				IoSession session = SessionCache.getSessionById(role.getRoleId());
+//
+//				// 赋予结果，score是比分，result是胜负
+//
+//				if (session == null || !session.isConnected()) {
+//					// 自己掉线了，则判定对面赢
+//					this.checkCorrectResult(game, role2);
+//				} else {
+//					game.getScoreMap().put(role.getRoleId(), roleScore1);
+//					game.getScoreMap().put(role2.getRoleId(), roleScore2);
+//					game.getResultMap().put(role.getRoleId(), result);
+//					game.getResultMap().put(role2.getRoleId(), (byte) -result);
+//				}
+//
+//			} else {
+//				// 如果是游戏时间到了
+//				int roleId1 = game.getRolePositionList().get(0);
+//				int roleId2 = game.getRolePositionList().get(1);
+//				// 获取收集到的分数信息
+//				OwlofwarGameInfo info1 = game.getRoleGameInfoMap().get(roleId1);
+//				OwlofwarGameInfo info2 = game.getRoleGameInfoMap().get(roleId2);
+//				Map<Integer, Integer> role1ScoreInfo = info1.getScoreMap();
+//				Map<Integer, Integer> role2ScoreInfo = info2.getScoreMap();
+//
+//				if (game.isAIGame()) {// 如果是npc战斗
+//					int score1 = this.nullThen0(role1ScoreInfo, roleId1);
+//					int score2 = this.nullThen0(role1ScoreInfo, roleId2);
+//					if (score1 > score2) {
+//						result = FightConstant.WIN;
+//					} else if (score1 == score2) {
+//						result = FightConstant.DOGFALL;
+//					} else {
+//						result = FightConstant.LOSS;
+//					}
+//					game.getScoreMap().put(roleId1, score1);
+//					game.getScoreMap().put(roleId2, score2);
+//					game.getResultMap().put(roleId1, result);
+//					game.getResultMap().put(roleId2, (byte) -result);
+//				} else {
+//					// 如果不是npc战斗
+//					int role1Score1 = this.nullThen0(role1ScoreInfo, roleId1);
+//					int role1Score2 = this.nullThen0(role1ScoreInfo, roleId2);
+//					int role2Score1 = this.nullThen0(role2ScoreInfo, roleId1);
+//					int role2Score2 = this.nullThen0(role2ScoreInfo, roleId2);
+//					if (role1Score1 != role2Score1 || role1Score2 != role2Score2) {
+//						this.checkCorrectResult(game, role);
+//					}
+//				}
+//			}
+//
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//
+//		return true;
+//
+//	}
+//
+//	private int nullThen0(Map<Integer, Integer> map, int key) {
+//		Integer value = map.get(key);
+//		if (value == null) {
+//			value = 0;
+//			map.put(key, value);
+//		}
+//		return value;
+//	}
 
 	// private void directReceiveResult(OwlofwarGame game, Role role) {
 	// Map<Integer, Byte> receiveResultMap = game.getReceiveResultMap();
@@ -581,17 +601,13 @@ public class FightServiceImpl extends BaseService implements FightService {
 	// }
 	// }
 
-	private void checkCorrectResult(OwlofwarGame game, Role role) {
-		// this.directReceiveResult(game, role);
-		System.out.println("hasCalculate");
-	}
+//	private void checkCorrectResult(OwlofwarGame game, Role role) {
+//		// this.directReceiveResult(game, role);
+//		System.out.println("hasCalculate");
+//	}
 
 	@Override
-	public void offlineCancelRoom(Role role) {
-		MatchService matchService = SpringContext.getBean("matchService");
-		// 先取消匹配
-		matchService.cancelMatch(role);
-
+	public void offline(Role role) {
 		OwlofwarGame game = role.getOwlofwarGame();
 		if (game == null || game.isEnd()) {
 			return;
@@ -599,23 +615,11 @@ public class FightServiceImpl extends BaseService implements FightService {
 		Lock lock = game.getLock();
 		try {
 			lock.lock();
-			if (role.getOwlofwarGame() == null || game.isEnd()) {
+			if (game.isEnd()) {
 				return;
 			}
 
-			if (game.isStart()) {
-				// 如果游戏开始了则发送结果
-				this.sendEnd(game, role, (byte) -1, 0, 0);
-			} else {
-				// 游戏还没有开始，就下线，则直接赋值成空
-				game.setEnd(true);
-				if (game.getScheduledFuture() != null) {
-					game.getScheduledFuture().cancel(true);
-				}
-				for (Role r : game.getRoleMap().values()) {
-					r.setOwlofwarGame(null);
-				}
-			}
+			gameOver(game);
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -634,13 +638,13 @@ public class FightServiceImpl extends BaseService implements FightService {
 	 */
 	private boolean checkSomeoneOffline(OwlofwarGame game) {
 		boolean hasOffline = false;
+		if (game == null || game.isEnd()) {
+			return true;
+		}
 		Lock lock = game.getLock();
+		lock.lock();
 		try {
-			if (game == null || game.isEnd()) {
-				return true;
-			}
-			lock.lock();
-			if (game == null || game.isEnd()) {
+			if (game.isEnd()) {
 				return true;
 			}
 			// 如果有人已经离线了，则直接返回

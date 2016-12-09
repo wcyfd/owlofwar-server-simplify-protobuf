@@ -120,6 +120,19 @@ public class MatchServiceImpl extends BaseService implements MatchService {
 				IoSession session = SessionCache.getSessionById(role.getRoleId());
 				session.write(SCMessage.newBuilder().setScMatchCancel(SCMatchCancel.newBuilder()).build());
 			}
+
+			@Override
+			public void changeStartMatcher(Matchable originStarter, Matchable newStarter) {
+				// TODO Auto-generated method stub
+
+			}
+
+			@Override
+			public void waitClick(MatchInfo matchInfo, int clickCount) {
+				Role role = (Role) matchInfo.getMatchRule().getMatchTarget();
+				System.out.println("owlofwar match clickCount:" + clickCount + " start account:" + role.getAccount()
+						+ " start name:" + role.getName() + " wait id:" + matchInfo.getMatchId());
+			}
 		});
 	}
 
@@ -175,14 +188,14 @@ public class MatchServiceImpl extends BaseService implements MatchService {
 		OwlofwarMatchRule matchRule = new OwlofwarMatchRule();
 		matchRule.setFightEventListener(null);
 		matchRule.setMatchTarget(aiRole);
-		
+
 		return matchRule;
 	}
 
 	@Override
 	public void matchRole(Role role1, FightEventListener listener1, Role role2, FightEventListener listener2) {
 		// TODO Auto-generated method stub
-		OwlofwarGame game = new OwlofwarGame(2, 4 * 60, 3);
+		OwlofwarGame game = new OwlofwarGame(2, 4 * 60);
 		game.setGameId(OwlofwarGame.getId());
 
 		Map<Integer, Role> roleMap = game.getRoleMap();
@@ -266,7 +279,7 @@ public class MatchServiceImpl extends BaseService implements MatchService {
 	// }
 
 	private OwlofwarGame serverGameInit(OwlofwarMatchInfo matchInfo) {
-		OwlofwarGame game = new OwlofwarGame(matchInfo.getMatchRule().getPlayerCount(), 5 * 60, 3);
+		OwlofwarGame game = new OwlofwarGame(matchInfo.getMatchRule().getPlayerCount(), 5 * 60);
 		game.setGameId(OwlofwarGame.getId());
 
 		Map<Integer, Role> roleMap = game.getRoleMap();
@@ -313,6 +326,11 @@ public class MatchServiceImpl extends BaseService implements MatchService {
 	@Override
 	public void cancelMatch(Role role) {
 		gameMatcher.cancelMatch(role);
+	}
+	
+	@Override
+	public void offline(Role role) {
+		cancelMatch(role);
 	}
 
 }

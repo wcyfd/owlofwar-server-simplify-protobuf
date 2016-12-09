@@ -1,5 +1,6 @@
 package com.randioo.owlofwar_server_simplify_protobuf.module.login.service;
 
+import java.lang.reflect.Field;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
@@ -16,9 +17,11 @@ import com.randioo.owlofwar_server_simplify_protobuf.cache.local.SessionCache;
 import com.randioo.owlofwar_server_simplify_protobuf.common.ErrorCode;
 import com.randioo.owlofwar_server_simplify_protobuf.db.dao.CardDao;
 import com.randioo.owlofwar_server_simplify_protobuf.db.dao.RoleDao;
+import com.randioo.owlofwar_server_simplify_protobuf.db.dao.StoreVideoDao;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.bo.Card;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.bo.Role;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.CardList;
+import com.randioo.owlofwar_server_simplify_protobuf.entity.po.OwlofwarGame;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.Video;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.VideoManager;
 import com.randioo.owlofwar_server_simplify_protobuf.module.card.service.CardService;
@@ -37,6 +40,8 @@ import com.randioo.owlofwar_server_simplify_protobuf.utils.TimeUtils;
 import com.randioo.randioo_server_base.entity.Ref;
 import com.randioo.randioo_server_base.module.login.LoginHandler;
 import com.randioo.randioo_server_base.module.login.LoginModelServiceImpl;
+import com.randioo.randioo_server_base.net.SpringContext;
+import com.randioo.randioo_server_base.utils.system.SystemManager;
 
 public class LoginServiceImpl extends LoginModelServiceImpl implements LoginService {
 	private DataSource dataSource;
@@ -63,12 +68,41 @@ public class LoginServiceImpl extends LoginModelServiceImpl implements LoginServ
 		this.cardService = cardService;
 	}
 
+	private StoreVideoDao storeVideoDao;
+
+	public void setStoreVideoDao(StoreVideoDao storeVideoDao) {
+		this.storeVideoDao = storeVideoDao;
+	}
+
 	@Override
 	public void init() {
+		int maxGameId = storeVideoDao.getMaxStoreVideoId();
+		// 为游戏id初始化
+		try {
+			Field field = OwlofwarGame.class.getDeclaredField("id");
+			field.setAccessible(true);
+			field.setInt(null, maxGameId);
+			field.setAccessible(false);
+		} catch (NoSuchFieldException | SecurityException | IllegalArgumentException | IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		setLoginHandler(new LoginHandlerImpl());
 	}
 
 	private class LoginHandlerImpl implements LoginHandler<Role> {
+
+		@Override
+		public GeneratedMessage checkLoginAccountCanLogin(String account) {
+			SystemManager systemManager = SpringContext.getBean("systemManager");
+			if (!systemManager.isService()) {
+				SCMessage
+						.newBuilder()
+						.setLoginCheckAccountResponse(
+								LoginCheckAccountResponse.newBuilder().setErrorCode(ErrorCode.REJECT_LOGIN)).build();
+			}
+			return null;
+		}
 
 		@Override
 		public String getLoginAccount(Object loginMessage) {
@@ -141,19 +175,19 @@ public class LoginServiceImpl extends LoginModelServiceImpl implements LoginServ
 		@Override
 		public GeneratedMessage getRoleData(Ref<Role> ref) {
 			Role role = ref.get();
-			
+
 			RoleData.Builder roleDataBuilder = RoleData.newBuilder().setRoleId(role.getRoleId())
 					.setName(role.getName());
 			for (Card card : role.getCardMap().values()) {
 				roleDataBuilder.addCardDatas(CardData.newBuilder().setCardId(card.getCardId()).setLv(card.getLv())
 						.setNum(card.getNum()));
 			}
-			Map<Integer,CardList> cardListMap = role.getCardListMap();
+			Map<Integer, CardList> cardListMap = role.getCardListMap();
 			for (CardList cardList : cardListMap.values()) {
 				roleDataBuilder.addCardListDatas(CardListData.newBuilder().setMainId(cardList.getMainId())
 						.setCardListIndex(cardList.getIndex()).addAllCardIds(cardList.getList()));
 			}
-			
+
 			boolean isInFight = false;
 			Video video = VideoManager.getVideoById(role.getOwlofwarGameId());
 			if (video != null && video.getGameResultMap().get(role.getRoleId()) == null) {
@@ -180,7 +214,7 @@ public class LoginServiceImpl extends LoginModelServiceImpl implements LoginServ
 			String account = request.getAccount();
 			Role role = RoleCache.getRoleByAccount(account);
 			if (role == null) {
-				 role = roleDao.getRoleByAccount(account);
+				role = roleDao.getRoleByAccount(account);
 				loginRoleModuleDataInit(role);
 				if (role == null) {
 					return SCMessage.newBuilder()
@@ -254,11 +288,11 @@ public class LoginServiceImpl extends LoginModelServiceImpl implements LoginServ
 			cardDao.insertCard(temp, conn);
 			role.getCardMap().put(temp.getCardId(), temp);
 		}
-//		// 此时随机 完成卡组生成
-//		for (int i = 1; i <= 3; i++) {
-//			cardService.randomCardList(role, i);
-//		}
-		
+		// // 此时随机 完成卡组生成
+		// for (int i = 1; i <= 3; i++) {
+		// cardService.randomCardList(role, i);
+		// }
+
 		for (int i = 1; i <= 3; i++) {
 			List<Integer> cardIntegerList = CardInitConfigCache.getList();
 			CardList cardList = new CardList();
@@ -275,14 +309,14 @@ public class LoginServiceImpl extends LoginModelServiceImpl implements LoginServ
 
 		role.setUseCardsId(1);
 	}
-	
+
 	@Override
-	public void loginRoleModuleDataInit(Role role){
+	public void loginRoleModuleDataInit(Role role) {
 		// 将数据库中的数据放入缓存中
 		RoleCache.putRoleCache(role);
 
 		// 初始化卡组信息
 		List<Card> list = cardDao.getAllCardByRoleId(role.getRoleId());
-		cardService.initCard(role, list);			
+		cardService.initCard(role, list);
 	}
 }

@@ -161,6 +161,27 @@ public final class ClientMessage {
     public boolean hasPingRequest() { return hasPingRequest; }
     public com.randioo.owlofwar_server_simplify_protobuf.protocol.Ping.PingRequest getPingRequest() { return pingRequest_; }
     
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.GMRejectLoginRequest gmRejectLoginRequest = 19;
+    public static final int GMREJECTLOGINREQUEST_FIELD_NUMBER = 19;
+    private boolean hasGmRejectLoginRequest;
+    private com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMRejectLoginRequest gmRejectLoginRequest_;
+    public boolean hasGmRejectLoginRequest() { return hasGmRejectLoginRequest; }
+    public com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMRejectLoginRequest getGmRejectLoginRequest() { return gmRejectLoginRequest_; }
+    
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.GMTerminatedServerRequest gmTerminatedServerRequest = 20;
+    public static final int GMTERMINATEDSERVERREQUEST_FIELD_NUMBER = 20;
+    private boolean hasGmTerminatedServerRequest;
+    private com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMTerminatedServerRequest gmTerminatedServerRequest_;
+    public boolean hasGmTerminatedServerRequest() { return hasGmTerminatedServerRequest; }
+    public com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMTerminatedServerRequest getGmTerminatedServerRequest() { return gmTerminatedServerRequest_; }
+    
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.GMOpenLoginRequest gmOpenLoginRequest = 21;
+    public static final int GMOPENLOGINREQUEST_FIELD_NUMBER = 21;
+    private boolean hasGmOpenLoginRequest;
+    private com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMOpenLoginRequest gmOpenLoginRequest_;
+    public boolean hasGmOpenLoginRequest() { return hasGmOpenLoginRequest; }
+    public com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMOpenLoginRequest getGmOpenLoginRequest() { return gmOpenLoginRequest_; }
+    
     private void initFields() {
       loginCheckAccountRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Login.LoginCheckAccountRequest.getDefaultInstance();
       loginCreateRoleRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Login.LoginCreateRoleRequest.getDefaultInstance();
@@ -180,6 +201,9 @@ public final class ClientMessage {
       cardChooseUseCardListRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardChooseUseCardListRequest.getDefaultInstance();
       cardChangeMainCardRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardChangeMainCardRequest.getDefaultInstance();
       pingRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Ping.PingRequest.getDefaultInstance();
+      gmRejectLoginRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMRejectLoginRequest.getDefaultInstance();
+      gmTerminatedServerRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMTerminatedServerRequest.getDefaultInstance();
+      gmOpenLoginRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMOpenLoginRequest.getDefaultInstance();
     }
     public final boolean isInitialized() {
       return true;
@@ -241,6 +265,15 @@ public final class ClientMessage {
       }
       if (hasCardChangeMainCardRequest()) {
         output.writeMessage(18, getCardChangeMainCardRequest());
+      }
+      if (hasGmRejectLoginRequest()) {
+        output.writeMessage(19, getGmRejectLoginRequest());
+      }
+      if (hasGmTerminatedServerRequest()) {
+        output.writeMessage(20, getGmTerminatedServerRequest());
+      }
+      if (hasGmOpenLoginRequest()) {
+        output.writeMessage(21, getGmOpenLoginRequest());
       }
       getUnknownFields().writeTo(output);
     }
@@ -322,6 +355,18 @@ public final class ClientMessage {
       if (hasCardChangeMainCardRequest()) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(18, getCardChangeMainCardRequest());
+      }
+      if (hasGmRejectLoginRequest()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(19, getGmRejectLoginRequest());
+      }
+      if (hasGmTerminatedServerRequest()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(20, getGmTerminatedServerRequest());
+      }
+      if (hasGmOpenLoginRequest()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(21, getGmOpenLoginRequest());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -535,6 +580,15 @@ public final class ClientMessage {
         if (other.hasPingRequest()) {
           mergePingRequest(other.getPingRequest());
         }
+        if (other.hasGmRejectLoginRequest()) {
+          mergeGmRejectLoginRequest(other.getGmRejectLoginRequest());
+        }
+        if (other.hasGmTerminatedServerRequest()) {
+          mergeGmTerminatedServerRequest(other.getGmTerminatedServerRequest());
+        }
+        if (other.hasGmOpenLoginRequest()) {
+          mergeGmOpenLoginRequest(other.getGmOpenLoginRequest());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -720,6 +774,33 @@ public final class ClientMessage {
               }
               input.readMessage(subBuilder, extensionRegistry);
               setCardChangeMainCardRequest(subBuilder.buildPartial());
+              break;
+            }
+            case 154: {
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMRejectLoginRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMRejectLoginRequest.newBuilder();
+              if (hasGmRejectLoginRequest()) {
+                subBuilder.mergeFrom(getGmRejectLoginRequest());
+              }
+              input.readMessage(subBuilder, extensionRegistry);
+              setGmRejectLoginRequest(subBuilder.buildPartial());
+              break;
+            }
+            case 162: {
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMTerminatedServerRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMTerminatedServerRequest.newBuilder();
+              if (hasGmTerminatedServerRequest()) {
+                subBuilder.mergeFrom(getGmTerminatedServerRequest());
+              }
+              input.readMessage(subBuilder, extensionRegistry);
+              setGmTerminatedServerRequest(subBuilder.buildPartial());
+              break;
+            }
+            case 170: {
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMOpenLoginRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMOpenLoginRequest.newBuilder();
+              if (hasGmOpenLoginRequest()) {
+                subBuilder.mergeFrom(getGmOpenLoginRequest());
+              }
+              input.readMessage(subBuilder, extensionRegistry);
+              setGmOpenLoginRequest(subBuilder.buildPartial());
               break;
             }
           }
@@ -1393,6 +1474,117 @@ public final class ClientMessage {
         return this;
       }
       
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.GMRejectLoginRequest gmRejectLoginRequest = 19;
+      public boolean hasGmRejectLoginRequest() {
+        return result.hasGmRejectLoginRequest();
+      }
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMRejectLoginRequest getGmRejectLoginRequest() {
+        return result.getGmRejectLoginRequest();
+      }
+      public Builder setGmRejectLoginRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMRejectLoginRequest value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        result.hasGmRejectLoginRequest = true;
+        result.gmRejectLoginRequest_ = value;
+        return this;
+      }
+      public Builder setGmRejectLoginRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMRejectLoginRequest.Builder builderForValue) {
+        result.hasGmRejectLoginRequest = true;
+        result.gmRejectLoginRequest_ = builderForValue.build();
+        return this;
+      }
+      public Builder mergeGmRejectLoginRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMRejectLoginRequest value) {
+        if (result.hasGmRejectLoginRequest() &&
+            result.gmRejectLoginRequest_ != com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMRejectLoginRequest.getDefaultInstance()) {
+          result.gmRejectLoginRequest_ =
+            com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMRejectLoginRequest.newBuilder(result.gmRejectLoginRequest_).mergeFrom(value).buildPartial();
+        } else {
+          result.gmRejectLoginRequest_ = value;
+        }
+        result.hasGmRejectLoginRequest = true;
+        return this;
+      }
+      public Builder clearGmRejectLoginRequest() {
+        result.hasGmRejectLoginRequest = false;
+        result.gmRejectLoginRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMRejectLoginRequest.getDefaultInstance();
+        return this;
+      }
+      
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.GMTerminatedServerRequest gmTerminatedServerRequest = 20;
+      public boolean hasGmTerminatedServerRequest() {
+        return result.hasGmTerminatedServerRequest();
+      }
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMTerminatedServerRequest getGmTerminatedServerRequest() {
+        return result.getGmTerminatedServerRequest();
+      }
+      public Builder setGmTerminatedServerRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMTerminatedServerRequest value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        result.hasGmTerminatedServerRequest = true;
+        result.gmTerminatedServerRequest_ = value;
+        return this;
+      }
+      public Builder setGmTerminatedServerRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMTerminatedServerRequest.Builder builderForValue) {
+        result.hasGmTerminatedServerRequest = true;
+        result.gmTerminatedServerRequest_ = builderForValue.build();
+        return this;
+      }
+      public Builder mergeGmTerminatedServerRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMTerminatedServerRequest value) {
+        if (result.hasGmTerminatedServerRequest() &&
+            result.gmTerminatedServerRequest_ != com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMTerminatedServerRequest.getDefaultInstance()) {
+          result.gmTerminatedServerRequest_ =
+            com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMTerminatedServerRequest.newBuilder(result.gmTerminatedServerRequest_).mergeFrom(value).buildPartial();
+        } else {
+          result.gmTerminatedServerRequest_ = value;
+        }
+        result.hasGmTerminatedServerRequest = true;
+        return this;
+      }
+      public Builder clearGmTerminatedServerRequest() {
+        result.hasGmTerminatedServerRequest = false;
+        result.gmTerminatedServerRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMTerminatedServerRequest.getDefaultInstance();
+        return this;
+      }
+      
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.GMOpenLoginRequest gmOpenLoginRequest = 21;
+      public boolean hasGmOpenLoginRequest() {
+        return result.hasGmOpenLoginRequest();
+      }
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMOpenLoginRequest getGmOpenLoginRequest() {
+        return result.getGmOpenLoginRequest();
+      }
+      public Builder setGmOpenLoginRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMOpenLoginRequest value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        result.hasGmOpenLoginRequest = true;
+        result.gmOpenLoginRequest_ = value;
+        return this;
+      }
+      public Builder setGmOpenLoginRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMOpenLoginRequest.Builder builderForValue) {
+        result.hasGmOpenLoginRequest = true;
+        result.gmOpenLoginRequest_ = builderForValue.build();
+        return this;
+      }
+      public Builder mergeGmOpenLoginRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMOpenLoginRequest value) {
+        if (result.hasGmOpenLoginRequest() &&
+            result.gmOpenLoginRequest_ != com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMOpenLoginRequest.getDefaultInstance()) {
+          result.gmOpenLoginRequest_ =
+            com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMOpenLoginRequest.newBuilder(result.gmOpenLoginRequest_).mergeFrom(value).buildPartial();
+        } else {
+          result.gmOpenLoginRequest_ = value;
+        }
+        result.hasGmOpenLoginRequest = true;
+        return this;
+      }
+      public Builder clearGmOpenLoginRequest() {
+        result.hasGmOpenLoginRequest = false;
+        result.gmOpenLoginRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMOpenLoginRequest.getDefaultInstance();
+        return this;
+      }
+      
       // @@protoc_insertion_point(builder_scope:com.randioo.owlofwar_server_simplify_protobuf.protocol.CSMessage)
     }
     
@@ -1422,58 +1614,66 @@ public final class ClientMessage {
       "\n\023ClientMessage.proto\0226com.randioo.owlof" +
       "war_server_simplify_protobuf.protocol\032\013L" +
       "ogin.proto\032\013Match.proto\032\013Fight.proto\032\rPi" +
-      "llage.proto\032\nCard.proto\032\nPing.proto\"\344\017\n\t" +
-      "CSMessage\022r\n\030loginCheckAccountRequest\030\001 " +
-      "\001(\0132P.com.randioo.owlofwar_server_simpli" +
-      "fy_protobuf.protocol.LoginCheckAccountRe" +
-      "quest\022n\n\026loginCreateRoleRequest\030\002 \001(\0132N." +
-      "com.randioo.owlofwar_server_simplify_pro" +
-      "tobuf.protocol.LoginCreateRoleRequest\022p\n",
-      "\027loginGetRoleDataRequest\030\003 \001(\0132O.com.ran" +
+      "llage.proto\032\nCard.proto\032\nPing.proto\032\010GM." +
+      "proto\"\256\022\n\tCSMessage\022r\n\030loginCheckAccount" +
+      "Request\030\001 \001(\0132P.com.randioo.owlofwar_ser" +
+      "ver_simplify_protobuf.protocol.LoginChec" +
+      "kAccountRequest\022n\n\026loginCreateRoleReques" +
+      "t\030\002 \001(\0132N.com.randioo.owlofwar_server_si" +
+      "mplify_protobuf.protocol.LoginCreateRole",
+      "Request\022p\n\027loginGetRoleDataRequest\030\003 \001(\013" +
+      "2O.com.randioo.owlofwar_server_simplify_" +
+      "protobuf.protocol.LoginGetRoleDataReques" +
+      "t\022p\n\027fightClientReadyRequest\030\004 \001(\0132O.com" +
+      ".randioo.owlofwar_server_simplify_protob" +
+      "uf.protocol.FightClientReadyRequest\022\202\001\n " +
+      "fightLoadResourceCompleteRequest\030\005 \001(\0132X" +
+      ".com.randioo.owlofwar_server_simplify_pr" +
+      "otobuf.protocol.FightLoadResourceComplet" +
+      "eRequest\022n\n\026fightGameActionRequest\030\006 \001(\013",
+      "2N.com.randioo.owlofwar_server_simplify_" +
+      "protobuf.protocol.FightGameActionRequest" +
+      "\022j\n\024fightGameOverRequest\030\007 \001(\0132L.com.ran" +
       "dioo.owlofwar_server_simplify_protobuf.p" +
-      "rotocol.LoginGetRoleDataRequest\022p\n\027fight" +
-      "ClientReadyRequest\030\004 \001(\0132O.com.randioo.o" +
-      "wlofwar_server_simplify_protobuf.protoco" +
-      "l.FightClientReadyRequest\022\202\001\n fightLoadR" +
-      "esourceCompleteRequest\030\005 \001(\0132X.com.randi" +
+      "rotocol.FightGameOverRequest\022l\n\025fightRea" +
+      "dFrameRequest\030\010 \001(\0132M.com.randioo.owlofw" +
+      "ar_server_simplify_protobuf.protocol.Fig" +
+      "htReadFrameRequest\022r\n\030fightGetGameAwardR" +
+      "equest\030\021 \001(\0132P.com.randioo.owlofwar_serv" +
+      "er_simplify_protobuf.protocol.FightGetGa",
+      "meAwardRequest\022f\n\022pillageRoleRequest\030\t \001" +
+      "(\0132J.com.randioo.owlofwar_server_simplif" +
+      "y_protobuf.protocol.PillageRoleRequest\022j" +
+      "\n\024pillageCancelRequest\030\n \001(\0132L.com.randi" +
       "oo.owlofwar_server_simplify_protobuf.pro" +
-      "tocol.FightLoadResourceCompleteRequest\022n" +
-      "\n\026fightGameActionRequest\030\006 \001(\0132N.com.ran",
-      "dioo.owlofwar_server_simplify_protobuf.p" +
-      "rotocol.FightGameActionRequest\022j\n\024fightG" +
-      "ameOverRequest\030\007 \001(\0132L.com.randioo.owlof" +
-      "war_server_simplify_protobuf.protocol.Fi" +
-      "ghtGameOverRequest\022l\n\025fightReadFrameRequ" +
-      "est\030\010 \001(\0132M.com.randioo.owlofwar_server_" +
-      "simplify_protobuf.protocol.FightReadFram" +
-      "eRequest\022r\n\030fightGetGameAwardRequest\030\021 \001" +
-      "(\0132P.com.randioo.owlofwar_server_simplif" +
-      "y_protobuf.protocol.FightGetGameAwardReq",
-      "uest\022f\n\022pillageRoleRequest\030\t \001(\0132J.com.r" +
-      "andioo.owlofwar_server_simplify_protobuf" +
-      ".protocol.PillageRoleRequest\022j\n\024pillageC" +
-      "ancelRequest\030\n \001(\0132L.com.randioo.owlofwa" +
-      "r_server_simplify_protobuf.protocol.Pill" +
-      "ageCancelRequest\022f\n\022pillageShowRequest\030\013" +
-      " \001(\0132J.com.randioo.owlofwar_server_simpl" +
-      "ify_protobuf.protocol.PillageShowRequest" +
-      "\022p\n\027cardGetCardsInfoRequest\030\014 \001(\0132O.com." +
-      "randioo.owlofwar_server_simplify_protobu",
-      "f.protocol.CardGetCardsInfoRequest\022p\n\027ca" +
-      "rdEditCardListRequest\030\r \001(\0132O.com.randio" +
-      "o.owlofwar_server_simplify_protobuf.prot" +
-      "ocol.CardEditCardListRequest\022`\n\017cardLvUp" +
-      "Request\030\016 \001(\0132G.com.randioo.owlofwar_ser" +
-      "ver_simplify_protobuf.protocol.CardLvUpR" +
-      "equest\022z\n\034cardChooseUseCardListRequest\030\017" +
-      " \001(\0132T.com.randioo.owlofwar_server_simpl" +
-      "ify_protobuf.protocol.CardChooseUseCardL" +
-      "istRequest\022t\n\031cardChangeMainCardRequest\030",
-      "\022 \001(\0132Q.com.randioo.owlofwar_server_simp" +
-      "lify_protobuf.protocol.CardChangeMainCar" +
-      "dRequest\022X\n\013pingRequest\030\020 \001(\0132C.com.rand" +
-      "ioo.owlofwar_server_simplify_protobuf.pr" +
-      "otocol.PingRequest"
+      "tocol.PillageCancelRequest\022f\n\022pillageSho" +
+      "wRequest\030\013 \001(\0132J.com.randioo.owlofwar_se" +
+      "rver_simplify_protobuf.protocol.PillageS" +
+      "howRequest\022p\n\027cardGetCardsInfoRequest\030\014 " +
+      "\001(\0132O.com.randioo.owlofwar_server_simpli",
+      "fy_protobuf.protocol.CardGetCardsInfoReq" +
+      "uest\022p\n\027cardEditCardListRequest\030\r \001(\0132O." +
+      "com.randioo.owlofwar_server_simplify_pro" +
+      "tobuf.protocol.CardEditCardListRequest\022`" +
+      "\n\017cardLvUpRequest\030\016 \001(\0132G.com.randioo.ow" +
+      "lofwar_server_simplify_protobuf.protocol" +
+      ".CardLvUpRequest\022z\n\034cardChooseUseCardLis" +
+      "tRequest\030\017 \001(\0132T.com.randioo.owlofwar_se" +
+      "rver_simplify_protobuf.protocol.CardChoo" +
+      "seUseCardListRequest\022t\n\031cardChangeMainCa",
+      "rdRequest\030\022 \001(\0132Q.com.randioo.owlofwar_s" +
+      "erver_simplify_protobuf.protocol.CardCha" +
+      "ngeMainCardRequest\022X\n\013pingRequest\030\020 \001(\0132" +
+      "C.com.randioo.owlofwar_server_simplify_p" +
+      "rotobuf.protocol.PingRequest\022j\n\024gmReject" +
+      "LoginRequest\030\023 \001(\0132L.com.randioo.owlofwa" +
+      "r_server_simplify_protobuf.protocol.GMRe" +
+      "jectLoginRequest\022t\n\031gmTerminatedServerRe" +
+      "quest\030\024 \001(\0132Q.com.randioo.owlofwar_serve" +
+      "r_simplify_protobuf.protocol.GMTerminate",
+      "dServerRequest\022f\n\022gmOpenLoginRequest\030\025 \001" +
+      "(\0132J.com.randioo.owlofwar_server_simplif" +
+      "y_protobuf.protocol.GMOpenLoginRequest"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -1485,7 +1685,7 @@ public final class ClientMessage {
           internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_CSMessage_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_CSMessage_descriptor,
-              new java.lang.String[] { "LoginCheckAccountRequest", "LoginCreateRoleRequest", "LoginGetRoleDataRequest", "FightClientReadyRequest", "FightLoadResourceCompleteRequest", "FightGameActionRequest", "FightGameOverRequest", "FightReadFrameRequest", "FightGetGameAwardRequest", "PillageRoleRequest", "PillageCancelRequest", "PillageShowRequest", "CardGetCardsInfoRequest", "CardEditCardListRequest", "CardLvUpRequest", "CardChooseUseCardListRequest", "CardChangeMainCardRequest", "PingRequest", },
+              new java.lang.String[] { "LoginCheckAccountRequest", "LoginCreateRoleRequest", "LoginGetRoleDataRequest", "FightClientReadyRequest", "FightLoadResourceCompleteRequest", "FightGameActionRequest", "FightGameOverRequest", "FightReadFrameRequest", "FightGetGameAwardRequest", "PillageRoleRequest", "PillageCancelRequest", "PillageShowRequest", "CardGetCardsInfoRequest", "CardEditCardListRequest", "CardLvUpRequest", "CardChooseUseCardListRequest", "CardChangeMainCardRequest", "PingRequest", "GmRejectLoginRequest", "GmTerminatedServerRequest", "GmOpenLoginRequest", },
               com.randioo.owlofwar_server_simplify_protobuf.protocol.ClientMessage.CSMessage.class,
               com.randioo.owlofwar_server_simplify_protobuf.protocol.ClientMessage.CSMessage.Builder.class);
           return null;
@@ -1500,6 +1700,7 @@ public final class ClientMessage {
           com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.getDescriptor(),
           com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.getDescriptor(),
           com.randioo.owlofwar_server_simplify_protobuf.protocol.Ping.getDescriptor(),
+          com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.getDescriptor(),
         }, assigner);
   }
   

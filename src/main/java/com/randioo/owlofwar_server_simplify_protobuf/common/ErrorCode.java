@@ -46,6 +46,7 @@ public class ErrorCode {
 	public static final short ERR_CANCEL_ROOM = 30202;
 	/** 最大匹配次数 */
 	public static final short MAX_MATCHING_COUNT = 30203;
+	
 
 	/**
 	 * 战斗

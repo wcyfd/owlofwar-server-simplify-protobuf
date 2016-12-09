@@ -11,6 +11,7 @@ import com.randioo.owlofwar_server_simplify_protobuf.db.dao.RoleDao;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.bo.Card;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.bo.Role;
 import com.randioo.owlofwar_server_simplify_protobuf.module.fight.service.FightService;
+import com.randioo.owlofwar_server_simplify_protobuf.module.match.service.MatchService;
 import com.randioo.randioo_server_base.net.SpringContext;
 
 /**
@@ -30,8 +31,10 @@ public class SessionCloseHandler {
 		SessionCache.removeSessionById(role.getRoleId());
 
 		FightService fightService = SpringContext.getBean("fightService");
+		MatchService matchService = SpringContext.getBean("matchService");
 
-		fightService.offlineCancelRoom(role);
+		matchService.offline(role);
+		fightService.offline(role);
 
 		updateRoleData(role);
 	}

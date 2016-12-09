@@ -8,6 +8,9 @@
 	<bean id="roleDao" class="com.randioo.owlofwar_server_simplify_protobuf.db.impl.RoleDaoImpl">
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
+	<bean id="storeVideoDao" class="com.randioo.owlofwar_server_simplify_protobuf.db.impl.StoreVideoDaoImpl">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
 
 
 

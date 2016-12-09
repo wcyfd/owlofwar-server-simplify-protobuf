@@ -36,11 +36,12 @@ public class PillageServiceImpl extends BaseService implements PillageService {
 	 */
 	@Override
 	public void choose(Role role, boolean isAI, IoSession session) {		
-		if(role.getOwlofwarGame() !=null){
-			session.write(SCMessage.newBuilder()
-					.setPillageRoleResponse(PillageRoleResponse.newBuilder().setErrorCode(ErrorCode.IN_THE_ROOM)).build());
-			return;
-		}
+//		if(role.getOwlofwarGame() !=null){
+//			session.write(SCMessage.newBuilder()
+//					.setPillageRoleResponse(PillageRoleResponse.newBuilder().setErrorCode(ErrorCode.IN_THE_ROOM)).build());
+//			return;
+//		}
+		role.setOwlofwarGame(null);
 		session.write(SCMessage.newBuilder()
 				.setPillageRoleResponse(PillageRoleResponse.newBuilder().setErrorCode(ErrorCode.SUCCESS)).build());
 

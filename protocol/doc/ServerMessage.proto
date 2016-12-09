@@ -5,7 +5,8 @@ import "Fight.proto";
 import "Pillage.proto";
 import "Card.proto";
 import "Ping.proto";
-//24
+import "GM.proto";
+//27
 message SCMessage{
 	optional LoginCheckAccountResponse loginCheckAccountResponse=1;
 	optional LoginCreateRoleResponse loginCreateRoleResponse=2;
@@ -36,5 +37,9 @@ message SCMessage{
 	optional CardChangeMainCardResponse cardChangeMainCardResponse = 24;
 
 	optional PingResponse pingResponse = 22;
+
+	optional GMRejectLoginResponse gmRejectLoginResponse = 25;
+	optional GMTerminatedServerResponse gmTerminatedServerResponse = 26;
+	optional GMOpenLoginResponse gmOpenLoginResponse = 27;
 
 }

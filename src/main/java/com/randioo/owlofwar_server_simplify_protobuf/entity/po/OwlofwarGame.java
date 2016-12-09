@@ -26,10 +26,10 @@ public class OwlofwarGame extends RTSGame {
 	private int controlCount;
 	/** 总时间 */
 	private int totalTime;
-	/** 等待结果经历的秒数 */
-	private int waitResultSecond;
-	/** 是否已经得出结果 */
-	private boolean hasResult;
+//	/** 等待结果经历的秒数 */
+//	private int waitResultSecond;
+//	/** 是否已经得出结果 */
+//	private boolean hasResult;
 	/** 是否开始 */
 	private boolean start;
 	/** 是否结束 */
@@ -49,8 +49,8 @@ public class OwlofwarGame extends RTSGame {
 
 	/**开始时间*/
 	private long startTime;
-	/** 结束时间 */
-	private int endTime;
+//	/** 结束时间 */
+//	private int endTime;
 	/** 结果 */
 	private Map<Integer, Byte> resultMap = new HashMap<>();
 	/** 分数结果 */
@@ -58,7 +58,7 @@ public class OwlofwarGame extends RTSGame {
 	/** ai数量 */
 	private int aiCount;
 
-	private int currentWaitResultTime = 0;
+//	private int currentWaitResultTime = 0;
 	/** 准备好的玩家id集合 */
 	private Set<Integer> readyRoleIdSet = new HashSet<>();
 	private int addDeltaFrame;
@@ -66,10 +66,10 @@ public class OwlofwarGame extends RTSGame {
 	
 	private Video video;
 
-	public OwlofwarGame(int controlCount, int totalTime, int waitResultTime) {
+	public OwlofwarGame(int controlCount, int totalTime) {
 		this.controlCount = controlCount;
 		this.totalTime = totalTime;
-		this.waitResultSecond = waitResultTime;
+//		this.waitResultSecond = waitResultTime;
 	}
 
 	public int getGameId() {
@@ -102,9 +102,9 @@ public class OwlofwarGame extends RTSGame {
 
 	public void setEnd(boolean end) {
 		this.end = end;
-		if (this.end && endTime == 0) {
-			endTime = TimeUtils.getNowTime();
-		}
+//		if (this.end && endTime == 0) {
+//			endTime = TimeUtils.getNowTime();
+//		}
 	}
 
 	public int getTotalTime() {
@@ -155,21 +155,21 @@ public class OwlofwarGame extends RTSGame {
 		this.startTime = startTime;
 	}
 
-	public boolean isHasResult() {
-		return hasResult;
-	}
-
-	public void setHasResult(boolean hasResult) {
-		this.hasResult = hasResult;
-	}
-
-	public int getWaitResultSecond() {
-		return waitResultSecond;
-	}
-
-	public void setWaitResultSecond(int waitResultSecond) {
-		this.waitResultSecond = waitResultSecond;
-	}
+//	public boolean isHasResult() {
+//		return hasResult;
+//	}
+//
+//	public void setHasResult(boolean hasResult) {
+//		this.hasResult = hasResult;
+//	}
+//
+//	public int getWaitResultSecond() {
+//		return waitResultSecond;
+//	}
+//
+//	public void setWaitResultSecond(int waitResultSecond) {
+//		this.waitResultSecond = waitResultSecond;
+//	}
 
 	public Map<Integer, Byte> getResultMap() {
 		return resultMap;
@@ -179,9 +179,9 @@ public class OwlofwarGame extends RTSGame {
 		return scoreMap;
 	}
 
-	public int getEndTime() {
-		return endTime;
-	}
+//	public int getEndTime() {
+//		return endTime;
+//	}
 
 	public Role getAnotherRole(Role role) {
 		for (Role r : roleMap.values()) {
@@ -199,13 +199,13 @@ public class OwlofwarGame extends RTSGame {
 		this.aiCount = aiCount;
 	}
 
-	public int getCurrentWaitResultTime() {
-		return currentWaitResultTime;
-	}
-
-	public void setCurrentWaitResultTime(int currentWaitResultTime) {
-		this.currentWaitResultTime = currentWaitResultTime;
-	}
+//	public int getCurrentWaitResultTime() {
+//		return currentWaitResultTime;
+//	}
+//
+//	public void setCurrentWaitResultTime(int currentWaitResultTime) {
+//		this.currentWaitResultTime = currentWaitResultTime;
+//	}
 
 	public Set<Integer> getReadyRoleIdSet() {
 		return readyRoleIdSet;

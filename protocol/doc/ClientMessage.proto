@@ -5,7 +5,8 @@ import "Fight.proto";
 import "Pillage.proto";
 import "Card.proto";
 import "Ping.proto";
-//18
+import "GM.proto";
+//21
 message CSMessage{
 	optional LoginCheckAccountRequest loginCheckAccountRequest=1;
 	optional LoginCreateRoleRequest loginCreateRoleRequest=2;
@@ -30,4 +31,7 @@ message CSMessage{
 
 	optional PingRequest pingRequest = 16;
 
+	optional GMRejectLoginRequest gmRejectLoginRequest = 19;
+	optional GMTerminatedServerRequest gmTerminatedServerRequest = 20;
+	optional GMOpenLoginRequest gmOpenLoginRequest = 21;
 }

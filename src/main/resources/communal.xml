@@ -14,6 +14,8 @@
 	<bean id="gameStarter" class="com.randioo.randioo_server_base.utils.game.game_type.real_time_strategy_game.RTSGameStarter">
 		<property name="threadSize" value="1"></property>
 	</bean>
+	
+	<bean id="systemManager" class="com.randioo.owlofwar_server_simplify_protobuf.utils.DefaultSystemManager"></bean>
 
 	<bean id="serviceManager" class="com.randioo.randioo_server_base.module.ServiceManager">
 		<property name="services">

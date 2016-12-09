@@ -49,3 +49,14 @@ enum GameResult{
 	LOSS = 2;
 	DOGFALL = 3;
 }
+
+message StoreRoleResourceInfos{
+	optional int32 myPlayerId = 1;
+	repeated RoleResourceInfo roleResourceInfo = 2;
+	optional bool isNPCGame = 3;
+	optional int32 NPCMapId = 4;
+}
+
+message StoreFrames{
+	repeated Frame frames = 1;
+}

@@ -18,4 +18,6 @@ public interface MatchService extends BaseServiceInterface{
 
 	void init();
 
+	public void offline(Role role);
+
 }

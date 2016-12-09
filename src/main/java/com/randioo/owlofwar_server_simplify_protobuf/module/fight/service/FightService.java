@@ -32,7 +32,7 @@ public interface FightService extends BaseServiceInterface {
 	 * @param role
 	 * @author wcy 2016年8月23日
 	 */
-	void offlineCancelRoom(Role role);
+	void offline(Role role);
 
 	void sendKeyFrameInfo(RTSGame game);
 

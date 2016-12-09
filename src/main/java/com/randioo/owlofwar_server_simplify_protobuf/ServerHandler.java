@@ -93,8 +93,9 @@ public class ServerHandler extends IoHandlerAdapter {
 
 	@Override
 	public void messageSent(IoSession session, Object message) throws Exception {
-		
-		System.out.println(getMessage(message, session));
+		if(!message.toString().contains("scFightKeyFrame")){
+			System.out.println(getMessage(message, session));			
+		}
 	}
 	
 	private String getMessage(Object message,IoSession session){

@@ -14,15 +14,17 @@ public class Video {
 	/** 游戏帧 */
 	private List<Frame> frames = new ArrayList<>();
 	/** 资源信息表 */
-	private Map<Integer, SCFightLoadResource> roleResourceInfoMap = new HashMap<>();
+	private List<SCFightLoadResource> roleResourceInfoMap = new ArrayList<>();
 	/** 游戏结局 */
 	private Map<Integer, GameResult> gameResultMap = new HashMap<>();
+	
+	private long startTime;
 
 	public List<Frame> getFrames() {
 		return frames;
 	}
 
-	public Map<Integer, SCFightLoadResource> getRoleResourceInfoMap() {
+	public List<SCFightLoadResource> getRoleResourceInfoMap() {
 		return roleResourceInfoMap;
 	}
 
@@ -36,6 +38,14 @@ public class Video {
 
 	public Map<Integer, GameResult> getGameResultMap() {
 		return gameResultMap;
+	}
+
+	public long getStartTime() {
+		return startTime;
+	}
+
+	public void setStartTime(long startTime) {
+		this.startTime = startTime;
 	}
 
 }
