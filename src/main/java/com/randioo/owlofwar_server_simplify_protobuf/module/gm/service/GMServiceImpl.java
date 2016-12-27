@@ -5,12 +5,12 @@ import java.sql.SQLException;
 import java.util.Collection;
 import java.util.Iterator;
 
+import javax.sql.DataSource;
+
 import org.apache.mina.core.session.IoSession;
 
 import com.google.protobuf.GeneratedMessage;
 import com.randioo.owlofwar_server_simplify_protobuf.SessionCloseHandler;
-import com.randioo.owlofwar_server_simplify_protobuf.cache.local.RoleCache;
-import com.randioo.owlofwar_server_simplify_protobuf.cache.local.SessionCache;
 import com.randioo.owlofwar_server_simplify_protobuf.db.dao.StoreVideoDao;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.bo.Role;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.bo.StoreVideo;
@@ -21,8 +21,10 @@ import com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMOpenLoginResp
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMRejectLoginResponse;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMTerminatedServerResponse;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.ServerMessage.SCMessage;
+import com.randioo.randioo_server_base.cache.RoleCache;
+import com.randioo.randioo_server_base.cache.SessionCache;
+import com.randioo.randioo_server_base.entity.RoleInterface;
 import com.randioo.randioo_server_base.module.BaseService;
-import com.randioo.randioo_server_base.net.DataSource;
 import com.randioo.randioo_server_base.utils.system.ServerManagerHandler;
 import com.randioo.randioo_server_base.utils.system.SystemManager;
 
@@ -120,11 +122,11 @@ public class GMServiceImpl extends BaseService implements GMService {
 			it.next().close(true);
 		}
 
-		for (Role role : RoleCache.getRoleMap().values()) {
+		for (RoleInterface roleInterface : RoleCache.getRoleMap().values()) {
 			try {
-				SessionCloseHandler.manipulate(role);
+				SessionCloseHandler.manipulate((Role)roleInterface);
 			} catch (Exception e) {
-				System.out.println("Role: " + role.getRoleId() + " saveError!");
+				System.out.println("Role: " + roleInterface.getRoleId() + " saveError!");
 				e.printStackTrace();
 			}
 		}

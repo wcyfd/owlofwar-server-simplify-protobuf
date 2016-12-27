@@ -22,11 +22,8 @@ public interface RoleDao {
 	public Role getRoleByAccount(String account);
 	
 	public void updateRole(Role role);
-	
-	/**
-	 * 服务器数据缓存
-	 */
-	public void serverStartInit();
 
 	Role getRoleById(int id);
+
+	List<List> getAllAccounts$Names();
 }

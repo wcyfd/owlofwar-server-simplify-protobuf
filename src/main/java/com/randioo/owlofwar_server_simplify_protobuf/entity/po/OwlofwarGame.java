@@ -61,7 +61,7 @@ public class OwlofwarGame extends RTSGame {
 //	private int currentWaitResultTime = 0;
 	/** 准备好的玩家id集合 */
 	private Set<Integer> readyRoleIdSet = new HashSet<>();
-	private int addDeltaFrame;
+//	private int addDeltaFrame;
 	private int frameCountInOneSecond;
 	
 	private Video video;
@@ -215,10 +215,10 @@ public class OwlofwarGame extends RTSGame {
 		this.readyRoleIdSet = readyRoleIdSet;
 	}
 
-	public int getAddDeltaFrame() {
-		return addDeltaFrame;
-	}
-
+//	public int getAddDeltaFrame() {
+//		return addDeltaFrame;
+//	}
+//
 	public void setAddDeltaFrame(int addDeltaFrame) {
 		this.addDeltaFrame = addDeltaFrame;
 	}

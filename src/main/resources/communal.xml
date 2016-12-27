@@ -7,26 +7,71 @@
     http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd 
     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
+	<bean id="databaseInitialization" class="com.randioo.randioo_server_base.utils.db.DatabaseInitialization">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="databaseName" value="owlofwarsimple"></property>
+		<property name="sqls">
+			<list>
+				<value>CREATE TABLE `role` (
+					`id` int(11) NOT NULL AUTO_INCREMENT,
+					`account` varchar(255) DEFAULT NULL,
+					`name` varchar(255) DEFAULT NULL,
+					`money` int(11) DEFAULT NULL,
+					`gold` int(11) DEFAULT NULL,
+					`food` int(11) DEFAULT NULL,
+					`listStr` text,
+					`useCardsId` int(11) DEFAULT NULL,
+					`point` int(11) DEFAULT NULL,
+					PRIMARY KEY (`id`)
+					) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+				</value>
+				<value>CREATE TABLE `card` (
+					`roleId` int(11) DEFAULT NULL,
+					`cardId` int(11) DEFAULT NULL,
+					`lv` tinyint(4) DEFAULT NULL,
+					`num` int(11) DEFAULT NULL
+					) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+				</value>
+				<value>
+					CREATE TABLE `storevideo` (
+					`gameId` int(11) NOT NULL,
+					`gameResultStr` varchar(255) DEFAULT NULL,
+					`startTime` bigint(20) DEFAULT NULL,
+					`storeFramesBytes` blob,
+					`storeRoleResourceInfosBytes` blob
+					) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+				</value>
+			</list>
+		</property>
+	</bean>
 
-	<bean id="gameMatcher" class="com.randioo.randioo_server_base.utils.game.matcher.GameMatcher">
+	<!-- <bean id="gameMatcher" class="com.randioo.randioo_server_base.utils.game.matcher.GameMatcher">
 		<property name="threadSize" value="5"></property>
+	</bean> -->
+	<bean id="matchConfig" class="com.randioo.randioo_server_base.module.match.MatchConfig">
+		<property name="threadSize" value="5"></property>
+	</bean>
+	<bean id="matchModelService" class="com.randioo.randioo_server_base.module.match.MatchModelServiceImpl">
+		<property name="matchConfig" ref="matchConfig"></property>
 	</bean>
 	<bean id="gameStarter" class="com.randioo.randioo_server_base.utils.game.game_type.real_time_strategy_game.RTSGameStarter">
 		<property name="threadSize" value="1"></property>
 	</bean>
 	
+	<bean id="rateFrameMeter" class="com.randioo.randioo_server_base.utils.game.game_type.real_time_strategy_game.RateFrameMeter"></bean>
+
 	<bean id="systemManager" class="com.randioo.owlofwar_server_simplify_protobuf.utils.DefaultSystemManager"></bean>
 
 	<bean id="serviceManager" class="com.randioo.randioo_server_base.module.ServiceManager">
 		<property name="services">
 			<list>
-				<ref bean="fightService"/>
-				<ref bean="loginService"/>
-				<ref bean="matchService"/>
-				<ref bean="cardService"/>
-				<ref bean="roleService"/>
-				<ref bean="pillageService"/>
-				<ref bean="pingService"/>
+				<ref bean="loginService" />
+				<ref bean="fightService" />
+				<ref bean="matchService" />
+				<ref bean="cardService" />
+				<ref bean="roleService" />
+				<ref bean="pillageService" />
+				<ref bean="pingService" />
 			</list>
 		</property>
 	</bean>

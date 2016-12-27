@@ -29,10 +29,10 @@
 			<attribute type="c_hp" name="生命值" value='147' show='1' icon='0' cP='0.1' cA='0' cB='0'/>			
 			<attribute type="c_attackRange" name="射程" value='5' show='1' icon='1' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackDamage" name="每次伤害" value='123' show='1' icon='2' cP='0.1' cA='0' cB='0'/>			
-			<attribute type="c_attackSputterRange" name="攻击范围" value='1' show='1' icon='3' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_attackSputterRange" name="攻击范围" value='1.5' show='1' icon='3' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackCD" name="攻击速度" value='2' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='1.33' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='1.45' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='0' show='0' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0013' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='0' show='0' icon='9' cP='0' cA='0' cB='0'/>			
@@ -58,7 +58,7 @@
 		</preview>				
 	</item>					
 						
-	<item id="16102" name='吕蒙' quality='3' type='0'>					
+	<item id="16102" name='吕蒙' quality='3' type='9'>					
 		<!-- cost : 生产速度 单位：秒 -->				
 		<cost>3</cost>				
 		<!-- useTimes : 可上场卡牌数 最多为2张 -->				
@@ -85,7 +85,7 @@
 			<attribute type="c_attackSputterRange" name="攻击范围" value='0' show='0' icon='3' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackCD" name="攻击速度" value='1.1' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='1.33' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='1.45' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='0' show='0' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0013' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='0' show='0' icon='9' cP='0' cA='0' cB='0'/>			
@@ -109,7 +109,7 @@
 		</preview>				
 	</item>					
 						
-	<item id="16103" name='甘宁' quality='3' type='0'>					
+	<item id="16103" name='甘宁' quality='3' type='9'>					
 		<!-- cost : 生产速度 单位：秒 -->				
 		<cost>4</cost>				
 		<!-- useTimes : 可上场卡牌数 最多为2张 -->				
@@ -134,7 +134,7 @@
 			<attribute type="c_attackSputterRange" name="攻击范围" value='0' show='0' icon='3' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackCD" name="攻击速度" value='1.8' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='1.7' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='1.98' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='0' show='0' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0013' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='0' show='0' icon='9' cP='0' cA='0' cB='0'/>			
@@ -182,7 +182,7 @@
 			<attribute type="c_attackSputterRange" name="攻击范围" value='0' show='0' icon='3' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackCD" name="攻击速度" value='1.5' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='0.72' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='1.1' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='0' show='0' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0012' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='0' show='0' icon='9' cP='0' cA='0' cB='0'/>			
@@ -229,9 +229,9 @@
 			<attribute type="c_attackRange" name="射程" value='6.5' show='1' icon='1' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackDamage" name="每次伤害" value='77' show='1' icon='2' cP='0.1' cA='0' cB='0'/>			
 			<attribute type="c_attackSputterRange" name="攻击范围" value='0' show='0' icon='3' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_attackCD" name="攻击速度" value='0.6' show='1' icon='4' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_attackCD" name="攻击速度" value='1' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='0.72' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='1.98' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='0' show='0' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0013' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='0' show='0' icon='9' cP='0' cA='0' cB='0'/>			
@@ -280,7 +280,7 @@
 			<attribute type="c_attackSputterRange" name="攻击范围" value='1' show='1' icon='3' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackCD" name="攻击速度" value='1.6' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='1.7' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='1.98' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='0' show='0' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0013' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='0' show='0' icon='9' cP='0' cA='0' cB='0'/>			
@@ -328,7 +328,7 @@
 			<attribute type="c_attackSputterRange" name="攻击范围" value='0' show='0' icon='3' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackCD" name="攻击速度" value='1.75' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='1.33' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='1.45' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='0' show='0' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0013' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='0' show='0' icon='9' cP='0' cA='0' cB='0'/>			
@@ -378,7 +378,7 @@
 			<attribute type="c_attackSputterRange" name="攻击范围" value='0.8' show='1' icon='3' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackCD" name="攻击速度" value='0.7' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='1.33' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='1.45' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='10' show='1' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0013' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='轻步兵x2' show='1' icon='9' cP='0' cA='0' cB='0'/>			
@@ -427,7 +427,7 @@
 			<attribute type="c_attackSputterRange" name="攻击范围" value='1' show='1' icon='3' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackCD" name="攻击速度" value='3' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='1.33' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='1.45' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='0' show='0' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0013' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='0' show='0' icon='9' cP='0' cA='0' cB='0'/>			
@@ -470,13 +470,13 @@
 			<attribute type="trade" name="商才" value='61' show='1' icon='0' cP='0.1' cA='0' cB='0'/>			
 			<attribute type="learn" name="学识" value='67' show='1' icon='0' cP='0.1' cA='0' cB='0'/>			
 			<attribute type="force" name="体魄" value='79' show='1' icon='0' cP='0.1' cA='0' cB='0'/>			
-			<attribute type="c_hp" name="生命值" value='2610' show='1' icon='0' cP='0.1' cA='0' cB='0'/>			
+			<attribute type="c_hp" name="生命值" value='2400' show='1' icon='0' cP='0.1' cA='0' cB='0'/>			
 			<attribute type="c_attackRange" name="射程" value='0' show='0' icon='1' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackDamage" name="每次伤害" value='93' show='1' icon='2' cP='0.1' cA='0' cB='0'/>			
 			<attribute type="c_attackSputterRange" name="攻击范围" value='0' show='0' icon='3' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_attackCD" name="攻击速度" value='2.5' show='1' icon='4' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_attackCD" name="攻击速度" value='2' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='0.72' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='1.1' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='0' show='0' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0012' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='盾步兵' show='1' icon='9' cP='0' cA='0' cB='0'/>			
@@ -524,7 +524,7 @@
 			<attribute type="c_attackSputterRange" name="攻击范围" value='0.8' show='1' icon='3' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackCD" name="攻击速度" value='1.5' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='1.33' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='1.45' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='0' show='0' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0013' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='0' show='0' icon='9' cP='0' cA='0' cB='0'/>			
@@ -569,10 +569,10 @@
 			<attribute type="c_hp" name="生命值" value='420' show='1' icon='0' cP='0.1' cA='0' cB='0'/>			
 			<attribute type="c_attackRange" name="射程" value='0' show='0' icon='1' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackDamage" name="每次伤害" value='100' show='1' icon='2' cP='0.1' cA='0' cB='0'/>			
-			<attribute type="c_attackSputterRange" name="攻击范围" value='0.8' show='1' icon='3' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_attackSputterRange" name="攻击范围" value='1' show='1' icon='3' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackCD" name="攻击速度" value='1' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='1.7' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='1.98' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='0' show='0' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0013' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='0' show='0' icon='9' cP='0' cA='0' cB='0'/>			
@@ -595,7 +595,7 @@
 			<make obj="12541" x='0' y='0'/>			
 		</preview>				
 	</item>					
-	<item id="16113" name='夏侯渊' quality='3' type='0'>					
+	<item id="16113" name='夏侯渊' quality='3' type='9'>					
 		<!-- cost : 生产速度 单位：秒 -->				
 		<cost>6</cost>				
 		<!-- useTimes : 可上场卡牌数 最多为2张 -->				
@@ -616,12 +616,12 @@
 			<attribute type="learn" name="学识" value='45' show='1' icon='0' cP='0.1' cA='0' cB='0'/>			
 			<attribute type="force" name="体魄" value='57' show='1' icon='0' cP='0.1' cA='0' cB='0'/>			
 			<attribute type="c_hp" name="生命值" value='1200' show='1' icon='0' cP='0.1' cA='0' cB='0'/>			
-			<attribute type="c_attackRange" name="射程" value='6.5' show='1' icon='1' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_attackRange" name="射程" value='7' show='1' icon='1' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackDamage" name="每次伤害" value='75' show='1' icon='2' cP='0.1' cA='0' cB='0'/>			
 			<attribute type="c_attackSputterRange" name="攻击范围" value='0' show='0' icon='3' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackCD" name="攻击速度" value='1.7' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='0.72' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='1.1' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='0' show='0' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0012' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='0' show='0' icon='9' cP='0' cA='0' cB='0'/>			
@@ -665,13 +665,13 @@
 			<attribute type="trade" name="商才" value='88' show='1' icon='0' cP='0.1' cA='0' cB='0'/>			
 			<attribute type="learn" name="学识" value='72' show='1' icon='0' cP='0.1' cA='0' cB='0'/>			
 			<attribute type="force" name="体魄" value='96' show='1' icon='0' cP='0.1' cA='0' cB='0'/>			
-			<attribute type="c_hp" name="生命值" value='3000' show='1' icon='0' cP='0.1' cA='0' cB='0'/>			
+			<attribute type="c_hp" name="生命值" value='2970' show='1' icon='0' cP='0.1' cA='0' cB='0'/>			
 			<attribute type="c_attackRange" name="射程" value='2' show='1' icon='1' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackDamage" name="每次伤害" value='45' show='1' icon='2' cP='0.1' cA='0' cB='0'/>			
 			<attribute type="c_attackSputterRange" name="攻击范围" value='0' show='0' icon='3' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackCD" name="攻击速度" value='1.3' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='0.72' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='1.1' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='0' show='0' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0012' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='轻步兵' show='1' icon='9' cP='0' cA='0' cB='0'/>			
@@ -694,7 +694,7 @@
 			<make obj="12544" x='0' y='0'/>			
 		</preview>				
 	</item>					
-	<item id="16115" name='胡车儿' quality='3' type='0'>					
+	<item id="16115" name='胡车儿' quality='3' type='9'>					
 		<!-- cost : 生产速度 单位：秒 -->				
 		<cost>3</cost>				
 		<!-- useTimes : 可上场卡牌数 最多为2张 -->				
@@ -719,7 +719,7 @@
 			<attribute type="c_attackSputterRange" name="攻击范围" value='0' show='0' icon='3' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackCD" name="攻击速度" value='1.2' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='1.7' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='1.98' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='0' show='0' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0013' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='0' show='0' icon='9' cP='0' cA='0' cB='0'/>			
@@ -742,7 +742,7 @@
 			<make obj="12545" x='0' y='0'/>			
 		</preview>				
 	</item>					
-	<item id="16116" name='许褚' quality='3' type='0'>					
+	<item id="16116" name='许褚' quality='3' type='9'>					
 		<!-- cost : 生产速度 单位：秒 -->				
 		<cost>7</cost>				
 		<!-- useTimes : 可上场卡牌数 最多为2张 -->				
@@ -767,7 +767,7 @@
 			<attribute type="c_attackSputterRange" name="攻击范围" value='0' show='0' icon='3' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackCD" name="攻击速度" value='1.8' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='0.72' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='1.1' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='0' show='0' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0013' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='0' show='0' icon='9' cP='0' cA='0' cB='0'/>			
@@ -816,7 +816,7 @@
 			<attribute type="c_attackSputterRange" name="攻击范围" value='1' show='1' icon='3' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackCD" name="攻击速度" value='1.7' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='1.33' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='1.45' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='0' show='0' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0013' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='0' show='0' icon='9' cP='0' cA='0' cB='0'/>			
@@ -865,7 +865,7 @@
 			<attribute type="c_attackSputterRange" name="攻击范围" value='1' show='1' icon='3' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackCD" name="攻击速度" value='1.5' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='1.33' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='1.45' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='0' show='0' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0013' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='0' show='0' icon='9' cP='0' cA='0' cB='0'/>			
@@ -913,7 +913,7 @@
 			<attribute type="c_attackSputterRange" name="攻击范围" value='0' show='0' icon='3' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackCD" name="攻击速度" value='3' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='1.33' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='1.45' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='0' show='0' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0012' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='0' show='0' icon='9' cP='0' cA='0' cB='0'/>			
@@ -961,7 +961,7 @@
 			<attribute type="c_attackSputterRange" name="攻击范围" value='0' show='0' icon='3' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackCD" name="攻击速度" value='1.5' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='1.33' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='1.45' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='0' show='0' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0013' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='0' show='0' icon='9' cP='0' cA='0' cB='0'/>			
@@ -1009,7 +1009,7 @@
 			<attribute type="c_attackSputterRange" name="攻击范围" value='1.2' show='1' icon='3' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackCD" name="攻击速度" value='1.5' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='1.33' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='1.45' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='0' show='0' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0013' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='0' show='0' icon='9' cP='0' cA='0' cB='0'/>			
@@ -1059,7 +1059,7 @@
 			<attribute type="c_attackSputterRange" name="攻击范围" value='0' show='0' icon='3' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackCD" name="攻击速度" value='1.3' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='1.33' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='1.45' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='0' show='0' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0013' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='0' show='0' icon='9' cP='0' cA='0' cB='0'/>			
@@ -1116,7 +1116,7 @@
 			<attribute type="c_attackSputterRange" name="攻击范围" value='0' show='0' icon='3' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackCD" name="攻击速度" value='0.7' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='2.45' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='2.48' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='0' show='0' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0013' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='0' show='0' icon='9' cP='0' cA='0' cB='0'/>			
@@ -1132,29 +1132,29 @@
 			<item level='8' cK='1.0517'/>			
 		</levelinfo>				
 		<action>				
-			<make fo="12101" x='0' y='60' />			
-			<make fo="12101" x='60' y='60' />			
-			<make fo="12101" x='-60' y='0' />			
+			<make fo="12101" x='0' y='50' />			
+			<make fo="12101" x='50' y='50' />			
+			<make fo="12101" x='-50' y='50' />			
+			<make fo="12101" x='-50' y='0' />			
 			<make fo="12101" x='0' y='0' />			
-			<make fo="12101" x='-105' y='0' />			
-			<make fo="12101" x='60' y='0' />			
-			<make fo="12101" x='0' y='-60' />			
-			<make fo="12101" x='-60' y='-60' />			
-			<make fo="12101" x='-60' y='-60' />			
-			<make fo="12101" x='60' y='-60' />			
+			<make fo="12101" x='-100' y='0' />			
+			<make fo="12101" x='50' y='0' />			
+			<make fo="12101" x='0' y='-50' />			
+			<make fo="12101" x='-50' y='-50' />			
+			<make fo="12101" x='50' y='-50' />			
 		</action>				
 		<preview>				
 			<circle r='55' alpha="0"/>			
-			<make obj="12101" x='0' y='60'/>			
-			<make obj="12101" x='60' y='60'/>			
-			<make obj="12101" x='-60' y='0'/>			
+			<make obj="12101" x='0' y='50'/>			
+			<make obj="12101" x='50' y='50'/>			
+			<make obj="12101" x='-50' y='0'/>			
 			<make obj="12101" x='0' y='0'/>			
-			<make obj="12101" x='-105' y='0'/>			
-			<make obj="12101" x='60' y='0'/>			
-			<make obj="12101" x='0' y='-60'/>			
-			<make obj="12101" x='-60' y='-60'/>			
-			<make obj="12101" x='-60' y='-60'/>			
-			<make obj="12101" x='60' y='-60'/>			
+			<make obj="12101" x='-100' y='0'/>			
+			<make obj="12101" x='50' y='0'/>			
+			<make obj="12101" x='0' y='-50'/>			
+			<make obj="12101" x='-50' y='-50'/>			
+			<make obj="12101" x='50' y='-50'/>			
+			<make obj="12101" x='50' y='-50'/>			
 		</preview>				
 	</item>					
 	<item id="16210" name='弓兵小队' quality='0' type='9'>					
@@ -1183,7 +1183,7 @@
 			<attribute type="c_attackSputterRange" name="攻击范围" value='0' show='0' icon='3' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackCD" name="攻击速度" value='1.2' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='0.72' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='1.1' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='0' show='0' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0013' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='0' show='0' icon='9' cP='0' cA='0' cB='0'/>			
@@ -1212,7 +1212,7 @@
 			<make obj="12103" x='0' y='0'/>			
 		</preview>				
 	</item>					
-	<item id="16211" name='勇士小队' quality='0' type='1'>					
+	<item id="16211" name='勇士小队' quality='0' type='9'>					
 		<!-- cost : 生产速度 单位：秒 -->				
 		<cost>5</cost>				
 		<!-- useTimes : 可上场卡牌数 最多为2张 -->				
@@ -1237,7 +1237,7 @@
 			<attribute type="c_attackSputterRange" name="攻击范围" value='0' show='0' icon='3' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackCD" name="攻击速度" value='1.5' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='1.33' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='1.45' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='0' show='0' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0013' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='0' show='0' icon='9' cP='0' cA='0' cB='0'/>			
@@ -1296,7 +1296,7 @@
 			<attribute type="c_attackSputterRange" name="攻击范围" value='1' show='1' icon='3' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackCD" name="攻击速度" value='2' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='1.7' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='1.98' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='0' show='0' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0013' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='0' show='0' icon='9' cP='0' cA='0' cB='0'/>			
@@ -1352,7 +1352,7 @@
 			<attribute type="c_attackSputterRange" name="攻击范围" value='0' show='0' icon='3' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackCD" name="攻击速度" value='1' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='1.7' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='1.98' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='0' show='0' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0013' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='0' show='0' icon='9' cP='0' cA='0' cB='0'/>			
@@ -1404,18 +1404,18 @@
 			<attribute type="trade" name="商才" value='0' show='0' icon='0' cP='0' cA='0' cB='0'/>			
 			<attribute type="learn" name="学识" value='0' show='0' icon='0' cP='0' cA='0' cB='0'/>			
 			<attribute type="force" name="体魄" value='0' show='0' icon='0' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_hp" name="生命值" value='125' show='1' icon='0' cP='0.1' cA='0' cB='0'/>			
+			<attribute type="c_hp" name="生命值" value='80' show='1' icon='0' cP='0.1' cA='0' cB='0'/>			
 			<attribute type="c_attackRange" name="射程" value='0' show='0' icon='1' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_attackDamage" name="每次伤害" value='53' show='1' icon='2' cP='0.1' cA='0' cB='0'/>			
+			<attribute type="c_attackDamage" name="每次伤害" value='45' show='1' icon='2' cP='0.1' cA='0' cB='0'/>			
 			<attribute type="c_attackSputterRange" name="攻击范围" value='0' show='0' icon='3' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_attackCD" name="攻击速度" value='1.2' show='1' icon='4' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_attackCD" name="攻击速度" value='0.7' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='1.33' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='2.48' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='0' show='0' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0013' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='0' show='0' icon='9' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_waittime" name="部署时间" value='1' show='1' icon='10' cP='0' cA='0' cB='0'/>			
-			<attribute type="amount" name="数量" value='3' show='1' icon='11' cP='0' cA='0' cB='0'/>			
+			<attribute type="amount" name="数量" value='6' show='1' icon='11' cP='0' cA='0' cB='0'/>			
 			<item level='1' cK='1'/>			
 			<item level='2' cK='1'/>			
 			<item level='3' cK='1'/>			
@@ -1430,15 +1430,29 @@
 			<item level='12' cK='1'/>			
 		</levelinfo>				
 		<action>				
-			<make fo="12202" x='-30' y='30' />			
+			<make fo="12202" x='0' y='50' />			
+			<make fo="12202" x='50' y='50' />			
+			<make fo="12202" x='-50' y='50' />			
+			<make fo="12202" x='-50' y='0' />			
 			<make fo="12202" x='0' y='0' />			
-			<make fo="12202" x='-30' y='-30' />			
+			<make fo="12202" x='-100' y='0' />			
+			<!--<make fo="12202" x='50' y='0' />			
+			<make fo="12202" x='0' y='-50' />			
+			<make fo="12202" x='-50' y='-50' />			
+			<make fo="12202" x='50' y='-50' />-->			
 		</action>				
 		<preview>				
 			<circle r='50' alpha="0"/>			
-			<make obj="12202" x='-30' y='30'/>			
+			<make obj="12202" x='0' y='50'/>			
+			<make obj="12202" x='50' y='50'/>			
+			<make obj="12202" x='-50' y='50'/>			
+			<make obj="12202" x='-50' y='0'/>			
 			<make obj="12202" x='0' y='0'/>			
-			<make obj="12202" x='-30' y='-30'/>			
+			<make obj="12202" x='-100' y='0'/>			
+			<!--<make obj="12202" x='50' y='0'/>			
+			<make obj="12202" x='0' y='-50'/>			
+			<make obj="12202" x='-50' y='-50'/>			
+			<make obj="12202" x='50' y='-50'/>-->			
 		</preview>				
 	</item>					
 	<item id="16215" name='重枪兵小队' quality='0' type='1'>					
@@ -1460,13 +1474,13 @@
 			<attribute type="trade" name="商才" value='0' show='0' icon='0' cP='0' cA='0' cB='0'/>			
 			<attribute type="learn" name="学识" value='0' show='0' icon='0' cP='0' cA='0' cB='0'/>			
 			<attribute type="force" name="体魄" value='0' show='0' icon='0' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_hp" name="生命值" value='80' show='1' icon='0' cP='0.1' cA='0' cB='0'/>			
+			<attribute type="c_hp" name="生命值" value='90' show='1' icon='0' cP='0.1' cA='0' cB='0'/>			
 			<attribute type="c_attackRange" name="射程" value='0' show='0' icon='1' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackDamage" name="每次伤害" value='58' show='1' icon='2' cP='0.1' cA='0' cB='0'/>			
 			<attribute type="c_attackSputterRange" name="攻击范围" value='0' show='0' icon='3' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackCD" name="攻击速度" value='0.9' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='1.7' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='1.98' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='0' show='0' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0013' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='0' show='0' icon='9' cP='0' cA='0' cB='0'/>			
@@ -1497,7 +1511,7 @@
 			<make obj="12209" x='-30' y='-30'/>			
 		</preview>				
 	</item>					
-	<item id="16216" name='鬼兵大军' quality='0' type='1'>					
+	<item id="16216" name='鬼兵大军' quality='0' type='9'>					
 		<!-- cost : 生产速度 单位：秒 -->				
 		<cost>5</cost>				
 		<!-- useTimes : 可上场卡牌数 最多为2张 -->				
@@ -1523,7 +1537,7 @@
 			<attribute type="c_attackSputterRange" name="攻击范围" value='0' show='0' icon='3' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackCD" name="攻击速度" value='1' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='1.7' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='1.98' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='0' show='0' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0013' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='0' show='0' icon='9' cP='0' cA='0' cB='0'/>			
@@ -1560,9 +1574,9 @@
 			<make obj="12210" x='0' y='-30'/>			
 		</preview>				
 	</item>					
-	<item id="16217" name='烈焰小队' quality='1' type='1'>					
+	<item id="16217" name='烈焰小队' quality='1' type='9'>					
 		<!-- cost : 生产速度 单位：秒 -->				
-		<cost>7</cost>				
+		<cost>9</cost>				
 		<!-- useTimes : 可上场卡牌数 最多为2张 -->				
 		<useTimes>1</useTimes>				
 		<!-- useDealy : 放置延迟 最小为1.0秒 -->				
@@ -1586,7 +1600,7 @@
 			<attribute type="c_attackSputterRange" name="攻击范围" value='0' show='0' icon='3' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackCD" name="攻击速度" value='1.1' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='1.33' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='1.45' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='0' show='0' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0013' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='0' show='0' icon='9' cP='0' cA='0' cB='0'/>			
@@ -1615,7 +1629,7 @@
 			<make obj="12311" x='-30' y='-30'/>			
 		</preview>				
 	</item>					
-	<item id="16218" name='鬼兵阵' quality='0' type='1'>					
+	<item id="16218" name='鬼兵阵' quality='0' type='9'>					
 		<!-- cost : 生产速度 单位：秒 -->				
 		<cost>3</cost>				
 		<!-- useTimes : 可上场卡牌数 最多为2张 -->				
@@ -1641,7 +1655,7 @@
 			<attribute type="c_attackSputterRange" name="攻击范围" value='0' show='0' icon='3' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackCD" name="攻击速度" value='1' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='1.7' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='1.98' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='0' show='0' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0013' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='0' show='0' icon='9' cP='0' cA='0' cB='0'/>			
@@ -1698,7 +1712,7 @@
 			<attribute type="c_attackSputterRange" name="攻击范围" value='2' show='1' icon='3' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackCD" name="攻击速度" value='5' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='0.72' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='1.1' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='0' show='0' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0013' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='0' show='0' icon='9' cP='0' cA='0' cB='0'/>			
@@ -1821,7 +1835,7 @@
 			<circle r='3' alpha="1"/>			
 		</preview>				
 	</item>					
-	<item id="16303" name='弹射战车' quality='2' type='1'>					
+	<item id="16303" name='弹射战车' quality='2' type='9'>					
 		<!-- cost : 生产速度 单位：秒 -->				
 		<cost>6</cost>				
 		<!-- useTimes : 可上场卡牌数 最多为2张 -->				
@@ -1922,7 +1936,7 @@
 			<make obj="13003" x='0' y='0'/>			
 		</preview>				
 	</item>					
-	<item id="16305" name='投石车' quality='0' type='1'>					
+	<item id="16305" name='投石车' quality='0' type='9'>					
 		<!-- cost : 生产速度 单位：秒 -->				
 		<cost>6</cost>				
 		<!-- useTimes : 可上场卡牌数 最多为2张 -->				
@@ -2124,7 +2138,7 @@
 			<make obj="13002" x='0' y='0'/>			
 		</preview>				
 	</item>					
-	<item id="16309" name='勇士营' quality='1' type='1'>					
+	<item id="16309" name='勇士营' quality='1' type='9'>					
 		<!-- cost : 生产速度 单位：秒 -->				
 		<cost>7</cost>				
 		<!-- useTimes : 可上场卡牌数 最多为2张 -->				
@@ -2452,7 +2466,7 @@
 			<attribute type="force" name="体魄" value='0' show='0' icon='0' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_hp" name="生命值" value='0' show='0' icon='0' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackRange" name="射程" value='0' show='0' icon='1' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_attackDamage" name="每次伤害" value='42' show='1' icon='2' cP='0.1' cA='0' cB='0'/>			
+			<attribute type="c_attackDamage" name="每次伤害" value='45' show='1' icon='2' cP='0.1' cA='0' cB='0'/>			
 			<attribute type="c_attackSputterRange" name="攻击范围" value='3.5' show='1' icon='3' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackCD" name="攻击速度" value='1' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='10' show='1' icon='5' cP='0' cA='0' cB='0'/>			
@@ -2857,7 +2871,7 @@
 			<attribute type="c_attackSputterRange" name="攻击范围" value='0' show='0' icon='3' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackCD" name="攻击速度" value='1.2' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='1.7' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='1.98' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='0' show='0' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0013' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='0' show='0' icon='9' cP='0' cA='0' cB='0'/>			
@@ -2888,7 +2902,7 @@
 	</item>					
 	<item id="16221" name='象兵' quality='0' type='1'>					
 		<!-- cost : 生产速度 单位：秒 -->				
-		<cost>5</cost>				
+		<cost>4</cost>				
 		<!-- useTimes : 可上场卡牌数 最多为2张 -->				
 		<useTimes>1</useTimes>				
 		<!-- useDealy : 放置延迟 最小为1.0秒 -->				
@@ -2905,13 +2919,13 @@
 			<attribute type="trade" name="商才" value='0' show='0' icon='0' cP='0' cA='0' cB='0'/>			
 			<attribute type="learn" name="学识" value='0' show='0' icon='0' cP='0' cA='0' cB='0'/>			
 			<attribute type="force" name="体魄" value='0' show='0' icon='0' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_hp" name="生命值" value='1250' show='1' icon='0' cP='0.1' cA='0' cB='0'/>			
+			<attribute type="c_hp" name="生命值" value='1500' show='1' icon='0' cP='0.1' cA='0' cB='0'/>			
 			<attribute type="c_attackRange" name="射程" value='0' show='0' icon='1' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_attackDamage" name="每次伤害" value='80' show='1' icon='2' cP='0.1' cA='0' cB='0'/>			
+			<attribute type="c_attackDamage" name="每次伤害" value='150' show='1' icon='2' cP='0.1' cA='0' cB='0'/>			
 			<attribute type="c_attackSputterRange" name="攻击范围" value='0' show='0' icon='3' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackCD" name="攻击速度" value='3' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='0.72' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='1.1' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='0' show='0' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0012' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='0' show='0' icon='9' cP='0' cA='0' cB='0'/>			
@@ -2963,7 +2977,7 @@
 			<attribute type="c_attackSputterRange" name="攻击范围" value='0' show='0' icon='3' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackCD" name="攻击速度" value='1.65' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='2.45' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='2.48' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='0' show='0' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0012' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='0' show='0' icon='9' cP='0' cA='0' cB='0'/>			
@@ -3069,9 +3083,9 @@
 			<attribute type="c_attackRange" name="射程" value='5' show='1' icon='1' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackDamage" name="每次伤害" value='0' show='0' icon='2' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackSputterRange" name="攻击范围" value='0' show='0' icon='3' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_attackCD" name="攻击速度" value='2.5' show='1' icon='4' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_attackCD" name="攻击速度" value='1.75' show='1' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_moveSpeed" name="移动速度" value='0.72' show='1' icon='6' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_moveSpeed" name="移动速度" value='1.1' show='1' icon='6' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnCD" name="造兵速度" value='0' show='0' icon='7' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackTargetType" name="目标" value='0x0021' show='1' icon='8' cP='0' cA='0' cB='0'/>			
 			<attribute type="spawnId" name="制造兵种" value='0' show='0' icon='9' cP='0' cA='0' cB='0'/>			
@@ -3120,7 +3134,7 @@
 			<attribute type="c_hp" name="生命值" value='0' show='0' icon='0' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackRange" name="射程" value='0' show='0' icon='1' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackDamage" name="每次伤害" value='0' show='1' icon='2' cP='0' cA='0' cB='0'/>			
-			<attribute type="c_attackSputterRange" name="攻击范围" value='4' show='1' icon='3' cP='0' cA='0' cB='0'/>			
+			<attribute type="c_attackSputterRange" name="攻击范围" value='3' show='1' icon='3' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_attackCD" name="攻击速度" value='1' show='0' icon='4' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_lifetime" name="持续时间" value='0' show='0' icon='5' cP='0' cA='0' cB='0'/>			
 			<attribute type="c_moveSpeed" name="移动速度" value='0' show='0' icon='6' cP='0' cA='0' cB='0'/>			
@@ -3142,7 +3156,7 @@
 			<make fo="14011" x='0' y='0' />			
 		</action>				
 		<preview>				
-			<circle r='4' alpha="1"/>			
+			<circle r='3' alpha="1"/>			
 		</preview>				
 	</item>					
 						

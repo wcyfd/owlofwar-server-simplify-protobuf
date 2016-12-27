@@ -3,7 +3,8 @@ package com.randioo.owlofwar_server_simplify_protobuf.entity.po;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.randioo.randioo_server_base.utils.game.matcher.MatchInfo;
+import com.randioo.randioo_server_base.module.match.MatchInfo;
+
 
 public class OwlofwarMatchInfo extends MatchInfo {
 	private Map<Integer, FightEventListener> fightEventListeners = new HashMap<>();

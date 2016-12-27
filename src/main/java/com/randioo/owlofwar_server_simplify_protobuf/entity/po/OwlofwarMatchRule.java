@@ -1,6 +1,6 @@
 package com.randioo.owlofwar_server_simplify_protobuf.entity.po;
 
-import com.randioo.randioo_server_base.utils.game.matcher.MatchRule;
+import com.randioo.randioo_server_base.module.match.MatchRule;
 
 public class OwlofwarMatchRule extends MatchRule {
 	private FightEventListener fightEventListener;

@@ -10,7 +10,7 @@ message CardGetCardsInfoResponse{
 
 message CardEditCardListRequest{
 	optional int32 id = 1;
-	optional int32 index =2;
+	optional int32 index = 2;
 	optional int32 cardId = 3;
 }
 

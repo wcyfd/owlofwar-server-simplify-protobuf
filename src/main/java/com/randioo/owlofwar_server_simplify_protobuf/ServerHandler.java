@@ -7,16 +7,12 @@ import org.apache.mina.core.session.IdleStatus;
 import org.apache.mina.core.session.IoSession;
 
 import com.google.protobuf.Descriptors.FieldDescriptor;
-import com.randioo.owlofwar_server_simplify_protobuf.cache.local.RoleCache;
-import com.randioo.owlofwar_server_simplify_protobuf.cache.local.SessionCache;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.bo.Role;
-import com.randioo.owlofwar_server_simplify_protobuf.module.fight.service.FightService;
-import com.randioo.owlofwar_server_simplify_protobuf.protocol.Game;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.ClientMessage.CSMessage;
+import com.randioo.randioo_server_base.cache.RoleCache;
 import com.randioo.randioo_server_base.navigation.Navigation;
 import com.randioo.randioo_server_base.net.IActionSupport;
 import com.randioo.randioo_server_base.net.IoHandlerAdapter;
-import com.randioo.randioo_server_base.net.SpringContext;
 
 public class ServerHandler extends IoHandlerAdapter {
 
@@ -33,7 +29,7 @@ public class ServerHandler extends IoHandlerAdapter {
 	@Override
 	public void sessionClosed(IoSession session) throws Exception {
 		System.out.println("roleId:" + session.getAttribute("roleId") + " sessionClosed");
-		Role role = RoleCache.getRoleBySession(session);
+		Role role = (Role) RoleCache.getRoleBySession(session);
 		if (role != null) {
 			try {
 				SessionCloseHandler.manipulate(role);
@@ -55,8 +51,6 @@ public class ServerHandler extends IoHandlerAdapter {
 
 	@Override
 	public void messageReceived(IoSession session, Object messageObj) throws Exception {
-		
-		
 
 		InputStream input = (InputStream) messageObj;
 		try {
@@ -78,7 +72,7 @@ public class ServerHandler extends IoHandlerAdapter {
 					action.execute(entrySet.getValue(), session);
 				} catch (Exception e) {
 					e.printStackTrace();
-					System.out.println("伪造的协议ID：" + name);					
+					System.out.println("伪造的协议ID：" + name);
 					session.close(true);
 				}
 			}
@@ -93,23 +87,23 @@ public class ServerHandler extends IoHandlerAdapter {
 
 	@Override
 	public void messageSent(IoSession session, Object message) throws Exception {
-		if(!message.toString().contains("scFightKeyFrame")){
-			System.out.println(getMessage(message, session));			
+		if (!message.toString().contains("scFightKeyFrame")) {
+			System.out.println(getMessage(message, session));
 		}
 	}
-	
-	private String getMessage(Object message,IoSession session){
+
+	private String getMessage(Object message, IoSession session) {
 		Integer roleId = (Integer) session.getAttribute("roleId");
 		String roleAccount = null;
 		String roleName = null;
 		if (roleId != null) {
-			Role role = RoleCache.getRoleById(roleId);
+			Role role = (Role) RoleCache.getRoleById(roleId);
 			if (role != null) {
 				roleAccount = role.getAccount();
 				roleName = role.getName();
 			}
 		}
-		
+
 		return "[account:" + roleAccount + ",name:" + roleName + "] " + message;
 	}
 

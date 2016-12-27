@@ -8,12 +8,8 @@ import java.util.Map;
 
 import javax.sql.DataSource;
 
-import org.apache.mina.core.session.IoSession;
-
 import com.google.protobuf.GeneratedMessage;
 import com.randioo.owlofwar_server_simplify_protobuf.cache.file.CardInitConfigCache;
-import com.randioo.owlofwar_server_simplify_protobuf.cache.local.RoleCache;
-import com.randioo.owlofwar_server_simplify_protobuf.cache.local.SessionCache;
 import com.randioo.owlofwar_server_simplify_protobuf.common.ErrorCode;
 import com.randioo.owlofwar_server_simplify_protobuf.db.dao.CardDao;
 import com.randioo.owlofwar_server_simplify_protobuf.db.dao.RoleDao;
@@ -37,11 +33,13 @@ import com.randioo.owlofwar_server_simplify_protobuf.protocol.Login.LoginGetRole
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Login.LoginGetRoleDataResponse;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.ServerMessage.SCMessage;
 import com.randioo.owlofwar_server_simplify_protobuf.utils.TimeUtils;
-import com.randioo.randioo_server_base.entity.Ref;
+import com.randioo.randioo_server_base.cache.RoleCache;
+import com.randioo.randioo_server_base.entity.RoleInterface;
 import com.randioo.randioo_server_base.module.login.LoginHandler;
 import com.randioo.randioo_server_base.module.login.LoginModelServiceImpl;
 import com.randioo.randioo_server_base.net.SpringContext;
 import com.randioo.randioo_server_base.utils.system.SystemManager;
+import com.randioo.randioo_server_base.utils.template.Ref;
 
 public class LoginServiceImpl extends LoginModelServiceImpl implements LoginService {
 	private DataSource dataSource;
@@ -76,8 +74,15 @@ public class LoginServiceImpl extends LoginModelServiceImpl implements LoginServ
 
 	@Override
 	public void init() {
-		int maxGameId = storeVideoDao.getMaxStoreVideoId();
+		//初始化所有已经有过的帐号和昵称
+		List<List> lists = roleDao.getAllAccounts$Names();
+		for(List list:lists){
+			RoleCache.getAccountSet().add((String) list.get(0));
+			RoleCache.getNameSet().add((String) list.get(1));
+		}
+		
 		// 为游戏id初始化
+		int maxGameId = storeVideoDao.getMaxStoreVideoId();
 		try {
 			Field field = OwlofwarGame.class.getDeclaredField("id");
 			field.setAccessible(true);
@@ -90,18 +95,19 @@ public class LoginServiceImpl extends LoginModelServiceImpl implements LoginServ
 		setLoginHandler(new LoginHandlerImpl());
 	}
 
-	private class LoginHandlerImpl implements LoginHandler<Role> {
+	private class LoginHandlerImpl implements LoginHandler {
 
 		@Override
-		public GeneratedMessage checkLoginAccountCanLogin(String account) {
+		public boolean checkLoginAccountCanLogin(String account, Ref<Object> canLoginErrorMessage) {
 			SystemManager systemManager = SpringContext.getBean("systemManager");
 			if (!systemManager.isService()) {
-				SCMessage
+				canLoginErrorMessage.set(SCMessage
 						.newBuilder()
 						.setLoginCheckAccountResponse(
-								LoginCheckAccountResponse.newBuilder().setErrorCode(ErrorCode.REJECT_LOGIN)).build();
+								LoginCheckAccountResponse.newBuilder().setErrorCode(ErrorCode.REJECT_LOGIN)).build());
+				return false;
 			}
-			return null;
+			return true;
 		}
 
 		@Override
@@ -129,24 +135,27 @@ public class LoginServiceImpl extends LoginModelServiceImpl implements LoginServ
 		}
 
 		@Override
-		public Object checkCreateRoleAccount(Object createRoleMessage) {
+		public boolean checkCreateRoleAccount(Object createRoleMessage, Ref<Object> checkCreateRoleAccountMessage) {
 			LoginCreateRoleRequest request = (LoginCreateRoleRequest) createRoleMessage;
 
 			if (RoleCache.getNameSet().contains(request.getName())) {
-				return SCMessage
+
+				checkCreateRoleAccountMessage.set(SCMessage
 						.newBuilder()
 						.setLoginCreateRoleResponse(
 								LoginCreateRoleResponse.newBuilder().setErrorCode(ErrorCode.NAME_IS_AREADY_HAS))
-						.build();
+						.build());
+				return false;
 			}
 
 			if (RoleCache.getAccountSet().contains(request.getAccount())) { // 判定账号是否存在
-				return SCMessage
+				checkCreateRoleAccountMessage.set(SCMessage
 						.newBuilder()
 						.setLoginCreateRoleResponse(
-								LoginCreateRoleResponse.newBuilder().setErrorCode(ErrorCode.ACCOUNT_ILLEGEL)).build();
+								LoginCreateRoleResponse.newBuilder().setErrorCode(ErrorCode.ACCOUNT_ILLEGEL)).build());
+				return false;
 			}
-			return null;
+			return true;
 		}
 
 		@Override
@@ -173,8 +182,8 @@ public class LoginServiceImpl extends LoginModelServiceImpl implements LoginServ
 		}
 
 		@Override
-		public GeneratedMessage getRoleData(Ref<Role> ref) {
-			Role role = ref.get();
+		public GeneratedMessage getRoleData(Ref<RoleInterface> ref) {
+			Role role = (Role) ref.get();
 
 			RoleData.Builder roleDataBuilder = RoleData.newBuilder().setRoleId(role.getRoleId())
 					.setName(role.getName());
@@ -209,51 +218,34 @@ public class LoginServiceImpl extends LoginModelServiceImpl implements LoginServ
 		}
 
 		@Override
-		public Object getRoleObjectFromCollectionsByGeneratedMessage(Ref<Role> ref, Object createRoleMessage) {
+		public boolean getRoleObject(Ref<RoleInterface> ref, Object createRoleMessage,
+				Ref<Object> errorMessage) {
 			LoginGetRoleDataRequest request = (LoginGetRoleDataRequest) createRoleMessage;
 			String account = request.getAccount();
-			Role role = RoleCache.getRoleByAccount(account);
+			Role role = (Role)RoleCache.getRoleByAccount(account);
 			if (role == null) {
 				role = roleDao.getRoleByAccount(account);
 				loginRoleModuleDataInit(role);
 				if (role == null) {
-					return SCMessage.newBuilder()
+					errorMessage.set(SCMessage.newBuilder()
 							.setLoginGetRoleDataResponse(LoginGetRoleDataResponse.newBuilder().setErrorCode(30103))
-							.build();
+							.build());
+					return false;
 				}
 			}
 			ref.set(role);
 
-			return null;
+			return true;
 		}
 
 		@Override
-		public String getIoSessionTag() {
-			return "roleId";
-		}
-
-		@Override
-		public Object getIoSessionAttributeValue(Ref<Role> ref) {
-			return ref.get().getRoleId();
-		}
-
-		@Override
-		public IoSession getSessionByRef(Ref<Role> ref) {
-			IoSession session = SessionCache.getSessionById(ref.get().getRoleId());
-			return session;
-		}
-
-		@Override
-		public Object connectingError() {
-			return SCMessage
-					.newBuilder()
-					.setLoginGetRoleDataResponse(LoginGetRoleDataResponse.newBuilder().setErrorCode(ErrorCode.IN_LOGIN))
-					.build();
-		}
-
-		@Override
-		public void recordSession(Ref<Role> ref, IoSession session) {
-			SessionCache.addSession(ref.get().getRoleId(), session);
+		public boolean connectingError(Ref<Object> errorConnectingMessage) {
+			errorConnectingMessage
+					.set(SCMessage
+							.newBuilder()
+							.setLoginGetRoleDataResponse(
+									LoginGetRoleDataResponse.newBuilder().setErrorCode(ErrorCode.IN_LOGIN)).build());
+			return false;
 		}
 
 	}

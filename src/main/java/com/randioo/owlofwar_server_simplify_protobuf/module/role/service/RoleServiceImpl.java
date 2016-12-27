@@ -1,6 +1,12 @@
 package com.randioo.owlofwar_server_simplify_protobuf.module.role.service;
 
+
+
+import java.util.Arrays;
+import java.util.List;
+
 import com.randioo.owlofwar_server_simplify_protobuf.db.dao.RoleDao;
+import com.randioo.randioo_server_base.cache.RoleCache;
 import com.randioo.randioo_server_base.module.BaseService;
 
 
@@ -14,7 +20,8 @@ public class RoleServiceImpl extends BaseService implements RoleService {
 	
 	@Override
 	public void init() {
-		roleDao.serverStartInit();
+//		roleDao.serverStartInit();
+		
 	}
 //
 //	private LoginService loginService;

@@ -10,7 +10,6 @@ import com.randioo.owlofwar_server_simplify_protobuf.cache.file.AIPlayerConfigCa
 import com.randioo.owlofwar_server_simplify_protobuf.cache.file.CardConfigCache;
 import com.randioo.owlofwar_server_simplify_protobuf.cache.file.ExtraCardConfigCache;
 import com.randioo.owlofwar_server_simplify_protobuf.cache.file.MapsConfigCache;
-import com.randioo.owlofwar_server_simplify_protobuf.cache.local.SessionCache;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.bo.Role;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.file.CardConfig;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.file.MapsConfig;
@@ -21,36 +20,44 @@ import com.randioo.owlofwar_server_simplify_protobuf.entity.po.OwlofwarGame;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.OwlofwarGameInfo;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.OwlofwarMatchInfo;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.OwlofwarMatchRule;
-import com.randioo.owlofwar_server_simplify_protobuf.entity.po.Video;
-import com.randioo.owlofwar_server_simplify_protobuf.entity.po.VideoManager;
-import com.randioo.owlofwar_server_simplify_protobuf.module.fight.service.FightService;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Match.SCMatchCancel;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Match.SCMatchComplete;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.ServerMessage.SCMessage;
+import com.randioo.randioo_server_base.cache.SessionCache;
 import com.randioo.randioo_server_base.module.BaseService;
-import com.randioo.randioo_server_base.utils.game.matcher.GameMatcher;
-import com.randioo.randioo_server_base.utils.game.matcher.MatchHandler;
-import com.randioo.randioo_server_base.utils.game.matcher.MatchInfo;
-import com.randioo.randioo_server_base.utils.game.matcher.MatchRule;
-import com.randioo.randioo_server_base.utils.game.matcher.Matchable;
+import com.randioo.randioo_server_base.module.match.MatchHandler;
+import com.randioo.randioo_server_base.module.match.MatchInfo;
+import com.randioo.randioo_server_base.module.match.MatchModelService;
+import com.randioo.randioo_server_base.module.match.MatchRule;
+import com.randioo.randioo_server_base.module.match.Matchable;
 
 public class MatchServiceImpl extends BaseService implements MatchService {
 
-	private FightService fightService;
+	// private FightService fightService;
+	//
+	// public void setFightService(FightService fightService) {
+	// this.fightService = fightService;
+	// }
 
-	public void setFightService(FightService fightService) {
-		this.fightService = fightService;
-	}
+	// private GameMatcher gameMatcher;
+	//
+	// public void setGameMatcher(GameMatcher gameMatcher) {
+	// this.gameMatcher = gameMatcher;
+	// }
 
-	private GameMatcher gameMatcher;
+	private MatchModelService matchModelService;
 
-	public void setGameMatcher(GameMatcher gameMatcher) {
-		this.gameMatcher = gameMatcher;
+	public void setMatchModelService(MatchModelService matchModelService) {
+		this.matchModelService = matchModelService;
 	}
 
 	@Override
 	public void init() {
-		gameMatcher.setMatchHandler(new MatchHandler() {
+		init2();
+	}
+
+	void init1() {
+		matchModelService.setMatchHandler(new MatchHandler() {
 
 			@Override
 			public MatchInfo createMatchInfo(MatchRule matchRule) {
@@ -136,6 +143,95 @@ public class MatchServiceImpl extends BaseService implements MatchService {
 		});
 	}
 
+	void init2() {
+		matchModelService.init();
+		matchModelService.setMatchHandler(new MatchHandler() {
+
+			@Override
+			public MatchInfo createMatchInfo(MatchRule matchRule) {
+				System.out.println("createMatchInfo");
+				OwlofwarMatchRule owlofwarMatchRule = (OwlofwarMatchRule) matchRule;
+				Role role = (Role) matchRule.getMatchTarget();
+
+				OwlofwarMatchInfo matchInfo = new OwlofwarMatchInfo();
+				matchInfo.getFightEventListeners().put(role.getRoleId(), owlofwarMatchRule.getFightEventListener());
+				System.out.println(matchInfo);
+				return matchInfo;
+			}
+
+			@Override
+			public void matchSuccess(MatchInfo matchInfo, MatchRule matchRule) {
+				System.out.println("matchSuccess");
+				OwlofwarMatchInfo owlofwarMatchInfo = (OwlofwarMatchInfo) matchInfo;
+				OwlofwarMatchRule owlofwarMatchRule = (OwlofwarMatchRule) matchRule;
+				Role role = (Role) owlofwarMatchRule.getMatchTarget();
+				FightEventListener listener = owlofwarMatchRule.getFightEventListener();
+				owlofwarMatchInfo.getFightEventListeners().put(role.getRoleId(), listener);
+				System.out.println(owlofwarMatchInfo);
+			}
+
+			@Override
+			public void matchComplete(MatchInfo matchInfo) {
+				System.out.println("matchComplete");
+				OwlofwarGame game = serverGameInit((OwlofwarMatchInfo) matchInfo);
+				startGame(game);
+			}
+
+			@Override
+			public boolean needWaitMatch(MatchInfo matchInfo) {
+				System.out.println("needWaitMatch");
+				return true;
+			}
+
+			@Override
+			public boolean matchRule(MatchRule myMatchRule, MatchInfo otherMatchInfo) {
+				System.out.println("matchRule");
+				return otherMatchInfo.getMatchRule().getPlayerCount() == myMatchRule.getPlayerCount();
+			}
+
+			@Override
+			public MatchRule getAutoMatchRole(MatchInfo matchInfo) {
+				System.out.println("getAutoMatchRole");
+				OwlofwarMatchInfo owlofwarMatchInfo = (OwlofwarMatchInfo) matchInfo;
+				Map<Integer, FightEventListener> listeners = owlofwarMatchInfo.getFightEventListeners();
+				MatchRule matchRule = null;
+				for (FightEventListener listener : listeners.values()) {
+					matchRule = getAI(owlofwarMatchInfo, listener);
+					break;
+				}
+				return matchRule;
+			}
+
+			@Override
+			public void destroyMatchInfo(MatchInfo matchInfo) {
+				System.out.println("destroyMatchInfo");
+
+			}
+
+			@Override
+			public void cancelMatch(Matchable matchable) {
+				System.out.println("cancel match success");
+				Role role = (Role) matchable;
+				IoSession session = SessionCache.getSessionById(role.getRoleId());
+				if (session != null)
+					session.write(SCMessage.newBuilder().setScMatchCancel(SCMatchCancel.newBuilder()).build());
+			}
+
+			@Override
+			public void changeStartMatcher(Matchable originStarter, Matchable newStarter) {
+				// TODO Auto-generated method stub
+
+			}
+
+			@Override
+			public void waitClick(MatchInfo matchInfo, int clickCount) {
+				Role role = (Role) matchInfo.getMatchRule().getMatchTarget();
+				System.out.println("owlofwar match clickCount:" + clickCount + " start account:" + role.getAccount()
+						+ " start name:" + role.getName() + " wait id:" + matchInfo.getMatchId());
+			}
+		});
+	}
+
 	@Override
 	public void matchRole(IoSession session, Role role, boolean isAI, FightEventListener listener) {
 
@@ -145,10 +241,10 @@ public class MatchServiceImpl extends BaseService implements MatchService {
 		matchRule.setFightEventListener(listener);
 		matchRule.setMatchNPC(isAI);
 		matchRule.setPlayerCount(2);
-		matchRule.setWaitTime(10);
+		matchRule.setWaitTime(5);
 		matchRule.setWaitUnit(TimeUnit.SECONDS);
 
-		gameMatcher.matchRole(matchRule);
+		matchModelService.matchRole(matchRule);
 	}
 
 	private MatchRule getAI(OwlofwarMatchInfo matchInfo, FightEventListener listener) {
@@ -325,9 +421,9 @@ public class MatchServiceImpl extends BaseService implements MatchService {
 
 	@Override
 	public void cancelMatch(Role role) {
-		gameMatcher.cancelMatch(role);
+		matchModelService.cancelMatch(role);
 	}
-	
+
 	@Override
 	public void offline(Role role) {
 		cancelMatch(role);

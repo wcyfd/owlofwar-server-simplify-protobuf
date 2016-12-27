@@ -32,9 +32,9 @@
 
 	<!-- BoneCP configuration -->
 
-	<bean id="dataSource" class="com.randioo.randioo_server_base.net.DataSource"
-		destroy-method="close">
+	<bean id="dataSource" class="com.jolbox.bonecp.BoneCPDataSource" destroy-method="close">
 		<property name="driverClass" value="${jdbc.driver}" />
+		<property name="jdbcUrl" value="${jdbc.url}" />
 		<property name="username" value="${jdbc.username}" />
 		<property name="password" value="${jdbc.password}" />
 		<property name="maxConnectionsPerPartition" value="20" />
@@ -47,26 +47,6 @@
 		<property name="acquireRetryAttempts" value="100" />
 		<property name="lazyInit" value="false" />
 	</bean>
-
-
-<!--
-	<bean id="dataSource2" class="com.jolbox.bonecp.BoneCPDataSource"
-		destroy-method="close">
-		<property name="driverClass" value="${jdbc.driver2}" />
-		<property name="jdbcUrl" value="${jdbc.url2}" />
-		<property name="username" value="${jdbc.username2}" />
-		<property name="password" value="${jdbc.password2}" />
-		<property name="maxConnectionsPerPartition" value="20" />
-		<property name="minConnectionsPerPartition" value="10" />
-		<property name="poolAvailabilityThreshold" value="10" />
-		<property name="partitionCount" value="3" />
-		<property name="acquireIncrement" value="2" />
-		<property name="statementsCacheSize" value="100" />
-		<property name="releaseHelperThreads" value="3" />
-		<property name="acquireRetryAttempts" value="100" />
-		<property name="lazyInit" value="false" />
-	</bean>  
--->
 
 	<import resource="communal.xml" />
 	<import resource="dao.xml" />

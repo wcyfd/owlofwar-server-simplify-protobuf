@@ -27,7 +27,7 @@
 		<c_skinId>15000</c_skinId>				
 		<c_launchX>40</c_launchX>				
 		<c_launchZ>135</c_launchZ>				
-		<c_hpbarZ>70</c_hpbarZ><c_hpbarX>50</c_hpbarX><c_hpbarWidth>72</c_hpbarWidth>				
+		<c_hpbarZ>70</c_hpbarZ><c_hpbarX>0</c_hpbarX><c_hpbarWidth>72</c_hpbarWidth>				
 		<c_hitZ>75</c_hitZ>				
 		<c_displayLayer>0</c_displayLayer>				
 		<c_freezeRotation>1</c_freezeRotation>				
@@ -59,7 +59,7 @@
 		<c_skinId>15001</c_skinId>				
 		<c_launchX>40</c_launchX>				
 		<c_launchZ>135</c_launchZ>				
-		<c_hpbarZ>70</c_hpbarZ><c_hpbarX>50</c_hpbarX><c_hpbarWidth>72</c_hpbarWidth>				
+		<c_hpbarZ>70</c_hpbarZ><c_hpbarX>0</c_hpbarX><c_hpbarWidth>72</c_hpbarWidth>				
 		<c_hitZ>75</c_hitZ>				
 		<c_displayLayer>0</c_displayLayer>				
 		<c_freezeRotation>1</c_freezeRotation>				
@@ -131,7 +131,7 @@
 		<body_density>1</body_density>				
 		<type>0</type>				
 		<c_name>步兵阵</c_name>				
-		<c_moveSpeed>2.45</c_moveSpeed>				
+		<c_moveSpeed>2.48</c_moveSpeed>				
 		<c_scanRange>5</c_scanRange>				
 		<c_hp>32</c_hp>				
 		<c_armor>0</c_armor>				
@@ -146,7 +146,7 @@
 		<c_attackSputterType>0</c_attackSputterType>				
 		<c_skinId>12101</c_skinId>				
 		<c_skinScale>0.75</c_skinScale>				
-		<c_hpbarZ>55</c_hpbarZ><c_hpbarX>0</c_hpbarX><c_hpbarWidth>25</c_hpbarWidth>				
+		<c_hpbarZ>55</c_hpbarZ><c_hpbarX>0</c_hpbarX><c_hpbarWidth>15</c_hpbarWidth>				
 		<c_hitZ>42</c_hitZ>				
 		<c_waittime>1</c_waittime>				
 		<Skills>				
@@ -162,7 +162,7 @@
 		<body_density>1</body_density>				
 		<type>0</type>				
 		<c_name>弓兵小队</c_name>				
-		<c_moveSpeed>0.72</c_moveSpeed>				
+		<c_moveSpeed>1.1</c_moveSpeed>				
 		<c_scanRange>5.5</c_scanRange>				
 		<c_hp>125</c_hp>				
 		<c_armor>0</c_armor>				
@@ -198,7 +198,7 @@
 		<body_density>1</body_density>				
 		<type>0</type>				
 		<c_name>巫师小队</c_name>				
-		<c_moveSpeed>1.7</c_moveSpeed>				
+		<c_moveSpeed>1.98</c_moveSpeed>				
 		<c_scanRange>5</c_scanRange>				
 		<c_hp>43</c_hp>				
 		<c_armor>0</c_armor>				
@@ -237,7 +237,7 @@
 		<body_density>1</body_density>				
 		<type>0</type>				
 		<c_name>枪兵小队</c_name>				
-		<c_moveSpeed>1.7</c_moveSpeed>				
+		<c_moveSpeed>1.98</c_moveSpeed>				
 		<c_scanRange>5</c_scanRange>				
 		<c_hp>32</c_hp>				
 		<c_armor>0</c_armor>				
@@ -268,7 +268,7 @@
 		<body_density>1</body_density>				
 		<type>0</type>				
 		<c_name>勇士小队</c_name>				
-		<c_moveSpeed>1.33</c_moveSpeed>				
+		<c_moveSpeed>1.45</c_moveSpeed>				
 		<c_scanRange>5</c_scanRange>				
 		<c_hp>300</c_hp>				
 		<c_armor>0</c_armor>				
@@ -295,26 +295,26 @@
 	<Soldier id='12202'>					
 		<body_type>2</body_type>				
 		<body_shape>0</body_shape>				
-		<body_radius>0.6</body_radius>				
+		<body_radius>0.4</body_radius>				
 		<body_density>1</body_density>				
 		<type>0</type>				
 		<c_name>盾步兵阵</c_name>				
-		<c_moveSpeed>1.33</c_moveSpeed>				
+		<c_moveSpeed>2.48</c_moveSpeed>				
 		<c_scanRange>5</c_scanRange>				
-		<c_hp>125</c_hp>				
+		<c_hp>80</c_hp>				
 		<c_armor>0</c_armor>				
 		<c_magicResist>0</c_magicResist>				
 		<c_attackTargetType>0x0013</c_attackTargetType>				
-		<c_attackDamage>53</c_attackDamage>				
+		<c_attackDamage>45</c_attackDamage>				
 		<c_damageType>0</c_damageType>				
-		<c_attackDelay>0.4</c_attackDelay>				
-		<c_attackCD>1.2</c_attackCD>				
+		<c_attackDelay>0.35</c_attackDelay>				
+		<c_attackCD>0.7</c_attackCD>				
 		<c_attackRange>0</c_attackRange>				
 		<c_attackProjectileType>0</c_attackProjectileType>				
 		<c_attackSputterType>0</c_attackSputterType>				
 		<c_skinId>12202</c_skinId>				
 		<c_skinScale>0.75</c_skinScale>				
-		<c_hpbarZ>50</c_hpbarZ><c_hpbarX>0</c_hpbarX><c_hpbarWidth>25</c_hpbarWidth>				
+		<c_hpbarZ>50</c_hpbarZ><c_hpbarX>0</c_hpbarX><c_hpbarWidth>15</c_hpbarWidth>				
 		<c_hitZ>43</c_hitZ>				
 		<c_waittime>1</c_waittime>				
 		<Skills>				
@@ -330,7 +330,7 @@
 		<body_density>1</body_density>				
 		<type>0</type>				
 		<c_name>长弓小队</c_name>				
-		<c_moveSpeed>1.33</c_moveSpeed>				
+		<c_moveSpeed>1.45</c_moveSpeed>				
 		<c_scanRange>5.5</c_scanRange>				
 		<c_hp>52</c_hp>				
 		<c_armor>0</c_armor>				
@@ -366,15 +366,15 @@
 		<body_density>1</body_density>				
 		<type>0</type>				
 		<c_name>重枪兵小队</c_name>				
-		<c_moveSpeed>1.7</c_moveSpeed>				
+		<c_moveSpeed>1.98</c_moveSpeed>				
 		<c_scanRange>5</c_scanRange>				
-		<c_hp>80</c_hp>				
+		<c_hp>90</c_hp>				
 		<c_armor>0</c_armor>				
 		<c_magicResist>0</c_magicResist>				
 		<c_attackTargetType>0x0013</c_attackTargetType>				
 		<c_attackDamage>58</c_attackDamage>				
 		<c_damageType>0</c_damageType>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<c_attackDelay>0.32</c_attackDelay>				
 		<c_attackCD>0.9</c_attackCD>				
 		<c_attackRange>0</c_attackRange>				
 		<c_attackProjectileType>0</c_attackProjectileType>				
@@ -397,7 +397,7 @@
 		<body_density>1</body_density>				
 		<type>0</type>				
 		<c_name>鬼兵大军</c_name>				
-		<c_moveSpeed>1.7</c_moveSpeed>				
+		<c_moveSpeed>1.98</c_moveSpeed>				
 		<c_scanRange>5</c_scanRange>				
 		<c_hp>90</c_hp>				
 		<c_armor>0</c_armor>				
@@ -405,7 +405,7 @@
 		<c_attackTargetType>0x0013</c_attackTargetType>				
 		<c_attackDamage>40</c_attackDamage>				
 		<c_damageType>0</c_damageType>				
-		<c_attackDelay>0.315</c_attackDelay>				
+		<c_attackDelay>0.3</c_attackDelay>				
 		<c_attackCD>1</c_attackCD>				
 		<c_attackRange>2</c_attackRange>				
 		<c_attackProjectileType>1</c_attackProjectileType>				
@@ -433,7 +433,7 @@
 		<body_density>1</body_density>				
 		<type>0</type>				
 		<c_name>烈焰小队</c_name>				
-		<c_moveSpeed>1.33</c_moveSpeed>				
+		<c_moveSpeed>1.45</c_moveSpeed>				
 		<c_scanRange>6.5</c_scanRange>				
 		<c_hp>340</c_hp>				
 		<c_armor>0</c_armor>				
@@ -469,7 +469,7 @@
 		<body_density>1</body_density>				
 		<type>0</type>				
 		<c_name>鬼兵阵</c_name>				
-		<c_moveSpeed>1.7</c_moveSpeed>				
+		<c_moveSpeed>1.98</c_moveSpeed>				
 		<c_scanRange>5</c_scanRange>				
 		<c_hp>90</c_hp>				
 		<c_armor>0</c_armor>				
@@ -477,7 +477,7 @@
 		<c_attackTargetType>0x0013</c_attackTargetType>				
 		<c_attackDamage>65</c_attackDamage>				
 		<c_damageType>0</c_damageType>				
-		<c_attackDelay>0.315</c_attackDelay>				
+		<c_attackDelay>0.3</c_attackDelay>				
 		<c_attackCD>1</c_attackCD>				
 		<c_attackRange>2</c_attackRange>				
 		<c_attackProjectileType>1</c_attackProjectileType>				
@@ -505,7 +505,7 @@
 		<body_density>1</body_density>				
 		<type>1</type>				
 		<c_name>木牛流马</c_name>				
-		<c_moveSpeed>0.72</c_moveSpeed>				
+		<c_moveSpeed>1.1</c_moveSpeed>				
 		<c_scanRange>5</c_scanRange>				
 		<c_hp>1200</c_hp>				
 		<c_armor>0</c_armor>				
@@ -537,16 +537,16 @@
 		<body_density>100000</body_density>				
 		<type>0</type>				
 		<c_name>董卓</c_name>				
-		<c_moveSpeed>0.72</c_moveSpeed>				
+		<c_moveSpeed>1.1</c_moveSpeed>				
 		<c_scanRange>5</c_scanRange>				
-		<c_hp>2610</c_hp>				
+		<c_hp>2400</c_hp>				
 		<c_armor>0</c_armor>				
 		<c_magicResist>0</c_magicResist>				
 		<c_attackTargetType>0x0012</c_attackTargetType>				
 		<c_attackDamage>93</c_attackDamage>				
 		<c_damageType>0</c_damageType>				
-		<c_attackDelay>1.3</c_attackDelay>				
-		<c_attackCD>2.5</c_attackCD>				
+		<c_attackDelay>0.71</c_attackDelay>				
+		<c_attackCD>2</c_attackCD>				
 		<c_attackRange>0</c_attackRange>				
 		<c_attackProjectileType>0</c_attackProjectileType>				
 		<c_attackSputterType>0</c_attackSputterType>				
@@ -573,7 +573,7 @@
 		<body_density>10000</body_density>				
 		<type>0</type>				
 		<c_name>吕布</c_name>				
-		<c_moveSpeed>1.33</c_moveSpeed>				
+		<c_moveSpeed>1.45</c_moveSpeed>				
 		<c_scanRange>5</c_scanRange>				
 		<c_hp>700</c_hp>				
 		<c_armor>0</c_armor>				
@@ -609,7 +609,7 @@
 		<body_density>1</body_density>				
 		<type>0</type>				
 		<c_name>孙尚香</c_name>				
-		<c_moveSpeed>1.33</c_moveSpeed>				
+		<c_moveSpeed>1.45</c_moveSpeed>				
 		<c_scanRange>9.5</c_scanRange>				
 		<c_hp>216</c_hp>				
 		<c_armor>0</c_armor>				
@@ -647,7 +647,7 @@
 		<body_density>100000</body_density>				
 		<type>0</type>				
 		<c_name>张辽</c_name>				
-		<c_moveSpeed>1.7</c_moveSpeed>				
+		<c_moveSpeed>1.98</c_moveSpeed>				
 		<c_scanRange>5</c_scanRange>				
 		<c_hp>420</c_hp>				
 		<c_armor>0</c_armor>				
@@ -665,7 +665,7 @@
 		<c_hpbarZ>63</c_hpbarZ><c_hpbarX>0</c_hpbarX><c_hpbarWidth>42</c_hpbarWidth>				
 		<c_hitZ>49</c_hitZ>				
 		<c_waittime>1</c_waittime>				
-		<c_attackSputterRange>0.8</c_attackSputterRange>				
+		<c_attackSputterRange>1</c_attackSputterRange>				
 		<Skills>				
 			<DeathAnimation>			
 				<castSkinId>444</castSkinId>		
@@ -679,7 +679,7 @@
 		<body_density>10000</body_density>				
 		<type>0</type>				
 		<c_name>夏侯渊</c_name>				
-		<c_moveSpeed>0.72</c_moveSpeed>				
+		<c_moveSpeed>1.1</c_moveSpeed>				
 		<c_scanRange>6.5</c_scanRange>				
 		<c_hp>1200</c_hp>				
 		<c_armor>0</c_armor>				
@@ -687,9 +687,9 @@
 		<c_attackTargetType>0x0012</c_attackTargetType>				
 		<c_attackDamage>75</c_attackDamage>				
 		<c_damageType>0</c_damageType>				
-		<c_attackDelay>0.675</c_attackDelay>				
+		<c_attackDelay>0.55</c_attackDelay>				
 		<c_attackCD>1.7</c_attackCD>				
-		<c_attackRange>6.5</c_attackRange>				
+		<c_attackRange>7</c_attackRange>				
 		<c_attackProjectileType>1</c_attackProjectileType>				
 		<c_projectileFlySpeed>15.5</c_projectileFlySpeed>				
 		<c_projectileLaunchSlope>0</c_projectileLaunchSlope>				
@@ -715,15 +715,15 @@
 		<body_density>100000</body_density>				
 		<type>0</type>				
 		<c_name>太史慈</c_name>				
-		<c_moveSpeed>0.72</c_moveSpeed>				
+		<c_moveSpeed>1.1</c_moveSpeed>				
 		<c_scanRange>5</c_scanRange>				
-		<c_hp>3000</c_hp>				
+		<c_hp>2970</c_hp>				
 		<c_armor>0</c_armor>				
 		<c_magicResist>0</c_magicResist>				
 		<c_attackTargetType>0x0012</c_attackTargetType>				
 		<c_attackDamage>45</c_attackDamage>				
 		<c_damageType>0</c_damageType>				
-		<c_attackDelay>0.675</c_attackDelay>				
+		<c_attackDelay>0.6</c_attackDelay>				
 		<c_attackCD>1.3</c_attackCD>				
 		<c_attackRange>2</c_attackRange>				
 		<c_attackProjectileType>1</c_attackProjectileType>				
@@ -756,7 +756,7 @@
 		<body_density>1</body_density>				
 		<type>0</type>				
 		<c_name>胡车儿</c_name>				
-		<c_moveSpeed>1.7</c_moveSpeed>				
+		<c_moveSpeed>1.98</c_moveSpeed>				
 		<c_scanRange>5</c_scanRange>				
 		<c_hp>996</c_hp>				
 		<c_armor>0</c_armor>				
@@ -787,7 +787,7 @@
 		<body_density>1</body_density>				
 		<type>0</type>				
 		<c_name>貂蝉</c_name>				
-		<c_moveSpeed>1.33</c_moveSpeed>				
+		<c_moveSpeed>1.45</c_moveSpeed>				
 		<c_scanRange>5.5</c_scanRange>				
 		<c_hp>500</c_hp>				
 		<c_armor>0</c_armor>				
@@ -829,7 +829,7 @@
 		<body_density>100000</body_density>				
 		<type>0</type>				
 		<c_name>张飞</c_name>				
-		<c_moveSpeed>0.72</c_moveSpeed>				
+		<c_moveSpeed>1.1</c_moveSpeed>				
 		<c_scanRange>5</c_scanRange>				
 		<c_hp>1900</c_hp>				
 		<c_armor>0</c_armor>				
@@ -860,7 +860,7 @@
 		<body_density>1</body_density>				
 		<type>0</type>				
 		<c_name>庞统</c_name>				
-		<c_moveSpeed>1.7</c_moveSpeed>				
+		<c_moveSpeed>1.98</c_moveSpeed>				
 		<c_scanRange>5</c_scanRange>				
 		<c_hp>800</c_hp>				
 		<c_armor>0</c_armor>				
@@ -897,7 +897,7 @@
 		<body_density>100000</body_density>				
 		<type>0</type>				
 		<c_name>马超</c_name>				
-		<c_moveSpeed>1.33</c_moveSpeed>				
+		<c_moveSpeed>1.45</c_moveSpeed>				
 		<c_scanRange>5</c_scanRange>				
 		<c_hp>700</c_hp>				
 		<c_armor>0</c_armor>				
@@ -905,7 +905,7 @@
 		<c_attackTargetType>0x0013</c_attackTargetType>				
 		<c_attackDamage>185</c_attackDamage>				
 		<c_damageType>0</c_damageType>				
-		<c_attackDelay>0.4</c_attackDelay>				
+		<c_attackDelay>0.42</c_attackDelay>				
 		<c_attackCD>1.75</c_attackCD>				
 		<c_attackRange>0</c_attackRange>				
 		<c_attackProjectileType>0</c_attackProjectileType>				
@@ -933,7 +933,7 @@
 		<body_density>100000</body_density>				
 		<type>0</type>				
 		<c_name>许褚</c_name>				
-		<c_moveSpeed>0.72</c_moveSpeed>				
+		<c_moveSpeed>1.1</c_moveSpeed>				
 		<c_scanRange>5</c_scanRange>				
 		<c_hp>2610</c_hp>				
 		<c_armor>0</c_armor>				
@@ -941,7 +941,7 @@
 		<c_attackTargetType>0x0013</c_attackTargetType>				
 		<c_attackDamage>509</c_attackDamage>				
 		<c_damageType>0</c_damageType>				
-		<c_attackDelay>0.75</c_attackDelay>				
+		<c_attackDelay>0.65</c_attackDelay>				
 		<c_attackCD>1.8</c_attackCD>				
 		<c_attackRange>0</c_attackRange>				
 		<c_attackProjectileType>0</c_attackProjectileType>				
@@ -964,7 +964,7 @@
 		<body_density>1</body_density>				
 		<type>0</type>				
 		<c_name>陆逊</c_name>				
-		<c_moveSpeed>1.33</c_moveSpeed>				
+		<c_moveSpeed>1.45</c_moveSpeed>				
 		<c_scanRange>5.5</c_scanRange>				
 		<c_hp>340</c_hp>				
 		<c_armor>0</c_armor>				
@@ -1001,7 +1001,7 @@
 		<body_density>10000</body_density>				
 		<type>0</type>				
 		<c_name>甘宁</c_name>				
-		<c_moveSpeed>1.7</c_moveSpeed>				
+		<c_moveSpeed>1.98</c_moveSpeed>				
 		<c_scanRange>5</c_scanRange>				
 		<c_hp>600</c_hp>				
 		<c_armor>0</c_armor>				
@@ -1032,7 +1032,7 @@
 		<body_density>10000</body_density>				
 		<type>0</type>				
 		<c_name>郭嘉</c_name>				
-		<c_moveSpeed>1.33</c_moveSpeed>				
+		<c_moveSpeed>1.45</c_moveSpeed>				
 		<c_scanRange>6</c_scanRange>				
 		<c_hp>665</c_hp>				
 		<c_armor>0</c_armor>				
@@ -1069,7 +1069,7 @@
 		<body_density>10000</body_density>				
 		<type>0</type>				
 		<c_name>吕蒙</c_name>				
-		<c_moveSpeed>1.33</c_moveSpeed>				
+		<c_moveSpeed>1.45</c_moveSpeed>				
 		<c_scanRange>5</c_scanRange>				
 		<c_hp>660</c_hp>				
 		<c_armor>0</c_armor>				
@@ -1100,7 +1100,7 @@
 		<body_density>1</body_density>				
 		<type>0</type>				
 		<c_name>王允</c_name>				
-		<c_moveSpeed>1.33</c_moveSpeed>				
+		<c_moveSpeed>1.45</c_moveSpeed>				
 		<c_scanRange>5</c_scanRange>				
 		<c_hp>147</c_hp>				
 		<c_armor>0</c_armor>				
@@ -1108,7 +1108,7 @@
 		<c_attackTargetType>0x0013</c_attackTargetType>				
 		<c_attackDamage>123</c_attackDamage>				
 		<c_damageType>0</c_damageType>				
-		<c_attackDelay>0.315</c_attackDelay>				
+		<c_attackDelay>0.45</c_attackDelay>				
 		<c_attackCD>2</c_attackCD>				
 		<c_attackRange>5</c_attackRange>				
 		<c_attackProjectileType>1</c_attackProjectileType>				
@@ -1116,7 +1116,7 @@
 		<c_projectileLaunchSlope>0</c_projectileLaunchSlope>				
 		<c_projectileSkinId>112633</c_projectileSkinId>				
 		<c_attackSputterType>2</c_attackSputterType>				
-		<c_attackSputterRange>1</c_attackSputterRange>				
+		<c_attackSputterRange>1.5</c_attackSputterRange>				
 		<c_skinId>12633</c_skinId>				
 		<c_skinScale>0.85</c_skinScale>				
 		<c_launchX>25</c_launchX>				
@@ -1137,7 +1137,7 @@
 		<body_density>100000</body_density>				
 		<type>0</type>				
 		<c_name>黄忠</c_name>				
-		<c_moveSpeed>0.72</c_moveSpeed>				
+		<c_moveSpeed>1.98</c_moveSpeed>				
 		<c_scanRange>6.5</c_scanRange>				
 		<c_hp>340</c_hp>				
 		<c_armor>0</c_armor>				
@@ -1146,7 +1146,7 @@
 		<c_attackDamage>77</c_attackDamage>				
 		<c_damageType>0</c_damageType>				
 		<c_attackDelay>0.405</c_attackDelay>				
-		<c_attackCD>0.6</c_attackCD>				
+		<c_attackCD>1</c_attackCD>				
 		<c_attackRange>6.5</c_attackRange>				
 		<c_attackProjectileType>1</c_attackProjectileType>				
 		<c_projectileFlySpeed>16.5</c_projectileFlySpeed>				
@@ -1173,7 +1173,7 @@
 		<body_density>10000</body_density>				
 		<type>0</type>				
 		<c_name>于吉</c_name>				
-		<c_moveSpeed>1.33</c_moveSpeed>				
+		<c_moveSpeed>1.45</c_moveSpeed>				
 		<c_scanRange>5</c_scanRange>				
 		<c_hp>1050</c_hp>				
 		<c_armor>0</c_armor>				
@@ -1204,7 +1204,7 @@
 		<body_density>100000</body_density>				
 		<type>0</type>				
 		<c_name>孟获</c_name>				
-		<c_moveSpeed>1.33</c_moveSpeed>				
+		<c_moveSpeed>1.45</c_moveSpeed>				
 		<c_scanRange>5</c_scanRange>				
 		<c_hp>2000</c_hp>				
 		<c_armor>0</c_armor>				
@@ -1235,7 +1235,7 @@
 		<body_density>1</body_density>				
 		<type>0</type>				
 		<c_name>祝融</c_name>				
-		<c_moveSpeed>1.33</c_moveSpeed>				
+		<c_moveSpeed>1.45</c_moveSpeed>				
 		<c_scanRange>5</c_scanRange>				
 		<c_hp>880</c_hp>				
 		<c_armor>0</c_armor>				
@@ -1623,7 +1623,7 @@
 		<type>4</type>				
 		<c_name>地矛刺</c_name>				
 		<c_scanRange>3.5</c_scanRange>				
-		<c_attackDamage>42</c_attackDamage>				
+		<c_attackDamage>45</c_attackDamage>				
 		<c_waittime>1</c_waittime>				
 		<c_lifetime>10.0</c_lifetime>				
 		<c_attackTargetType>0x0013</c_attackTargetType>				
@@ -1634,8 +1634,8 @@
 		<Skills>				
 			<HitWeaken>			
 				<duration>1.1</duration><!-- buff持续时间 -->		
-				<moveSpeedMultiple>0.6</moveSpeedMultiple><!-- 移动速度倍数 -->		
-				<attackSpeedMultiple>0.6</attackSpeedMultiple><!-- 攻击速度倍数 -->		
+				<moveSpeedMultiple>0.8</moveSpeedMultiple><!-- 移动速度倍数 -->		
+				<attackSpeedMultiple>0.8</attackSpeedMultiple><!-- 攻击速度倍数 -->		
 				<attackDamageMultiple>1</attackDamageMultiple><!-- 攻击伤害倍数 -->		
 				<autoSpawnSpeedMultiple>0.9</autoSpawnSpeedMultiple><!-- 自动召唤速度倍数 -->		
 				<buffColor>0xcf7f00</buffColor><!-- buff特效的颜色 -->		
@@ -1755,7 +1755,7 @@
 		<body_density>10000</body_density>				
 		<type>0</type>				
 		<c_name>骑兵小队</c_name>				
-		<c_moveSpeed>1.7</c_moveSpeed>				
+		<c_moveSpeed>1.98</c_moveSpeed>				
 		<c_scanRange>5</c_scanRange>				
 		<c_hp>195</c_hp>				
 		<c_armor>0</c_armor>				
@@ -1763,7 +1763,7 @@
 		<c_attackTargetType>0x0013</c_attackTargetType>				
 		<c_attackDamage>93</c_attackDamage>				
 		<c_damageType>0</c_damageType>				
-		<c_attackDelay>0.45</c_attackDelay>				
+		<c_attackDelay>0.4</c_attackDelay>				
 		<c_attackCD>1.2</c_attackCD>				
 		<c_attackRange>0</c_attackRange>				
 		<c_attackProjectileType>0</c_attackProjectileType>				
@@ -1786,15 +1786,15 @@
 		<body_density>100000</body_density>				
 		<type>0</type>				
 		<c_name>象兵</c_name>				
-		<c_moveSpeed>0.72</c_moveSpeed>				
+		<c_moveSpeed>1.1</c_moveSpeed>				
 		<c_scanRange>5</c_scanRange>				
-		<c_hp>1250</c_hp>				
+		<c_hp>1500</c_hp>				
 		<c_armor>0</c_armor>				
 		<c_magicResist>0</c_magicResist>				
 		<c_attackTargetType>0x0012</c_attackTargetType>				
-		<c_attackDamage>80</c_attackDamage>				
+		<c_attackDamage>150</c_attackDamage>				
 		<c_damageType>0</c_damageType>				
-		<c_attackDelay>0.7</c_attackDelay>				
+		<c_attackDelay>0.65</c_attackDelay>				
 		<c_attackCD>3</c_attackCD>				
 		<c_attackRange>0</c_attackRange>				
 		<c_attackProjectileType>0</c_attackProjectileType>				
@@ -1817,14 +1817,14 @@
 		<body_density>100000</body_density>				
 		<type>0</type>				
 		<c_name>虎豹骑</c_name>				
-		<c_moveSpeed>2.45</c_moveSpeed>				
+		<c_moveSpeed>2.48</c_moveSpeed>				
 		<c_hp>600</c_hp>				
 		<c_armor>0</c_armor>				
 		<c_magicResist>0</c_magicResist>				
 		<c_attackTargetType>0x0012</c_attackTargetType>				
 		<c_attackDamage>120</c_attackDamage>				
 		<c_damageType>0</c_damageType>				
-		<c_attackDelay>0.3</c_attackDelay>				
+		<c_attackDelay>0.38</c_attackDelay>				
 		<c_attackCD>1.65</c_attackCD>				
 		<c_attackRange>0</c_attackRange>				
 		<c_attackProjectileType>0</c_attackProjectileType>				
@@ -1848,15 +1848,15 @@
 		<body_density>1</body_density>				
 		<type>0</type>				
 		<c_name>医师</c_name>				
-		<c_moveSpeed>0.72</c_moveSpeed>				
+		<c_moveSpeed>1.1</c_moveSpeed>				
 		<c_scanRange>5</c_scanRange>				
 		<c_hp>150</c_hp>				
 		<c_armor>0</c_armor>				
 		<c_magicResist>0</c_magicResist>				
 		<c_attackTargetType>0x0021</c_attackTargetType>				
-		<c_attackHeal>55</c_attackHeal>				
+		<c_attackHeal>39</c_attackHeal>				
 		<c_attackDelay>0.135</c_attackDelay>				
-		<c_attackCD>2.5</c_attackCD>				
+		<c_attackCD>1.75</c_attackCD>				
 		<c_attackRange>5</c_attackRange>				
 		<c_attackProjectileType>2</c_attackProjectileType>				
 		<c_projectileFlySpeed>0</c_projectileFlySpeed>				
@@ -1879,8 +1879,8 @@
 	<AOE id='14011'>					
 		<type>4</type>				
 		<c_name>化瘀术</c_name>				
-		<c_scanRange>4</c_scanRange>				
-		<c_attackHeal>20</c_attackHeal>				
+		<c_scanRange>3</c_scanRange>				
+		<c_attackHeal>50</c_attackHeal>				
 		<c_waittime>1</c_waittime>				
 		<c_lifetime>10.0</c_lifetime>				
 		<c_attackTargetType>0x0021</c_attackTargetType>				

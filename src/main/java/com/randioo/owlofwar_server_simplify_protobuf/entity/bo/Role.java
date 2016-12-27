@@ -6,15 +6,9 @@ import java.util.Map;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.CardList;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.OwlofwarGame;
 import com.randioo.owlofwar_server_simplify_protobuf.utils.StringUtils;
-import com.randioo.randioo_server_base.entity.Matcher;
 
-public class Role extends Matcher {
+public class Role extends GameRole {
 
-	private String account;
-	/** 名字 */
-	private String name;
-	/** 用户ID */
-	private int roleId;
 	/** 银币 */
 	private int money;
 	/** 金币 */
@@ -35,7 +29,7 @@ public class Role extends Matcher {
 	private boolean change;
 	/** 战斗世界 */
 	private OwlofwarGame owlofwarGame;
-	/**游戏id*/
+	/** 游戏id */
 	private int owlofwarGameId;
 
 	public void setOwlofwarGame(OwlofwarGame owlofwarGame) {
@@ -53,31 +47,6 @@ public class Role extends Matcher {
 					.append(";");
 		}
 		return sb.toString();
-	}
-
-	public String getAccount() {
-		return account;
-	}
-
-	public void setAccount(String account) {
-		this.account = account;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		setChange(true);
-		this.name = name;
-	}
-
-	public int getRoleId() {
-		return roleId;
-	}
-
-	public void setRoleId(int roleId) {
-		this.roleId = roleId;
 	}
 
 	public int getMoney() {
@@ -133,24 +102,23 @@ public class Role extends Matcher {
 		return listStr;
 	}
 
-	public void setListStr(String listStr) {
-		// if (listStr != null && !listStr.equals("")) {
-		// String str[] = listStr.split(";");
-		// for (String x : str) {
-		// CardList temp = new CardList(x);
-		// this.cardListMap.put(temp.getIndex(), temp);
-		// }
-		// }
-		// this.listStr = listStr;
+	public boolean setListStr(String listStr) {
 
 		if (listStr == null || listStr.equals(""))
-			return;
+			return false;
 		String str[] = listStr.split(";");
 		for (String x : str) {
 			CardList temp = new CardList(x);
 			this.cardListMap.put(temp.getIndex(), temp);
 		}
-		this.listStr = listStr;
+		
+		return true;
+	}
+	
+	public void setListRawStr(String listStr){
+		if(setListStr(listStr)){
+			this.listStr = listStr;
+		}
 	}
 
 	public int getUseCardsId() {

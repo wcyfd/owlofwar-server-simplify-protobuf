@@ -17,7 +17,7 @@ public class RoleConverter implements ResultConverter<Role> {
 		role.setMoney(rs.getInt("money"));
 		role.setGold(rs.getInt("gold"));
 		role.setFood(rs.getInt("food"));
-		role.setListStr(rs.getString("listStr"));
+		role.setListRawStr(rs.getString("listStr"));
 		role.setUseCardsId(rs.getInt("useCardsId"));
 		role.setPoint(rs.getInt("point"));
 
