@@ -1,5 +1,6 @@
 package com.randioo.owlofwar_server_simplify_protobuf.xmlreader;
 
+import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -14,17 +15,19 @@ import com.randioo.owlofwar_server_simplify_protobuf.entity.file.CardConfig;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.EventAwardHero;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.EventElement;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.EventGetCard;
+import com.randioo.randioo_server_base.utils.XmlReader;
 
-public class CardXmlReader {
+public class CardXmlReader implements XmlReader{
 
-	private static int id;
 
-	public static void readXml(String path) {
+	@Override
+	public void readXml(InputStream inputStream) {
+		// TODO Auto-generated method stub
 		SAXReader sax = new SAXReader();
 		// Step 1 目录
 		Document doc;
 		try {
-			doc = sax.read(path);
+			doc = sax.read(inputStream);
 			Element root = doc.getRootElement();
 			Map<Byte, Class<? extends EventElement>> classMap = new HashMap<>();
 			classMap.put((byte) 5, EventAwardHero.class);
@@ -42,7 +45,6 @@ public class CardXmlReader {
 				int useTimes = Integer.parseInt(element.elementText("useTimes"));
 				int makeSpeed = Integer.parseInt(element.elementText("cost"));
 				double useDelay = Double.parseDouble(element.elementText("useDealy"));
-				CardXmlReader.id = id;
 
 				Element unlockElement = element.element("unlock");
 				int needTime = Integer.parseInt(unlockElement.attribute("needTime").getValue());
@@ -157,7 +159,6 @@ public class CardXmlReader {
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			System.out.println(id);
 			e.printStackTrace();
 		}
 	}

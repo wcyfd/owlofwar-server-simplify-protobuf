@@ -45,9 +45,6 @@
 		</property>
 	</bean>
 
-	<!-- <bean id="gameMatcher" class="com.randioo.randioo_server_base.utils.game.matcher.GameMatcher">
-		<property name="threadSize" value="5"></property>
-	</bean> -->
 	<bean id="matchConfig" class="com.randioo.randioo_server_base.module.match.MatchConfig">
 		<property name="threadSize" value="5"></property>
 	</bean>
@@ -58,6 +55,8 @@
 		<property name="threadSize" value="1"></property>
 	</bean>
 	
+	<bean id="loginModelService" class="com.randioo.randioo_server_base.module.login.LoginModelServiceImpl"></bean>
+
 	<bean id="rateFrameMeter" class="com.randioo.randioo_server_base.utils.game.game_type.real_time_strategy_game.RateFrameMeter"></bean>
 
 	<bean id="systemManager" class="com.randioo.owlofwar_server_simplify_protobuf.utils.DefaultSystemManager"></bean>

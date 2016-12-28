@@ -39,6 +39,8 @@ public class ErrorCode {
 	public static final short ACCOUNT_ILLEGEL = 30112;
 	/** 正在登录中 */
 	public static final short IN_LOGIN = 30113;
+	/** 玩家名有敏感字 */
+	public static final short NAME_SENSITIVE = 30114;
 
 	/** 无效的放置 */
 	public static final short ERR_PUT_LOC = 30201;

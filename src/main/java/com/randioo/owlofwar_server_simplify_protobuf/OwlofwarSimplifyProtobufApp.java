@@ -12,6 +12,7 @@ import com.randioo.randioo_server_base.net.SpringContext;
 import com.randioo.randioo_server_base.net.WanServer;
 import com.randioo.randioo_server_base.net.protocal.protobuf.ServerMessageCodecFactory;
 import com.randioo.randioo_server_base.utils.db.DatabaseInitialization;
+import com.randioo.randioo_server_base.utils.sensitive.SensitiveWordDictionary;
 import com.randioo.randioo_server_base.utils.system.SystemManager;
 
 /**
@@ -22,7 +23,9 @@ public class OwlofwarSimplifyProtobufApp {
 	public static void main(String[] args) {
 		int port = 9998;
 
-		ReadXml.readAll();
+		ReadXml.readAll("./config/config.zip");
+		SensitiveWordDictionary.readAll("./config/sensitive.txt");
+		
 		SpringContext.initSpringCtx("ApplicationContext.xml");
 
 		// 初始化数据库

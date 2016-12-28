@@ -8,6 +8,8 @@ import java.util.Map;
 
 import javax.sql.DataSource;
 
+import org.apache.mina.core.session.IoSession;
+
 import com.google.protobuf.GeneratedMessage;
 import com.randioo.owlofwar_server_simplify_protobuf.cache.file.CardInitConfigCache;
 import com.randioo.owlofwar_server_simplify_protobuf.common.ErrorCode;
@@ -35,13 +37,15 @@ import com.randioo.owlofwar_server_simplify_protobuf.protocol.ServerMessage.SCMe
 import com.randioo.owlofwar_server_simplify_protobuf.utils.TimeUtils;
 import com.randioo.randioo_server_base.cache.RoleCache;
 import com.randioo.randioo_server_base.entity.RoleInterface;
+import com.randioo.randioo_server_base.module.BaseService;
 import com.randioo.randioo_server_base.module.login.LoginHandler;
-import com.randioo.randioo_server_base.module.login.LoginModelServiceImpl;
+import com.randioo.randioo_server_base.module.login.LoginModelService;
 import com.randioo.randioo_server_base.net.SpringContext;
+import com.randioo.randioo_server_base.utils.sensitive.SensitiveWordDictionary;
 import com.randioo.randioo_server_base.utils.system.SystemManager;
 import com.randioo.randioo_server_base.utils.template.Ref;
 
-public class LoginServiceImpl extends LoginModelServiceImpl implements LoginService {
+public class LoginServiceImpl extends BaseService implements LoginService {
 	private DataSource dataSource;
 
 	public void setDataSource(DataSource dataSource) {
@@ -71,6 +75,11 @@ public class LoginServiceImpl extends LoginModelServiceImpl implements LoginServ
 	public void setStoreVideoDao(StoreVideoDao storeVideoDao) {
 		this.storeVideoDao = storeVideoDao;
 	}
+	
+	private LoginModelService loginModelService;
+	public void setLoginModelService(LoginModelService loginModelService) {
+		this.loginModelService = loginModelService;
+	}
 
 	@Override
 	public void init() {
@@ -92,7 +101,8 @@ public class LoginServiceImpl extends LoginModelServiceImpl implements LoginServ
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		setLoginHandler(new LoginHandlerImpl());
+		loginModelService.init();
+		loginModelService.setLoginHandler(new LoginHandlerImpl());
 	}
 
 	private class LoginHandlerImpl implements LoginHandler {
@@ -138,8 +148,8 @@ public class LoginServiceImpl extends LoginModelServiceImpl implements LoginServ
 		public boolean checkCreateRoleAccount(Object createRoleMessage, Ref<Object> checkCreateRoleAccountMessage) {
 			LoginCreateRoleRequest request = (LoginCreateRoleRequest) createRoleMessage;
 
-			if (RoleCache.getNameSet().contains(request.getName())) {
-
+			String name = request.getName();
+			if (RoleCache.getNameSet().contains(name)) {
 				checkCreateRoleAccountMessage.set(SCMessage
 						.newBuilder()
 						.setLoginCreateRoleResponse(
@@ -153,6 +163,14 @@ public class LoginServiceImpl extends LoginModelServiceImpl implements LoginServ
 						.newBuilder()
 						.setLoginCreateRoleResponse(
 								LoginCreateRoleResponse.newBuilder().setErrorCode(ErrorCode.ACCOUNT_ILLEGEL)).build());
+				return false;
+			}
+			
+			if(SensitiveWordDictionary.containsSensitiveWord(name)){
+				checkCreateRoleAccountMessage.set(SCMessage
+						.newBuilder()
+						.setLoginCreateRoleResponse(
+								LoginCreateRoleResponse.newBuilder().setErrorCode(ErrorCode.NAME_SENSITIVE)).build());
 				return false;
 			}
 			return true;
@@ -310,5 +328,20 @@ public class LoginServiceImpl extends LoginModelServiceImpl implements LoginServ
 		// 初始化卡组信息
 		List<Card> list = cardDao.getAllCardByRoleId(role.getRoleId());
 		cardService.initCard(role, list);
+	}
+
+	@Override
+	public Object getRoleData(Object requestMessage, IoSession ioSession) {
+		return loginModelService.getRoleData(requestMessage, ioSession);
+	}
+
+	@Override
+	public Object creatRole(Object msg) {
+		return loginModelService.creatRole(msg);
+	}
+
+	@Override
+	public Object login(Object msg) {
+		return loginModelService.login(msg);
 	}
 }
