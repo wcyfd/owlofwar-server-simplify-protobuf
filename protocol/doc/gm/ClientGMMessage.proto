@@ -1,0 +1,10 @@
+package com.randioo.owlofwar_server_simplify_protobuf.protocol.gm;
+import "GM.proto";
+
+//4
+message CSGMMessage{
+	optional int32 type = 1 [default=1];
+	optional GmRejectLoginRequest gmRejectLoginRequest = 2;
+	optional GmOpenLoginRequest gmOpenLoginRequest = 3;
+	optional GmTerminatedServerRequest gmTerminatedServerRequest = 4;
+}

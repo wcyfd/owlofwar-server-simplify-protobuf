@@ -1,0 +1,8 @@
+package com.randioo.owlofwar_server_simplify_protobuf.protocol.gm;
+import "GM.proto";
+
+message SCGMMessage{
+	optional GmRejectLoginResponse gmRejectLoginResponse =1;
+	optional GmOpenLoginResponse gmOpenLoginResponse = 2;
+	optional GmTerminatedServerResponse gmTerminatedServerResponse = 3;
+}

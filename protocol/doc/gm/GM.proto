@@ -1,0 +1,25 @@
+package com.randioo.owlofwar_server_simplify_protobuf.protocol.gm;
+
+message GmRejectLoginRequest{
+	optional string code = 1;
+}
+
+message GmRejectLoginResponse{
+	optional bool errorCode = 1;
+}
+
+message GmOpenLoginRequest{
+	optional string code = 1;
+}
+
+message GmOpenLoginResponse{
+	optional bool errorCode = 1;
+}
+
+message GmTerminatedServerRequest{
+	optional string code = 1;
+}
+
+message GmTerminatedServerResponse{
+	optional bool errorCode = 1;
+}
