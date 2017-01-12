@@ -43,6 +43,7 @@ public class FightEventListenerAdapter implements FightEventListener {
 
 			int index = RandomUtils.getRandomNum(config.getNpcIdList().size());
 			mapsId = config.getNpcIdList().get(index);
+mapsId = 1101;
 			return mapsId;
 
 		}
@@ -50,7 +51,7 @@ public class FightEventListenerAdapter implements FightEventListener {
 		AutoNpcConfig config = list.get(list.size() - 1);
 		int index = RandomUtils.getRandomNum(config.getNpcIdList().size());
 		mapsId = config.getNpcIdList().get(index);
-
+mapsId = 1101;
 		return mapsId;
 	}
 

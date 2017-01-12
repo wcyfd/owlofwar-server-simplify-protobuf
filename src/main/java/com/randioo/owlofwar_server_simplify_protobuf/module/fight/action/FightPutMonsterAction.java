@@ -21,6 +21,6 @@ public class FightPutMonsterAction extends ActionSupport {
 	public void execute(Object data, IoSession session) {
 		FightGameActionRequest request = (FightGameActionRequest) data;
 		Role role =(Role) RoleCache.getRoleBySession(session);
-		fightService.receiveGameAction(role,request.getGameAction());
+		fightService.receiveGameAction(role,request.getGameAction(),session);
 	}
 }

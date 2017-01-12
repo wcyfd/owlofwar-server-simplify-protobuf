@@ -35,152 +35,215 @@ public final class ClientMessage {
       return com.randioo.owlofwar_server_simplify_protobuf.protocol.ClientMessage.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_CSMessage_fieldAccessorTable;
     }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.LoginCheckAccountRequest loginCheckAccountRequest = 1;
-    public static final int LOGINCHECKACCOUNTREQUEST_FIELD_NUMBER = 1;
+    // optional int32 type = 1 [default = 0];
+    public static final int TYPE_FIELD_NUMBER = 1;
+    private boolean hasType;
+    private int type_ = 0;
+    public boolean hasType() { return hasType; }
+    public int getType() { return type_; }
+    
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.LoginCheckAccountRequest loginCheckAccountRequest = 2;
+    public static final int LOGINCHECKACCOUNTREQUEST_FIELD_NUMBER = 2;
     private boolean hasLoginCheckAccountRequest;
     private com.randioo.owlofwar_server_simplify_protobuf.protocol.Login.LoginCheckAccountRequest loginCheckAccountRequest_;
     public boolean hasLoginCheckAccountRequest() { return hasLoginCheckAccountRequest; }
     public com.randioo.owlofwar_server_simplify_protobuf.protocol.Login.LoginCheckAccountRequest getLoginCheckAccountRequest() { return loginCheckAccountRequest_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.LoginCreateRoleRequest loginCreateRoleRequest = 2;
-    public static final int LOGINCREATEROLEREQUEST_FIELD_NUMBER = 2;
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.LoginCreateRoleRequest loginCreateRoleRequest = 3;
+    public static final int LOGINCREATEROLEREQUEST_FIELD_NUMBER = 3;
     private boolean hasLoginCreateRoleRequest;
     private com.randioo.owlofwar_server_simplify_protobuf.protocol.Login.LoginCreateRoleRequest loginCreateRoleRequest_;
     public boolean hasLoginCreateRoleRequest() { return hasLoginCreateRoleRequest; }
     public com.randioo.owlofwar_server_simplify_protobuf.protocol.Login.LoginCreateRoleRequest getLoginCreateRoleRequest() { return loginCreateRoleRequest_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.LoginGetRoleDataRequest loginGetRoleDataRequest = 3;
-    public static final int LOGINGETROLEDATAREQUEST_FIELD_NUMBER = 3;
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.LoginGetRoleDataRequest loginGetRoleDataRequest = 4;
+    public static final int LOGINGETROLEDATAREQUEST_FIELD_NUMBER = 4;
     private boolean hasLoginGetRoleDataRequest;
     private com.randioo.owlofwar_server_simplify_protobuf.protocol.Login.LoginGetRoleDataRequest loginGetRoleDataRequest_;
     public boolean hasLoginGetRoleDataRequest() { return hasLoginGetRoleDataRequest; }
     public com.randioo.owlofwar_server_simplify_protobuf.protocol.Login.LoginGetRoleDataRequest getLoginGetRoleDataRequest() { return loginGetRoleDataRequest_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightClientReadyRequest fightClientReadyRequest = 4;
-    public static final int FIGHTCLIENTREADYREQUEST_FIELD_NUMBER = 4;
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightClientReadyRequest fightClientReadyRequest = 5;
+    public static final int FIGHTCLIENTREADYREQUEST_FIELD_NUMBER = 5;
     private boolean hasFightClientReadyRequest;
     private com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightClientReadyRequest fightClientReadyRequest_;
     public boolean hasFightClientReadyRequest() { return hasFightClientReadyRequest; }
     public com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightClientReadyRequest getFightClientReadyRequest() { return fightClientReadyRequest_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightLoadResourceCompleteRequest fightLoadResourceCompleteRequest = 5;
-    public static final int FIGHTLOADRESOURCECOMPLETEREQUEST_FIELD_NUMBER = 5;
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightLoadResourceCompleteRequest fightLoadResourceCompleteRequest = 6;
+    public static final int FIGHTLOADRESOURCECOMPLETEREQUEST_FIELD_NUMBER = 6;
     private boolean hasFightLoadResourceCompleteRequest;
     private com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightLoadResourceCompleteRequest fightLoadResourceCompleteRequest_;
     public boolean hasFightLoadResourceCompleteRequest() { return hasFightLoadResourceCompleteRequest; }
     public com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightLoadResourceCompleteRequest getFightLoadResourceCompleteRequest() { return fightLoadResourceCompleteRequest_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightGameActionRequest fightGameActionRequest = 6;
-    public static final int FIGHTGAMEACTIONREQUEST_FIELD_NUMBER = 6;
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightGameActionRequest fightGameActionRequest = 7;
+    public static final int FIGHTGAMEACTIONREQUEST_FIELD_NUMBER = 7;
     private boolean hasFightGameActionRequest;
     private com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGameActionRequest fightGameActionRequest_;
     public boolean hasFightGameActionRequest() { return hasFightGameActionRequest; }
     public com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGameActionRequest getFightGameActionRequest() { return fightGameActionRequest_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightGameOverRequest fightGameOverRequest = 7;
-    public static final int FIGHTGAMEOVERREQUEST_FIELD_NUMBER = 7;
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightGameOverRequest fightGameOverRequest = 8;
+    public static final int FIGHTGAMEOVERREQUEST_FIELD_NUMBER = 8;
     private boolean hasFightGameOverRequest;
     private com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGameOverRequest fightGameOverRequest_;
     public boolean hasFightGameOverRequest() { return hasFightGameOverRequest; }
     public com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGameOverRequest getFightGameOverRequest() { return fightGameOverRequest_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightReadFrameRequest fightReadFrameRequest = 8;
-    public static final int FIGHTREADFRAMEREQUEST_FIELD_NUMBER = 8;
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightReadFrameRequest fightReadFrameRequest = 9;
+    public static final int FIGHTREADFRAMEREQUEST_FIELD_NUMBER = 9;
     private boolean hasFightReadFrameRequest;
     private com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightReadFrameRequest fightReadFrameRequest_;
     public boolean hasFightReadFrameRequest() { return hasFightReadFrameRequest; }
     public com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightReadFrameRequest getFightReadFrameRequest() { return fightReadFrameRequest_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightGetGameAwardRequest fightGetGameAwardRequest = 17;
-    public static final int FIGHTGETGAMEAWARDREQUEST_FIELD_NUMBER = 17;
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightGetGameAwardRequest fightGetGameAwardRequest = 10;
+    public static final int FIGHTGETGAMEAWARDREQUEST_FIELD_NUMBER = 10;
     private boolean hasFightGetGameAwardRequest;
     private com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGetGameAwardRequest fightGetGameAwardRequest_;
     public boolean hasFightGetGameAwardRequest() { return hasFightGetGameAwardRequest; }
     public com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGetGameAwardRequest getFightGetGameAwardRequest() { return fightGetGameAwardRequest_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.PillageRoleRequest pillageRoleRequest = 9;
-    public static final int PILLAGEROLEREQUEST_FIELD_NUMBER = 9;
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightCountDownRequest fightCountDownRequest = 11;
+    public static final int FIGHTCOUNTDOWNREQUEST_FIELD_NUMBER = 11;
+    private boolean hasFightCountDownRequest;
+    private com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest fightCountDownRequest_;
+    public boolean hasFightCountDownRequest() { return hasFightCountDownRequest; }
+    public com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest getFightCountDownRequest() { return fightCountDownRequest_; }
+    
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.PillageRoleRequest pillageRoleRequest = 12;
+    public static final int PILLAGEROLEREQUEST_FIELD_NUMBER = 12;
     private boolean hasPillageRoleRequest;
     private com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageRoleRequest pillageRoleRequest_;
     public boolean hasPillageRoleRequest() { return hasPillageRoleRequest; }
     public com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageRoleRequest getPillageRoleRequest() { return pillageRoleRequest_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.PillageCancelRequest pillageCancelRequest = 10;
-    public static final int PILLAGECANCELREQUEST_FIELD_NUMBER = 10;
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.PillageCancelRequest pillageCancelRequest = 13;
+    public static final int PILLAGECANCELREQUEST_FIELD_NUMBER = 13;
     private boolean hasPillageCancelRequest;
     private com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCancelRequest pillageCancelRequest_;
     public boolean hasPillageCancelRequest() { return hasPillageCancelRequest; }
     public com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCancelRequest getPillageCancelRequest() { return pillageCancelRequest_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.PillageShowRequest pillageShowRequest = 11;
-    public static final int PILLAGESHOWREQUEST_FIELD_NUMBER = 11;
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.PillageShowRequest pillageShowRequest = 14;
+    public static final int PILLAGESHOWREQUEST_FIELD_NUMBER = 14;
     private boolean hasPillageShowRequest;
     private com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageShowRequest pillageShowRequest_;
     public boolean hasPillageShowRequest() { return hasPillageShowRequest; }
     public com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageShowRequest getPillageShowRequest() { return pillageShowRequest_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.CardGetCardsInfoRequest cardGetCardsInfoRequest = 12;
-    public static final int CARDGETCARDSINFOREQUEST_FIELD_NUMBER = 12;
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.PillageCompetitionNoticeRequest pillageCompetitionNoticeRequest = 30;
+    public static final int PILLAGECOMPETITIONNOTICEREQUEST_FIELD_NUMBER = 30;
+    private boolean hasPillageCompetitionNoticeRequest;
+    private com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest pillageCompetitionNoticeRequest_;
+    public boolean hasPillageCompetitionNoticeRequest() { return hasPillageCompetitionNoticeRequest; }
+    public com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest getPillageCompetitionNoticeRequest() { return pillageCompetitionNoticeRequest_; }
+    
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.CardGetCardsInfoRequest cardGetCardsInfoRequest = 15;
+    public static final int CARDGETCARDSINFOREQUEST_FIELD_NUMBER = 15;
     private boolean hasCardGetCardsInfoRequest;
     private com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardGetCardsInfoRequest cardGetCardsInfoRequest_;
     public boolean hasCardGetCardsInfoRequest() { return hasCardGetCardsInfoRequest; }
     public com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardGetCardsInfoRequest getCardGetCardsInfoRequest() { return cardGetCardsInfoRequest_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.CardEditCardListRequest cardEditCardListRequest = 13;
-    public static final int CARDEDITCARDLISTREQUEST_FIELD_NUMBER = 13;
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.CardEditCardListRequest cardEditCardListRequest = 16;
+    public static final int CARDEDITCARDLISTREQUEST_FIELD_NUMBER = 16;
     private boolean hasCardEditCardListRequest;
     private com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardEditCardListRequest cardEditCardListRequest_;
     public boolean hasCardEditCardListRequest() { return hasCardEditCardListRequest; }
     public com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardEditCardListRequest getCardEditCardListRequest() { return cardEditCardListRequest_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.CardLvUpRequest cardLvUpRequest = 14;
-    public static final int CARDLVUPREQUEST_FIELD_NUMBER = 14;
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.CardLvUpRequest cardLvUpRequest = 17;
+    public static final int CARDLVUPREQUEST_FIELD_NUMBER = 17;
     private boolean hasCardLvUpRequest;
     private com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardLvUpRequest cardLvUpRequest_;
     public boolean hasCardLvUpRequest() { return hasCardLvUpRequest; }
     public com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardLvUpRequest getCardLvUpRequest() { return cardLvUpRequest_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.CardChooseUseCardListRequest cardChooseUseCardListRequest = 15;
-    public static final int CARDCHOOSEUSECARDLISTREQUEST_FIELD_NUMBER = 15;
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.CardChooseUseCardListRequest cardChooseUseCardListRequest = 18;
+    public static final int CARDCHOOSEUSECARDLISTREQUEST_FIELD_NUMBER = 18;
     private boolean hasCardChooseUseCardListRequest;
     private com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardChooseUseCardListRequest cardChooseUseCardListRequest_;
     public boolean hasCardChooseUseCardListRequest() { return hasCardChooseUseCardListRequest; }
     public com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardChooseUseCardListRequest getCardChooseUseCardListRequest() { return cardChooseUseCardListRequest_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.CardChangeMainCardRequest cardChangeMainCardRequest = 18;
-    public static final int CARDCHANGEMAINCARDREQUEST_FIELD_NUMBER = 18;
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.CardChangeMainCardRequest cardChangeMainCardRequest = 19;
+    public static final int CARDCHANGEMAINCARDREQUEST_FIELD_NUMBER = 19;
     private boolean hasCardChangeMainCardRequest;
     private com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardChangeMainCardRequest cardChangeMainCardRequest_;
     public boolean hasCardChangeMainCardRequest() { return hasCardChangeMainCardRequest; }
     public com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardChangeMainCardRequest getCardChangeMainCardRequest() { return cardChangeMainCardRequest_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.PingRequest pingRequest = 16;
-    public static final int PINGREQUEST_FIELD_NUMBER = 16;
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.PingRequest pingRequest = 20;
+    public static final int PINGREQUEST_FIELD_NUMBER = 20;
     private boolean hasPingRequest;
     private com.randioo.owlofwar_server_simplify_protobuf.protocol.Ping.PingRequest pingRequest_;
     public boolean hasPingRequest() { return hasPingRequest; }
     public com.randioo.owlofwar_server_simplify_protobuf.protocol.Ping.PingRequest getPingRequest() { return pingRequest_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.GMRejectLoginRequest gmRejectLoginRequest = 19;
-    public static final int GMREJECTLOGINREQUEST_FIELD_NUMBER = 19;
-    private boolean hasGmRejectLoginRequest;
-    private com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMRejectLoginRequest gmRejectLoginRequest_;
-    public boolean hasGmRejectLoginRequest() { return hasGmRejectLoginRequest; }
-    public com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMRejectLoginRequest getGmRejectLoginRequest() { return gmRejectLoginRequest_; }
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.MarketShowMarketItemRequest marketShowMarketItemReqeust = 21;
+    public static final int MARKETSHOWMARKETITEMREQEUST_FIELD_NUMBER = 21;
+    private boolean hasMarketShowMarketItemReqeust;
+    private com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest marketShowMarketItemReqeust_;
+    public boolean hasMarketShowMarketItemReqeust() { return hasMarketShowMarketItemReqeust; }
+    public com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest getMarketShowMarketItemReqeust() { return marketShowMarketItemReqeust_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.GMTerminatedServerRequest gmTerminatedServerRequest = 20;
-    public static final int GMTERMINATEDSERVERREQUEST_FIELD_NUMBER = 20;
-    private boolean hasGmTerminatedServerRequest;
-    private com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMTerminatedServerRequest gmTerminatedServerRequest_;
-    public boolean hasGmTerminatedServerRequest() { return hasGmTerminatedServerRequest; }
-    public com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMTerminatedServerRequest getGmTerminatedServerRequest() { return gmTerminatedServerRequest_; }
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.MarketBuyMarketItemRequest marketBuyMarketItemRequest = 22;
+    public static final int MARKETBUYMARKETITEMREQUEST_FIELD_NUMBER = 22;
+    private boolean hasMarketBuyMarketItemRequest;
+    private com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketBuyMarketItemRequest marketBuyMarketItemRequest_;
+    public boolean hasMarketBuyMarketItemRequest() { return hasMarketBuyMarketItemRequest; }
+    public com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketBuyMarketItemRequest getMarketBuyMarketItemRequest() { return marketBuyMarketItemRequest_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.GMOpenLoginRequest gmOpenLoginRequest = 21;
-    public static final int GMOPENLOGINREQUEST_FIELD_NUMBER = 21;
-    private boolean hasGmOpenLoginRequest;
-    private com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMOpenLoginRequest gmOpenLoginRequest_;
-    public boolean hasGmOpenLoginRequest() { return hasGmOpenLoginRequest; }
-    public com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMOpenLoginRequest getGmOpenLoginRequest() { return gmOpenLoginRequest_; }
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.MarketArtificialRefreshRequest marketArtificialRefreshRequest = 23;
+    public static final int MARKETARTIFICIALREFRESHREQUEST_FIELD_NUMBER = 23;
+    private boolean hasMarketArtificialRefreshRequest;
+    private com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketArtificialRefreshRequest marketArtificialRefreshRequest_;
+    public boolean hasMarketArtificialRefreshRequest() { return hasMarketArtificialRefreshRequest; }
+    public com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketArtificialRefreshRequest getMarketArtificialRefreshRequest() { return marketArtificialRefreshRequest_; }
+    
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.WarShowWarChapterRequest warShowWarChapterRequest = 24;
+    public static final int WARSHOWWARCHAPTERREQUEST_FIELD_NUMBER = 24;
+    private boolean hasWarShowWarChapterRequest;
+    private com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarChapterRequest warShowWarChapterRequest_;
+    public boolean hasWarShowWarChapterRequest() { return hasWarShowWarChapterRequest; }
+    public com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarChapterRequest getWarShowWarChapterRequest() { return warShowWarChapterRequest_; }
+    
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.WarShowWarBuildRequest warShowWarBuildRequest = 25;
+    public static final int WARSHOWWARBUILDREQUEST_FIELD_NUMBER = 25;
+    private boolean hasWarShowWarBuildRequest;
+    private com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarBuildRequest warShowWarBuildRequest_;
+    public boolean hasWarShowWarBuildRequest() { return hasWarShowWarBuildRequest; }
+    public com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarBuildRequest getWarShowWarBuildRequest() { return warShowWarBuildRequest_; }
+    
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.WarMarchRequest warMarchRequest = 26;
+    public static final int WARMARCHREQUEST_FIELD_NUMBER = 26;
+    private boolean hasWarMarchRequest;
+    private com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMarchRequest warMarchRequest_;
+    public boolean hasWarMarchRequest() { return hasWarMarchRequest; }
+    public com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMarchRequest getWarMarchRequest() { return warMarchRequest_; }
+    
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.WarWinBuildRequest warWinBuildRequest = 27;
+    public static final int WARWINBUILDREQUEST_FIELD_NUMBER = 27;
+    private boolean hasWarWinBuildRequest;
+    private com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarWinBuildRequest warWinBuildRequest_;
+    public boolean hasWarWinBuildRequest() { return hasWarWinBuildRequest; }
+    public com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarWinBuildRequest getWarWinBuildRequest() { return warWinBuildRequest_; }
+    
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.WarGetChapterAwardRequest warGetChapterAwardRequest = 28;
+    public static final int WARGETCHAPTERAWARDREQUEST_FIELD_NUMBER = 28;
+    private boolean hasWarGetChapterAwardRequest;
+    private com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarGetChapterAwardRequest warGetChapterAwardRequest_;
+    public boolean hasWarGetChapterAwardRequest() { return hasWarGetChapterAwardRequest; }
+    public com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarGetChapterAwardRequest getWarGetChapterAwardRequest() { return warGetChapterAwardRequest_; }
+    
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.RoleInfoSelectRequest roleInfoSelectRequest = 29;
+    public static final int ROLEINFOSELECTREQUEST_FIELD_NUMBER = 29;
+    private boolean hasRoleInfoSelectRequest;
+    private com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.RoleInfoSelectRequest roleInfoSelectRequest_;
+    public boolean hasRoleInfoSelectRequest() { return hasRoleInfoSelectRequest; }
+    public com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.RoleInfoSelectRequest getRoleInfoSelectRequest() { return roleInfoSelectRequest_; }
     
     private void initFields() {
       loginCheckAccountRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Login.LoginCheckAccountRequest.getDefaultInstance();
@@ -192,18 +255,26 @@ public final class ClientMessage {
       fightGameOverRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGameOverRequest.getDefaultInstance();
       fightReadFrameRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightReadFrameRequest.getDefaultInstance();
       fightGetGameAwardRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGetGameAwardRequest.getDefaultInstance();
+      fightCountDownRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest.getDefaultInstance();
       pillageRoleRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageRoleRequest.getDefaultInstance();
       pillageCancelRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCancelRequest.getDefaultInstance();
       pillageShowRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageShowRequest.getDefaultInstance();
+      pillageCompetitionNoticeRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest.getDefaultInstance();
       cardGetCardsInfoRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardGetCardsInfoRequest.getDefaultInstance();
       cardEditCardListRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardEditCardListRequest.getDefaultInstance();
       cardLvUpRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardLvUpRequest.getDefaultInstance();
       cardChooseUseCardListRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardChooseUseCardListRequest.getDefaultInstance();
       cardChangeMainCardRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardChangeMainCardRequest.getDefaultInstance();
       pingRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Ping.PingRequest.getDefaultInstance();
-      gmRejectLoginRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMRejectLoginRequest.getDefaultInstance();
-      gmTerminatedServerRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMTerminatedServerRequest.getDefaultInstance();
-      gmOpenLoginRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMOpenLoginRequest.getDefaultInstance();
+      marketShowMarketItemReqeust_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest.getDefaultInstance();
+      marketBuyMarketItemRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketBuyMarketItemRequest.getDefaultInstance();
+      marketArtificialRefreshRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketArtificialRefreshRequest.getDefaultInstance();
+      warShowWarChapterRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarChapterRequest.getDefaultInstance();
+      warShowWarBuildRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarBuildRequest.getDefaultInstance();
+      warMarchRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMarchRequest.getDefaultInstance();
+      warWinBuildRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarWinBuildRequest.getDefaultInstance();
+      warGetChapterAwardRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarGetChapterAwardRequest.getDefaultInstance();
+      roleInfoSelectRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.RoleInfoSelectRequest.getDefaultInstance();
     }
     public final boolean isInitialized() {
       return true;
@@ -212,68 +283,95 @@ public final class ClientMessage {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
+      if (hasType()) {
+        output.writeInt32(1, getType());
+      }
       if (hasLoginCheckAccountRequest()) {
-        output.writeMessage(1, getLoginCheckAccountRequest());
+        output.writeMessage(2, getLoginCheckAccountRequest());
       }
       if (hasLoginCreateRoleRequest()) {
-        output.writeMessage(2, getLoginCreateRoleRequest());
+        output.writeMessage(3, getLoginCreateRoleRequest());
       }
       if (hasLoginGetRoleDataRequest()) {
-        output.writeMessage(3, getLoginGetRoleDataRequest());
+        output.writeMessage(4, getLoginGetRoleDataRequest());
       }
       if (hasFightClientReadyRequest()) {
-        output.writeMessage(4, getFightClientReadyRequest());
+        output.writeMessage(5, getFightClientReadyRequest());
       }
       if (hasFightLoadResourceCompleteRequest()) {
-        output.writeMessage(5, getFightLoadResourceCompleteRequest());
+        output.writeMessage(6, getFightLoadResourceCompleteRequest());
       }
       if (hasFightGameActionRequest()) {
-        output.writeMessage(6, getFightGameActionRequest());
+        output.writeMessage(7, getFightGameActionRequest());
       }
       if (hasFightGameOverRequest()) {
-        output.writeMessage(7, getFightGameOverRequest());
+        output.writeMessage(8, getFightGameOverRequest());
       }
       if (hasFightReadFrameRequest()) {
-        output.writeMessage(8, getFightReadFrameRequest());
-      }
-      if (hasPillageRoleRequest()) {
-        output.writeMessage(9, getPillageRoleRequest());
-      }
-      if (hasPillageCancelRequest()) {
-        output.writeMessage(10, getPillageCancelRequest());
-      }
-      if (hasPillageShowRequest()) {
-        output.writeMessage(11, getPillageShowRequest());
-      }
-      if (hasCardGetCardsInfoRequest()) {
-        output.writeMessage(12, getCardGetCardsInfoRequest());
-      }
-      if (hasCardEditCardListRequest()) {
-        output.writeMessage(13, getCardEditCardListRequest());
-      }
-      if (hasCardLvUpRequest()) {
-        output.writeMessage(14, getCardLvUpRequest());
-      }
-      if (hasCardChooseUseCardListRequest()) {
-        output.writeMessage(15, getCardChooseUseCardListRequest());
-      }
-      if (hasPingRequest()) {
-        output.writeMessage(16, getPingRequest());
+        output.writeMessage(9, getFightReadFrameRequest());
       }
       if (hasFightGetGameAwardRequest()) {
-        output.writeMessage(17, getFightGetGameAwardRequest());
+        output.writeMessage(10, getFightGetGameAwardRequest());
+      }
+      if (hasFightCountDownRequest()) {
+        output.writeMessage(11, getFightCountDownRequest());
+      }
+      if (hasPillageRoleRequest()) {
+        output.writeMessage(12, getPillageRoleRequest());
+      }
+      if (hasPillageCancelRequest()) {
+        output.writeMessage(13, getPillageCancelRequest());
+      }
+      if (hasPillageShowRequest()) {
+        output.writeMessage(14, getPillageShowRequest());
+      }
+      if (hasCardGetCardsInfoRequest()) {
+        output.writeMessage(15, getCardGetCardsInfoRequest());
+      }
+      if (hasCardEditCardListRequest()) {
+        output.writeMessage(16, getCardEditCardListRequest());
+      }
+      if (hasCardLvUpRequest()) {
+        output.writeMessage(17, getCardLvUpRequest());
+      }
+      if (hasCardChooseUseCardListRequest()) {
+        output.writeMessage(18, getCardChooseUseCardListRequest());
       }
       if (hasCardChangeMainCardRequest()) {
-        output.writeMessage(18, getCardChangeMainCardRequest());
+        output.writeMessage(19, getCardChangeMainCardRequest());
       }
-      if (hasGmRejectLoginRequest()) {
-        output.writeMessage(19, getGmRejectLoginRequest());
+      if (hasPingRequest()) {
+        output.writeMessage(20, getPingRequest());
       }
-      if (hasGmTerminatedServerRequest()) {
-        output.writeMessage(20, getGmTerminatedServerRequest());
+      if (hasMarketShowMarketItemReqeust()) {
+        output.writeMessage(21, getMarketShowMarketItemReqeust());
       }
-      if (hasGmOpenLoginRequest()) {
-        output.writeMessage(21, getGmOpenLoginRequest());
+      if (hasMarketBuyMarketItemRequest()) {
+        output.writeMessage(22, getMarketBuyMarketItemRequest());
+      }
+      if (hasMarketArtificialRefreshRequest()) {
+        output.writeMessage(23, getMarketArtificialRefreshRequest());
+      }
+      if (hasWarShowWarChapterRequest()) {
+        output.writeMessage(24, getWarShowWarChapterRequest());
+      }
+      if (hasWarShowWarBuildRequest()) {
+        output.writeMessage(25, getWarShowWarBuildRequest());
+      }
+      if (hasWarMarchRequest()) {
+        output.writeMessage(26, getWarMarchRequest());
+      }
+      if (hasWarWinBuildRequest()) {
+        output.writeMessage(27, getWarWinBuildRequest());
+      }
+      if (hasWarGetChapterAwardRequest()) {
+        output.writeMessage(28, getWarGetChapterAwardRequest());
+      }
+      if (hasRoleInfoSelectRequest()) {
+        output.writeMessage(29, getRoleInfoSelectRequest());
+      }
+      if (hasPillageCompetitionNoticeRequest()) {
+        output.writeMessage(30, getPillageCompetitionNoticeRequest());
       }
       getUnknownFields().writeTo(output);
     }
@@ -284,89 +382,125 @@ public final class ClientMessage {
       if (size != -1) return size;
     
       size = 0;
+      if (hasType()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, getType());
+      }
       if (hasLoginCheckAccountRequest()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getLoginCheckAccountRequest());
+          .computeMessageSize(2, getLoginCheckAccountRequest());
       }
       if (hasLoginCreateRoleRequest()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getLoginCreateRoleRequest());
+          .computeMessageSize(3, getLoginCreateRoleRequest());
       }
       if (hasLoginGetRoleDataRequest()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getLoginGetRoleDataRequest());
+          .computeMessageSize(4, getLoginGetRoleDataRequest());
       }
       if (hasFightClientReadyRequest()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getFightClientReadyRequest());
+          .computeMessageSize(5, getFightClientReadyRequest());
       }
       if (hasFightLoadResourceCompleteRequest()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, getFightLoadResourceCompleteRequest());
+          .computeMessageSize(6, getFightLoadResourceCompleteRequest());
       }
       if (hasFightGameActionRequest()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, getFightGameActionRequest());
+          .computeMessageSize(7, getFightGameActionRequest());
       }
       if (hasFightGameOverRequest()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, getFightGameOverRequest());
+          .computeMessageSize(8, getFightGameOverRequest());
       }
       if (hasFightReadFrameRequest()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, getFightReadFrameRequest());
-      }
-      if (hasPillageRoleRequest()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, getPillageRoleRequest());
-      }
-      if (hasPillageCancelRequest()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, getPillageCancelRequest());
-      }
-      if (hasPillageShowRequest()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(11, getPillageShowRequest());
-      }
-      if (hasCardGetCardsInfoRequest()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(12, getCardGetCardsInfoRequest());
-      }
-      if (hasCardEditCardListRequest()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(13, getCardEditCardListRequest());
-      }
-      if (hasCardLvUpRequest()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(14, getCardLvUpRequest());
-      }
-      if (hasCardChooseUseCardListRequest()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(15, getCardChooseUseCardListRequest());
-      }
-      if (hasPingRequest()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(16, getPingRequest());
+          .computeMessageSize(9, getFightReadFrameRequest());
       }
       if (hasFightGetGameAwardRequest()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(17, getFightGetGameAwardRequest());
+          .computeMessageSize(10, getFightGetGameAwardRequest());
+      }
+      if (hasFightCountDownRequest()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getFightCountDownRequest());
+      }
+      if (hasPillageRoleRequest()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getPillageRoleRequest());
+      }
+      if (hasPillageCancelRequest()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getPillageCancelRequest());
+      }
+      if (hasPillageShowRequest()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, getPillageShowRequest());
+      }
+      if (hasCardGetCardsInfoRequest()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, getCardGetCardsInfoRequest());
+      }
+      if (hasCardEditCardListRequest()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(16, getCardEditCardListRequest());
+      }
+      if (hasCardLvUpRequest()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(17, getCardLvUpRequest());
+      }
+      if (hasCardChooseUseCardListRequest()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(18, getCardChooseUseCardListRequest());
       }
       if (hasCardChangeMainCardRequest()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(18, getCardChangeMainCardRequest());
+          .computeMessageSize(19, getCardChangeMainCardRequest());
       }
-      if (hasGmRejectLoginRequest()) {
+      if (hasPingRequest()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(19, getGmRejectLoginRequest());
+          .computeMessageSize(20, getPingRequest());
       }
-      if (hasGmTerminatedServerRequest()) {
+      if (hasMarketShowMarketItemReqeust()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(20, getGmTerminatedServerRequest());
+          .computeMessageSize(21, getMarketShowMarketItemReqeust());
       }
-      if (hasGmOpenLoginRequest()) {
+      if (hasMarketBuyMarketItemRequest()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(21, getGmOpenLoginRequest());
+          .computeMessageSize(22, getMarketBuyMarketItemRequest());
+      }
+      if (hasMarketArtificialRefreshRequest()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(23, getMarketArtificialRefreshRequest());
+      }
+      if (hasWarShowWarChapterRequest()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(24, getWarShowWarChapterRequest());
+      }
+      if (hasWarShowWarBuildRequest()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(25, getWarShowWarBuildRequest());
+      }
+      if (hasWarMarchRequest()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(26, getWarMarchRequest());
+      }
+      if (hasWarWinBuildRequest()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(27, getWarWinBuildRequest());
+      }
+      if (hasWarGetChapterAwardRequest()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(28, getWarGetChapterAwardRequest());
+      }
+      if (hasRoleInfoSelectRequest()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(29, getRoleInfoSelectRequest());
+      }
+      if (hasPillageCompetitionNoticeRequest()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(30, getPillageCompetitionNoticeRequest());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -526,6 +660,9 @@ public final class ClientMessage {
       
       public Builder mergeFrom(com.randioo.owlofwar_server_simplify_protobuf.protocol.ClientMessage.CSMessage other) {
         if (other == com.randioo.owlofwar_server_simplify_protobuf.protocol.ClientMessage.CSMessage.getDefaultInstance()) return this;
+        if (other.hasType()) {
+          setType(other.getType());
+        }
         if (other.hasLoginCheckAccountRequest()) {
           mergeLoginCheckAccountRequest(other.getLoginCheckAccountRequest());
         }
@@ -553,6 +690,9 @@ public final class ClientMessage {
         if (other.hasFightGetGameAwardRequest()) {
           mergeFightGetGameAwardRequest(other.getFightGetGameAwardRequest());
         }
+        if (other.hasFightCountDownRequest()) {
+          mergeFightCountDownRequest(other.getFightCountDownRequest());
+        }
         if (other.hasPillageRoleRequest()) {
           mergePillageRoleRequest(other.getPillageRoleRequest());
         }
@@ -561,6 +701,9 @@ public final class ClientMessage {
         }
         if (other.hasPillageShowRequest()) {
           mergePillageShowRequest(other.getPillageShowRequest());
+        }
+        if (other.hasPillageCompetitionNoticeRequest()) {
+          mergePillageCompetitionNoticeRequest(other.getPillageCompetitionNoticeRequest());
         }
         if (other.hasCardGetCardsInfoRequest()) {
           mergeCardGetCardsInfoRequest(other.getCardGetCardsInfoRequest());
@@ -580,14 +723,32 @@ public final class ClientMessage {
         if (other.hasPingRequest()) {
           mergePingRequest(other.getPingRequest());
         }
-        if (other.hasGmRejectLoginRequest()) {
-          mergeGmRejectLoginRequest(other.getGmRejectLoginRequest());
+        if (other.hasMarketShowMarketItemReqeust()) {
+          mergeMarketShowMarketItemReqeust(other.getMarketShowMarketItemReqeust());
         }
-        if (other.hasGmTerminatedServerRequest()) {
-          mergeGmTerminatedServerRequest(other.getGmTerminatedServerRequest());
+        if (other.hasMarketBuyMarketItemRequest()) {
+          mergeMarketBuyMarketItemRequest(other.getMarketBuyMarketItemRequest());
         }
-        if (other.hasGmOpenLoginRequest()) {
-          mergeGmOpenLoginRequest(other.getGmOpenLoginRequest());
+        if (other.hasMarketArtificialRefreshRequest()) {
+          mergeMarketArtificialRefreshRequest(other.getMarketArtificialRefreshRequest());
+        }
+        if (other.hasWarShowWarChapterRequest()) {
+          mergeWarShowWarChapterRequest(other.getWarShowWarChapterRequest());
+        }
+        if (other.hasWarShowWarBuildRequest()) {
+          mergeWarShowWarBuildRequest(other.getWarShowWarBuildRequest());
+        }
+        if (other.hasWarMarchRequest()) {
+          mergeWarMarchRequest(other.getWarMarchRequest());
+        }
+        if (other.hasWarWinBuildRequest()) {
+          mergeWarWinBuildRequest(other.getWarWinBuildRequest());
+        }
+        if (other.hasWarGetChapterAwardRequest()) {
+          mergeWarGetChapterAwardRequest(other.getWarGetChapterAwardRequest());
+        }
+        if (other.hasRoleInfoSelectRequest()) {
+          mergeRoleInfoSelectRequest(other.getRoleInfoSelectRequest());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -614,7 +775,11 @@ public final class ClientMessage {
               }
               break;
             }
-            case 10: {
+            case 8: {
+              setType(input.readInt32());
+              break;
+            }
+            case 18: {
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Login.LoginCheckAccountRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Login.LoginCheckAccountRequest.newBuilder();
               if (hasLoginCheckAccountRequest()) {
                 subBuilder.mergeFrom(getLoginCheckAccountRequest());
@@ -623,7 +788,7 @@ public final class ClientMessage {
               setLoginCheckAccountRequest(subBuilder.buildPartial());
               break;
             }
-            case 18: {
+            case 26: {
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Login.LoginCreateRoleRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Login.LoginCreateRoleRequest.newBuilder();
               if (hasLoginCreateRoleRequest()) {
                 subBuilder.mergeFrom(getLoginCreateRoleRequest());
@@ -632,7 +797,7 @@ public final class ClientMessage {
               setLoginCreateRoleRequest(subBuilder.buildPartial());
               break;
             }
-            case 26: {
+            case 34: {
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Login.LoginGetRoleDataRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Login.LoginGetRoleDataRequest.newBuilder();
               if (hasLoginGetRoleDataRequest()) {
                 subBuilder.mergeFrom(getLoginGetRoleDataRequest());
@@ -641,7 +806,7 @@ public final class ClientMessage {
               setLoginGetRoleDataRequest(subBuilder.buildPartial());
               break;
             }
-            case 34: {
+            case 42: {
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightClientReadyRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightClientReadyRequest.newBuilder();
               if (hasFightClientReadyRequest()) {
                 subBuilder.mergeFrom(getFightClientReadyRequest());
@@ -650,7 +815,7 @@ public final class ClientMessage {
               setFightClientReadyRequest(subBuilder.buildPartial());
               break;
             }
-            case 42: {
+            case 50: {
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightLoadResourceCompleteRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightLoadResourceCompleteRequest.newBuilder();
               if (hasFightLoadResourceCompleteRequest()) {
                 subBuilder.mergeFrom(getFightLoadResourceCompleteRequest());
@@ -659,7 +824,7 @@ public final class ClientMessage {
               setFightLoadResourceCompleteRequest(subBuilder.buildPartial());
               break;
             }
-            case 50: {
+            case 58: {
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGameActionRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGameActionRequest.newBuilder();
               if (hasFightGameActionRequest()) {
                 subBuilder.mergeFrom(getFightGameActionRequest());
@@ -668,7 +833,7 @@ public final class ClientMessage {
               setFightGameActionRequest(subBuilder.buildPartial());
               break;
             }
-            case 58: {
+            case 66: {
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGameOverRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGameOverRequest.newBuilder();
               if (hasFightGameOverRequest()) {
                 subBuilder.mergeFrom(getFightGameOverRequest());
@@ -677,7 +842,7 @@ public final class ClientMessage {
               setFightGameOverRequest(subBuilder.buildPartial());
               break;
             }
-            case 66: {
+            case 74: {
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightReadFrameRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightReadFrameRequest.newBuilder();
               if (hasFightReadFrameRequest()) {
                 subBuilder.mergeFrom(getFightReadFrameRequest());
@@ -686,79 +851,7 @@ public final class ClientMessage {
               setFightReadFrameRequest(subBuilder.buildPartial());
               break;
             }
-            case 74: {
-              com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageRoleRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageRoleRequest.newBuilder();
-              if (hasPillageRoleRequest()) {
-                subBuilder.mergeFrom(getPillageRoleRequest());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setPillageRoleRequest(subBuilder.buildPartial());
-              break;
-            }
             case 82: {
-              com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCancelRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCancelRequest.newBuilder();
-              if (hasPillageCancelRequest()) {
-                subBuilder.mergeFrom(getPillageCancelRequest());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setPillageCancelRequest(subBuilder.buildPartial());
-              break;
-            }
-            case 90: {
-              com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageShowRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageShowRequest.newBuilder();
-              if (hasPillageShowRequest()) {
-                subBuilder.mergeFrom(getPillageShowRequest());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setPillageShowRequest(subBuilder.buildPartial());
-              break;
-            }
-            case 98: {
-              com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardGetCardsInfoRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardGetCardsInfoRequest.newBuilder();
-              if (hasCardGetCardsInfoRequest()) {
-                subBuilder.mergeFrom(getCardGetCardsInfoRequest());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setCardGetCardsInfoRequest(subBuilder.buildPartial());
-              break;
-            }
-            case 106: {
-              com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardEditCardListRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardEditCardListRequest.newBuilder();
-              if (hasCardEditCardListRequest()) {
-                subBuilder.mergeFrom(getCardEditCardListRequest());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setCardEditCardListRequest(subBuilder.buildPartial());
-              break;
-            }
-            case 114: {
-              com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardLvUpRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardLvUpRequest.newBuilder();
-              if (hasCardLvUpRequest()) {
-                subBuilder.mergeFrom(getCardLvUpRequest());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setCardLvUpRequest(subBuilder.buildPartial());
-              break;
-            }
-            case 122: {
-              com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardChooseUseCardListRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardChooseUseCardListRequest.newBuilder();
-              if (hasCardChooseUseCardListRequest()) {
-                subBuilder.mergeFrom(getCardChooseUseCardListRequest());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setCardChooseUseCardListRequest(subBuilder.buildPartial());
-              break;
-            }
-            case 130: {
-              com.randioo.owlofwar_server_simplify_protobuf.protocol.Ping.PingRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Ping.PingRequest.newBuilder();
-              if (hasPingRequest()) {
-                subBuilder.mergeFrom(getPingRequest());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setPingRequest(subBuilder.buildPartial());
-              break;
-            }
-            case 138: {
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGetGameAwardRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGetGameAwardRequest.newBuilder();
               if (hasFightGetGameAwardRequest()) {
                 subBuilder.mergeFrom(getFightGetGameAwardRequest());
@@ -767,7 +860,79 @@ public final class ClientMessage {
               setFightGetGameAwardRequest(subBuilder.buildPartial());
               break;
             }
+            case 90: {
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest.newBuilder();
+              if (hasFightCountDownRequest()) {
+                subBuilder.mergeFrom(getFightCountDownRequest());
+              }
+              input.readMessage(subBuilder, extensionRegistry);
+              setFightCountDownRequest(subBuilder.buildPartial());
+              break;
+            }
+            case 98: {
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageRoleRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageRoleRequest.newBuilder();
+              if (hasPillageRoleRequest()) {
+                subBuilder.mergeFrom(getPillageRoleRequest());
+              }
+              input.readMessage(subBuilder, extensionRegistry);
+              setPillageRoleRequest(subBuilder.buildPartial());
+              break;
+            }
+            case 106: {
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCancelRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCancelRequest.newBuilder();
+              if (hasPillageCancelRequest()) {
+                subBuilder.mergeFrom(getPillageCancelRequest());
+              }
+              input.readMessage(subBuilder, extensionRegistry);
+              setPillageCancelRequest(subBuilder.buildPartial());
+              break;
+            }
+            case 114: {
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageShowRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageShowRequest.newBuilder();
+              if (hasPillageShowRequest()) {
+                subBuilder.mergeFrom(getPillageShowRequest());
+              }
+              input.readMessage(subBuilder, extensionRegistry);
+              setPillageShowRequest(subBuilder.buildPartial());
+              break;
+            }
+            case 122: {
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardGetCardsInfoRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardGetCardsInfoRequest.newBuilder();
+              if (hasCardGetCardsInfoRequest()) {
+                subBuilder.mergeFrom(getCardGetCardsInfoRequest());
+              }
+              input.readMessage(subBuilder, extensionRegistry);
+              setCardGetCardsInfoRequest(subBuilder.buildPartial());
+              break;
+            }
+            case 130: {
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardEditCardListRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardEditCardListRequest.newBuilder();
+              if (hasCardEditCardListRequest()) {
+                subBuilder.mergeFrom(getCardEditCardListRequest());
+              }
+              input.readMessage(subBuilder, extensionRegistry);
+              setCardEditCardListRequest(subBuilder.buildPartial());
+              break;
+            }
+            case 138: {
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardLvUpRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardLvUpRequest.newBuilder();
+              if (hasCardLvUpRequest()) {
+                subBuilder.mergeFrom(getCardLvUpRequest());
+              }
+              input.readMessage(subBuilder, extensionRegistry);
+              setCardLvUpRequest(subBuilder.buildPartial());
+              break;
+            }
             case 146: {
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardChooseUseCardListRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardChooseUseCardListRequest.newBuilder();
+              if (hasCardChooseUseCardListRequest()) {
+                subBuilder.mergeFrom(getCardChooseUseCardListRequest());
+              }
+              input.readMessage(subBuilder, extensionRegistry);
+              setCardChooseUseCardListRequest(subBuilder.buildPartial());
+              break;
+            }
+            case 154: {
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardChangeMainCardRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardChangeMainCardRequest.newBuilder();
               if (hasCardChangeMainCardRequest()) {
                 subBuilder.mergeFrom(getCardChangeMainCardRequest());
@@ -776,31 +941,103 @@ public final class ClientMessage {
               setCardChangeMainCardRequest(subBuilder.buildPartial());
               break;
             }
-            case 154: {
-              com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMRejectLoginRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMRejectLoginRequest.newBuilder();
-              if (hasGmRejectLoginRequest()) {
-                subBuilder.mergeFrom(getGmRejectLoginRequest());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setGmRejectLoginRequest(subBuilder.buildPartial());
-              break;
-            }
             case 162: {
-              com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMTerminatedServerRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMTerminatedServerRequest.newBuilder();
-              if (hasGmTerminatedServerRequest()) {
-                subBuilder.mergeFrom(getGmTerminatedServerRequest());
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Ping.PingRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Ping.PingRequest.newBuilder();
+              if (hasPingRequest()) {
+                subBuilder.mergeFrom(getPingRequest());
               }
               input.readMessage(subBuilder, extensionRegistry);
-              setGmTerminatedServerRequest(subBuilder.buildPartial());
+              setPingRequest(subBuilder.buildPartial());
               break;
             }
             case 170: {
-              com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMOpenLoginRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMOpenLoginRequest.newBuilder();
-              if (hasGmOpenLoginRequest()) {
-                subBuilder.mergeFrom(getGmOpenLoginRequest());
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest.newBuilder();
+              if (hasMarketShowMarketItemReqeust()) {
+                subBuilder.mergeFrom(getMarketShowMarketItemReqeust());
               }
               input.readMessage(subBuilder, extensionRegistry);
-              setGmOpenLoginRequest(subBuilder.buildPartial());
+              setMarketShowMarketItemReqeust(subBuilder.buildPartial());
+              break;
+            }
+            case 178: {
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketBuyMarketItemRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketBuyMarketItemRequest.newBuilder();
+              if (hasMarketBuyMarketItemRequest()) {
+                subBuilder.mergeFrom(getMarketBuyMarketItemRequest());
+              }
+              input.readMessage(subBuilder, extensionRegistry);
+              setMarketBuyMarketItemRequest(subBuilder.buildPartial());
+              break;
+            }
+            case 186: {
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketArtificialRefreshRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketArtificialRefreshRequest.newBuilder();
+              if (hasMarketArtificialRefreshRequest()) {
+                subBuilder.mergeFrom(getMarketArtificialRefreshRequest());
+              }
+              input.readMessage(subBuilder, extensionRegistry);
+              setMarketArtificialRefreshRequest(subBuilder.buildPartial());
+              break;
+            }
+            case 194: {
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarChapterRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarChapterRequest.newBuilder();
+              if (hasWarShowWarChapterRequest()) {
+                subBuilder.mergeFrom(getWarShowWarChapterRequest());
+              }
+              input.readMessage(subBuilder, extensionRegistry);
+              setWarShowWarChapterRequest(subBuilder.buildPartial());
+              break;
+            }
+            case 202: {
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarBuildRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarBuildRequest.newBuilder();
+              if (hasWarShowWarBuildRequest()) {
+                subBuilder.mergeFrom(getWarShowWarBuildRequest());
+              }
+              input.readMessage(subBuilder, extensionRegistry);
+              setWarShowWarBuildRequest(subBuilder.buildPartial());
+              break;
+            }
+            case 210: {
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMarchRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMarchRequest.newBuilder();
+              if (hasWarMarchRequest()) {
+                subBuilder.mergeFrom(getWarMarchRequest());
+              }
+              input.readMessage(subBuilder, extensionRegistry);
+              setWarMarchRequest(subBuilder.buildPartial());
+              break;
+            }
+            case 218: {
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarWinBuildRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarWinBuildRequest.newBuilder();
+              if (hasWarWinBuildRequest()) {
+                subBuilder.mergeFrom(getWarWinBuildRequest());
+              }
+              input.readMessage(subBuilder, extensionRegistry);
+              setWarWinBuildRequest(subBuilder.buildPartial());
+              break;
+            }
+            case 226: {
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarGetChapterAwardRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarGetChapterAwardRequest.newBuilder();
+              if (hasWarGetChapterAwardRequest()) {
+                subBuilder.mergeFrom(getWarGetChapterAwardRequest());
+              }
+              input.readMessage(subBuilder, extensionRegistry);
+              setWarGetChapterAwardRequest(subBuilder.buildPartial());
+              break;
+            }
+            case 234: {
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.RoleInfoSelectRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.RoleInfoSelectRequest.newBuilder();
+              if (hasRoleInfoSelectRequest()) {
+                subBuilder.mergeFrom(getRoleInfoSelectRequest());
+              }
+              input.readMessage(subBuilder, extensionRegistry);
+              setRoleInfoSelectRequest(subBuilder.buildPartial());
+              break;
+            }
+            case 242: {
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest.newBuilder();
+              if (hasPillageCompetitionNoticeRequest()) {
+                subBuilder.mergeFrom(getPillageCompetitionNoticeRequest());
+              }
+              input.readMessage(subBuilder, extensionRegistry);
+              setPillageCompetitionNoticeRequest(subBuilder.buildPartial());
               break;
             }
           }
@@ -808,7 +1045,25 @@ public final class ClientMessage {
       }
       
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.LoginCheckAccountRequest loginCheckAccountRequest = 1;
+      // optional int32 type = 1 [default = 0];
+      public boolean hasType() {
+        return result.hasType();
+      }
+      public int getType() {
+        return result.getType();
+      }
+      public Builder setType(int value) {
+        result.hasType = true;
+        result.type_ = value;
+        return this;
+      }
+      public Builder clearType() {
+        result.hasType = false;
+        result.type_ = 0;
+        return this;
+      }
+      
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.LoginCheckAccountRequest loginCheckAccountRequest = 2;
       public boolean hasLoginCheckAccountRequest() {
         return result.hasLoginCheckAccountRequest();
       }
@@ -845,7 +1100,7 @@ public final class ClientMessage {
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.LoginCreateRoleRequest loginCreateRoleRequest = 2;
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.LoginCreateRoleRequest loginCreateRoleRequest = 3;
       public boolean hasLoginCreateRoleRequest() {
         return result.hasLoginCreateRoleRequest();
       }
@@ -882,7 +1137,7 @@ public final class ClientMessage {
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.LoginGetRoleDataRequest loginGetRoleDataRequest = 3;
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.LoginGetRoleDataRequest loginGetRoleDataRequest = 4;
       public boolean hasLoginGetRoleDataRequest() {
         return result.hasLoginGetRoleDataRequest();
       }
@@ -919,7 +1174,7 @@ public final class ClientMessage {
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightClientReadyRequest fightClientReadyRequest = 4;
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightClientReadyRequest fightClientReadyRequest = 5;
       public boolean hasFightClientReadyRequest() {
         return result.hasFightClientReadyRequest();
       }
@@ -956,7 +1211,7 @@ public final class ClientMessage {
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightLoadResourceCompleteRequest fightLoadResourceCompleteRequest = 5;
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightLoadResourceCompleteRequest fightLoadResourceCompleteRequest = 6;
       public boolean hasFightLoadResourceCompleteRequest() {
         return result.hasFightLoadResourceCompleteRequest();
       }
@@ -993,7 +1248,7 @@ public final class ClientMessage {
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightGameActionRequest fightGameActionRequest = 6;
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightGameActionRequest fightGameActionRequest = 7;
       public boolean hasFightGameActionRequest() {
         return result.hasFightGameActionRequest();
       }
@@ -1030,7 +1285,7 @@ public final class ClientMessage {
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightGameOverRequest fightGameOverRequest = 7;
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightGameOverRequest fightGameOverRequest = 8;
       public boolean hasFightGameOverRequest() {
         return result.hasFightGameOverRequest();
       }
@@ -1067,7 +1322,7 @@ public final class ClientMessage {
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightReadFrameRequest fightReadFrameRequest = 8;
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightReadFrameRequest fightReadFrameRequest = 9;
       public boolean hasFightReadFrameRequest() {
         return result.hasFightReadFrameRequest();
       }
@@ -1104,7 +1359,7 @@ public final class ClientMessage {
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightGetGameAwardRequest fightGetGameAwardRequest = 17;
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightGetGameAwardRequest fightGetGameAwardRequest = 10;
       public boolean hasFightGetGameAwardRequest() {
         return result.hasFightGetGameAwardRequest();
       }
@@ -1141,7 +1396,44 @@ public final class ClientMessage {
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.PillageRoleRequest pillageRoleRequest = 9;
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightCountDownRequest fightCountDownRequest = 11;
+      public boolean hasFightCountDownRequest() {
+        return result.hasFightCountDownRequest();
+      }
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest getFightCountDownRequest() {
+        return result.getFightCountDownRequest();
+      }
+      public Builder setFightCountDownRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        result.hasFightCountDownRequest = true;
+        result.fightCountDownRequest_ = value;
+        return this;
+      }
+      public Builder setFightCountDownRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest.Builder builderForValue) {
+        result.hasFightCountDownRequest = true;
+        result.fightCountDownRequest_ = builderForValue.build();
+        return this;
+      }
+      public Builder mergeFightCountDownRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest value) {
+        if (result.hasFightCountDownRequest() &&
+            result.fightCountDownRequest_ != com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest.getDefaultInstance()) {
+          result.fightCountDownRequest_ =
+            com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest.newBuilder(result.fightCountDownRequest_).mergeFrom(value).buildPartial();
+        } else {
+          result.fightCountDownRequest_ = value;
+        }
+        result.hasFightCountDownRequest = true;
+        return this;
+      }
+      public Builder clearFightCountDownRequest() {
+        result.hasFightCountDownRequest = false;
+        result.fightCountDownRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest.getDefaultInstance();
+        return this;
+      }
+      
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.PillageRoleRequest pillageRoleRequest = 12;
       public boolean hasPillageRoleRequest() {
         return result.hasPillageRoleRequest();
       }
@@ -1178,7 +1470,7 @@ public final class ClientMessage {
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.PillageCancelRequest pillageCancelRequest = 10;
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.PillageCancelRequest pillageCancelRequest = 13;
       public boolean hasPillageCancelRequest() {
         return result.hasPillageCancelRequest();
       }
@@ -1215,7 +1507,7 @@ public final class ClientMessage {
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.PillageShowRequest pillageShowRequest = 11;
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.PillageShowRequest pillageShowRequest = 14;
       public boolean hasPillageShowRequest() {
         return result.hasPillageShowRequest();
       }
@@ -1252,7 +1544,44 @@ public final class ClientMessage {
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.CardGetCardsInfoRequest cardGetCardsInfoRequest = 12;
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.PillageCompetitionNoticeRequest pillageCompetitionNoticeRequest = 30;
+      public boolean hasPillageCompetitionNoticeRequest() {
+        return result.hasPillageCompetitionNoticeRequest();
+      }
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest getPillageCompetitionNoticeRequest() {
+        return result.getPillageCompetitionNoticeRequest();
+      }
+      public Builder setPillageCompetitionNoticeRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        result.hasPillageCompetitionNoticeRequest = true;
+        result.pillageCompetitionNoticeRequest_ = value;
+        return this;
+      }
+      public Builder setPillageCompetitionNoticeRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest.Builder builderForValue) {
+        result.hasPillageCompetitionNoticeRequest = true;
+        result.pillageCompetitionNoticeRequest_ = builderForValue.build();
+        return this;
+      }
+      public Builder mergePillageCompetitionNoticeRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest value) {
+        if (result.hasPillageCompetitionNoticeRequest() &&
+            result.pillageCompetitionNoticeRequest_ != com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest.getDefaultInstance()) {
+          result.pillageCompetitionNoticeRequest_ =
+            com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest.newBuilder(result.pillageCompetitionNoticeRequest_).mergeFrom(value).buildPartial();
+        } else {
+          result.pillageCompetitionNoticeRequest_ = value;
+        }
+        result.hasPillageCompetitionNoticeRequest = true;
+        return this;
+      }
+      public Builder clearPillageCompetitionNoticeRequest() {
+        result.hasPillageCompetitionNoticeRequest = false;
+        result.pillageCompetitionNoticeRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest.getDefaultInstance();
+        return this;
+      }
+      
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.CardGetCardsInfoRequest cardGetCardsInfoRequest = 15;
       public boolean hasCardGetCardsInfoRequest() {
         return result.hasCardGetCardsInfoRequest();
       }
@@ -1289,7 +1618,7 @@ public final class ClientMessage {
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.CardEditCardListRequest cardEditCardListRequest = 13;
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.CardEditCardListRequest cardEditCardListRequest = 16;
       public boolean hasCardEditCardListRequest() {
         return result.hasCardEditCardListRequest();
       }
@@ -1326,7 +1655,7 @@ public final class ClientMessage {
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.CardLvUpRequest cardLvUpRequest = 14;
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.CardLvUpRequest cardLvUpRequest = 17;
       public boolean hasCardLvUpRequest() {
         return result.hasCardLvUpRequest();
       }
@@ -1363,7 +1692,7 @@ public final class ClientMessage {
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.CardChooseUseCardListRequest cardChooseUseCardListRequest = 15;
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.CardChooseUseCardListRequest cardChooseUseCardListRequest = 18;
       public boolean hasCardChooseUseCardListRequest() {
         return result.hasCardChooseUseCardListRequest();
       }
@@ -1400,7 +1729,7 @@ public final class ClientMessage {
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.CardChangeMainCardRequest cardChangeMainCardRequest = 18;
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.CardChangeMainCardRequest cardChangeMainCardRequest = 19;
       public boolean hasCardChangeMainCardRequest() {
         return result.hasCardChangeMainCardRequest();
       }
@@ -1437,7 +1766,7 @@ public final class ClientMessage {
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.PingRequest pingRequest = 16;
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.PingRequest pingRequest = 20;
       public boolean hasPingRequest() {
         return result.hasPingRequest();
       }
@@ -1474,114 +1803,336 @@ public final class ClientMessage {
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.GMRejectLoginRequest gmRejectLoginRequest = 19;
-      public boolean hasGmRejectLoginRequest() {
-        return result.hasGmRejectLoginRequest();
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.MarketShowMarketItemRequest marketShowMarketItemReqeust = 21;
+      public boolean hasMarketShowMarketItemReqeust() {
+        return result.hasMarketShowMarketItemReqeust();
       }
-      public com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMRejectLoginRequest getGmRejectLoginRequest() {
-        return result.getGmRejectLoginRequest();
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest getMarketShowMarketItemReqeust() {
+        return result.getMarketShowMarketItemReqeust();
       }
-      public Builder setGmRejectLoginRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMRejectLoginRequest value) {
+      public Builder setMarketShowMarketItemReqeust(com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest value) {
         if (value == null) {
           throw new NullPointerException();
         }
-        result.hasGmRejectLoginRequest = true;
-        result.gmRejectLoginRequest_ = value;
+        result.hasMarketShowMarketItemReqeust = true;
+        result.marketShowMarketItemReqeust_ = value;
         return this;
       }
-      public Builder setGmRejectLoginRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMRejectLoginRequest.Builder builderForValue) {
-        result.hasGmRejectLoginRequest = true;
-        result.gmRejectLoginRequest_ = builderForValue.build();
+      public Builder setMarketShowMarketItemReqeust(com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest.Builder builderForValue) {
+        result.hasMarketShowMarketItemReqeust = true;
+        result.marketShowMarketItemReqeust_ = builderForValue.build();
         return this;
       }
-      public Builder mergeGmRejectLoginRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMRejectLoginRequest value) {
-        if (result.hasGmRejectLoginRequest() &&
-            result.gmRejectLoginRequest_ != com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMRejectLoginRequest.getDefaultInstance()) {
-          result.gmRejectLoginRequest_ =
-            com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMRejectLoginRequest.newBuilder(result.gmRejectLoginRequest_).mergeFrom(value).buildPartial();
+      public Builder mergeMarketShowMarketItemReqeust(com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest value) {
+        if (result.hasMarketShowMarketItemReqeust() &&
+            result.marketShowMarketItemReqeust_ != com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest.getDefaultInstance()) {
+          result.marketShowMarketItemReqeust_ =
+            com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest.newBuilder(result.marketShowMarketItemReqeust_).mergeFrom(value).buildPartial();
         } else {
-          result.gmRejectLoginRequest_ = value;
+          result.marketShowMarketItemReqeust_ = value;
         }
-        result.hasGmRejectLoginRequest = true;
+        result.hasMarketShowMarketItemReqeust = true;
         return this;
       }
-      public Builder clearGmRejectLoginRequest() {
-        result.hasGmRejectLoginRequest = false;
-        result.gmRejectLoginRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMRejectLoginRequest.getDefaultInstance();
+      public Builder clearMarketShowMarketItemReqeust() {
+        result.hasMarketShowMarketItemReqeust = false;
+        result.marketShowMarketItemReqeust_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest.getDefaultInstance();
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.GMTerminatedServerRequest gmTerminatedServerRequest = 20;
-      public boolean hasGmTerminatedServerRequest() {
-        return result.hasGmTerminatedServerRequest();
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.MarketBuyMarketItemRequest marketBuyMarketItemRequest = 22;
+      public boolean hasMarketBuyMarketItemRequest() {
+        return result.hasMarketBuyMarketItemRequest();
       }
-      public com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMTerminatedServerRequest getGmTerminatedServerRequest() {
-        return result.getGmTerminatedServerRequest();
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketBuyMarketItemRequest getMarketBuyMarketItemRequest() {
+        return result.getMarketBuyMarketItemRequest();
       }
-      public Builder setGmTerminatedServerRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMTerminatedServerRequest value) {
+      public Builder setMarketBuyMarketItemRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketBuyMarketItemRequest value) {
         if (value == null) {
           throw new NullPointerException();
         }
-        result.hasGmTerminatedServerRequest = true;
-        result.gmTerminatedServerRequest_ = value;
+        result.hasMarketBuyMarketItemRequest = true;
+        result.marketBuyMarketItemRequest_ = value;
         return this;
       }
-      public Builder setGmTerminatedServerRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMTerminatedServerRequest.Builder builderForValue) {
-        result.hasGmTerminatedServerRequest = true;
-        result.gmTerminatedServerRequest_ = builderForValue.build();
+      public Builder setMarketBuyMarketItemRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketBuyMarketItemRequest.Builder builderForValue) {
+        result.hasMarketBuyMarketItemRequest = true;
+        result.marketBuyMarketItemRequest_ = builderForValue.build();
         return this;
       }
-      public Builder mergeGmTerminatedServerRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMTerminatedServerRequest value) {
-        if (result.hasGmTerminatedServerRequest() &&
-            result.gmTerminatedServerRequest_ != com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMTerminatedServerRequest.getDefaultInstance()) {
-          result.gmTerminatedServerRequest_ =
-            com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMTerminatedServerRequest.newBuilder(result.gmTerminatedServerRequest_).mergeFrom(value).buildPartial();
+      public Builder mergeMarketBuyMarketItemRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketBuyMarketItemRequest value) {
+        if (result.hasMarketBuyMarketItemRequest() &&
+            result.marketBuyMarketItemRequest_ != com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketBuyMarketItemRequest.getDefaultInstance()) {
+          result.marketBuyMarketItemRequest_ =
+            com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketBuyMarketItemRequest.newBuilder(result.marketBuyMarketItemRequest_).mergeFrom(value).buildPartial();
         } else {
-          result.gmTerminatedServerRequest_ = value;
+          result.marketBuyMarketItemRequest_ = value;
         }
-        result.hasGmTerminatedServerRequest = true;
+        result.hasMarketBuyMarketItemRequest = true;
         return this;
       }
-      public Builder clearGmTerminatedServerRequest() {
-        result.hasGmTerminatedServerRequest = false;
-        result.gmTerminatedServerRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMTerminatedServerRequest.getDefaultInstance();
+      public Builder clearMarketBuyMarketItemRequest() {
+        result.hasMarketBuyMarketItemRequest = false;
+        result.marketBuyMarketItemRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketBuyMarketItemRequest.getDefaultInstance();
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.GMOpenLoginRequest gmOpenLoginRequest = 21;
-      public boolean hasGmOpenLoginRequest() {
-        return result.hasGmOpenLoginRequest();
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.MarketArtificialRefreshRequest marketArtificialRefreshRequest = 23;
+      public boolean hasMarketArtificialRefreshRequest() {
+        return result.hasMarketArtificialRefreshRequest();
       }
-      public com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMOpenLoginRequest getGmOpenLoginRequest() {
-        return result.getGmOpenLoginRequest();
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketArtificialRefreshRequest getMarketArtificialRefreshRequest() {
+        return result.getMarketArtificialRefreshRequest();
       }
-      public Builder setGmOpenLoginRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMOpenLoginRequest value) {
+      public Builder setMarketArtificialRefreshRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketArtificialRefreshRequest value) {
         if (value == null) {
           throw new NullPointerException();
         }
-        result.hasGmOpenLoginRequest = true;
-        result.gmOpenLoginRequest_ = value;
+        result.hasMarketArtificialRefreshRequest = true;
+        result.marketArtificialRefreshRequest_ = value;
         return this;
       }
-      public Builder setGmOpenLoginRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMOpenLoginRequest.Builder builderForValue) {
-        result.hasGmOpenLoginRequest = true;
-        result.gmOpenLoginRequest_ = builderForValue.build();
+      public Builder setMarketArtificialRefreshRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketArtificialRefreshRequest.Builder builderForValue) {
+        result.hasMarketArtificialRefreshRequest = true;
+        result.marketArtificialRefreshRequest_ = builderForValue.build();
         return this;
       }
-      public Builder mergeGmOpenLoginRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMOpenLoginRequest value) {
-        if (result.hasGmOpenLoginRequest() &&
-            result.gmOpenLoginRequest_ != com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMOpenLoginRequest.getDefaultInstance()) {
-          result.gmOpenLoginRequest_ =
-            com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMOpenLoginRequest.newBuilder(result.gmOpenLoginRequest_).mergeFrom(value).buildPartial();
+      public Builder mergeMarketArtificialRefreshRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketArtificialRefreshRequest value) {
+        if (result.hasMarketArtificialRefreshRequest() &&
+            result.marketArtificialRefreshRequest_ != com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketArtificialRefreshRequest.getDefaultInstance()) {
+          result.marketArtificialRefreshRequest_ =
+            com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketArtificialRefreshRequest.newBuilder(result.marketArtificialRefreshRequest_).mergeFrom(value).buildPartial();
         } else {
-          result.gmOpenLoginRequest_ = value;
+          result.marketArtificialRefreshRequest_ = value;
         }
-        result.hasGmOpenLoginRequest = true;
+        result.hasMarketArtificialRefreshRequest = true;
         return this;
       }
-      public Builder clearGmOpenLoginRequest() {
-        result.hasGmOpenLoginRequest = false;
-        result.gmOpenLoginRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMOpenLoginRequest.getDefaultInstance();
+      public Builder clearMarketArtificialRefreshRequest() {
+        result.hasMarketArtificialRefreshRequest = false;
+        result.marketArtificialRefreshRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketArtificialRefreshRequest.getDefaultInstance();
+        return this;
+      }
+      
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.WarShowWarChapterRequest warShowWarChapterRequest = 24;
+      public boolean hasWarShowWarChapterRequest() {
+        return result.hasWarShowWarChapterRequest();
+      }
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarChapterRequest getWarShowWarChapterRequest() {
+        return result.getWarShowWarChapterRequest();
+      }
+      public Builder setWarShowWarChapterRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarChapterRequest value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        result.hasWarShowWarChapterRequest = true;
+        result.warShowWarChapterRequest_ = value;
+        return this;
+      }
+      public Builder setWarShowWarChapterRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarChapterRequest.Builder builderForValue) {
+        result.hasWarShowWarChapterRequest = true;
+        result.warShowWarChapterRequest_ = builderForValue.build();
+        return this;
+      }
+      public Builder mergeWarShowWarChapterRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarChapterRequest value) {
+        if (result.hasWarShowWarChapterRequest() &&
+            result.warShowWarChapterRequest_ != com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarChapterRequest.getDefaultInstance()) {
+          result.warShowWarChapterRequest_ =
+            com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarChapterRequest.newBuilder(result.warShowWarChapterRequest_).mergeFrom(value).buildPartial();
+        } else {
+          result.warShowWarChapterRequest_ = value;
+        }
+        result.hasWarShowWarChapterRequest = true;
+        return this;
+      }
+      public Builder clearWarShowWarChapterRequest() {
+        result.hasWarShowWarChapterRequest = false;
+        result.warShowWarChapterRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarChapterRequest.getDefaultInstance();
+        return this;
+      }
+      
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.WarShowWarBuildRequest warShowWarBuildRequest = 25;
+      public boolean hasWarShowWarBuildRequest() {
+        return result.hasWarShowWarBuildRequest();
+      }
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarBuildRequest getWarShowWarBuildRequest() {
+        return result.getWarShowWarBuildRequest();
+      }
+      public Builder setWarShowWarBuildRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarBuildRequest value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        result.hasWarShowWarBuildRequest = true;
+        result.warShowWarBuildRequest_ = value;
+        return this;
+      }
+      public Builder setWarShowWarBuildRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarBuildRequest.Builder builderForValue) {
+        result.hasWarShowWarBuildRequest = true;
+        result.warShowWarBuildRequest_ = builderForValue.build();
+        return this;
+      }
+      public Builder mergeWarShowWarBuildRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarBuildRequest value) {
+        if (result.hasWarShowWarBuildRequest() &&
+            result.warShowWarBuildRequest_ != com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarBuildRequest.getDefaultInstance()) {
+          result.warShowWarBuildRequest_ =
+            com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarBuildRequest.newBuilder(result.warShowWarBuildRequest_).mergeFrom(value).buildPartial();
+        } else {
+          result.warShowWarBuildRequest_ = value;
+        }
+        result.hasWarShowWarBuildRequest = true;
+        return this;
+      }
+      public Builder clearWarShowWarBuildRequest() {
+        result.hasWarShowWarBuildRequest = false;
+        result.warShowWarBuildRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarBuildRequest.getDefaultInstance();
+        return this;
+      }
+      
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.WarMarchRequest warMarchRequest = 26;
+      public boolean hasWarMarchRequest() {
+        return result.hasWarMarchRequest();
+      }
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMarchRequest getWarMarchRequest() {
+        return result.getWarMarchRequest();
+      }
+      public Builder setWarMarchRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMarchRequest value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        result.hasWarMarchRequest = true;
+        result.warMarchRequest_ = value;
+        return this;
+      }
+      public Builder setWarMarchRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMarchRequest.Builder builderForValue) {
+        result.hasWarMarchRequest = true;
+        result.warMarchRequest_ = builderForValue.build();
+        return this;
+      }
+      public Builder mergeWarMarchRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMarchRequest value) {
+        if (result.hasWarMarchRequest() &&
+            result.warMarchRequest_ != com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMarchRequest.getDefaultInstance()) {
+          result.warMarchRequest_ =
+            com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMarchRequest.newBuilder(result.warMarchRequest_).mergeFrom(value).buildPartial();
+        } else {
+          result.warMarchRequest_ = value;
+        }
+        result.hasWarMarchRequest = true;
+        return this;
+      }
+      public Builder clearWarMarchRequest() {
+        result.hasWarMarchRequest = false;
+        result.warMarchRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMarchRequest.getDefaultInstance();
+        return this;
+      }
+      
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.WarWinBuildRequest warWinBuildRequest = 27;
+      public boolean hasWarWinBuildRequest() {
+        return result.hasWarWinBuildRequest();
+      }
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarWinBuildRequest getWarWinBuildRequest() {
+        return result.getWarWinBuildRequest();
+      }
+      public Builder setWarWinBuildRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarWinBuildRequest value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        result.hasWarWinBuildRequest = true;
+        result.warWinBuildRequest_ = value;
+        return this;
+      }
+      public Builder setWarWinBuildRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarWinBuildRequest.Builder builderForValue) {
+        result.hasWarWinBuildRequest = true;
+        result.warWinBuildRequest_ = builderForValue.build();
+        return this;
+      }
+      public Builder mergeWarWinBuildRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarWinBuildRequest value) {
+        if (result.hasWarWinBuildRequest() &&
+            result.warWinBuildRequest_ != com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarWinBuildRequest.getDefaultInstance()) {
+          result.warWinBuildRequest_ =
+            com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarWinBuildRequest.newBuilder(result.warWinBuildRequest_).mergeFrom(value).buildPartial();
+        } else {
+          result.warWinBuildRequest_ = value;
+        }
+        result.hasWarWinBuildRequest = true;
+        return this;
+      }
+      public Builder clearWarWinBuildRequest() {
+        result.hasWarWinBuildRequest = false;
+        result.warWinBuildRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarWinBuildRequest.getDefaultInstance();
+        return this;
+      }
+      
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.WarGetChapterAwardRequest warGetChapterAwardRequest = 28;
+      public boolean hasWarGetChapterAwardRequest() {
+        return result.hasWarGetChapterAwardRequest();
+      }
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarGetChapterAwardRequest getWarGetChapterAwardRequest() {
+        return result.getWarGetChapterAwardRequest();
+      }
+      public Builder setWarGetChapterAwardRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarGetChapterAwardRequest value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        result.hasWarGetChapterAwardRequest = true;
+        result.warGetChapterAwardRequest_ = value;
+        return this;
+      }
+      public Builder setWarGetChapterAwardRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarGetChapterAwardRequest.Builder builderForValue) {
+        result.hasWarGetChapterAwardRequest = true;
+        result.warGetChapterAwardRequest_ = builderForValue.build();
+        return this;
+      }
+      public Builder mergeWarGetChapterAwardRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarGetChapterAwardRequest value) {
+        if (result.hasWarGetChapterAwardRequest() &&
+            result.warGetChapterAwardRequest_ != com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarGetChapterAwardRequest.getDefaultInstance()) {
+          result.warGetChapterAwardRequest_ =
+            com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarGetChapterAwardRequest.newBuilder(result.warGetChapterAwardRequest_).mergeFrom(value).buildPartial();
+        } else {
+          result.warGetChapterAwardRequest_ = value;
+        }
+        result.hasWarGetChapterAwardRequest = true;
+        return this;
+      }
+      public Builder clearWarGetChapterAwardRequest() {
+        result.hasWarGetChapterAwardRequest = false;
+        result.warGetChapterAwardRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarGetChapterAwardRequest.getDefaultInstance();
+        return this;
+      }
+      
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.RoleInfoSelectRequest roleInfoSelectRequest = 29;
+      public boolean hasRoleInfoSelectRequest() {
+        return result.hasRoleInfoSelectRequest();
+      }
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.RoleInfoSelectRequest getRoleInfoSelectRequest() {
+        return result.getRoleInfoSelectRequest();
+      }
+      public Builder setRoleInfoSelectRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.RoleInfoSelectRequest value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        result.hasRoleInfoSelectRequest = true;
+        result.roleInfoSelectRequest_ = value;
+        return this;
+      }
+      public Builder setRoleInfoSelectRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.RoleInfoSelectRequest.Builder builderForValue) {
+        result.hasRoleInfoSelectRequest = true;
+        result.roleInfoSelectRequest_ = builderForValue.build();
+        return this;
+      }
+      public Builder mergeRoleInfoSelectRequest(com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.RoleInfoSelectRequest value) {
+        if (result.hasRoleInfoSelectRequest() &&
+            result.roleInfoSelectRequest_ != com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.RoleInfoSelectRequest.getDefaultInstance()) {
+          result.roleInfoSelectRequest_ =
+            com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.RoleInfoSelectRequest.newBuilder(result.roleInfoSelectRequest_).mergeFrom(value).buildPartial();
+        } else {
+          result.roleInfoSelectRequest_ = value;
+        }
+        result.hasRoleInfoSelectRequest = true;
+        return this;
+      }
+      public Builder clearRoleInfoSelectRequest() {
+        result.hasRoleInfoSelectRequest = false;
+        result.roleInfoSelectRequest_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.RoleInfoSelectRequest.getDefaultInstance();
         return this;
       }
       
@@ -1614,66 +2165,91 @@ public final class ClientMessage {
       "\n\023ClientMessage.proto\0226com.randioo.owlof" +
       "war_server_simplify_protobuf.protocol\032\013L" +
       "ogin.proto\032\013Match.proto\032\013Fight.proto\032\rPi" +
-      "llage.proto\032\nCard.proto\032\nPing.proto\032\010GM." +
-      "proto\"\256\022\n\tCSMessage\022r\n\030loginCheckAccount" +
-      "Request\030\001 \001(\0132P.com.randioo.owlofwar_ser" +
-      "ver_simplify_protobuf.protocol.LoginChec" +
-      "kAccountRequest\022n\n\026loginCreateRoleReques" +
-      "t\030\002 \001(\0132N.com.randioo.owlofwar_server_si" +
-      "mplify_protobuf.protocol.LoginCreateRole",
-      "Request\022p\n\027loginGetRoleDataRequest\030\003 \001(\013" +
-      "2O.com.randioo.owlofwar_server_simplify_" +
-      "protobuf.protocol.LoginGetRoleDataReques" +
-      "t\022p\n\027fightClientReadyRequest\030\004 \001(\0132O.com" +
-      ".randioo.owlofwar_server_simplify_protob" +
-      "uf.protocol.FightClientReadyRequest\022\202\001\n " +
-      "fightLoadResourceCompleteRequest\030\005 \001(\0132X" +
+      "llage.proto\032\nCard.proto\032\nPing.proto\032\014Mar" +
+      "ket.proto\032\tWar.proto\032\nRole.proto\"\352\031\n\tCSM" +
+      "essage\022\017\n\004type\030\001 \001(\005:\0010\022r\n\030loginCheckAcc" +
+      "ountRequest\030\002 \001(\0132P.com.randioo.owlofwar" +
+      "_server_simplify_protobuf.protocol.Login" +
+      "CheckAccountRequest\022n\n\026loginCreateRoleRe" +
+      "quest\030\003 \001(\0132N.com.randioo.owlofwar_serve",
+      "r_simplify_protobuf.protocol.LoginCreate" +
+      "RoleRequest\022p\n\027loginGetRoleDataRequest\030\004" +
+      " \001(\0132O.com.randioo.owlofwar_server_simpl" +
+      "ify_protobuf.protocol.LoginGetRoleDataRe" +
+      "quest\022p\n\027fightClientReadyRequest\030\005 \001(\0132O" +
       ".com.randioo.owlofwar_server_simplify_pr" +
-      "otobuf.protocol.FightLoadResourceComplet" +
-      "eRequest\022n\n\026fightGameActionRequest\030\006 \001(\013",
-      "2N.com.randioo.owlofwar_server_simplify_" +
-      "protobuf.protocol.FightGameActionRequest" +
-      "\022j\n\024fightGameOverRequest\030\007 \001(\0132L.com.ran" +
-      "dioo.owlofwar_server_simplify_protobuf.p" +
-      "rotocol.FightGameOverRequest\022l\n\025fightRea" +
-      "dFrameRequest\030\010 \001(\0132M.com.randioo.owlofw" +
-      "ar_server_simplify_protobuf.protocol.Fig" +
-      "htReadFrameRequest\022r\n\030fightGetGameAwardR" +
-      "equest\030\021 \001(\0132P.com.randioo.owlofwar_serv" +
-      "er_simplify_protobuf.protocol.FightGetGa",
-      "meAwardRequest\022f\n\022pillageRoleRequest\030\t \001" +
-      "(\0132J.com.randioo.owlofwar_server_simplif" +
-      "y_protobuf.protocol.PillageRoleRequest\022j" +
-      "\n\024pillageCancelRequest\030\n \001(\0132L.com.randi" +
-      "oo.owlofwar_server_simplify_protobuf.pro" +
-      "tocol.PillageCancelRequest\022f\n\022pillageSho" +
-      "wRequest\030\013 \001(\0132J.com.randioo.owlofwar_se" +
-      "rver_simplify_protobuf.protocol.PillageS" +
-      "howRequest\022p\n\027cardGetCardsInfoRequest\030\014 " +
-      "\001(\0132O.com.randioo.owlofwar_server_simpli",
-      "fy_protobuf.protocol.CardGetCardsInfoReq" +
-      "uest\022p\n\027cardEditCardListRequest\030\r \001(\0132O." +
-      "com.randioo.owlofwar_server_simplify_pro" +
-      "tobuf.protocol.CardEditCardListRequest\022`" +
-      "\n\017cardLvUpRequest\030\016 \001(\0132G.com.randioo.ow" +
+      "otobuf.protocol.FightClientReadyRequest\022" +
+      "\202\001\n fightLoadResourceCompleteRequest\030\006 \001" +
+      "(\0132X.com.randioo.owlofwar_server_simplif" +
+      "y_protobuf.protocol.FightLoadResourceCom",
+      "pleteRequest\022n\n\026fightGameActionRequest\030\007" +
+      " \001(\0132N.com.randioo.owlofwar_server_simpl" +
+      "ify_protobuf.protocol.FightGameActionReq" +
+      "uest\022j\n\024fightGameOverRequest\030\010 \001(\0132L.com" +
+      ".randioo.owlofwar_server_simplify_protob" +
+      "uf.protocol.FightGameOverRequest\022l\n\025figh" +
+      "tReadFrameRequest\030\t \001(\0132M.com.randioo.ow" +
       "lofwar_server_simplify_protobuf.protocol" +
-      ".CardLvUpRequest\022z\n\034cardChooseUseCardLis" +
-      "tRequest\030\017 \001(\0132T.com.randioo.owlofwar_se" +
-      "rver_simplify_protobuf.protocol.CardChoo" +
-      "seUseCardListRequest\022t\n\031cardChangeMainCa",
-      "rdRequest\030\022 \001(\0132Q.com.randioo.owlofwar_s" +
-      "erver_simplify_protobuf.protocol.CardCha" +
-      "ngeMainCardRequest\022X\n\013pingRequest\030\020 \001(\0132" +
-      "C.com.randioo.owlofwar_server_simplify_p" +
-      "rotobuf.protocol.PingRequest\022j\n\024gmReject" +
-      "LoginRequest\030\023 \001(\0132L.com.randioo.owlofwa" +
-      "r_server_simplify_protobuf.protocol.GMRe" +
-      "jectLoginRequest\022t\n\031gmTerminatedServerRe" +
-      "quest\030\024 \001(\0132Q.com.randioo.owlofwar_serve" +
-      "r_simplify_protobuf.protocol.GMTerminate",
-      "dServerRequest\022f\n\022gmOpenLoginRequest\030\025 \001" +
-      "(\0132J.com.randioo.owlofwar_server_simplif" +
-      "y_protobuf.protocol.GMOpenLoginRequest"
+      ".FightReadFrameRequest\022r\n\030fightGetGameAw" +
+      "ardRequest\030\n \001(\0132P.com.randioo.owlofwar_",
+      "server_simplify_protobuf.protocol.FightG" +
+      "etGameAwardRequest\022l\n\025fightCountDownRequ" +
+      "est\030\013 \001(\0132M.com.randioo.owlofwar_server_" +
+      "simplify_protobuf.protocol.FightCountDow" +
+      "nRequest\022f\n\022pillageRoleRequest\030\014 \001(\0132J.c" +
+      "om.randioo.owlofwar_server_simplify_prot" +
+      "obuf.protocol.PillageRoleRequest\022j\n\024pill" +
+      "ageCancelRequest\030\r \001(\0132L.com.randioo.owl" +
+      "ofwar_server_simplify_protobuf.protocol." +
+      "PillageCancelRequest\022f\n\022pillageShowReque",
+      "st\030\016 \001(\0132J.com.randioo.owlofwar_server_s" +
+      "implify_protobuf.protocol.PillageShowReq" +
+      "uest\022\200\001\n\037pillageCompetitionNoticeRequest" +
+      "\030\036 \001(\0132W.com.randioo.owlofwar_server_sim" +
+      "plify_protobuf.protocol.PillageCompetiti" +
+      "onNoticeRequest\022p\n\027cardGetCardsInfoReque" +
+      "st\030\017 \001(\0132O.com.randioo.owlofwar_server_s" +
+      "implify_protobuf.protocol.CardGetCardsIn" +
+      "foRequest\022p\n\027cardEditCardListRequest\030\020 \001" +
+      "(\0132O.com.randioo.owlofwar_server_simplif",
+      "y_protobuf.protocol.CardEditCardListRequ" +
+      "est\022`\n\017cardLvUpRequest\030\021 \001(\0132G.com.randi" +
+      "oo.owlofwar_server_simplify_protobuf.pro" +
+      "tocol.CardLvUpRequest\022z\n\034cardChooseUseCa" +
+      "rdListRequest\030\022 \001(\0132T.com.randioo.owlofw" +
+      "ar_server_simplify_protobuf.protocol.Car" +
+      "dChooseUseCardListRequest\022t\n\031cardChangeM" +
+      "ainCardRequest\030\023 \001(\0132Q.com.randioo.owlof" +
+      "war_server_simplify_protobuf.protocol.Ca" +
+      "rdChangeMainCardRequest\022X\n\013pingRequest\030\024",
+      " \001(\0132C.com.randioo.owlofwar_server_simpl" +
+      "ify_protobuf.protocol.PingRequest\022x\n\033mar" +
+      "ketShowMarketItemReqeust\030\025 \001(\0132S.com.ran" +
+      "dioo.owlofwar_server_simplify_protobuf.p" +
+      "rotocol.MarketShowMarketItemRequest\022v\n\032m" +
+      "arketBuyMarketItemRequest\030\026 \001(\0132R.com.ra" +
+      "ndioo.owlofwar_server_simplify_protobuf." +
+      "protocol.MarketBuyMarketItemRequest\022~\n\036m" +
+      "arketArtificialRefreshRequest\030\027 \001(\0132V.co" +
+      "m.randioo.owlofwar_server_simplify_proto",
+      "buf.protocol.MarketArtificialRefreshRequ" +
+      "est\022r\n\030warShowWarChapterRequest\030\030 \001(\0132P." +
+      "com.randioo.owlofwar_server_simplify_pro" +
+      "tobuf.protocol.WarShowWarChapterRequest\022" +
+      "n\n\026warShowWarBuildRequest\030\031 \001(\0132N.com.ra" +
+      "ndioo.owlofwar_server_simplify_protobuf." +
+      "protocol.WarShowWarBuildRequest\022`\n\017warMa" +
+      "rchRequest\030\032 \001(\0132G.com.randioo.owlofwar_" +
+      "server_simplify_protobuf.protocol.WarMar" +
+      "chRequest\022f\n\022warWinBuildRequest\030\033 \001(\0132J.",
+      "com.randioo.owlofwar_server_simplify_pro" +
+      "tobuf.protocol.WarWinBuildRequest\022t\n\031war" +
+      "GetChapterAwardRequest\030\034 \001(\0132Q.com.randi" +
+      "oo.owlofwar_server_simplify_protobuf.pro" +
+      "tocol.WarGetChapterAwardRequest\022l\n\025roleI" +
+      "nfoSelectRequest\030\035 \001(\0132M.com.randioo.owl" +
+      "ofwar_server_simplify_protobuf.protocol." +
+      "RoleInfoSelectRequest"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -1685,7 +2261,7 @@ public final class ClientMessage {
           internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_CSMessage_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_CSMessage_descriptor,
-              new java.lang.String[] { "LoginCheckAccountRequest", "LoginCreateRoleRequest", "LoginGetRoleDataRequest", "FightClientReadyRequest", "FightLoadResourceCompleteRequest", "FightGameActionRequest", "FightGameOverRequest", "FightReadFrameRequest", "FightGetGameAwardRequest", "PillageRoleRequest", "PillageCancelRequest", "PillageShowRequest", "CardGetCardsInfoRequest", "CardEditCardListRequest", "CardLvUpRequest", "CardChooseUseCardListRequest", "CardChangeMainCardRequest", "PingRequest", "GmRejectLoginRequest", "GmTerminatedServerRequest", "GmOpenLoginRequest", },
+              new java.lang.String[] { "Type", "LoginCheckAccountRequest", "LoginCreateRoleRequest", "LoginGetRoleDataRequest", "FightClientReadyRequest", "FightLoadResourceCompleteRequest", "FightGameActionRequest", "FightGameOverRequest", "FightReadFrameRequest", "FightGetGameAwardRequest", "FightCountDownRequest", "PillageRoleRequest", "PillageCancelRequest", "PillageShowRequest", "PillageCompetitionNoticeRequest", "CardGetCardsInfoRequest", "CardEditCardListRequest", "CardLvUpRequest", "CardChooseUseCardListRequest", "CardChangeMainCardRequest", "PingRequest", "MarketShowMarketItemReqeust", "MarketBuyMarketItemRequest", "MarketArtificialRefreshRequest", "WarShowWarChapterRequest", "WarShowWarBuildRequest", "WarMarchRequest", "WarWinBuildRequest", "WarGetChapterAwardRequest", "RoleInfoSelectRequest", },
               com.randioo.owlofwar_server_simplify_protobuf.protocol.ClientMessage.CSMessage.class,
               com.randioo.owlofwar_server_simplify_protobuf.protocol.ClientMessage.CSMessage.Builder.class);
           return null;
@@ -1700,7 +2276,9 @@ public final class ClientMessage {
           com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.getDescriptor(),
           com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.getDescriptor(),
           com.randioo.owlofwar_server_simplify_protobuf.protocol.Ping.getDescriptor(),
-          com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.getDescriptor(),
+          com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.getDescriptor(),
+          com.randioo.owlofwar_server_simplify_protobuf.protocol.War.getDescriptor(),
+          com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.getDescriptor(),
         }, assigner);
   }
   

@@ -5,30 +5,22 @@ package com.randioo.owlofwar_server_simplify_protobuf.module.role.service;
 import java.util.Arrays;
 import java.util.List;
 
+import org.apache.mina.core.session.IoSession;
+
+import com.google.protobuf.GeneratedMessage;
 import com.randioo.owlofwar_server_simplify_protobuf.db.dao.RoleDao;
+import com.randioo.owlofwar_server_simplify_protobuf.entity.bo.Role;
+import com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.RoleInfoType;
+import com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.RoleInfoSelectResponse;
+import com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold;
+import com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney;
+import com.randioo.owlofwar_server_simplify_protobuf.protocol.ServerMessage.SCMessage;
 import com.randioo.randioo_server_base.cache.RoleCache;
+import com.randioo.randioo_server_base.cache.SessionCache;
 import com.randioo.randioo_server_base.module.BaseService;
 
 
-public class RoleServiceImpl extends BaseService implements RoleService {
-
-	private RoleDao roleDao;
-
-	public void setRoleDao(RoleDao roleDao) {
-		this.roleDao = roleDao;
-	}
-	
-	@Override
-	public void init() {
-//		roleDao.serverStartInit();
-		
-	}
-//
-//	private LoginService loginService;
-//
-//	public void setLoginService(LoginService loginService) {
-//		this.loginService = loginService;
-//	}
+public class RoleServiceImpl extends BaseService implements RoleService {	
 //
 //	
 //
@@ -107,13 +99,13 @@ public class RoleServiceImpl extends BaseService implements RoleService {
 //		}
 //		annalsService.recordIncome(role, IncomeConstant.ITEM_TYPE_FOOD, value);
 //	}
-//
-//	@Override
-//	public void addMoney(Role role, int value) {
-//		byte method = 0;
-//		this.addMoney(role, value, method);
-//
-//	}
+
+	@Override
+	public void addMoney(Role role, int value) {
+		byte method = 0;
+		this.addMoney(role, value, method);
+
+	}
 //
 //	// @Override
 //	// public void addMoney(Role role, int value, byte payMethod) {
@@ -140,99 +132,68 @@ public class RoleServiceImpl extends BaseService implements RoleService {
 //	// }
 //	// }
 //
-//	@Override
-//	public void addMoney(Role role, int value, byte method) {
-//		int originTotal = role.getMoney();
-//		int total = role.getMoney() + value;
-//		if (total < 0) {
-//			if (value >= 0) {
-//				total = Integer.MAX_VALUE;
-//			} else {
-//				total = 0;
-//			}
-//		}
-//
-//		if (method == 0) {// 正常
-//			// 如果还没有到达容量上限，则加入
-//			if (value > 0) {
-//				if (!this.checkCapacity(role, total, IncomeConstant.ITEM_TYPE_MONEY)) {
-//					role.setMoney(total);
-//					this.repairCapacity(role, IncomeConstant.ITEM_TYPE_MONEY);
-//					total = role.getMoney();
-//					value = total - originTotal;
-//				} else {
-//					value = 0;
-//				}
-//			} else {
-//				role.setMoney(total);
-//				value = total - originTotal;
-//			}
-//
-//		} else if (method == 1) {// 金币
-//			role.setMoney(total);
-//			value = total - originTotal;
-//		} else if (method == 2) {// GM
-//			role.setMoney(total);
-//			value = total - originTotal;
-//		}
-//		IoSession ioSession = SessionCache.getSessionById(role.getRoleId());
-//		Message message = new Message();
-//		message.setType(RoleConstant.ADD_MONEY_ROLE);
-//		message.putInt(value);
-//		if (ioSession != null) {
-//			ioSession.write(message);
-//		}
-//		annalsService.recordIncome(role, IncomeConstant.ITEM_TYPE_MONEY, value);
-//	}
-//
-//	@Override
-//	public void addGold(Role role, int value) {
-//		int originTotal = role.getGold();
-//		int total = role.getGold() + value;
-//		if (total < 0) {
-//			if (value >= 0) {
-//				total = Integer.MAX_VALUE;
-//			} else {
-//				total = 0;
-//			}
-//		}
-//		value = total - originTotal;
-//		role.setGold(total);
-//		IoSession ioSession = SessionCache.getSessionById(role.getRoleId());
-//		Message message = new Message();
-//		message.setType(RoleConstant.ADD_GOLD_ROLE);
-//		message.putInt(value);
-//		annalsService.recordIncome(role, IncomeConstant.ITEM_TYPE_GOLD, value);
-//		if (ioSession != null) {
-//			ioSession.write(message);
-//		}
-//	}
-//
-//	@Override
-//	public Role getRoleById(int roleId) {
-//		Role role = RoleCache.getRoleById(roleId);
-//		if (role == null) {
-//			role = roleDao.getRoleById(roleId);
-//			if (role == null) {
-//				return role;
-//			}
-//			loginService.loginRoleModuleDataInit(role);
-//		}
-//		return role;
-//	}
-//
-//	@Override
-//	public Role getRoleByAccount(String account) {
-//		Role role = RoleCache.getRoleByAccount(account);
-//		if (role == null) {
-//			role = roleDao.getRoleByAccount(account);
-//			if (role == null)
-//				return role;
-//			loginService.loginRoleModuleDataInit(role);
-//		}
-//
-//		return role;
-//	}
+	@Override
+	public void addMoney(Role role, int value, byte method) {
+		int originTotal = role.getMoney();
+		int total = role.getMoney() + value;
+		if (total < 0) {
+			if (value >= 0) {
+				total = Integer.MAX_VALUE;
+			} else {
+				total = 0;
+			}
+		}
+
+		if (method == 0) {// 正常
+			// 如果还没有到达容量上限，则加入
+			role.setMoney(total);
+			value = total - originTotal;
+		} else if (method == 1) {// 金币
+			role.setMoney(total);
+			value = total - originTotal;
+		} else if (method == 2) {// GM
+			role.setMoney(total);
+			value = total - originTotal;
+		}
+		IoSession ioSession = SessionCache.getSessionById(role.getRoleId());		
+		
+		if (ioSession != null) {
+			ioSession.write(SCMessage.newBuilder().setScRoleAddMoney(SCRoleAddMoney.newBuilder().setAddValue(value)).build());
+		}
+	}
+
+	@Override
+	public void addGold(Role role, int value) {
+		int originTotal = role.getGold();
+		int total = role.getGold() + value;
+		if (total < 0) {
+			if (value >= 0) {
+				total = Integer.MAX_VALUE;
+			} else {
+				total = 0;
+			}
+		}
+		value = total - originTotal;
+		role.setGold(total);
+		IoSession ioSession = SessionCache.getSessionById(role.getRoleId());
+		if (ioSession != null) {
+			ioSession.write(SCMessage.newBuilder().setScRoleAddGold(SCRoleAddGold.newBuilder().setAddValue(value))
+					.build());
+		}
+	}
+
+	@Override
+	public GeneratedMessage selectRoleInfo(Role role,List<RoleInfoType> roleInfoType){
+		RoleInfoSelectResponse.Builder response = RoleInfoSelectResponse.newBuilder().addAllRoleInfoType(roleInfoType);
+		for (RoleInfoType type : roleInfoType) {
+			switch (type) {
+			case INFO_MONEY:
+				response.setMoney(role.getMoney());
+			}
+
+		}
+		return SCMessage.newBuilder().setRoleInfoSelectResponse(response).build();
+	}
 //
 //	private boolean checkCapacity(Role role, int total, byte resType) {
 //		Income income = role.getIncome();

@@ -5,33 +5,53 @@ import "Fight.proto";
 import "Pillage.proto";
 import "Card.proto";
 import "Ping.proto";
-import "GM.proto";
-//21
+import "Market.proto";
+import "War.proto";
+import "Role.proto";
+
+//30
 message CSMessage{
-	optional LoginCheckAccountRequest loginCheckAccountRequest=1;
-	optional LoginCreateRoleRequest loginCreateRoleRequest=2;
-	optional LoginGetRoleDataRequest loginGetRoleDataRequest=3;
+	optional int32 type = 1 [default = 0];
+	optional LoginCheckAccountRequest loginCheckAccountRequest=2;
+	optional LoginCreateRoleRequest loginCreateRoleRequest=3;
+	optional LoginGetRoleDataRequest loginGetRoleDataRequest=4;
 
-	optional FightClientReadyRequest fightClientReadyRequest=4;
-	optional FightLoadResourceCompleteRequest fightLoadResourceCompleteRequest=5;
-	optional FightGameActionRequest fightGameActionRequest = 6;
-	optional FightGameOverRequest fightGameOverRequest = 7;
-	optional FightReadFrameRequest fightReadFrameRequest = 8;
-	optional FightGetGameAwardRequest fightGetGameAwardRequest = 17;
+	optional FightClientReadyRequest fightClientReadyRequest=5;
+	optional FightLoadResourceCompleteRequest fightLoadResourceCompleteRequest=6;
+	optional FightGameActionRequest fightGameActionRequest = 7;
+	optional FightGameOverRequest fightGameOverRequest = 8;
+	optional FightReadFrameRequest fightReadFrameRequest = 9;
+	optional FightGetGameAwardRequest fightGetGameAwardRequest = 10;
+	optional FightCountDownRequest fightCountDownRequest = 11;
 
-	optional PillageRoleRequest pillageRoleRequest=9;
-	optional PillageCancelRequest pillageCancelRequest =10;
-	optional PillageShowRequest pillageShowRequest=11;
+	optional PillageRoleRequest pillageRoleRequest=12;
+	optional PillageCancelRequest pillageCancelRequest =13;
+	optional PillageShowRequest pillageShowRequest=14;
+	optional PillageCompetitionNoticeRequest pillageCompetitionNoticeRequest = 30;
 
-	optional CardGetCardsInfoRequest cardGetCardsInfoRequest = 12;
-	optional CardEditCardListRequest cardEditCardListRequest = 13;
-	optional CardLvUpRequest cardLvUpRequest = 14;
-	optional CardChooseUseCardListRequest cardChooseUseCardListRequest = 15;
-	optional CardChangeMainCardRequest cardChangeMainCardRequest = 18;
+	optional CardGetCardsInfoRequest cardGetCardsInfoRequest = 15;
+	optional CardEditCardListRequest cardEditCardListRequest = 16;
+	optional CardLvUpRequest cardLvUpRequest = 17;
+	optional CardChooseUseCardListRequest cardChooseUseCardListRequest = 18;
+	optional CardChangeMainCardRequest cardChangeMainCardRequest = 19;
 
-	optional PingRequest pingRequest = 16;
+	optional PingRequest pingRequest = 20;
+	
+	//显示商品信息
+	optional MarketShowMarketItemRequest marketShowMarketItemReqeust= 21;
+	//购买商品
+	optional MarketBuyMarketItemRequest marketBuyMarketItemRequest = 22;
+	//手动刷新
+	optional MarketArtificialRefreshRequest marketArtificialRefreshRequest = 23;
 
-	optional GMRejectLoginRequest gmRejectLoginRequest = 19;
-	optional GMTerminatedServerRequest gmTerminatedServerRequest = 20;
-	optional GMOpenLoginRequest gmOpenLoginRequest = 21;
+	//显示战场章节信息
+	optional WarShowWarChapterRequest warShowWarChapterRequest = 24;
+	//显示战场建筑信息
+	optional WarShowWarBuildRequest warShowWarBuildRequest=25;
+	//攻打建筑
+	optional WarMarchRequest warMarchRequest = 26;	
+	optional WarWinBuildRequest warWinBuildRequest = 27;	
+	optional WarGetChapterAwardRequest warGetChapterAwardRequest = 28;
+	
+	optional RoleInfoSelectRequest roleInfoSelectRequest = 29;
 }

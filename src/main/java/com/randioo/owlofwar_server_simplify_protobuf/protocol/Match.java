@@ -35,6 +35,32 @@ public final class Match {
       return com.randioo.owlofwar_server_simplify_protobuf.protocol.Match.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCMatchComplete_fieldAccessorTable;
     }
     
+    // optional int32 index = 1;
+    public static final int INDEX_FIELD_NUMBER = 1;
+    private boolean hasIndex;
+    private int index_ = 0;
+    public boolean hasIndex() { return hasIndex; }
+    public int getIndex() { return index_; }
+    
+    // optional int32 mapsId = 2;
+    public static final int MAPSID_FIELD_NUMBER = 2;
+    private boolean hasMapsId;
+    private int mapsId_ = 0;
+    public boolean hasMapsId() { return hasMapsId; }
+    public int getMapsId() { return mapsId_; }
+    
+    // repeated .com.randioo.owlofwar_server_simplify_protobuf.protocol.MatchRoleInfo matchRoleInfos = 3;
+    public static final int MATCHROLEINFOS_FIELD_NUMBER = 3;
+    private java.util.List<com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MatchRoleInfo> matchRoleInfos_ =
+      java.util.Collections.emptyList();
+    public java.util.List<com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MatchRoleInfo> getMatchRoleInfosList() {
+      return matchRoleInfos_;
+    }
+    public int getMatchRoleInfosCount() { return matchRoleInfos_.size(); }
+    public com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MatchRoleInfo getMatchRoleInfos(int index) {
+      return matchRoleInfos_.get(index);
+    }
+    
     private void initFields() {
     }
     public final boolean isInitialized() {
@@ -44,6 +70,15 @@ public final class Match {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
+      if (hasIndex()) {
+        output.writeInt32(1, getIndex());
+      }
+      if (hasMapsId()) {
+        output.writeInt32(2, getMapsId());
+      }
+      for (com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MatchRoleInfo element : getMatchRoleInfosList()) {
+        output.writeMessage(3, element);
+      }
       getUnknownFields().writeTo(output);
     }
     
@@ -53,6 +88,18 @@ public final class Match {
       if (size != -1) return size;
     
       size = 0;
+      if (hasIndex()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, getIndex());
+      }
+      if (hasMapsId()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, getMapsId());
+      }
+      for (com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MatchRoleInfo element : getMatchRoleInfosList()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, element);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
       return size;
@@ -195,6 +242,10 @@ public final class Match {
           throw new IllegalStateException(
             "build() has already been called on this Builder.");
         }
+        if (result.matchRoleInfos_ != java.util.Collections.EMPTY_LIST) {
+          result.matchRoleInfos_ =
+            java.util.Collections.unmodifiableList(result.matchRoleInfos_);
+        }
         com.randioo.owlofwar_server_simplify_protobuf.protocol.Match.SCMatchComplete returnMe = result;
         result = null;
         return returnMe;
@@ -211,6 +262,18 @@ public final class Match {
       
       public Builder mergeFrom(com.randioo.owlofwar_server_simplify_protobuf.protocol.Match.SCMatchComplete other) {
         if (other == com.randioo.owlofwar_server_simplify_protobuf.protocol.Match.SCMatchComplete.getDefaultInstance()) return this;
+        if (other.hasIndex()) {
+          setIndex(other.getIndex());
+        }
+        if (other.hasMapsId()) {
+          setMapsId(other.getMapsId());
+        }
+        if (!other.matchRoleInfos_.isEmpty()) {
+          if (result.matchRoleInfos_.isEmpty()) {
+            result.matchRoleInfos_ = new java.util.ArrayList<com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MatchRoleInfo>();
+          }
+          result.matchRoleInfos_.addAll(other.matchRoleInfos_);
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -236,10 +299,111 @@ public final class Match {
               }
               break;
             }
+            case 8: {
+              setIndex(input.readInt32());
+              break;
+            }
+            case 16: {
+              setMapsId(input.readInt32());
+              break;
+            }
+            case 26: {
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MatchRoleInfo.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MatchRoleInfo.newBuilder();
+              input.readMessage(subBuilder, extensionRegistry);
+              addMatchRoleInfos(subBuilder.buildPartial());
+              break;
+            }
           }
         }
       }
       
+      
+      // optional int32 index = 1;
+      public boolean hasIndex() {
+        return result.hasIndex();
+      }
+      public int getIndex() {
+        return result.getIndex();
+      }
+      public Builder setIndex(int value) {
+        result.hasIndex = true;
+        result.index_ = value;
+        return this;
+      }
+      public Builder clearIndex() {
+        result.hasIndex = false;
+        result.index_ = 0;
+        return this;
+      }
+      
+      // optional int32 mapsId = 2;
+      public boolean hasMapsId() {
+        return result.hasMapsId();
+      }
+      public int getMapsId() {
+        return result.getMapsId();
+      }
+      public Builder setMapsId(int value) {
+        result.hasMapsId = true;
+        result.mapsId_ = value;
+        return this;
+      }
+      public Builder clearMapsId() {
+        result.hasMapsId = false;
+        result.mapsId_ = 0;
+        return this;
+      }
+      
+      // repeated .com.randioo.owlofwar_server_simplify_protobuf.protocol.MatchRoleInfo matchRoleInfos = 3;
+      public java.util.List<com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MatchRoleInfo> getMatchRoleInfosList() {
+        return java.util.Collections.unmodifiableList(result.matchRoleInfos_);
+      }
+      public int getMatchRoleInfosCount() {
+        return result.getMatchRoleInfosCount();
+      }
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MatchRoleInfo getMatchRoleInfos(int index) {
+        return result.getMatchRoleInfos(index);
+      }
+      public Builder setMatchRoleInfos(int index, com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MatchRoleInfo value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        result.matchRoleInfos_.set(index, value);
+        return this;
+      }
+      public Builder setMatchRoleInfos(int index, com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MatchRoleInfo.Builder builderForValue) {
+        result.matchRoleInfos_.set(index, builderForValue.build());
+        return this;
+      }
+      public Builder addMatchRoleInfos(com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MatchRoleInfo value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        if (result.matchRoleInfos_.isEmpty()) {
+          result.matchRoleInfos_ = new java.util.ArrayList<com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MatchRoleInfo>();
+        }
+        result.matchRoleInfos_.add(value);
+        return this;
+      }
+      public Builder addMatchRoleInfos(com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MatchRoleInfo.Builder builderForValue) {
+        if (result.matchRoleInfos_.isEmpty()) {
+          result.matchRoleInfos_ = new java.util.ArrayList<com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MatchRoleInfo>();
+        }
+        result.matchRoleInfos_.add(builderForValue.build());
+        return this;
+      }
+      public Builder addAllMatchRoleInfos(
+          java.lang.Iterable<? extends com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MatchRoleInfo> values) {
+        if (result.matchRoleInfos_.isEmpty()) {
+          result.matchRoleInfos_ = new java.util.ArrayList<com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MatchRoleInfo>();
+        }
+        super.addAll(values, result.matchRoleInfos_);
+        return this;
+      }
+      public Builder clearMatchRoleInfos() {
+        result.matchRoleInfos_ = java.util.Collections.emptyList();
+        return this;
+      }
       
       // @@protoc_insertion_point(builder_scope:com.randioo.owlofwar_server_simplify_protobuf.protocol.SCMatchComplete)
     }
@@ -518,8 +682,12 @@ public final class Match {
   static {
     java.lang.String[] descriptorData = {
       "\n\013Match.proto\0226com.randioo.owlofwar_serv" +
-      "er_simplify_protobuf.protocol\"\021\n\017SCMatch" +
-      "Complete\"\017\n\rSCMatchCancel"
+      "er_simplify_protobuf.protocol\032\014Entity.pr" +
+      "oto\"\217\001\n\017SCMatchComplete\022\r\n\005index\030\001 \001(\005\022\016" +
+      "\n\006mapsId\030\002 \001(\005\022]\n\016matchRoleInfos\030\003 \003(\0132E" +
+      ".com.randioo.owlofwar_server_simplify_pr" +
+      "otobuf.protocol.MatchRoleInfo\"\017\n\rSCMatch" +
+      "Cancel"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -531,7 +699,7 @@ public final class Match {
           internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCMatchComplete_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCMatchComplete_descriptor,
-              new java.lang.String[] { },
+              new java.lang.String[] { "Index", "MapsId", "MatchRoleInfos", },
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Match.SCMatchComplete.class,
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Match.SCMatchComplete.Builder.class);
           internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCMatchCancel_descriptor =
@@ -548,6 +716,7 @@ public final class Match {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.getDescriptor(),
         }, assigner);
   }
   

@@ -4,7 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.CardList;
+import com.randioo.owlofwar_server_simplify_protobuf.entity.po.Market;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.OwlofwarGame;
+import com.randioo.owlofwar_server_simplify_protobuf.entity.po.War;
 import com.randioo.owlofwar_server_simplify_protobuf.utils.StringUtils;
 
 public class Role extends GameRole {
@@ -21,16 +23,37 @@ public class Role extends GameRole {
 	private Map<Integer, Card> cardMap = new HashMap<Integer, Card>();
 	/** 卡组 */
 	private Map<Integer, CardList> cardListMap = new HashMap<Integer, CardList>();
-	/** 卡组STR */
+	/** 原始卡牌字符串 */
+	private String rawListStr;
+	/** 卡牌字符串 */
 	private String listStr;
 	/** 当前使用中的卡组ID */
 	private int useCardsId;
 
-	private boolean change;
 	/** 战斗世界 */
 	private OwlofwarGame owlofwarGame;
 	/** 游戏id */
 	private int owlofwarGameId;
+	/** 商城 */
+	private Market market;
+	/** 战场 */
+	private War war;
+
+	public void setMarket(Market market) {
+		this.market = market;
+	}
+
+	public Market getMarket() {
+		return market;
+	}
+
+	public War getWar() {
+		return war;
+	}
+
+	public void setWar(War war) {
+		this.war = war;
+	}
 
 	public void setOwlofwarGame(OwlofwarGame owlofwarGame) {
 		this.owlofwarGame = owlofwarGame;
@@ -102,23 +125,23 @@ public class Role extends GameRole {
 		return listStr;
 	}
 
-	public boolean setListStr(String listStr) {
-
+	public void setListStr(String listStr) {
 		if (listStr == null || listStr.equals(""))
-			return false;
+			return;
 		String str[] = listStr.split(";");
 		for (String x : str) {
 			CardList temp = new CardList(x);
 			this.cardListMap.put(temp.getIndex(), temp);
 		}
-		
-		return true;
+
 	}
-	
-	public void setListRawStr(String listStr){
-		if(setListStr(listStr)){
-			this.listStr = listStr;
+
+	public void setRawListStr(String listStr) {
+		if (listStr == null || listStr.equals("")) {
+			return;
 		}
+		this.rawListStr = listStr;
+		this.setListStr(listStr);
 	}
 
 	public int getUseCardsId() {
@@ -139,22 +162,17 @@ public class Role extends GameRole {
 		this.point = point;
 	}
 
-	public boolean isChange() {
-		if (!change)
-			change = StringUtils.checkChange(listStr, getListStr());
-		return change;
-	}
-
-	public void setChange(boolean change) {
-		this.change = change;
-	}
-
 	public int getOwlofwarGameId() {
 		return owlofwarGameId;
 	}
 
 	public void setOwlofwarGameId(int owlofwarGameId) {
 		this.owlofwarGameId = owlofwarGameId;
+	}
+
+	@Override
+	public boolean checkChange() {
+		return StringUtils.checkChange(rawListStr, getListStr());
 	}
 
 }

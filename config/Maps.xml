@@ -136,7 +136,7 @@
 			<Card id='16221' pl='2' camp='2' lv='1' sP='6,11' sT='110'></Card>			
 			<Card id='16214' pl='2' camp='2' lv='1' sP='6,11' sT='112'></Card>			
 			<Card id='16206' pl='2' camp='2' lv='1' sP='6,11' sT='115'></Card>			
-			<ExtraCard id='26001' pl='2' camp='2' lv='1' sP='3,16' sT='120'></ExtraCard>			
+			<ExtraCard id='26022' pl='2' camp='2' lv='1' sP='3,16' sT='120'></ExtraCard>			
 		</NpcActions>				
 	</item>					
 						
@@ -158,7 +158,7 @@
 			<Card id='16221' pl='2' camp='2' lv='1' sP='9,12' sT='110'></Card>			
 			<Card id='16214' pl='2' camp='2' lv='1' sP='12,12' sT='112'></Card>			
 			<Card id='16206' pl='2' camp='2' lv='1' sP='9,12' sT='115'></Card>			
-			<ExtraCard id='26004' pl='2' camp='2' lv='1' sP='3,16' sT='120'></ExtraCard>			
+			<ExtraCard id='26046' pl='2' camp='2' lv='1' sP='3,16' sT='120'></ExtraCard>			
 		</NpcActions>				
 	</item>					
 						
@@ -175,12 +175,12 @@
 			<Card id='16220' pl='2' camp='2' lv='1' sP='6,6' sT='55'></Card>			
 			<Card id='16221' pl='2' camp='2' lv='1' sP='6,6' sT='75'></Card>			
 			<Card id='16214' pl='2' camp='2' lv='1' sP='6,6' sT='80'></Card>			
-			<ExtraCard id='26004' pl='2' camp='2' lv='1' sP='6,6' sT='82'></ExtraCard>			
+			<ExtraCard id='26046' pl='2' camp='2' lv='1' sP='6,6' sT='82'></ExtraCard>			
 			<Card id='16215' pl='2' camp='2' lv='1' sP='9,5' sT='85'></Card>			
 			<Card id='16221' pl='2' camp='2' lv='1' sP='6,11' sT='110'></Card>			
 			<Card id='16214' pl='2' camp='2' lv='1' sP='6,11' sT='112'></Card>			
 			<Card id='16206' pl='2' camp='2' lv='1' sP='6,11' sT='115'></Card>			
-			<ExtraCard id='26002' pl='2' camp='2' lv='1' sP='3,16' sT='120'></ExtraCard>			
+			<ExtraCard id='26023' pl='2' camp='2' lv='1' sP='3,16' sT='120'></ExtraCard>			
 		</NpcActions>				
 	</item>					
 						
@@ -190,7 +190,7 @@
 			<Card id='16221' pl='2' camp='2' lv='1' sP='6,6' sT='15'></Card>			
 			<Card id='16214' pl='2' camp='2' lv='1' sP='9,5' sT='20'></Card>			
 			<Card id='16206' pl='2' camp='2' lv='1' sP='9,5' sT='22'></Card>			
-			<ExtraCard id='26002' pl='2' camp='2' lv='1' sP='6,6' sT='25'></ExtraCard>			
+			<ExtraCard id='26023' pl='2' camp='2' lv='1' sP='6,6' sT='25'></ExtraCard>			
 			<Card id='16221' pl='2' camp='2' lv='1' sP='9,12' sT='45'></Card>			
 			<Card id='16214' pl='2' camp='2' lv='1' sP='12,12' sT='50'></Card>			
 			<Card id='16206' pl='2' camp='2' lv='1' sP='9,12' sT='52'></Card>			
@@ -202,7 +202,7 @@
 			<Card id='16221' pl='2' camp='2' lv='1' sP='6,6' sT='110'></Card>			
 			<Card id='16214' pl='2' camp='2' lv='1' sP='6,6' sT='112'></Card>			
 			<Card id='16206' pl='2' camp='2' lv='1' sP='6,6' sT='115'></Card>			
-			<ExtraCard id='26005' pl='2' camp='2' lv='1' sP='9,5' sT='120'></ExtraCard>			
+			<ExtraCard id='26047' pl='2' camp='2' lv='1' sP='9,5' sT='120'></ExtraCard>			
 		</NpcActions>				
 	</item>					
 						
@@ -212,7 +212,7 @@
 			<Card id='16221' pl='2' camp='2' lv='1' sP='6,6' sT='15'></Card>			
 			<Card id='16214' pl='2' camp='2' lv='1' sP='9,5' sT='20'></Card>			
 			<Card id='16206' pl='2' camp='2' lv='1' sP='9,5' sT='22'></Card>			
-			<ExtraCard id='26005' pl='2' camp='2' lv='1' sP='6,6' sT='25'></ExtraCard>			
+			<ExtraCard id='26047' pl='2' camp='2' lv='1' sP='6,6' sT='25'></ExtraCard>			
 			<Card id='16221' pl='2' camp='2' lv='1' sP='9,12' sT='45'></Card>			
 			<Card id='16214' pl='2' camp='2' lv='1' sP='12,12' sT='50'></Card>			
 			<Card id='16206' pl='2' camp='2' lv='1' sP='9,12' sT='52'></Card>			
@@ -239,7 +239,7 @@
 			<Card id='16214' pl='2' camp='2' lv='1' sP='6,6' sT='50'></Card>			
 			<Card id='16206' pl='2' camp='2' lv='1' sP='6,6' sT='52'></Card>			
 			<Card id='16220' pl='2' camp='2' lv='1' sP='9,5' sT='55'></Card>			
-			<ExtraCard id='26005' pl='2' camp='2' lv='1' sP='6,11' sT='75'></ExtraCard>			
+			<ExtraCard id='26047' pl='2' camp='2' lv='1' sP='6,11' sT='75'></ExtraCard>			
 			<Card id='16214' pl='2' camp='2' lv='1' sP='6,11' sT='80'></Card>			
 			<Card id='16206' pl='2' camp='2' lv='1' sP='6,11' sT='82'></Card>			
 			<Card id='16215' pl='2' camp='2' lv='1' sP='3,16' sT='85'></Card>			
@@ -253,7 +253,7 @@
 	<item id="1202" parent="0" name="">					
 		<NpcActions modifier='override'>				
 			<Citadel pl='2' camp='2' lv='1' loop='1,2,2' />			
-			<ExtraCard id='26004' pl='2' camp='2' lv='1' sP='9,12' sT='15'></ExtraCard>			
+			<ExtraCard id='26046' pl='2' camp='2' lv='1' sP='9,12' sT='15'></ExtraCard>			
 			<Card id='16214' pl='2' camp='2' lv='1' sP='12,12' sT='20'></Card>			
 			<Card id='16206' pl='2' camp='2' lv='1' sP='9,12' sT='22'></Card>			
 			<Card id='16215' pl='2' camp='2' lv='1' sP='3,16' sT='25'></Card>			
@@ -278,7 +278,7 @@
 			<Card id='16221' pl='2' camp='2' lv='1' sP='6,6' sT='15'></Card>			
 			<Card id='16214' pl='2' camp='2' lv='1' sP='9,5' sT='20'></Card>			
 			<Card id='16206' pl='2' camp='2' lv='1' sP='9,5' sT='22'></Card>			
-			<ExtraCard id='26002' pl='2' camp='2' lv='1' sP='6,6' sT='25'></ExtraCard>			
+			<ExtraCard id='26023' pl='2' camp='2' lv='1' sP='6,6' sT='25'></ExtraCard>			
 			<Card id='16221' pl='2' camp='2' lv='1' sP='9,12' sT='45'></Card>			
 			<Card id='16214' pl='2' camp='2' lv='1' sP='12,12' sT='50'></Card>			
 			<Card id='16206' pl='2' camp='2' lv='1' sP='9,12' sT='52'></Card>			
@@ -322,7 +322,7 @@
 			<Card id='16221' pl='2' camp='2' lv='1' sP='6,6' sT='15'></Card>			
 			<Card id='16214' pl='2' camp='2' lv='1' sP='9,5' sT='20'></Card>			
 			<Card id='16206' pl='2' camp='2' lv='1' sP='9,5' sT='22'></Card>			
-			<ExtraCard id='26004' pl='2' camp='2' lv='1' sP='6,6' sT='25'></ExtraCard>			
+			<ExtraCard id='26046' pl='2' camp='2' lv='1' sP='6,6' sT='25'></ExtraCard>			
 			<Card id='16221' pl='2' camp='2' lv='1' sP='6,6' sT='45'></Card>			
 			<Card id='16214' pl='2' camp='2' lv='1' sP='6,6' sT='50'></Card>			
 			<Card id='16206' pl='2' camp='2' lv='1' sP='6,6' sT='52'></Card>			
@@ -344,7 +344,7 @@
 			<Card id='16221' pl='2' camp='2' lv='1' sP='9,12' sT='15'></Card>			
 			<Card id='16214' pl='2' camp='2' lv='1' sP='12,12' sT='20'></Card>			
 			<Card id='16206' pl='2' camp='2' lv='1' sP='9,12' sT='22'></Card>			
-			<ExtraCard id='26005' pl='2' camp='2' lv='1' sP='3,16' sT='25'></ExtraCard>			
+			<ExtraCard id='26047' pl='2' camp='2' lv='1' sP='3,16' sT='25'></ExtraCard>			
 			<Card id='16221' pl='2' camp='2' lv='1' sP='6,6' sT='45'></Card>			
 			<Card id='16214' pl='2' camp='2' lv='1' sP='9,5' sT='50'></Card>			
 			<Card id='16206' pl='2' camp='2' lv='1' sP='9,5' sT='52'></Card>			

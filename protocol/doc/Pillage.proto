@@ -26,3 +26,12 @@ message PillageShowRequest{
 message PillageShowResponse{
 	optional int32 point = 1;
 }
+
+//定向匹配
+message PillageCompetitionNoticeRequest{
+	optional int32 competitionId = 1;
+}
+
+message PillageCompetitionNoticeResponse{
+
+}

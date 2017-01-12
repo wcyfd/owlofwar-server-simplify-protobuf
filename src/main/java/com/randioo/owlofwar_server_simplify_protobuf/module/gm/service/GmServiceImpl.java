@@ -17,18 +17,22 @@ import com.randioo.owlofwar_server_simplify_protobuf.entity.bo.StoreVideo;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.Video;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.VideoManager;
 import com.randioo.owlofwar_server_simplify_protobuf.formatter.StoreVideoFormatter;
-import com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMOpenLoginResponse;
-import com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMRejectLoginResponse;
-import com.randioo.owlofwar_server_simplify_protobuf.protocol.GM.GMTerminatedServerResponse;
-import com.randioo.owlofwar_server_simplify_protobuf.protocol.ServerMessage.SCMessage;
+import com.randioo.owlofwar_server_simplify_protobuf.protocol.gm.GM.GmOpenLoginResponse;
+import com.randioo.owlofwar_server_simplify_protobuf.protocol.gm.GM.GmRejectLoginResponse;
+import com.randioo.owlofwar_server_simplify_protobuf.protocol.gm.GM.GmTerminatedServerResponse;
+import com.randioo.owlofwar_server_simplify_protobuf.protocol.gm.ServerGMMessage.SCGMMessage;
 import com.randioo.randioo_server_base.cache.RoleCache;
 import com.randioo.randioo_server_base.cache.SessionCache;
 import com.randioo.randioo_server_base.entity.RoleInterface;
 import com.randioo.randioo_server_base.module.BaseService;
+import com.randioo.randioo_server_base.utils.system.Platform;
 import com.randioo.randioo_server_base.utils.system.ServerManagerHandler;
+import com.randioo.randioo_server_base.utils.system.SignalTrigger;
 import com.randioo.randioo_server_base.utils.system.SystemManager;
+import com.randioo.randioo_server_base.utils.system.Platform.OS;
+import com.randioo.randioo_server_base.utils.template.Function;
 
-public class GMServiceImpl extends BaseService implements GMService {
+public class GmServiceImpl extends BaseService implements GmService {
 
 	private SystemManager systemManager;
 
@@ -68,17 +72,47 @@ public class GMServiceImpl extends BaseService implements GMService {
 
 			}
 		});
+		
+		Function function = new Function(){
+
+			@Override
+			public Object apply(Object... params) {
+				systemManager.close();
+				
+				System.out.println("port close");	
+				System.out.println("start save");			
+				
+				everybodyOffline();
+				saveVideo();
+				
+				System.out.println("save complete");
+				
+				System.exit(0);
+				return null;
+			}
+			
+		};
+		
+		try {
+			System.out.println(Platform.getOS());
+			if (Platform.getOS() == OS.WIN)
+				SignalTrigger.setSignCallback("INT", function);
+			else if (Platform.getOS() == OS.LINUX)
+				SignalTrigger.setSignCallback("ABRT", function);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override
 	public GeneratedMessage rejectLogin(String code) {
 		if (!systemManager.checkPassword(code)) {
-			return SCMessage.newBuilder()
-					.setGmRejectLoginResponse(GMRejectLoginResponse.newBuilder().setErrorCode(false)).build();
+			return SCGMMessage.newBuilder()
+					.setGmRejectLoginResponse(GmRejectLoginResponse.newBuilder().setErrorCode(false)).build();
 		}
 		systemManager.close();
 
-		return SCMessage.newBuilder().setGmRejectLoginResponse(GMRejectLoginResponse.newBuilder().setErrorCode(true))
+		return SCGMMessage.newBuilder().setGmRejectLoginResponse(GmRejectLoginResponse.newBuilder().setErrorCode(true))
 				.build();
 
 	}
@@ -86,27 +120,37 @@ public class GMServiceImpl extends BaseService implements GMService {
 	@Override
 	public GeneratedMessage openLogin(String code) {
 		if (!systemManager.checkPassword(code)) {
-			return SCMessage.newBuilder().setGmOpenLoginResponse(GMOpenLoginResponse.newBuilder().setErrorCode(false))
-					.build();
+			return SCGMMessage.newBuilder()
+					.setGmOpenLoginResponse(GmOpenLoginResponse.newBuilder().setErrorCode(false)).build();
 		}
 		systemManager.open();
 
-		return SCMessage.newBuilder().setGmOpenLoginResponse(GMOpenLoginResponse.newBuilder().setErrorCode(true))
+		return SCGMMessage.newBuilder().setGmOpenLoginResponse(GmOpenLoginResponse.newBuilder().setErrorCode(true))
 				.build();
 
 	}
 
 	@Override
-	public GeneratedMessage terminatedServer(String code) {
+	public void terminatedServer(String code, IoSession session) {
 		if (!systemManager.checkPassword(code)) {
-			return SCMessage.newBuilder()
-					.setGmTerminatedServerResponse(GMTerminatedServerResponse.newBuilder().setErrorCode(false)).build();
+			session.write(SCGMMessage.newBuilder()
+					.setGmTerminatedServerResponse(GmTerminatedServerResponse.newBuilder().setErrorCode(false)).build());
+			return;
 		}
 
-		systemManager.terminated();
+		systemManager.close();
 
-		return SCMessage.newBuilder()
-				.setGmTerminatedServerResponse(GMTerminatedServerResponse.newBuilder().setErrorCode(true)).build();
+		System.out.println("port close");
+
+		System.out.println("start save");
+		systemManager.terminated();
+		System.out.println("save complete");
+
+		session.write(SCGMMessage.newBuilder()
+				.setGmTerminatedServerResponse(GmTerminatedServerResponse.newBuilder().setErrorCode(true)).build());
+		// 关闭
+		System.exit(0);
+
 	}
 
 	/**
@@ -124,7 +168,7 @@ public class GMServiceImpl extends BaseService implements GMService {
 
 		for (RoleInterface roleInterface : RoleCache.getRoleMap().values()) {
 			try {
-				SessionCloseHandler.manipulate((Role)roleInterface);
+				SessionCloseHandler.manipulate((Role) roleInterface);
 			} catch (Exception e) {
 				System.out.println("Role: " + roleInterface.getRoleId() + " saveError!");
 				e.printStackTrace();

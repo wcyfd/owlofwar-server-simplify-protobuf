@@ -1,7 +1,6 @@
 
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
-
 	<bean id="cardDao" class="com.randioo.owlofwar_server_simplify_protobuf.db.impl.CardDaoImpl">
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
@@ -11,7 +10,10 @@
 	<bean id="storeVideoDao" class="com.randioo.owlofwar_server_simplify_protobuf.db.impl.StoreVideoDaoImpl">
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
-
-
-
+	<bean id="warBuildDao" class="com.randioo.owlofwar_server_simplify_protobuf.db.impl.WarBuildDaoImpl">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	<bean id="warChapterDao" class="com.randioo.owlofwar_server_simplify_protobuf.db.impl.WarChapterDaoImpl">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
 </beans>

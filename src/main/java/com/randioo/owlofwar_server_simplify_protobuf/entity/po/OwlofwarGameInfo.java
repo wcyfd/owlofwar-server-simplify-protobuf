@@ -1,18 +1,13 @@
 package com.randioo.owlofwar_server_simplify_protobuf.entity.po;
 
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
-
-import com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.Frame;
-import com.randioo.owlofwar_server_simplify_protobuf.utils.TagReaderQueue;
-import com.randioo.randioo_server_base.entity.GameEvent;
 
 public class OwlofwarGameInfo {
 	private int roleId;
 	private FightEventListener listener;
 	private Map<Integer, Integer> scoreMap = new HashMap<>();
-	private TagReaderQueue<Frame> runQueue = new TagReaderQueue<>();
+	private int countDown;
 
 	public void setListener(FightEventListener listener) {
 		this.listener = listener;
@@ -33,8 +28,13 @@ public class OwlofwarGameInfo {
 	public void setRoleId(int roleId) {
 		this.roleId = roleId;
 	}
-	
-	public TagReaderQueue<Frame> getRunQueue() {
-		return runQueue;
+
+	public int getCountDown() {
+		return countDown;
 	}
+
+	public void setCountDown(int countDown) {
+		this.countDown = countDown;
+	}
+
 }

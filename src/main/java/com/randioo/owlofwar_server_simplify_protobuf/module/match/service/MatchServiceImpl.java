@@ -1,5 +1,6 @@
 package com.randioo.owlofwar_server_simplify_protobuf.module.match.service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -20,6 +21,7 @@ import com.randioo.owlofwar_server_simplify_protobuf.entity.po.OwlofwarGame;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.OwlofwarGameInfo;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.OwlofwarMatchInfo;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.OwlofwarMatchRule;
+import com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MatchRoleInfo;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Match.SCMatchCancel;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Match.SCMatchComplete;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.ServerMessage.SCMessage;
@@ -327,10 +329,28 @@ public class MatchServiceImpl extends BaseService implements MatchService {
 		for (Role role : roleMap.values()) {
 			OwlofwarGameInfo info = game.getRoleGameInfoMap().get(role.getRoleId());
 			FightEventListener listener = info.getListener();
-			IoSession session = SessionCache.getSessionById(role.getRoleId());
-			if (listener != null && session != null) {
+			if (listener != null) {
 				listener.matchFighter(game, listener.getRole());
-				session.write(SCMessage.newBuilder().setScMatchComplete(SCMatchComplete.newBuilder()).build());
+			}
+		}
+
+		List<Role> roleList= new ArrayList<>(roleMap.values());
+		for(int i = 0;i<roleMap.size();i++){
+			Role tempRole = roleList.get(i);
+			SCMatchComplete.Builder scMatchCompleteBuilder = SCMatchComplete.newBuilder();
+			scMatchCompleteBuilder.setMapsId(game.getAiMapsId());
+			for (Role role : roleMap.values()) {
+				if (tempRole == role) {
+					scMatchCompleteBuilder.setIndex(i);
+				}
+
+				scMatchCompleteBuilder.addMatchRoleInfos(MatchRoleInfo.newBuilder().setName(role.getName())
+						.setPoint(role.getPoint())
+						.setHeroId(role.isNPC() ? 0 : role.getCardListMap().get(role.getUseCardsId()).getMainId()));
+			}
+			IoSession session = SessionCache.getSessionById(tempRole.getRoleId());
+			if (session != null) {
+				session.write(SCMessage.newBuilder().setScMatchComplete(scMatchCompleteBuilder).build());
 			}
 		}
 	}

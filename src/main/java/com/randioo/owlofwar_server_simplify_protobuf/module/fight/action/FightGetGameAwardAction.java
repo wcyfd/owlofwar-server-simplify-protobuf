@@ -22,6 +22,7 @@ public class FightGetGameAwardAction extends ActionSupport {
 		FightGetGameAwardRequest request = (FightGetGameAwardRequest) data;
 		Role role = (Role)RoleCache.getRoleBySession(session);
 
-		fightService.getGameAward(role, request.getGameResult(), request.getScore());
+		
+		fightService.getGameAward(role, request.getGameResultData());
 	}
 }

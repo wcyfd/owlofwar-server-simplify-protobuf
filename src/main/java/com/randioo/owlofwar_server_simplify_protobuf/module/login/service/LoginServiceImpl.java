@@ -12,6 +12,7 @@ import org.apache.mina.core.session.IoSession;
 
 import com.google.protobuf.GeneratedMessage;
 import com.randioo.owlofwar_server_simplify_protobuf.cache.file.CardInitConfigCache;
+import com.randioo.owlofwar_server_simplify_protobuf.cache.file.WarChapterConfigCache;
 import com.randioo.owlofwar_server_simplify_protobuf.common.ErrorCode;
 import com.randioo.owlofwar_server_simplify_protobuf.db.dao.CardDao;
 import com.randioo.owlofwar_server_simplify_protobuf.db.dao.RoleDao;
@@ -19,11 +20,12 @@ import com.randioo.owlofwar_server_simplify_protobuf.db.dao.StoreVideoDao;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.bo.Card;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.bo.Role;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.CardList;
+import com.randioo.owlofwar_server_simplify_protobuf.entity.po.Market;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.OwlofwarGame;
-import com.randioo.owlofwar_server_simplify_protobuf.entity.po.Video;
-import com.randioo.owlofwar_server_simplify_protobuf.entity.po.VideoManager;
 import com.randioo.owlofwar_server_simplify_protobuf.module.card.service.CardService;
 import com.randioo.owlofwar_server_simplify_protobuf.module.login.LoginConstant;
+import com.randioo.owlofwar_server_simplify_protobuf.module.market.service.MarketService;
+import com.randioo.owlofwar_server_simplify_protobuf.module.role.service.RoleService;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.CardData;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.CardListData;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.RoleData;
@@ -76,10 +78,16 @@ public class LoginServiceImpl extends BaseService implements LoginService {
 		this.storeVideoDao = storeVideoDao;
 	}
 	
+	private MarketService marketService;
+	public void setMarketService(MarketService marketService) {
+		this.marketService = marketService;
+	}
+	
 	private LoginModelService loginModelService;
 	public void setLoginModelService(LoginModelService loginModelService) {
 		this.loginModelService = loginModelService;
 	}
+	
 
 	@Override
 	public void init() {
@@ -149,14 +157,16 @@ public class LoginServiceImpl extends BaseService implements LoginService {
 			LoginCreateRoleRequest request = (LoginCreateRoleRequest) createRoleMessage;
 
 			String name = request.getName();
-			if (RoleCache.getNameSet().contains(name)) {
-				checkCreateRoleAccountMessage.set(SCMessage
-						.newBuilder()
-						.setLoginCreateRoleResponse(
-								LoginCreateRoleResponse.newBuilder().setErrorCode(ErrorCode.NAME_IS_AREADY_HAS))
-						.build());
-				return false;
-			}
+			
+			//姓名不可重复
+//			if (RoleCache.getNameSet().contains(name)) {
+//				checkCreateRoleAccountMessage.set(SCMessage
+//						.newBuilder()
+//						.setLoginCreateRoleResponse(
+//								LoginCreateRoleResponse.newBuilder().setErrorCode(ErrorCode.NAME_IS_AREADY_HAS))
+//						.build());
+//				return false;
+//			}
 
 			if (RoleCache.getAccountSet().contains(request.getAccount())) { // 判定账号是否存在
 				checkCreateRoleAccountMessage.set(SCMessage
@@ -189,7 +199,10 @@ public class LoginServiceImpl extends BaseService implements LoginService {
 
 			// 用户数据
 			Role role = roleInit(request.getAccount(), conn, request.getName());
+			//卡片初始化
 			cardInit(role, conn);
+			//商城初始化
+			marketInit(role, conn);
 
 			// 加入role缓存
 			RoleCache.putNewRole(role);
@@ -202,9 +215,20 @@ public class LoginServiceImpl extends BaseService implements LoginService {
 		@Override
 		public GeneratedMessage getRoleData(Ref<RoleInterface> ref) {
 			Role role = (Role) ref.get();
+			
+			//知道最新进度的章节id
+			List<Integer> chapterIdList= WarChapterConfigCache.getChapterIdList();
+			int maxChapterId = WarChapterConfigCache.getMinChapterId();
+			for(Integer chapterId:chapterIdList){
+				if(role.getWar().getWarChapterMap().containsKey(chapterId)){
+					maxChapterId = chapterId;
+				}else{
+					break;
+				}
+			}
 
 			RoleData.Builder roleDataBuilder = RoleData.newBuilder().setRoleId(role.getRoleId())
-					.setName(role.getName());
+					.setName(role.getName()).setCurrentChapterId(maxChapterId);
 			for (Card card : role.getCardMap().values()) {
 				roleDataBuilder.addCardDatas(CardData.newBuilder().setCardId(card.getCardId()).setLv(card.getLv())
 						.setNum(card.getNum()));
@@ -216,9 +240,22 @@ public class LoginServiceImpl extends BaseService implements LoginService {
 			}
 
 			boolean isInFight = false;
-			Video video = VideoManager.getVideoById(role.getOwlofwarGameId());
-			if (video != null && video.getGameResultMap().get(role.getRoleId()) == null) {
-				isInFight = true;
+			//是否正在比赛
+			OwlofwarGame game = role.getOwlofwarGame();
+			if (game != null) {
+				if (!game.isEnd()) {
+					game.getLock();
+					try {
+						game.getLock().lock();
+						if (!game.isEnd()) {
+							isInFight = true;
+						}
+					} catch (Exception e) {
+						e.printStackTrace(); 
+					} finally {
+						game.getLock().unlock();
+					}
+				}
 			}
 			roleDataBuilder.setInFight(isInFight);
 
@@ -239,18 +276,15 @@ public class LoginServiceImpl extends BaseService implements LoginService {
 		public boolean getRoleObject(Ref<RoleInterface> ref, Object createRoleMessage,
 				Ref<Object> errorMessage) {
 			LoginGetRoleDataRequest request = (LoginGetRoleDataRequest) createRoleMessage;
-			String account = request.getAccount();
-			Role role = (Role)RoleCache.getRoleByAccount(account);
+			Role role = getRoleByAccount(request.getAccount());
 			if (role == null) {
-				role = roleDao.getRoleByAccount(account);
-				loginRoleModuleDataInit(role);
-				if (role == null) {
-					errorMessage.set(SCMessage.newBuilder()
-							.setLoginGetRoleDataResponse(LoginGetRoleDataResponse.newBuilder().setErrorCode(30103))
-							.build());
-					return false;
-				}
+				errorMessage
+						.set(SCMessage.newBuilder()
+								.setLoginGetRoleDataResponse(LoginGetRoleDataResponse.newBuilder().setErrorCode(30103))
+								.build());
+				return false;
 			}
+
 			ref.set(role);
 
 			return true;
@@ -319,6 +353,18 @@ public class LoginServiceImpl extends BaseService implements LoginService {
 
 		role.setUseCardsId(1);
 	}
+	
+	private void marketInit(Role role, Connection conn) {
+		int roleId = role.getRoleId();
+
+		Market market = new Market();
+		market.setRoleId(roleId);
+		role.setMarket(market);
+		int nowTime = TimeUtils.getNowTime();
+
+		marketService.marketInit(role, nowTime);
+//		marketDao.insertMarket(market, conn);
+	}
 
 	@Override
 	public void loginRoleModuleDataInit(Role role) {
@@ -343,5 +389,30 @@ public class LoginServiceImpl extends BaseService implements LoginService {
 	@Override
 	public Object login(Object msg) {
 		return loginModelService.login(msg);
+	}
+
+	@Override
+	public Role getRoleById(int roleId) {
+		Role role = (Role) RoleCache.getRoleById(roleId);
+		if (role == null) {
+			role = roleDao.getRoleById(roleId);
+			if (role == null) 
+				return role;
+			this.loginRoleModuleDataInit(role);
+		}
+		return role;
+	}
+
+	@Override
+	public Role getRoleByAccount(String account) {
+		Role role = (Role) RoleCache.getRoleByAccount(account);
+		if (role == null) {
+			role = roleDao.getRoleByAccount(account);
+			if (role == null)
+				return role;
+			this.loginRoleModuleDataInit(role);
+		}
+
+		return role;
 	}
 }

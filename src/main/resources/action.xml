@@ -17,6 +17,7 @@
 	<bean id="fightReceiveEndAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.fight.action.FightReceiveEndAction" p:fightService-ref="fightService"></bean>
 	<bean id="fightReadFramesAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.fight.action.FightReadFramesAction" p:fightService-ref="fightService"></bean>
 	<bean id="fightGetGameAwardAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.fight.action.FightGetGameAwardAction" p:fightService-ref="fightService"></bean>
+	<bean id="fightCountDownAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.fight.action.FightCountDownAction" p:fightService-ref="fightService"></bean>
 
 	<bean id="cardChooseCardListAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.card.action.CardChooseCardListAction" p:cardService-ref="cardService"></bean>
 	<bean id="cardEditCardListAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.card.action.CardEditCardListAction" p:cardService-ref="cardService"></bean>
@@ -27,6 +28,22 @@
 	<bean id="pillageCancelAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.pillage.action.PillageCancelAction" p:pillageService-ref="pillageService"></bean>
 	<bean id="pillageRoleAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.pillage.action.PillageRoleAction" p:pillageService-ref="pillageService"></bean>
 	<bean id="pillageShowAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.pillage.action.PillageShowAction" p:pillageService-ref="pillageService"></bean>
+	<bean id="pillageCompetitionNoticeAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.pillage.action.PillageCompetitionNoticeAction" p:pillageService-ref="pillageService"></bean>
 
 	<bean id="pingAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.ping.action.PingAction" p:pingService-ref="pingService"></bean>
+
+	<bean id="gmOpenLoginAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.gm.action.GmOpenLoginAction" p:gmService-ref="gmService"></bean>
+	<bean id="gmRejectLoginAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.gm.action.GmRejectLoginAction" p:gmService-ref="gmService"></bean>
+	<bean id="gmTerminatedServerAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.gm.action.GmTerminatedServerAction" p:gmService-ref="gmService"></bean>
+
+	<bean id="marketArtificialRefreshMarketItemAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.market.action.MarketArtificialRefreshMarketItemAction" p:marketService-ref="marketService"></bean>
+	<bean id="marketBuyMarketItemAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.market.action.MarketBuyMarketItemAction" p:marketService-ref="marketService"></bean>
+	<bean id="marketShowMarketItemAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.market.action.MarketShowMarketItemAction" p:marketService-ref="marketService"></bean>
+	
+	<bean id="roleSelectRoleInfoAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.role.action.RoleSelectRoleInfoAction" p:roleService-ref="roleService"></bean>
+	
+	<bean id="warGetChapterAwardAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.war.action.WarGetChapterAwardAction" p:warService-ref="warService"></bean>
+	<bean id="warMarchAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.war.action.WarMarchAction" p:warService-ref="warService"></bean>
+	<bean id="warShowWarBuildInfoAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.war.action.WarShowWarBuildInfoAction" p:warService-ref="warService"></bean>
+	<bean id="warShowWarChapterInfoAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.war.action.WarShowWarChapterInfoAction" p:warService-ref="warService"></bean>
 </beans>

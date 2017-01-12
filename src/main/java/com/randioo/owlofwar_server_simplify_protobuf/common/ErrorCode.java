@@ -120,6 +120,8 @@ public class ErrorCode {
 	public static final short WAR_CARDLIST_DEAD = 30611;
 	/** 超出最大卡组 */
 	public static final short MAX_WAR_CARDLIST = 30612;
+	/**章节奖励需要满星*/
+	public static final short CHAPTER_AWARD_NEED_STAR_FULL = 30613;
 	/**
 	 * 公会
 	 */

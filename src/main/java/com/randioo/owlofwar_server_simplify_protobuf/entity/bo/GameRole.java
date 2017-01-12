@@ -3,8 +3,9 @@ package com.randioo.owlofwar_server_simplify_protobuf.entity.bo;
 import com.randioo.randioo_server_base.entity.RoleInterface;
 import com.randioo.randioo_server_base.module.match.MatchInfo;
 import com.randioo.randioo_server_base.module.match.Matchable;
+import com.randioo.randioo_server_base.utils.db.Saveable;
 
-public class GameRole implements RoleInterface, Matchable {
+public abstract class GameRole implements RoleInterface, Matchable ,Saveable{
 
 	protected MatchInfo matchInfo;
 	protected boolean isNPC;
@@ -72,5 +73,25 @@ public class GameRole implements RoleInterface, Matchable {
 		// TODO Auto-generated method stub
 		this.roleId = roleId;
 	}
+
+	protected boolean change;
+	
+	@Override
+	public void setChange(boolean change) {
+		// TODO Auto-generated method stub
+		this.change = change;
+	}
+
+	@Override
+	public boolean isChange() {
+		// TODO Auto-generated method stub
+		if(!change){
+			change = checkChange();
+		}		
+		return change;
+	}
+
+	@Override
+	public abstract boolean checkChange() ;
 
 }

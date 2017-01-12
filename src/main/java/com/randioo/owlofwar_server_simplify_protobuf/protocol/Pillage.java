@@ -1634,6 +1634,535 @@ public final class Pillage {
     // @@protoc_insertion_point(class_scope:com.randioo.owlofwar_server_simplify_protobuf.protocol.PillageShowResponse)
   }
   
+  public static final class PillageCompetitionNoticeRequest extends
+      com.google.protobuf.GeneratedMessage {
+    // Use PillageCompetitionNoticeRequest.newBuilder() to construct.
+    private PillageCompetitionNoticeRequest() {
+      initFields();
+    }
+    private PillageCompetitionNoticeRequest(boolean noInit) {}
+    
+    private static final PillageCompetitionNoticeRequest defaultInstance;
+    public static PillageCompetitionNoticeRequest getDefaultInstance() {
+      return defaultInstance;
+    }
+    
+    public PillageCompetitionNoticeRequest getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+    
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_PillageCompetitionNoticeRequest_descriptor;
+    }
+    
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_PillageCompetitionNoticeRequest_fieldAccessorTable;
+    }
+    
+    // optional int32 competitionId = 1;
+    public static final int COMPETITIONID_FIELD_NUMBER = 1;
+    private boolean hasCompetitionId;
+    private int competitionId_ = 0;
+    public boolean hasCompetitionId() { return hasCompetitionId; }
+    public int getCompetitionId() { return competitionId_; }
+    
+    private void initFields() {
+    }
+    public final boolean isInitialized() {
+      return true;
+    }
+    
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (hasCompetitionId()) {
+        output.writeInt32(1, getCompetitionId());
+      }
+      getUnknownFields().writeTo(output);
+    }
+    
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+    
+      size = 0;
+      if (hasCompetitionId()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, getCompetitionId());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+    
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+    
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> {
+      private com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest result;
+      
+      // Construct using com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest.newBuilder()
+      private Builder() {}
+      
+      private static Builder create() {
+        Builder builder = new Builder();
+        builder.result = new com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest();
+        return builder;
+      }
+      
+      protected com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest internalGetResult() {
+        return result;
+      }
+      
+      public Builder clear() {
+        if (result == null) {
+          throw new IllegalStateException(
+            "Cannot call clear() after build().");
+        }
+        result = new com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest();
+        return this;
+      }
+      
+      public Builder clone() {
+        return create().mergeFrom(result);
+      }
+      
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest.getDescriptor();
+      }
+      
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest getDefaultInstanceForType() {
+        return com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest.getDefaultInstance();
+      }
+      
+      public boolean isInitialized() {
+        return result.isInitialized();
+      }
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest build() {
+        if (result != null && !isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return buildPartial();
+      }
+      
+      private com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest buildParsed()
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        if (!isInitialized()) {
+          throw newUninitializedMessageException(
+            result).asInvalidProtocolBufferException();
+        }
+        return buildPartial();
+      }
+      
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest buildPartial() {
+        if (result == null) {
+          throw new IllegalStateException(
+            "build() has already been called on this Builder.");
+        }
+        com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest returnMe = result;
+        result = null;
+        return returnMe;
+      }
+      
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest) {
+          return mergeFrom((com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+      
+      public Builder mergeFrom(com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest other) {
+        if (other == com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest.getDefaultInstance()) return this;
+        if (other.hasCompetitionId()) {
+          setCompetitionId(other.getCompetitionId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+      
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder(
+            this.getUnknownFields());
+        while (true) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              this.setUnknownFields(unknownFields.build());
+              return this;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                this.setUnknownFields(unknownFields.build());
+                return this;
+              }
+              break;
+            }
+            case 8: {
+              setCompetitionId(input.readInt32());
+              break;
+            }
+          }
+        }
+      }
+      
+      
+      // optional int32 competitionId = 1;
+      public boolean hasCompetitionId() {
+        return result.hasCompetitionId();
+      }
+      public int getCompetitionId() {
+        return result.getCompetitionId();
+      }
+      public Builder setCompetitionId(int value) {
+        result.hasCompetitionId = true;
+        result.competitionId_ = value;
+        return this;
+      }
+      public Builder clearCompetitionId() {
+        result.hasCompetitionId = false;
+        result.competitionId_ = 0;
+        return this;
+      }
+      
+      // @@protoc_insertion_point(builder_scope:com.randioo.owlofwar_server_simplify_protobuf.protocol.PillageCompetitionNoticeRequest)
+    }
+    
+    static {
+      defaultInstance = new PillageCompetitionNoticeRequest(true);
+      com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.internalForceInit();
+      defaultInstance.initFields();
+    }
+    
+    // @@protoc_insertion_point(class_scope:com.randioo.owlofwar_server_simplify_protobuf.protocol.PillageCompetitionNoticeRequest)
+  }
+  
+  public static final class PillageCompetitionNoticeResponse extends
+      com.google.protobuf.GeneratedMessage {
+    // Use PillageCompetitionNoticeResponse.newBuilder() to construct.
+    private PillageCompetitionNoticeResponse() {
+      initFields();
+    }
+    private PillageCompetitionNoticeResponse(boolean noInit) {}
+    
+    private static final PillageCompetitionNoticeResponse defaultInstance;
+    public static PillageCompetitionNoticeResponse getDefaultInstance() {
+      return defaultInstance;
+    }
+    
+    public PillageCompetitionNoticeResponse getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+    
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_PillageCompetitionNoticeResponse_descriptor;
+    }
+    
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_PillageCompetitionNoticeResponse_fieldAccessorTable;
+    }
+    
+    private void initFields() {
+    }
+    public final boolean isInitialized() {
+      return true;
+    }
+    
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      getUnknownFields().writeTo(output);
+    }
+    
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+    
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+    
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+    
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> {
+      private com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse result;
+      
+      // Construct using com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse.newBuilder()
+      private Builder() {}
+      
+      private static Builder create() {
+        Builder builder = new Builder();
+        builder.result = new com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse();
+        return builder;
+      }
+      
+      protected com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse internalGetResult() {
+        return result;
+      }
+      
+      public Builder clear() {
+        if (result == null) {
+          throw new IllegalStateException(
+            "Cannot call clear() after build().");
+        }
+        result = new com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse();
+        return this;
+      }
+      
+      public Builder clone() {
+        return create().mergeFrom(result);
+      }
+      
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse.getDescriptor();
+      }
+      
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse getDefaultInstanceForType() {
+        return com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse.getDefaultInstance();
+      }
+      
+      public boolean isInitialized() {
+        return result.isInitialized();
+      }
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse build() {
+        if (result != null && !isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return buildPartial();
+      }
+      
+      private com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse buildParsed()
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        if (!isInitialized()) {
+          throw newUninitializedMessageException(
+            result).asInvalidProtocolBufferException();
+        }
+        return buildPartial();
+      }
+      
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse buildPartial() {
+        if (result == null) {
+          throw new IllegalStateException(
+            "build() has already been called on this Builder.");
+        }
+        com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse returnMe = result;
+        result = null;
+        return returnMe;
+      }
+      
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse) {
+          return mergeFrom((com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+      
+      public Builder mergeFrom(com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse other) {
+        if (other == com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+      
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder(
+            this.getUnknownFields());
+        while (true) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              this.setUnknownFields(unknownFields.build());
+              return this;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                this.setUnknownFields(unknownFields.build());
+                return this;
+              }
+              break;
+            }
+          }
+        }
+      }
+      
+      
+      // @@protoc_insertion_point(builder_scope:com.randioo.owlofwar_server_simplify_protobuf.protocol.PillageCompetitionNoticeResponse)
+    }
+    
+    static {
+      defaultInstance = new PillageCompetitionNoticeResponse(true);
+      com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.internalForceInit();
+      defaultInstance.initFields();
+    }
+    
+    // @@protoc_insertion_point(class_scope:com.randioo.owlofwar_server_simplify_protobuf.protocol.PillageCompetitionNoticeResponse)
+  }
+  
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_PillageRoleRequest_descriptor;
   private static
@@ -1664,6 +2193,16 @@ public final class Pillage {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_PillageShowResponse_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_PillageCompetitionNoticeRequest_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_PillageCompetitionNoticeRequest_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_PillageCompetitionNoticeResponse_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_PillageCompetitionNoticeResponse_fieldAccessorTable;
   
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1679,7 +2218,10 @@ public final class Pillage {
       "eResponse\022\021\n\terrorCode\030\001 \001(\005\"\026\n\024PillageC" +
       "ancelRequest\"*\n\025PillageCancelResponse\022\021\n" +
       "\terrorCode\030\001 \001(\005\"\024\n\022PillageShowRequest\"$" +
-      "\n\023PillageShowResponse\022\r\n\005point\030\001 \001(\005"
+      "\n\023PillageShowResponse\022\r\n\005point\030\001 \001(\005\"8\n\037" +
+      "PillageCompetitionNoticeRequest\022\025\n\rcompe" +
+      "titionId\030\001 \001(\005\"\"\n PillageCompetitionNoti" +
+      "ceResponse"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -1734,6 +2276,22 @@ public final class Pillage {
               new java.lang.String[] { "Point", },
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageShowResponse.class,
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageShowResponse.Builder.class);
+          internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_PillageCompetitionNoticeRequest_descriptor =
+            getDescriptor().getMessageTypes().get(6);
+          internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_PillageCompetitionNoticeRequest_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_PillageCompetitionNoticeRequest_descriptor,
+              new java.lang.String[] { "CompetitionId", },
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest.class,
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeRequest.Builder.class);
+          internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_PillageCompetitionNoticeResponse_descriptor =
+            getDescriptor().getMessageTypes().get(7);
+          internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_PillageCompetitionNoticeResponse_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_PillageCompetitionNoticeResponse_descriptor,
+              new java.lang.String[] { },
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse.class,
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse.Builder.class);
           return null;
         }
       };

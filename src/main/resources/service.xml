@@ -16,9 +16,8 @@
 		<property name="loginModelService" ref="loginModelService"></property>
 	</bean>
 
-	<bean id="roleService" class="com.randioo.owlofwar_server_simplify_protobuf.module.role.service.RoleServiceImpl">
-		<property name="roleDao" ref="roleDao"></property>
-	</bean>
+	<bean id="roleService" class="com.randioo.owlofwar_server_simplify_protobuf.module.role.service.RoleServiceImpl"></bean>
+	
 	<bean id="fightService" class="com.randioo.owlofwar_server_simplify_protobuf.module.fight.service.FightServiceImpl">
 		<property name="gameStarter" ref="gameStarter"></property>
 		<property name="rateFrameMeter" ref="rateFrameMeter"></property>
@@ -35,13 +34,26 @@
 	<bean id="pillageService" class="com.randioo.owlofwar_server_simplify_protobuf.module.pillage.service.PillageServiceImpl">
 		<property name="cardService" ref="cardService"></property>
 		<property name="matchService" ref="matchService"></property>
+		<property name="httpVisitor" ref="httpVisitor"></property>
 	</bean>
 	
 	<bean id="pingService" class="com.randioo.owlofwar_server_simplify_protobuf.module.ping.service.PingServiceImpl"></bean>
 	
-	<bean id="gmService" class="com.randioo.owlofwar_server_simplify_protobuf.module.gm.service.GMServiceImpl">
+	<bean id="gmService" class="com.randioo.owlofwar_server_simplify_protobuf.module.gm.service.GmServiceImpl">
 		<property name="dataSource" ref="dataSource"></property>
 		<property name="systemManager" ref="systemManager"></property>
 		<property name="storeVideoDao" ref="storeVideoDao"></property>
+	</bean>
+	
+	<bean id="marketService" class="com.randioo.owlofwar_server_simplify_protobuf.module.market.service.MarketServiceImpl">
+		<property name="roleService" ref="roleService"></property>
+		<property name="cardService" ref="cardService"></property>
+	</bean>
+	
+	<bean id="warService" class="com.randioo.owlofwar_server_simplify_protobuf.module.war.service.WarServiceImpl">
+		<property name="warBuildDao" ref="warBuildDao"></property>
+		<property name="warChapterDao" ref="warChapterDao"></property>
+		<property name="matchService" ref="matchService"></property>
+		<property name="roleService" ref="roleService"></property>
 	</bean>
 </beans>

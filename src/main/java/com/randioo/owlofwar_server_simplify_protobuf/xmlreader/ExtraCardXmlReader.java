@@ -27,7 +27,7 @@ public class ExtraCardXmlReader implements XmlReader{
 				Element itemE = itemIt.next();
 				int extraCardId = Integer.parseInt(itemE.attributeValue("extraCardId"));
 				int cardId = Integer.parseInt(itemE.attributeValue("cardId"));
-				String name = itemE.element("c_name").getStringValue();
+				String name = itemE.element("name").getStringValue();
 
 				ExtraCardConfig config = new ExtraCardConfig();
 				config.setExtraCardId(extraCardId);

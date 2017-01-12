@@ -15,6 +15,7 @@ message SCFightLoadResource{
 	repeated RoleResourceInfo roleResourceInfo = 2;
 	optional bool isNPCGame = 3;
 	optional int32 NPCMapId = 4;
+	optional FightType fightType = 5;
 }
 
 message FightLoadResourceCompleteRequest{
@@ -65,11 +66,18 @@ message FightReadFrameResponse{
 }
 
 message FightGetGameAwardRequest{
-	optional GameResult gameResult =1;
-	optional int32 score =2;
+	optional GameResultData gameResultData = 1;
 }
 
 message FightGetGameAwardResponse{
-	optional int32 point = 1;
-	repeated CardData cardDatas = 2;
+	optional GameResultAwardData gameResultAwardData = 1;
+}
+
+message FightCountDownRequest{
+}
+
+message FightCountDownResponse{
+}
+
+message SCFightCountDown{
 }

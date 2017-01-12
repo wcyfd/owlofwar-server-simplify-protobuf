@@ -21,4 +21,20 @@ public interface LoginService extends BaseServiceInterface{
 
 	Object login(Object msg);
 
+	/**
+	 * 通过id获取玩家
+	 * @param roleId
+	 * @return
+	 * @author wcy 2017年1月10日
+	 */
+	public Role getRoleById(int roleId);
+
+	/**
+	 * 通过帐号获得玩家
+	 * @param account
+	 * @return
+	 * @author wcy 2017年1月10日
+	 */
+	public Role getRoleByAccount(String account);
+
 }

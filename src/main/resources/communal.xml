@@ -41,10 +41,30 @@
 					`storeRoleResourceInfosBytes` blob
 					) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 				</value>
+				<value>CREATE TABLE `warbuild` (
+					`roleId` int(11) DEFAULT NULL,
+					`buildId` int(11) DEFAULT NULL,
+					`starCount` tinyint(4) DEFAULT NULL
+					) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+				</value>
+				<value>
+					CREATE TABLE `warchapter` (
+					`roleId` int(11) DEFAULT NULL,
+					`chapterId` int(11) DEFAULT NULL,
+					`award` int(11) DEFAULT NULL
+					) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+				</value>
 			</list>
 		</property>
 	</bean>
 
+	<bean id="httpVisitor" class="com.randioo.owlofwar_server_simplify_protobuf.utils.HttpVisitor">
+		<property name="maxTotal" value="50"></property>
+		<property name="maxPerRoute" value="5"></property>
+		<!-- 确认赛事合法性的网站地址 -->
+		<property name="url" value="http://manager.app.randioo.com/gateway/PhpServices/Match/getZDSInfo.php"></property>
+	</bean>
+	
 	<bean id="matchConfig" class="com.randioo.randioo_server_base.module.match.MatchConfig">
 		<property name="threadSize" value="5"></property>
 	</bean>
@@ -54,7 +74,7 @@
 	<bean id="gameStarter" class="com.randioo.randioo_server_base.utils.game.game_type.real_time_strategy_game.RTSGameStarter">
 		<property name="threadSize" value="1"></property>
 	</bean>
-	
+
 	<bean id="loginModelService" class="com.randioo.randioo_server_base.module.login.LoginModelServiceImpl"></bean>
 
 	<bean id="rateFrameMeter" class="com.randioo.randioo_server_base.utils.game.game_type.real_time_strategy_game.RateFrameMeter"></bean>
@@ -71,7 +91,11 @@
 				<ref bean="roleService" />
 				<ref bean="pillageService" />
 				<ref bean="pingService" />
+				<ref bean="marketService" />
+				<ref bean="warService" />
+				<ref bean="gmService" />
 			</list>
 		</property>
 	</bean>
+	
 </beans>

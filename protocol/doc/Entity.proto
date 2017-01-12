@@ -8,6 +8,7 @@ message RoleData{
 	repeated CardListData cardListDatas = 4;
 	//是否在战斗中
 	optional bool inFight = 5;
+	optional int32 currentChapterId = 6;
 }
 
 message CardData{
@@ -59,4 +60,54 @@ message StoreRoleResourceInfos{
 
 message StoreFrames{
 	repeated Frame frames = 1;
+}
+
+message MatchRoleInfo{
+	optional string name = 1;
+	optional int32 heroId = 2;
+	optional int32 point = 3;
+}
+
+enum MarketItemDataBuyType{
+	GOLD = 1;
+	MONEY = 2;
+	RMB = 3;
+}
+
+message MarketItemData{
+	optional int32 cardId = 1;
+	optional int32 dayBuyCount = 2;
+	optional MarketItemDataBuyType buyType = 3;
+}
+
+message WarChapterData{
+	optional int32 chapterId = 1;
+	optional int32 starCount = 2;
+}
+
+message WarBuildData{
+	optional int32 buildId = 1;
+	optional int32 starCount = 2;
+}
+
+enum FightType{
+	PILLAGE = 1;
+	WAR = 2;
+}
+
+message GameResultData{
+	optional GameResult gameResult = 1;
+	optional FightType fightType = 2;
+	optional int32 starCount = 3;
+	optional int32 buildId = 4;
+}
+
+message GameResultAwardData{
+	optional int32 point = 1;
+	repeated CardData cardDatas = 2;
+	optional int32 money = 3;
+}
+
+enum RoleInfoType{
+	INFO_MONEY = 1;
 }

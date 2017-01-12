@@ -1,1657 +1,2241 @@
 <ExtraCard>						
 	<item extraCardId="26001" cardId="16110">					
-		<c_name>裴元绍</c_name>				
-		<c_skinId>12674</c_skinId>				
-		<c_hitZ>47</c_hitZ>				
-		<c_hpbarZ>80</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.75</c_attackDelay>				
+		<name>裴元绍</name>				
+		<skinId>12674</skinId>				
+		<hitZ>47</hitZ>				
+		<hpbarZ>63</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.75</attackDelay>				
+		<res>				
+			<spine>12674</spine>			
+			<spine>12202</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26002" cardId="16111">					
-		<c_name>马元义</c_name>				
-		<c_skinId>12675</c_skinId>				
-		<c_hitZ>58</c_hitZ>				
-		<c_hpbarZ>87</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.75</c_attackDelay>				
+		<name>马元义</name>				
+		<skinId>12675</skinId>				
+		<hitZ>58</hitZ>				
+		<hpbarZ>70</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.45</attackDelay>				
+		<res>				
+			<spine>12675</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26003" cardId="16109">					
-		<c_name>张曼成</c_name>				
-		<c_skinId>12676</c_skinId>				
-		<c_launchZ>74</c_launchZ>				
-		<c_launchX>23</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>15003</c_projectileSkinId>				
-		<c_hitZ>48</c_hitZ>				
-		<c_hpbarZ>79</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>1.25</c_attackDelay>				
+		<name>张曼成</name>				
+		<skinId>12676</skinId>				
+		<launchZ>74</launchZ>				
+		<launchX>23</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>15003</projectileSkinId>				
+		<hitZ>48</hitZ>				
+		<hpbarZ>62</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>1.25</attackDelay>				
+		<res>				
+			<spine>12676</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26004" cardId="16112">					
-		<c_name>何进</c_name>				
-		<c_skinId>12677</c_skinId>				
-		<c_hitZ>60</c_hitZ>				
-		<c_hpbarZ>87</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.75</c_attackDelay>				
+		<name>何进</name>				
+		<skinId>12677</skinId>				
+		<hitZ>60</hitZ>				
+		<hpbarZ>70</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.75</attackDelay>				
+		<res>				
+			<spine>12677</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26005" cardId="16113">					
-		<c_name>皇甫嵩</c_name>				
-		<c_skinId>12678</c_skinId>				
-		<c_launchZ>62</c_launchZ>				
-		<c_launchX>22</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>52</c_hitZ>				
-		<c_hpbarZ>82</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>皇甫嵩</name>				
+		<skinId>12678</skinId>				
+		<launchZ>70</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>52</hitZ>				
+		<hpbarZ>65</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12678</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26006" cardId="16114">					
-		<c_name>张宝</c_name>				
-		<c_skinId>12679</c_skinId>				
-		<c_launchZ>65</c_launchZ>				
-		<c_launchX>22</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>51</c_hitZ>				
-		<c_hpbarZ>87</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>张宝</name>				
+		<skinId>12679</skinId>				
+		<launchZ>80</launchZ>				
+		<launchX>35</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>51</hitZ>				
+		<hpbarZ>73</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12679</spine>			
+		</res>				
 	</item>					
-	<item extraCardId="26007" cardId="16115">					
-		<c_name>张梁</c_name>				
-		<c_skinId>12680</c_skinId>				
-		<c_hitZ>51</c_hitZ>				
-		<c_hpbarZ>81</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+	<item extraCardId="26007" cardId="16116">					
+		<name>张梁</name>				
+		<skinId>12680</skinId>				
+		<hitZ>51</hitZ>				
+		<hpbarZ>61</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.4</attackDelay>				
+		<res>				
+			<spine>12680</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26008" cardId="16108">					
-		<c_name>张角</c_name>				
-		<c_skinId>12681</c_skinId>				
-		<c_launchZ>73</c_launchZ>				
-		<c_launchX>26</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>47</c_hitZ>				
-		<c_hpbarZ>78</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>张角</name>				
+		<skinId>12681</skinId>				
+		<launchZ>80</launchZ>				
+		<launchX>-22</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>47</hitZ>				
+		<hpbarZ>61</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12681</spine>			
+			<spine>12202</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26009" cardId="16104">					
-		<c_name>卢植</c_name>				
-		<c_skinId>12682</c_skinId>				
-		<c_hitZ>46</c_hitZ>				
-		<c_hpbarZ>83</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.7</c_attackDelay>				
+		<name>卢植</name>				
+		<skinId>12682</skinId>				
+		<hitZ>46</hitZ>				
+		<hpbarZ>66</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12682</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26010" cardId="16106">					
-		<c_name>周仓</c_name>				
-		<c_skinId>12683</c_skinId>				
-		<c_launchZ>104</c_launchZ>				
-		<c_launchX>10</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>60</c_hitZ>				
-		<c_hpbarZ>88</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>周仓</name>				
+		<skinId>12683</skinId>				
+		<launchZ>104</launchZ>				
+		<launchX>-3</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>60</hitZ>				
+		<hpbarZ>71</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12683</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26011" cardId="16107">					
-		<c_name>张绣</c_name>				
-		<c_skinId>12684</c_skinId>				
-		<c_hitZ>57</c_hitZ>				
-		<c_hpbarZ>88</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.6</c_attackDelay>				
+		<name>张绣</name>				
+		<skinId>12684</skinId>				
+		<hitZ>57</hitZ>				
+		<hpbarZ>71</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.6</attackDelay>				
+		<res>				
+			<spine>12684</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26012" cardId="16116">					
-		<c_name>曹昂</c_name>				
-		<c_skinId>12685</c_skinId>				
-		<c_hitZ>57</c_hitZ>				
-		<c_hpbarZ>89</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.6</c_attackDelay>				
+		<name>曹昂</name>				
+		<skinId>12685</skinId>				
+		<hitZ>57</hitZ>				
+		<hpbarZ>71</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.58</attackDelay>				
+		<res>				
+			<spine>12685</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26013" cardId="16117">					
-		<c_name>曹操</c_name>				
-		<c_skinId>12686</c_skinId>				
-		<c_launchZ>76</c_launchZ>				
-		<c_launchX>34</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>49</c_hitZ>				
-		<c_hpbarZ>81</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>曹操</name>				
+		<skinId>12686</skinId>				
+		<launchZ>76</launchZ>				
+		<launchX>34</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>49</hitZ>				
+		<hpbarZ>64</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12686</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26014" cardId="16103">					
-		<c_name>贾诩</c_name>				
-		<c_skinId>12687</c_skinId>				
-		<c_hitZ>50</c_hitZ>				
-		<c_hpbarZ>82</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>贾诩</name>				
+		<skinId>12687</skinId>				
+		<hitZ>50</hitZ>				
+		<hpbarZ>65</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12687</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26015" cardId="16118">					
-		<c_name>典韦</c_name>				
-		<c_skinId>12688</c_skinId>				
-		<c_launchZ>45</c_launchZ>				
-		<c_launchX>20</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>44</c_hitZ>				
-		<c_hpbarZ>73</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>典韦</name>				
+		<skinId>12688</skinId>				
+		<launchZ>45</launchZ>				
+		<launchX>20</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>44</hitZ>				
+		<hpbarZ>56</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12688</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26016" cardId="16102">					
-		<c_name>李儒</c_name>				
-		<c_skinId>12689</c_skinId>				
-		<c_hitZ>51</c_hitZ>				
-		<c_hpbarZ>83</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>李儒</name>				
+		<skinId>12689</skinId>				
+		<hitZ>51</hitZ>				
+		<hpbarZ>65</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.4</attackDelay>				
+		<res>				
+			<spine>12689</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26017" cardId="16101">					
-		<c_name>郭汜</c_name>				
-		<c_skinId>12690</c_skinId>				
-		<c_launchZ>101</c_launchZ>				
-		<c_launchX>5</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>46</c_hitZ>				
-		<c_hpbarZ>83</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>1.25</c_attackDelay>				
+		<name>郭汜</name>				
+		<skinId>12690</skinId>				
+		<launchZ>98</launchZ>				
+		<launchX>1</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>46</hitZ>				
+		<hpbarZ>63</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>1.25</attackDelay>				
+		<res>				
+			<spine>12690</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26018" cardId="16105">					
-		<c_name>李傕</c_name>				
-		<c_skinId>12691</c_skinId>				
-		<c_launchZ>72</c_launchZ>				
-		<c_launchX>22</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>52</c_hitZ>				
-		<c_hpbarZ>87</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>李傕</name>				
+		<skinId>12691</skinId>				
+		<launchZ>70</launchZ>				
+		<launchX>18</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>52</hitZ>				
+		<hpbarZ>62</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12691</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26019" cardId="16119">					
-		<c_name>华雄</c_name>				
-		<c_skinId>12692</c_skinId>				
-		<c_hitZ>59</c_hitZ>				
-		<c_hpbarZ>89</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.75</c_attackDelay>				
+		<name>华雄</name>				
+		<skinId>12692</skinId>				
+		<hitZ>59</hitZ>				
+		<hpbarZ>72</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.75</attackDelay>				
+		<res>				
+			<spine>12692</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26020" cardId="16120">					
-		<c_name>高顺</c_name>				
-		<c_skinId>12693</c_skinId>				
-		<c_hitZ>49</c_hitZ>				
-		<c_hpbarZ>80</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.6</c_attackDelay>				
+		<name>高顺</name>				
+		<skinId>12693</skinId>				
+		<hitZ>49</hitZ>				
+		<hpbarZ>63</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.6</attackDelay>				
+		<res>				
+			<spine>12693</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26021" cardId="16121">					
-		<c_name>袁术</c_name>				
-		<c_skinId>12694</c_skinId>				
-		<c_hitZ>48</c_hitZ>				
-		<c_hpbarZ>80</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.6</c_attackDelay>				
+		<name>袁术</name>				
+		<skinId>12694</skinId>				
+		<hitZ>48</hitZ>				
+		<hpbarZ>63</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.6</attackDelay>				
+		<res>				
+			<spine>12694</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26022" cardId="16110">					
-		<c_name>陈宫</c_name>				
-		<c_skinId>12695</c_skinId>				
-		<c_hitZ>54</c_hitZ>				
-		<c_hpbarZ>88</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.75</c_attackDelay>				
+		<name>陈宫</name>				
+		<skinId>12695</skinId>				
+		<hitZ>54</hitZ>				
+		<hpbarZ>71</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.75</attackDelay>				
+		<res>				
+			<spine>12695</spine>			
+			<spine>12202</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26023" cardId="16111">					
-		<c_name>陈登</c_name>				
-		<c_skinId>12696</c_skinId>				
-		<c_hitZ>59</c_hitZ>				
-		<c_hpbarZ>89</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>陈登</name>				
+		<skinId>12696</skinId>				
+		<hitZ>59</hitZ>				
+		<hpbarZ>72</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12696</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26024" cardId="16109">					
-		<c_name>侯成</c_name>				
-		<c_skinId>12697</c_skinId>				
-		<c_launchZ>75</c_launchZ>				
-		<c_launchX>27</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>15003</c_projectileSkinId>				
-		<c_hitZ>51</c_hitZ>				
-		<c_hpbarZ>80</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>1.25</c_attackDelay>				
+		<name>侯成</name>				
+		<skinId>12697</skinId>				
+		<launchZ>75</launchZ>				
+		<launchX>27</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>15003</projectileSkinId>				
+		<hitZ>51</hitZ>				
+		<hpbarZ>63</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>1.25</attackDelay>				
+		<res>				
+			<spine>12697</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26025" cardId="16112">					
-		<c_name>王允</c_name>				
-		<c_skinId>12698</c_skinId>				
-		<c_hitZ>51</c_hitZ>				
-		<c_hpbarZ>90</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>王允</name>				
+		<skinId>12698</skinId>				
+		<hitZ>51</hitZ>				
+		<hpbarZ>73</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12698</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26026" cardId="16113">					
-		<c_name>牛辅</c_name>				
-		<c_skinId>12699</c_skinId>				
-		<c_launchZ>71</c_launchZ>				
-		<c_launchX>40</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>53</c_hitZ>				
-		<c_hpbarZ>87</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>牛辅</name>				
+		<skinId>12699</skinId>				
+		<launchZ>71</launchZ>				
+		<launchX>40</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>53</hitZ>				
+		<hpbarZ>70</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12699</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26027" cardId="16114">					
-		<c_name>汉献帝</c_name>				
-		<c_skinId>12700</c_skinId>				
-		<c_launchZ>101</c_launchZ>				
-		<c_launchX>10</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>52</c_hitZ>				
-		<c_hpbarZ>83</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>1</c_attackDelay>				
+		<name>汉献帝</name>				
+		<skinId>12700</skinId>				
+		<launchZ>101</launchZ>				
+		<launchX>10</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>52</hitZ>				
+		<hpbarZ>66</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>1</attackDelay>				
+		<res>				
+			<spine>12700</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26028" cardId="16115">					
-		<c_name>徐荣</c_name>				
-		<c_skinId>12701</c_skinId>				
-		<c_hitZ>50</c_hitZ>				
-		<c_hpbarZ>80</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>徐荣</name>				
+		<skinId>12701</skinId>				
+		<hitZ>50</hitZ>				
+		<hpbarZ>61</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.38</attackDelay>				
+		<res>				
+			<spine>12701</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26029" cardId="16108">					
-		<c_name>公孙瓒</c_name>				
-		<c_skinId>12702</c_skinId>				
-		<c_launchZ>46</c_launchZ>				
-		<c_launchX>21</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>56</c_hitZ>				
-		<c_hpbarZ>84</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>公孙瓒</name>				
+		<skinId>12702</skinId>				
+		<launchZ>65</launchZ>				
+		<launchX>32</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>56</hitZ>				
+		<hpbarZ>72</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.75</attackDelay>				
+		<res>				
+			<spine>12702</spine>			
+			<spine>12202</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26030" cardId="16104">					
-		<c_name>潘凤</c_name>				
-		<c_skinId>12703</c_skinId>				
-		<c_hitZ>49</c_hitZ>				
-		<c_hpbarZ>84</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>潘凤</name>				
+		<skinId>12703</skinId>				
+		<hitZ>49</hitZ>				
+		<hpbarZ>65</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.38</attackDelay>				
+		<res>				
+			<spine>12703</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26031" cardId="16106">					
-		<c_name>袁绍</c_name>				
-		<c_skinId>12704</c_skinId>				
-		<c_launchZ>67</c_launchZ>				
-		<c_launchX>20</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>44</c_hitZ>				
-		<c_hpbarZ>82</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>袁绍</name>				
+		<skinId>12704</skinId>				
+		<launchZ>67</launchZ>				
+		<launchX>20</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>44</hitZ>				
+		<hpbarZ>65</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12704</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26032" cardId="16107">					
-		<c_name>臧霸</c_name>				
-		<c_skinId>12705</c_skinId>				
-		<c_hitZ>51</c_hitZ>				
-		<c_hpbarZ>86</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>臧霸</name>				
+		<skinId>12705</skinId>				
+		<hitZ>51</hitZ>				
+		<hpbarZ>69</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12705</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26033" cardId="16116">					
-		<c_name>田丰</c_name>				
-		<c_skinId>12706</c_skinId>				
-		<c_hitZ>53</c_hitZ>				
-		<c_hpbarZ>90</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>田丰</name>				
+		<skinId>12706</skinId>				
+		<hitZ>53</hitZ>				
+		<hpbarZ>73</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12706</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26034" cardId="16117">					
-		<c_name>颜良</c_name>				
-		<c_skinId>12707</c_skinId>				
-		<c_launchZ>62</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>49</c_hitZ>				
-		<c_hpbarZ>80</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>颜良</name>				
+		<skinId>12707</skinId>				
+		<launchZ>62</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>49</hitZ>				
+		<hpbarZ>63</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12707</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26035" cardId="16103">					
-		<c_name>文丑</c_name>				
-		<c_skinId>12708</c_skinId>				
-		<c_hitZ>62</c_hitZ>				
-		<c_hpbarZ>95</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.75</c_attackDelay>				
+		<name>文丑</name>				
+		<skinId>12708</skinId>				
+		<hitZ>62</hitZ>				
+		<hpbarZ>78</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.75</attackDelay>				
+		<res>				
+			<spine>12708</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26036" cardId="16118">					
-		<c_name>审配</c_name>				
-		<c_skinId>12709</c_skinId>				
-		<c_launchZ>62</c_launchZ>				
-		<c_launchX>39</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>61</c_hitZ>				
-		<c_hpbarZ>90</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>审配</name>				
+		<skinId>12709</skinId>				
+		<launchZ>62</launchZ>				
+		<launchX>39</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>61</hitZ>				
+		<hpbarZ>73</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12709</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26037" cardId="16102">					
-		<c_name>夏侯惇</c_name>				
-		<c_skinId>12710</c_skinId>				
-		<c_hitZ>71</c_hitZ>				
-		<c_hpbarZ>94</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.7</c_attackDelay>				
+		<name>夏侯惇</name>				
+		<skinId>12710</skinId>				
+		<hitZ>71</hitZ>				
+		<hpbarZ>77</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.7</attackDelay>				
+		<res>				
+			<spine>12710</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26038" cardId="16101">					
-		<c_name>曹仁</c_name>				
-		<c_skinId>12711</c_skinId>				
-		<c_launchZ>66</c_launchZ>				
-		<c_launchX>36</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>60</c_hitZ>				
-		<c_hpbarZ>85</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>曹仁</name>				
+		<skinId>12711</skinId>				
+		<launchZ>66</launchZ>				
+		<launchX>36</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>60</hitZ>				
+		<hpbarZ>68</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12711</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26039" cardId="16105">					
-		<c_name>孙乾</c_name>				
-		<c_skinId>12712</c_skinId>				
-		<c_launchZ>58</c_launchZ>				
-		<c_launchX>25</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>60</c_hitZ>				
-		<c_hpbarZ>84</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>孙乾</name>				
+		<skinId>12712</skinId>				
+		<launchZ>58</launchZ>				
+		<launchX>25</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>60</hitZ>				
+		<hpbarZ>67</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12712</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26040" cardId="16119">					
-		<c_name>孔融</c_name>				
-		<c_skinId>12713</c_skinId>				
-		<c_hitZ>55</c_hitZ>				
-		<c_hpbarZ>89</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.6</c_attackDelay>				
+		<name>孔融</name>				
+		<skinId>12713</skinId>				
+		<hitZ>55</hitZ>				
+		<hpbarZ>72</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.6</attackDelay>				
+		<res>				
+			<spine>12713</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26041" cardId="16120">					
-		<c_name>糜竺</c_name>				
-		<c_skinId>12714</c_skinId>				
-		<c_hitZ>56</c_hitZ>				
-		<c_hpbarZ>85</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>糜竺</name>				
+		<skinId>12714</skinId>				
+		<hitZ>56</hitZ>				
+		<hpbarZ>68</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12714</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26042" cardId="16121">					
-		<c_name>曹洪</c_name>				
-		<c_skinId>12715</c_skinId>				
-		<c_hitZ>60</c_hitZ>				
-		<c_hpbarZ>85</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>曹洪</name>				
+		<skinId>12715</skinId>				
+		<hitZ>60</hitZ>				
+		<hpbarZ>68</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12715</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26043" cardId="16110">					
-		<c_name>张允</c_name>				
-		<c_skinId>12716</c_skinId>				
-		<c_hitZ>56</c_hitZ>				
-		<c_hpbarZ>85</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.75</c_attackDelay>				
+		<name>张允</name>				
+		<skinId>12716</skinId>				
+		<hitZ>56</hitZ>				
+		<hpbarZ>68</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.75</attackDelay>				
+		<res>				
+			<spine>12716</spine>			
+			<spine>12202</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26044" cardId="16111">					
-		<c_name>糜芳</c_name>				
-		<c_skinId>12717</c_skinId>				
-		<c_hitZ>54</c_hitZ>				
-		<c_hpbarZ>82</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>糜芳</name>				
+		<skinId>12717</skinId>				
+		<hitZ>54</hitZ>				
+		<hpbarZ>65</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12717</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26045" cardId="16109">					
-		<c_name>简雍</c_name>				
-		<c_skinId>12718</c_skinId>				
-		<c_launchZ>75</c_launchZ>				
-		<c_launchX>27</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>15003</c_projectileSkinId>				
-		<c_hitZ>56</c_hitZ>				
-		<c_hpbarZ>82</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>1.25</c_attackDelay>				
+		<name>简雍</name>				
+		<skinId>12718</skinId>				
+		<launchZ>75</launchZ>				
+		<launchX>27</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>15003</projectileSkinId>				
+		<hitZ>56</hitZ>				
+		<hpbarZ>65</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>1.25</attackDelay>				
+		<res>				
+			<spine>12718</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26046" cardId="16112">					
-		<c_name>淳于导</c_name>				
-		<c_skinId>12719</c_skinId>				
-		<c_hitZ>60</c_hitZ>				
-		<c_hpbarZ>88</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.75</c_attackDelay>				
+		<name>淳于导</name>				
+		<skinId>12719</skinId>				
+		<hitZ>60</hitZ>				
+		<hpbarZ>71</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.75</attackDelay>				
+		<res>				
+			<spine>12719</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26047" cardId="16113">					
-		<c_name>夏侯恩</c_name>				
-		<c_skinId>12720</c_skinId>				
-		<c_launchZ>68</c_launchZ>				
-		<c_launchX>32</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>58</c_hitZ>				
-		<c_hpbarZ>86</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>夏侯恩</name>				
+		<skinId>12720</skinId>				
+		<launchZ>68</launchZ>				
+		<launchX>32</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>58</hitZ>				
+		<hpbarZ>69</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12720</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26048" cardId="16114">					
-		<c_name>赵云</c_name>				
-		<c_skinId>12721</c_skinId>				
-		<c_hitZ>55</c_hitZ>				
-		<c_hpbarZ>85</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>赵云</name>				
+		<skinId>12721</skinId>				
+		<hitZ>55</hitZ>				
+		<hpbarZ>68</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12721</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26049" cardId="16115">					
-		<c_name>晏明</c_name>				
-		<c_skinId>12722</c_skinId>				
-		<c_hitZ>51</c_hitZ>				
-		<c_hpbarZ>79</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.6</c_attackDelay>				
+		<name>晏明</name>				
+		<skinId>12722</skinId>				
+		<hitZ>51</hitZ>				
+		<hpbarZ>62</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.6</attackDelay>				
+		<res>				
+			<spine>12722</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26050" cardId="16108">					
-		<c_name>马延</c_name>				
-		<c_skinId>12723</c_skinId>				
-		<c_launchZ>55</c_launchZ>				
-		<c_launchX>31</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>51</c_hitZ>				
-		<c_hpbarZ>80</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>马延</name>				
+		<skinId>12723</skinId>				
+		<launchZ>55</launchZ>				
+		<launchX>31</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>51</hitZ>				
+		<hpbarZ>63</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12723</spine>			
+			<spine>12202</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26051" cardId="16104">					
-		<c_name>乐进</c_name>				
-		<c_skinId>12724</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>乐进</name>				
+		<skinId>12724</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12724</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26052" cardId="16106">					
-		<c_name>荀彧</c_name>				
-		<c_skinId>12725</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>荀彧</name>				
+		<skinId>12725</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12725</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26053" cardId="16107">					
-		<c_name>鲁肃</c_name>				
-		<c_skinId>12726</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>鲁肃</name>				
+		<skinId>12726</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12726</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26054" cardId="16116">					
-		<c_name>周瑜</c_name>				
-		<c_skinId>12727</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>周瑜</name>				
+		<skinId>12727</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12727</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26055" cardId="16117">					
-		<c_name>张昭</c_name>				
-		<c_skinId>12728</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>张昭</name>				
+		<skinId>12728</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12728</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26056" cardId="16103">					
-		<c_name>小乔</c_name>				
-		<c_skinId>12729</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>小乔</name>				
+		<skinId>12729</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12729</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26057" cardId="16118">					
-		<c_name>徐晃</c_name>				
-		<c_skinId>12730</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>徐晃</name>				
+		<skinId>12730</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12730</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26058" cardId="16102">					
-		<c_name>牛金</c_name>				
-		<c_skinId>12731</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>牛金</name>				
+		<skinId>12731</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12731</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26059" cardId="16101">					
-		<c_name>李典</c_name>				
-		<c_skinId>12732</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>李典</name>				
+		<skinId>12732</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12732</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26060" cardId="16105">					
-		<c_name>宋谦</c_name>				
-		<c_skinId>12733</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>宋谦</name>				
+		<skinId>12733</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12733</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26061" cardId="16119">					
-		<c_name>徐盛</c_name>				
-		<c_skinId>12734</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>徐盛</name>				
+		<skinId>12734</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12734</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26062" cardId="16120">					
-		<c_name>凌统</c_name>				
-		<c_skinId>12735</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>凌统</name>				
+		<skinId>12735</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12735</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26063" cardId="16121">					
-		<c_name>蒋钦</c_name>				
-		<c_skinId>12736</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>蒋钦</name>				
+		<skinId>12736</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12736</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26064" cardId="16110">					
-		<c_name>潘璋</c_name>				
-		<c_skinId>12737</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>潘璋</name>				
+		<skinId>12737</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12737</spine>			
+			<spine>12202</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26065" cardId="16111">					
-		<c_name>周泰</c_name>				
-		<c_skinId>12738</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>周泰</name>				
+		<skinId>12738</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12738</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26066" cardId="16109">					
-		<c_name>关羽</c_name>				
-		<c_skinId>12739</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>关羽</name>				
+		<skinId>12739</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12739</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26067" cardId="16112">					
-		<c_name>刘备</c_name>				
-		<c_skinId>12740</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>刘备</name>				
+		<skinId>12740</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12740</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26068" cardId="16113">					
-		<c_name>蒋干</c_name>				
-		<c_skinId>12741</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>蒋干</name>				
+		<skinId>12741</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12741</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26069" cardId="16114">					
-		<c_name>荀攸</c_name>				
-		<c_skinId>12742</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>荀攸</name>				
+		<skinId>12742</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12742</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26070" cardId="16115">					
-		<c_name>陈群</c_name>				
-		<c_skinId>12743</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>陈群</name>				
+		<skinId>12743</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12743</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26071" cardId="16108">					
-		<c_name>董昭</c_name>				
-		<c_skinId>12744</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>董昭</name>				
+		<skinId>12744</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12744</spine>			
+			<spine>12202</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26072" cardId="16104">					
-		<c_name>韩浩</c_name>				
-		<c_skinId>12745</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>韩浩</name>				
+		<skinId>12745</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12745</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26074" cardId="16107">					
-		<c_name>诸葛亮</c_name>				
-		<c_skinId>12747</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>诸葛亮</name>				
+		<skinId>12747</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12747</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26075" cardId="16116">					
-		<c_name>刘禅</c_name>				
-		<c_skinId>12748</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>刘禅</name>				
+		<skinId>12748</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12748</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26076" cardId="16117">					
-		<c_name>李严</c_name>				
-		<c_skinId>12749</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>李严</name>				
+		<skinId>12749</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12749</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26077" cardId="16103">					
-		<c_name>庞德</c_name>				
-		<c_skinId>12750</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>庞德</name>				
+		<skinId>12750</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12750</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26078" cardId="16118">					
-		<c_name>关平</c_name>				
-		<c_skinId>12751</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>关平</name>				
+		<skinId>12751</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12751</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26079" cardId="16102">					
-		<c_name>于禁</c_name>				
-		<c_skinId>12752</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>于禁</name>				
+		<skinId>12752</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12752</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26080" cardId="16101">					
-		<c_name>满宠</c_name>				
-		<c_skinId>12753</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>满宠</name>				
+		<skinId>12753</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12753</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26081" cardId="16105">					
-		<c_name>傅方</c_name>				
-		<c_skinId>12754</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>傅方</name>				
+		<skinId>12754</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12754</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26082" cardId="16119">					
-		<c_name>胡修</c_name>				
-		<c_skinId>12755</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>胡修</name>				
+		<skinId>12755</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12755</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26083" cardId="16120">					
-		<c_name>朱然</c_name>				
-		<c_skinId>12756</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>朱然</name>				
+		<skinId>12756</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12756</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26084" cardId="16121">					
-		<c_name>孙权</c_name>				
-		<c_skinId>12757</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>孙权</name>				
+		<skinId>12757</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12757</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26085" cardId="16110">					
-		<c_name>冯习</c_name>				
-		<c_skinId>12758</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>冯习</name>				
+		<skinId>12758</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12758</spine>			
+			<spine>12202</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26086" cardId="16111">					
-		<c_name>吴班</c_name>				
-		<c_skinId>12759</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>吴班</name>				
+		<skinId>12759</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12759</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26087" cardId="16109">					
-		<c_name>张南</c_name>				
-		<c_skinId>12760</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>张南</name>				
+		<skinId>12760</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12760</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26088" cardId="16112">					
-		<c_name>孙桓</c_name>				
-		<c_skinId>12761</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>孙桓</name>				
+		<skinId>12761</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12761</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26089" cardId="16113">					
-		<c_name>骆统</c_name>				
-		<c_skinId>12762</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>骆统</name>				
+		<skinId>12762</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12762</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26090" cardId="16114">					
-		<c_name>周胤</c_name>				
-		<c_skinId>12763</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>周胤</name>				
+		<skinId>12763</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12763</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26091" cardId="16115">					
-		<c_name>程普</c_name>				
-		<c_skinId>12764</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>程普</name>				
+		<skinId>12764</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12764</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26092" cardId="16108">					
-		<c_name>马谡</c_name>				
-		<c_skinId>12765</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>马谡</name>				
+		<skinId>12765</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12765</spine>			
+			<spine>12202</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26093" cardId="16104">					
-		<c_name>高定</c_name>				
-		<c_skinId>12766</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>高定</name>				
+		<skinId>12766</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12766</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26094" cardId="16106">					
-		<c_name>朱褒</c_name>				
-		<c_skinId>12767</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>朱褒</name>				
+		<skinId>12767</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12767</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26095" cardId="16107">					
-		<c_name>孟优</c_name>				
-		<c_skinId>12768</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>孟优</name>				
+		<skinId>12768</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12768</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26096" cardId="16116">					
-		<c_name>杨锋</c_name>				
-		<c_skinId>12769</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>杨锋</name>				
+		<skinId>12769</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12769</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26097" cardId="16117">					
-		<c_name>木鹿大王</c_name>				
-		<c_skinId>12770</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>木鹿大王</name>				
+		<skinId>12770</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12770</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26098" cardId="16103">					
-		<c_name>兀突骨</c_name>				
-		<c_skinId>12771</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>兀突骨</name>				
+		<skinId>12771</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12771</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26099" cardId="16118">					
-		<c_name>关索</c_name>				
-		<c_skinId>12772</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>关索</name>				
+		<skinId>12772</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12772</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26100" cardId="16102">					
-		<c_name>阿会喃</c_name>				
-		<c_skinId>12773</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>阿会喃</name>				
+		<skinId>12773</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12773</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26101" cardId="16101">					
-		<c_name>忙牙长</c_name>				
-		<c_skinId>12774</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>忙牙长</name>				
+		<skinId>12774</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12774</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26102" cardId="16105">					
-		<c_name>带来洞主</c_name>				
-		<c_skinId>12775</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>带来洞主</name>				
+		<skinId>12775</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12775</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26103" cardId="16119">					
-		<c_name>金环三结</c_name>				
-		<c_skinId>12776</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>金环三结</name>				
+		<skinId>12776</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12776</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26104" cardId="16120">					
-		<c_name>朵思大王</c_name>				
-		<c_skinId>12777</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>朵思大王</name>				
+		<skinId>12777</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12777</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26105" cardId="16121">					
-		<c_name>董荼那</c_name>				
-		<c_skinId>12778</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>董荼那</name>				
+		<skinId>12778</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12778</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26106" cardId="16110">					
-		<c_name>花鬘</c_name>				
-		<c_skinId>12779</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>花鬘</name>				
+		<skinId>12779</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12779</spine>			
+			<spine>12202</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26107" cardId="16111">					
-		<c_name>雍闿</c_name>				
-		<c_skinId>12780</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>雍闿</name>				
+		<skinId>12780</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12780</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26108" cardId="16109">					
-		<c_name>李恢</c_name>				
-		<c_skinId>12781</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>李恢</name>				
+		<skinId>12781</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12781</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26109" cardId="16112">					
-		<c_name>吕凯</c_name>				
-		<c_skinId>12782</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>吕凯</name>				
+		<skinId>12782</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12782</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26110" cardId="16113">					
-		<c_name>爨习</c_name>				
-		<c_skinId>12783</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>爨习</name>				
+		<skinId>12783</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12783</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26111" cardId="16114">					
-		<c_name>孟琰</c_name>				
-		<c_skinId>12784</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>孟琰</name>				
+		<skinId>12784</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12784</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26112" cardId="16115">					
-		<c_name>马忠</c_name>				
-		<c_skinId>12785</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>马忠</name>				
+		<skinId>12785</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12785</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26113" cardId="16108">					
-		<c_name>王伉</c_name>				
-		<c_skinId>12786</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>王伉</name>				
+		<skinId>12786</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12786</spine>			
+			<spine>12202</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26114" cardId="16104">					
-		<c_name>甄宓</c_name>				
-		<c_skinId>12787</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>甄宓</name>				
+		<skinId>12787</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12787</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26115" cardId="16106">					
-		<c_name>司马懿</c_name>				
-		<c_skinId>12788</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>司马懿</name>				
+		<skinId>12788</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12788</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26116" cardId="16107">					
-		<c_name>向宠</c_name>				
-		<c_skinId>12789</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>向宠</name>				
+		<skinId>12789</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12789</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26117" cardId="16116">					
-		<c_name>邓芝</c_name>				
-		<c_skinId>12790</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>邓芝</name>				
+		<skinId>12790</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12790</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26118" cardId="16117">					
-		<c_name>曹真</c_name>				
-		<c_skinId>12791</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>曹真</name>				
+		<skinId>12791</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12791</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26119" cardId="16103">					
-		<c_name>王双</c_name>				
-		<c_skinId>12792</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>王双</name>				
+		<skinId>12792</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12792</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26120" cardId="16118">					
-		<c_name>魏延</c_name>				
-		<c_skinId>12793</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>魏延</name>				
+		<skinId>12793</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12793</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26121" cardId="16102">					
-		<c_name>全琮</c_name>				
-		<c_skinId>12794</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>全琮</name>				
+		<skinId>12794</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12794</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26122" cardId="16101">					
-		<c_name>诸葛恪</c_name>				
-		<c_skinId>12795</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>诸葛恪</name>				
+		<skinId>12795</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12795</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26123" cardId="16105">					
-		<c_name>黄盖</c_name>				
-		<c_skinId>12796</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>黄盖</name>				
+		<skinId>12796</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12796</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26124" cardId="16119">					
-		<c_name>陆抗</c_name>				
-		<c_skinId>12797</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>陆抗</name>				
+		<skinId>12797</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12797</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26125" cardId="16120">					
-		<c_name>陆景</c_name>				
-		<c_skinId>12798</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>陆景</name>				
+		<skinId>12798</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12798</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26126" cardId="16121">					
-		<c_name>丁奉</c_name>				
-		<c_skinId>12799</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>丁奉</name>				
+		<skinId>12799</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12799</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26127" cardId="16110">					
-		<c_name>孙韶</c_name>				
-		<c_skinId>12800</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>孙韶</name>				
+		<skinId>12800</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12800</spine>			
+			<spine>12202</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26128" cardId="16111">					
-		<c_name>曹丕</c_name>				
-		<c_skinId>12801</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>曹丕</name>				
+		<skinId>12801</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12801</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26129" cardId="16109">					
-		<c_name>司马炎</c_name>				
-		<c_skinId>12802</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>司马炎</name>				
+		<skinId>12802</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12802</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26130" cardId="16112">					
-		<c_name>司马昭</c_name>				
-		<c_skinId>12803</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>司马昭</name>				
+		<skinId>12803</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12803</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26131" cardId="16113">					
-		<c_name>曹奂</c_name>				
-		<c_skinId>12804</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>曹奂</name>				
+		<skinId>12804</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12804</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26132" cardId="16114">					
-		<c_name>邓艾</c_name>				
-		<c_skinId>12805</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>邓艾</name>				
+		<skinId>12805</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12805</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26133" cardId="16115">					
-		<c_name>孙皓</c_name>				
-		<c_skinId>12806</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>孙皓</name>				
+		<skinId>12806</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12806</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26134" cardId="16108">					
-		<c_name>黄月英</c_name>				
-		<c_skinId>12807</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>黄月英</name>				
+		<skinId>12807</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12807</spine>			
+			<spine>12202</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26135" cardId="16104">					
-		<c_name>姜维</c_name>				
-		<c_skinId>12808</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>姜维</name>				
+		<skinId>12808</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12808</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="26136" cardId="16106">					
-		<c_name>徐庶</c_name>				
-		<c_skinId>12809</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>徐庶</name>				
+		<skinId>12809</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12809</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27001" cardId="16209">					
-		<c_name>黄巾步兵</c_name>				
-		<c_skinId>12327</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>黄巾步兵</name>				
+		<skinId>12327</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12327</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27002" cardId="16210">					
-		<c_name>黄巾弓兵</c_name>				
-		<c_skinId>12328</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>38</c_hitZ>				
-		<c_hpbarZ>58</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>黄巾弓兵</name>				
+		<skinId>12328</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>38</hitZ>				
+		<hpbarZ>41</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12328</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27003" cardId="16212">					
-		<c_name>黄巾法师</c_name>				
-		<c_skinId>12329</c_skinId>				
-		<c_launchZ>54</c_launchZ>				
-		<c_launchX>33</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>15003</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>黄巾法师</name>				
+		<skinId>12329</skinId>				
+		<launchZ>54</launchZ>				
+		<launchX>33</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>15003</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12329</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27004" cardId="16213">					
-		<c_name>黄巾枪兵</c_name>				
-		<c_skinId>12330</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>黄巾枪兵</name>				
+		<skinId>12330</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12330</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27005" cardId="16211">					
-		<c_name>黄巾骑兵</c_name>				
-		<c_skinId>12331</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>70</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>黄巾骑兵</name>				
+		<skinId>12331</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>53</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12331</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27006" cardId="16209">					
-		<c_name>魏军步兵</c_name>				
-		<c_skinId>12332</c_skinId>				
-		<c_hitZ>59</c_hitZ>				
-		<c_hpbarZ>80</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>魏军步兵</name>				
+		<skinId>12332</skinId>				
+		<hitZ>59</hitZ>				
+		<hpbarZ>63</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12332</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27007" cardId="16210">					
-		<c_name>魏军弓兵</c_name>				
-		<c_skinId>12333</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>38</c_hitZ>				
-		<c_hpbarZ>58</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>魏军弓兵</name>				
+		<skinId>12333</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>38</hitZ>				
+		<hpbarZ>41</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12333</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27008" cardId="16212">					
-		<c_name>魏军法师</c_name>				
-		<c_skinId>12334</c_skinId>				
-		<c_launchZ>54</c_launchZ>				
-		<c_launchX>33</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>15003</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>69</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>魏军法师</name>				
+		<skinId>12334</skinId>				
+		<launchZ>54</launchZ>				
+		<launchX>33</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>15003</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>52</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12334</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27009" cardId="16213">					
-		<c_name>魏军枪兵</c_name>				
-		<c_skinId>12335</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>魏军枪兵</name>				
+		<skinId>12335</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12335</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27010" cardId="16211">					
-		<c_name>魏军骑兵</c_name>				
-		<c_skinId>12336</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>68</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>魏军骑兵</name>				
+		<skinId>12336</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>51</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12336</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27011" cardId="16209">					
-		<c_name>西凉步兵</c_name>				
-		<c_skinId>12337</c_skinId>				
-		<c_hitZ>56</c_hitZ>				
-		<c_hpbarZ>77</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>西凉步兵</name>				
+		<skinId>12337</skinId>				
+		<hitZ>56</hitZ>				
+		<hpbarZ>60</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12337</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27012" cardId="16210">					
-		<c_name>西凉弓兵</c_name>				
-		<c_skinId>12338</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>37</c_hitZ>				
-		<c_hpbarZ>58</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>西凉弓兵</name>				
+		<skinId>12338</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>37</hitZ>				
+		<hpbarZ>41</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12338</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27013" cardId="16212">					
-		<c_name>西凉法师</c_name>				
-		<c_skinId>12339</c_skinId>				
-		<c_launchZ>54</c_launchZ>				
-		<c_launchX>33</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>15003</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>69</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>西凉法师</name>				
+		<skinId>12339</skinId>				
+		<launchZ>54</launchZ>				
+		<launchX>33</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>15003</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>52</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12339</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27014" cardId="16213">					
-		<c_name>西凉枪兵</c_name>				
-		<c_skinId>12340</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>西凉枪兵</name>				
+		<skinId>12340</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12340</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27015" cardId="16211">					
-		<c_name>西凉铁骑</c_name>				
-		<c_skinId>12341</c_skinId>				
-		<c_hitZ>47</c_hitZ>				
-		<c_hpbarZ>66</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>西凉铁骑</name>				
+		<skinId>12341</skinId>				
+		<hitZ>47</hitZ>				
+		<hpbarZ>49</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12341</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27016" cardId="16209">					
-		<c_name>蜀军步兵</c_name>				
-		<c_skinId>12342</c_skinId>				
-		<c_hitZ>59</c_hitZ>				
-		<c_hpbarZ>82</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>蜀军步兵</name>				
+		<skinId>12342</skinId>				
+		<hitZ>59</hitZ>				
+		<hpbarZ>65</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12342</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27017" cardId="16210">					
-		<c_name>蜀军弓兵</c_name>				
-		<c_skinId>12343</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>40</c_hitZ>				
-		<c_hpbarZ>56</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>蜀军弓兵</name>				
+		<skinId>12343</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>40</hitZ>				
+		<hpbarZ>39</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12343</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27018" cardId="16212">					
-		<c_name>蜀军法师</c_name>				
-		<c_skinId>12344</c_skinId>				
-		<c_launchZ>54</c_launchZ>				
-		<c_launchX>33</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>15003</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>68</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>蜀军法师</name>				
+		<skinId>12344</skinId>				
+		<launchZ>54</launchZ>				
+		<launchX>33</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>15003</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>51</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12344</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27019" cardId="16213">					
-		<c_name>蜀军枪兵</c_name>				
-		<c_skinId>12345</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>蜀军枪兵</name>				
+		<skinId>12345</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12345</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27020" cardId="16211">					
-		<c_name>蜀军骑兵</c_name>				
-		<c_skinId>12346</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>69</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>蜀军骑兵</name>				
+		<skinId>12346</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>52</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12346</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27021" cardId="16209">					
-		<c_name>吴军步兵</c_name>				
-		<c_skinId>12347</c_skinId>				
-		<c_hitZ>55</c_hitZ>				
-		<c_hpbarZ>77</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>吴军步兵</name>				
+		<skinId>12347</skinId>				
+		<hitZ>55</hitZ>				
+		<hpbarZ>60</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12347</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27022" cardId="16210">					
-		<c_name>吴军弓兵</c_name>				
-		<c_skinId>12348</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>39</c_hitZ>				
-		<c_hpbarZ>55</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>吴军弓兵</name>				
+		<skinId>12348</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>39</hitZ>				
+		<hpbarZ>38</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12348</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27023" cardId="16212">					
-		<c_name>吴军法师</c_name>				
-		<c_skinId>12349</c_skinId>				
-		<c_launchZ>54</c_launchZ>				
-		<c_launchX>33</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>15003</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>68</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>吴军法师</name>				
+		<skinId>12349</skinId>				
+		<launchZ>54</launchZ>				
+		<launchX>33</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>15003</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>51</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12349</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27024" cardId="16213">					
-		<c_name>吴军枪兵</c_name>				
-		<c_skinId>12350</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>吴军枪兵</name>				
+		<skinId>12350</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12350</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27025" cardId="16211">					
-		<c_name>吴军骑兵</c_name>				
-		<c_skinId>12351</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>66</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>吴军骑兵</name>				
+		<skinId>12351</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>49</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12351</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27026" cardId="16209">					
-		<c_name>虎豹骑A</c_name>				
-		<c_skinId>12352</c_skinId>				
-		<c_hitZ>56</c_hitZ>				
-		<c_hpbarZ>76</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>虎豹骑A</name>				
+		<skinId>12352</skinId>				
+		<hitZ>56</hitZ>				
+		<hpbarZ>59</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12352</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27027" cardId="16210">					
-		<c_name>虎豹骑B</c_name>				
-		<c_skinId>12353</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>虎豹骑B</name>				
+		<skinId>12353</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12353</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27028" cardId="16212">					
-		<c_name>虎豹骑C</c_name>				
-		<c_skinId>12354</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>15003</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>虎豹骑C</name>				
+		<skinId>12354</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>15003</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12354</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27029" cardId="16213">					
-		<c_name>虎豹骑D</c_name>				
-		<c_skinId>12355</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>虎豹骑D</name>				
+		<skinId>12355</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12355</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27030" cardId="16211">					
-		<c_name>虎豹骑E</c_name>				
-		<c_skinId>12356</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>虎豹骑E</name>				
+		<skinId>12356</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12356</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27031" cardId="16209">					
-		<c_name>吴军精锐A</c_name>				
-		<c_skinId>12357</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>吴军精锐A</name>				
+		<skinId>12357</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12357</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27032" cardId="16210">					
-		<c_name>吴军精锐B</c_name>				
-		<c_skinId>12358</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>吴军精锐B</name>				
+		<skinId>12358</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12358</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27033" cardId="16212">					
-		<c_name>吴军精锐C</c_name>				
-		<c_skinId>12359</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>15003</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>吴军精锐C</name>				
+		<skinId>12359</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>15003</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12359</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27034" cardId="16213">					
-		<c_name>吴军精锐D</c_name>				
-		<c_skinId>12360</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>吴军精锐D</name>				
+		<skinId>12360</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12360</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27035" cardId="16211">					
-		<c_name>吴军精锐E</c_name>				
-		<c_skinId>12361</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>吴军精锐E</name>				
+		<skinId>12361</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12361</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27036" cardId="16209">					
-		<c_name>蛮兵A</c_name>				
-		<c_skinId>12362</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>蛮兵A</name>				
+		<skinId>12362</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12362</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27037" cardId="16210">					
-		<c_name>蛮兵B</c_name>				
-		<c_skinId>12363</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>蛮兵B</name>				
+		<skinId>12363</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12363</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27038" cardId="16212">					
-		<c_name>蛮兵C</c_name>				
-		<c_skinId>12364</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>15003</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>蛮兵C</name>				
+		<skinId>12364</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>15003</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12364</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27039" cardId="16213">					
-		<c_name>蛮兵D</c_name>				
-		<c_skinId>12365</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>蛮兵D</name>				
+		<skinId>12365</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12365</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27040" cardId="16211">					
-		<c_name>蛮兵E</c_name>				
-		<c_skinId>12366</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>蛮兵E</name>				
+		<skinId>12366</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12366</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27041" cardId="16209">					
-		<c_name>蜀军精锐A</c_name>				
-		<c_skinId>12367</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>蜀军精锐A</name>				
+		<skinId>12367</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12367</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27042" cardId="16210">					
-		<c_name>蜀军精锐B</c_name>				
-		<c_skinId>12368</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>蜀军精锐B</name>				
+		<skinId>12368</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12368</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27043" cardId="16212">					
-		<c_name>蜀军精锐C</c_name>				
-		<c_skinId>12369</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>15003</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>蜀军精锐C</name>				
+		<skinId>12369</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>15003</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12369</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27044" cardId="16213">					
-		<c_name>蜀军精锐D</c_name>				
-		<c_skinId>12370</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>蜀军精锐D</name>				
+		<skinId>12370</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12370</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27045" cardId="16211">					
-		<c_name>蜀军精锐E</c_name>				
-		<c_skinId>12371</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>蜀军精锐E</name>				
+		<skinId>12371</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12371</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27046" cardId="16209">					
-		<c_name>山贼步兵</c_name>				
-		<c_skinId>12372</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>山贼步兵</name>				
+		<skinId>12372</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12372</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27047" cardId="16210">					
-		<c_name>山贼弓兵</c_name>				
-		<c_hp>50</c_hp>				
-		<c_skinId>12328</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>38</c_hitZ>				
-		<c_hpbarZ>58</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>山贼弓兵</name>				
+		<hp>50</hp>				
+		<skinId>12328</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>38</hitZ>				
+		<hpbarZ>41</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12328</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27048" cardId="16212">					
-		<c_name>山贼法师</c_name>				
-		<c_hp>50</c_hp>				
-		<c_skinId>12329</c_skinId>				
-		<c_launchZ>54</c_launchZ>				
-		<c_launchX>33</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>15003</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>山贼法师</name>				
+		<hp>50</hp>				
+		<skinId>12329</skinId>				
+		<launchZ>54</launchZ>				
+		<launchX>33</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>15003</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12329</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27049" cardId="16213">					
-		<c_name>山贼枪兵</c_name>				
-		<c_hp>50</c_hp>				
-		<c_skinId>12330</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>山贼枪兵</name>				
+		<hp>50</hp>				
+		<skinId>12330</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12330</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27050" cardId="16211">					
-		<c_name>山贼骑兵</c_name>				
-		<c_hp>50</c_hp>				
-		<c_skinId>12331</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>70</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>山贼骑兵</name>				
+		<hp>50</hp>				
+		<skinId>12331</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>53</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12331</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27051" cardId="16209">					
-		<c_name>强盗步兵</c_name>				
-		<c_hp>50</c_hp>				
-		<c_skinId>12332</c_skinId>				
-		<c_hitZ>59</c_hitZ>				
-		<c_hpbarZ>80</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>强盗步兵</name>				
+		<hp>50</hp>				
+		<skinId>12332</skinId>				
+		<hitZ>59</hitZ>				
+		<hpbarZ>63</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12332</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27052" cardId="16210">					
-		<c_name>强盗弓兵</c_name>				
-		<c_hp>50</c_hp>				
-		<c_skinId>12333</c_skinId>				
-		<c_launchZ>50</c_launchZ>				
-		<c_launchX>30</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>112633</c_projectileSkinId>				
-		<c_hitZ>38</c_hitZ>				
-		<c_hpbarZ>58</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>强盗弓兵</name>				
+		<hp>50</hp>				
+		<skinId>12333</skinId>				
+		<launchZ>50</launchZ>				
+		<launchX>30</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>112633</projectileSkinId>				
+		<hitZ>38</hitZ>				
+		<hpbarZ>41</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12333</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27053" cardId="16212">					
-		<c_name>强盗法师</c_name>				
-		<c_hp>50</c_hp>				
-		<c_skinId>12334</c_skinId>				
-		<c_launchZ>54</c_launchZ>				
-		<c_launchX>33</c_launchX>				
-		<c_attackProjectileType>1</c_attackProjectileType>				
-		<c_projectileSkinId>15003</c_projectileSkinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>69</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>强盗法师</name>				
+		<hp>50</hp>				
+		<skinId>12334</skinId>				
+		<launchZ>54</launchZ>				
+		<launchX>33</launchX>				
+		<attackProjectileType>1</attackProjectileType>				
+		<projectileSkinId>15003</projectileSkinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>52</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12334</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27054" cardId="16213">					
-		<c_name>强盗枪兵</c_name>				
-		<c_hp>50</c_hp>				
-		<c_skinId>12335</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>65</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.35</c_attackDelay>				
+		<name>强盗枪兵</name>				
+		<hp>50</hp>				
+		<skinId>12335</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>48</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.35</attackDelay>				
+		<res>				
+			<spine>12335</spine>			
+		</res>				
 	</item>					
 	<item extraCardId="27055" cardId="16211">					
-		<c_name>强盗骑兵</c_name>				
-		<c_hp>50</c_hp>				
-		<c_skinId>12336</c_skinId>				
-		<c_hitZ>45</c_hitZ>				
-		<c_hpbarZ>68</c_hpbarZ><c_hpbarX>0</c_hpbarX>				
-		<c_attackDelay>0.5</c_attackDelay>				
+		<name>强盗骑兵</name>				
+		<hp>50</hp>				
+		<skinId>12336</skinId>				
+		<hitZ>45</hitZ>				
+		<hpbarZ>51</hpbarZ><hpbarX>0</hpbarX>				
+		<attackDelay>0.5</attackDelay>				
+		<res>				
+			<spine>12336</spine>			
+		</res>				
 	</item>					
 </ExtraCard>						

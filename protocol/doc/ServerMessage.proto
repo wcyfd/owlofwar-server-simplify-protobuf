@@ -5,8 +5,11 @@ import "Fight.proto";
 import "Pillage.proto";
 import "Card.proto";
 import "Ping.proto";
-import "GM.proto";
-//27
+import "Market.proto";
+import "Role.proto";
+import "War.proto";
+
+//38
 message SCMessage{
 	optional LoginCheckAccountResponse loginCheckAccountResponse=1;
 	optional LoginCreateRoleResponse loginCreateRoleResponse=2;
@@ -24,22 +27,43 @@ message SCMessage{
 	optional SCFightGameOver scFightGameOver = 12;
 	optional FightReadFrameResponse FightReadFrameResponse = 13;
 	optional SCFightKeyFrame scFightKeyFrame = 14;
-	optional FightGetGameAwardResponse fightGetGameAwardResponse = 23;
+	optional FightGetGameAwardResponse fightGetGameAwardResponse = 15;
+	optional FightCountDownResponse fightCountDownResponse = 16;
+	optional SCFightCountDown scFightCountDown = 17;
 
-	optional PillageRoleResponse pillageRoleResponse = 15;
-	optional PillageCancelResponse pillageCancelResponse = 16;
-	optional PillageShowResponse pillageShowResponse = 17;
+	optional PillageRoleResponse pillageRoleResponse = 18;
+	optional PillageCancelResponse pillageCancelResponse = 19;
+	optional PillageShowResponse pillageShowResponse = 20;
+	optional PillageCompetitionNoticeResponse pillageCompetitionNoticeResponse= 38;
 
-	optional CardGetCardsInfoResponse cardGetCardsInfoResponse = 18;
-	optional CardEditCardListResponse cardEditCardListResponse = 19;
-	optional CardLvUpResponse cardLvUpResponse = 20;
-	optional CardChooseUseCardListResponse cardChooseUseCardListResponse = 21;
-	optional CardChangeMainCardResponse cardChangeMainCardResponse = 24;
+	optional CardGetCardsInfoResponse cardGetCardsInfoResponse = 21;
+	optional CardEditCardListResponse cardEditCardListResponse = 22;
+	optional CardLvUpResponse cardLvUpResponse = 23;
+	optional CardChooseUseCardListResponse cardChooseUseCardListResponse = 24;
+	optional CardChangeMainCardResponse cardChangeMainCardResponse = 25;
 
-	optional PingResponse pingResponse = 22;
-
-	optional GMRejectLoginResponse gmRejectLoginResponse = 25;
-	optional GMTerminatedServerResponse gmTerminatedServerResponse = 26;
-	optional GMOpenLoginResponse gmOpenLoginResponse = 27;
-
+	optional PingResponse pingResponse = 26;
+	
+	//显示商店信息
+	optional MarketShowMarketItemResponse marketShowMarketItemResponse = 27;
+	//购买商品
+	optional MarketBuyMarketItemResponse marketBuyMarketItemResponse = 28;
+	//手动刷新
+	optional MarketArtificialRefreshResponse MarketArtificialRefreshResponse = 31;
+	
+	//添加金币
+	optional SCRoleAddMoney scRoleAddMoney = 29;
+	//添加银币
+	optional SCRoleAddGold scRoleAddGold = 30;
+	//查询用户信息
+	optional RoleInfoSelectResponse roleInfoSelectResponse = 37;
+	
+	//显示章节信息
+	optional WarShowWarChapterResponse warShowWarChapterResponse = 32;
+	//显示建筑信息
+	optional WarShowWarBuildResponse WarShowWarBuildResponse = 33;
+	//攻打建筑
+	optional WarMatchResponse warMatchResponse = 34;
+	optional WarWinBuildResponse warWinBuildResponse = 35;
+	optional WarGetChapterAwardResponse warGetChapterAwardResponse = 36;
 }

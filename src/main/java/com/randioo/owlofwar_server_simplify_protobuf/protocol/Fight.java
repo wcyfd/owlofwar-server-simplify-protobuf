@@ -597,7 +597,15 @@ public final class Fight {
     public boolean hasNPCMapId() { return hasNPCMapId; }
     public int getNPCMapId() { return nPCMapId_; }
     
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightType fightType = 5;
+    public static final int FIGHTTYPE_FIELD_NUMBER = 5;
+    private boolean hasFightType;
+    private com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.FightType fightType_;
+    public boolean hasFightType() { return hasFightType; }
+    public com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.FightType getFightType() { return fightType_; }
+    
     private void initFields() {
+      fightType_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.FightType.PILLAGE;
     }
     public final boolean isInitialized() {
       return true;
@@ -617,6 +625,9 @@ public final class Fight {
       }
       if (hasNPCMapId()) {
         output.writeInt32(4, getNPCMapId());
+      }
+      if (hasFightType()) {
+        output.writeEnum(5, getFightType().getNumber());
       }
       getUnknownFields().writeTo(output);
     }
@@ -642,6 +653,10 @@ public final class Fight {
       if (hasNPCMapId()) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(4, getNPCMapId());
+      }
+      if (hasFightType()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(5, getFightType().getNumber());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -820,6 +835,9 @@ public final class Fight {
         if (other.hasNPCMapId()) {
           setNPCMapId(other.getNPCMapId());
         }
+        if (other.hasFightType()) {
+          setFightType(other.getFightType());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -861,6 +879,16 @@ public final class Fight {
             }
             case 32: {
               setNPCMapId(input.readInt32());
+              break;
+            }
+            case 40: {
+              int rawValue = input.readEnum();
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.FightType value = com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.FightType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(5, rawValue);
+              } else {
+                setFightType(value);
+              }
               break;
             }
           }
@@ -970,6 +998,27 @@ public final class Fight {
       public Builder clearNPCMapId() {
         result.hasNPCMapId = false;
         result.nPCMapId_ = 0;
+        return this;
+      }
+      
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightType fightType = 5;
+      public boolean hasFightType() {
+        return result.hasFightType();
+      }
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.FightType getFightType() {
+        return result.getFightType();
+      }
+      public Builder setFightType(com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.FightType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        result.hasFightType = true;
+        result.fightType_ = value;
+        return this;
+      }
+      public Builder clearFightType() {
+        result.hasFightType = false;
+        result.fightType_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.FightType.PILLAGE;
         return this;
       }
       
@@ -4232,22 +4281,15 @@ public final class Fight {
       return com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_FightGetGameAwardRequest_fieldAccessorTable;
     }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.GameResult gameResult = 1;
-    public static final int GAMERESULT_FIELD_NUMBER = 1;
-    private boolean hasGameResult;
-    private com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResult gameResult_;
-    public boolean hasGameResult() { return hasGameResult; }
-    public com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResult getGameResult() { return gameResult_; }
-    
-    // optional int32 score = 2;
-    public static final int SCORE_FIELD_NUMBER = 2;
-    private boolean hasScore;
-    private int score_ = 0;
-    public boolean hasScore() { return hasScore; }
-    public int getScore() { return score_; }
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.GameResultData gameResultData = 1;
+    public static final int GAMERESULTDATA_FIELD_NUMBER = 1;
+    private boolean hasGameResultData;
+    private com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResultData gameResultData_;
+    public boolean hasGameResultData() { return hasGameResultData; }
+    public com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResultData getGameResultData() { return gameResultData_; }
     
     private void initFields() {
-      gameResult_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResult.WIN;
+      gameResultData_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResultData.getDefaultInstance();
     }
     public final boolean isInitialized() {
       return true;
@@ -4256,11 +4298,8 @@ public final class Fight {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (hasGameResult()) {
-        output.writeEnum(1, getGameResult().getNumber());
-      }
-      if (hasScore()) {
-        output.writeInt32(2, getScore());
+      if (hasGameResultData()) {
+        output.writeMessage(1, getGameResultData());
       }
       getUnknownFields().writeTo(output);
     }
@@ -4271,13 +4310,9 @@ public final class Fight {
       if (size != -1) return size;
     
       size = 0;
-      if (hasGameResult()) {
+      if (hasGameResultData()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, getGameResult().getNumber());
-      }
-      if (hasScore()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, getScore());
+          .computeMessageSize(1, getGameResultData());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -4437,11 +4472,8 @@ public final class Fight {
       
       public Builder mergeFrom(com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGetGameAwardRequest other) {
         if (other == com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGetGameAwardRequest.getDefaultInstance()) return this;
-        if (other.hasGameResult()) {
-          setGameResult(other.getGameResult());
-        }
-        if (other.hasScore()) {
-          setScore(other.getScore());
+        if (other.hasGameResultData()) {
+          mergeGameResultData(other.getGameResultData());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -4468,18 +4500,13 @@ public final class Fight {
               }
               break;
             }
-            case 8: {
-              int rawValue = input.readEnum();
-              com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResult value = com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResult.valueOf(rawValue);
-              if (value == null) {
-                unknownFields.mergeVarintField(1, rawValue);
-              } else {
-                setGameResult(value);
+            case 10: {
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResultData.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResultData.newBuilder();
+              if (hasGameResultData()) {
+                subBuilder.mergeFrom(getGameResultData());
               }
-              break;
-            }
-            case 16: {
-              setScore(input.readInt32());
+              input.readMessage(subBuilder, extensionRegistry);
+              setGameResultData(subBuilder.buildPartial());
               break;
             }
           }
@@ -4487,42 +4514,40 @@ public final class Fight {
       }
       
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.GameResult gameResult = 1;
-      public boolean hasGameResult() {
-        return result.hasGameResult();
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.GameResultData gameResultData = 1;
+      public boolean hasGameResultData() {
+        return result.hasGameResultData();
       }
-      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResult getGameResult() {
-        return result.getGameResult();
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResultData getGameResultData() {
+        return result.getGameResultData();
       }
-      public Builder setGameResult(com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResult value) {
+      public Builder setGameResultData(com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResultData value) {
         if (value == null) {
           throw new NullPointerException();
         }
-        result.hasGameResult = true;
-        result.gameResult_ = value;
+        result.hasGameResultData = true;
+        result.gameResultData_ = value;
         return this;
       }
-      public Builder clearGameResult() {
-        result.hasGameResult = false;
-        result.gameResult_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResult.WIN;
+      public Builder setGameResultData(com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResultData.Builder builderForValue) {
+        result.hasGameResultData = true;
+        result.gameResultData_ = builderForValue.build();
         return this;
       }
-      
-      // optional int32 score = 2;
-      public boolean hasScore() {
-        return result.hasScore();
-      }
-      public int getScore() {
-        return result.getScore();
-      }
-      public Builder setScore(int value) {
-        result.hasScore = true;
-        result.score_ = value;
+      public Builder mergeGameResultData(com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResultData value) {
+        if (result.hasGameResultData() &&
+            result.gameResultData_ != com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResultData.getDefaultInstance()) {
+          result.gameResultData_ =
+            com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResultData.newBuilder(result.gameResultData_).mergeFrom(value).buildPartial();
+        } else {
+          result.gameResultData_ = value;
+        }
+        result.hasGameResultData = true;
         return this;
       }
-      public Builder clearScore() {
-        result.hasScore = false;
-        result.score_ = 0;
+      public Builder clearGameResultData() {
+        result.hasGameResultData = false;
+        result.gameResultData_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResultData.getDefaultInstance();
         return this;
       }
       
@@ -4565,26 +4590,15 @@ public final class Fight {
       return com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_FightGetGameAwardResponse_fieldAccessorTable;
     }
     
-    // optional int32 point = 1;
-    public static final int POINT_FIELD_NUMBER = 1;
-    private boolean hasPoint;
-    private int point_ = 0;
-    public boolean hasPoint() { return hasPoint; }
-    public int getPoint() { return point_; }
-    
-    // repeated .com.randioo.owlofwar_server_simplify_protobuf.protocol.CardData cardDatas = 2;
-    public static final int CARDDATAS_FIELD_NUMBER = 2;
-    private java.util.List<com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.CardData> cardDatas_ =
-      java.util.Collections.emptyList();
-    public java.util.List<com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.CardData> getCardDatasList() {
-      return cardDatas_;
-    }
-    public int getCardDatasCount() { return cardDatas_.size(); }
-    public com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.CardData getCardDatas(int index) {
-      return cardDatas_.get(index);
-    }
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.GameResultAwardData gameResultAwardData = 1;
+    public static final int GAMERESULTAWARDDATA_FIELD_NUMBER = 1;
+    private boolean hasGameResultAwardData;
+    private com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResultAwardData gameResultAwardData_;
+    public boolean hasGameResultAwardData() { return hasGameResultAwardData; }
+    public com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResultAwardData getGameResultAwardData() { return gameResultAwardData_; }
     
     private void initFields() {
+      gameResultAwardData_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResultAwardData.getDefaultInstance();
     }
     public final boolean isInitialized() {
       return true;
@@ -4593,11 +4607,8 @@ public final class Fight {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (hasPoint()) {
-        output.writeInt32(1, getPoint());
-      }
-      for (com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.CardData element : getCardDatasList()) {
-        output.writeMessage(2, element);
+      if (hasGameResultAwardData()) {
+        output.writeMessage(1, getGameResultAwardData());
       }
       getUnknownFields().writeTo(output);
     }
@@ -4608,13 +4619,9 @@ public final class Fight {
       if (size != -1) return size;
     
       size = 0;
-      if (hasPoint()) {
+      if (hasGameResultAwardData()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, getPoint());
-      }
-      for (com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.CardData element : getCardDatasList()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, element);
+          .computeMessageSize(1, getGameResultAwardData());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -4758,10 +4765,6 @@ public final class Fight {
           throw new IllegalStateException(
             "build() has already been called on this Builder.");
         }
-        if (result.cardDatas_ != java.util.Collections.EMPTY_LIST) {
-          result.cardDatas_ =
-            java.util.Collections.unmodifiableList(result.cardDatas_);
-        }
         com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGetGameAwardResponse returnMe = result;
         result = null;
         return returnMe;
@@ -4778,14 +4781,8 @@ public final class Fight {
       
       public Builder mergeFrom(com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGetGameAwardResponse other) {
         if (other == com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGetGameAwardResponse.getDefaultInstance()) return this;
-        if (other.hasPoint()) {
-          setPoint(other.getPoint());
-        }
-        if (!other.cardDatas_.isEmpty()) {
-          if (result.cardDatas_.isEmpty()) {
-            result.cardDatas_ = new java.util.ArrayList<com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.CardData>();
-          }
-          result.cardDatas_.addAll(other.cardDatas_);
+        if (other.hasGameResultAwardData()) {
+          mergeGameResultAwardData(other.getGameResultAwardData());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -4812,14 +4809,13 @@ public final class Fight {
               }
               break;
             }
-            case 8: {
-              setPoint(input.readInt32());
-              break;
-            }
-            case 18: {
-              com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.CardData.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.CardData.newBuilder();
+            case 10: {
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResultAwardData.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResultAwardData.newBuilder();
+              if (hasGameResultAwardData()) {
+                subBuilder.mergeFrom(getGameResultAwardData());
+              }
               input.readMessage(subBuilder, extensionRegistry);
-              addCardDatas(subBuilder.buildPartial());
+              setGameResultAwardData(subBuilder.buildPartial());
               break;
             }
           }
@@ -4827,72 +4823,40 @@ public final class Fight {
       }
       
       
-      // optional int32 point = 1;
-      public boolean hasPoint() {
-        return result.hasPoint();
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.GameResultAwardData gameResultAwardData = 1;
+      public boolean hasGameResultAwardData() {
+        return result.hasGameResultAwardData();
       }
-      public int getPoint() {
-        return result.getPoint();
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResultAwardData getGameResultAwardData() {
+        return result.getGameResultAwardData();
       }
-      public Builder setPoint(int value) {
-        result.hasPoint = true;
-        result.point_ = value;
-        return this;
-      }
-      public Builder clearPoint() {
-        result.hasPoint = false;
-        result.point_ = 0;
-        return this;
-      }
-      
-      // repeated .com.randioo.owlofwar_server_simplify_protobuf.protocol.CardData cardDatas = 2;
-      public java.util.List<com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.CardData> getCardDatasList() {
-        return java.util.Collections.unmodifiableList(result.cardDatas_);
-      }
-      public int getCardDatasCount() {
-        return result.getCardDatasCount();
-      }
-      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.CardData getCardDatas(int index) {
-        return result.getCardDatas(index);
-      }
-      public Builder setCardDatas(int index, com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.CardData value) {
+      public Builder setGameResultAwardData(com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResultAwardData value) {
         if (value == null) {
           throw new NullPointerException();
         }
-        result.cardDatas_.set(index, value);
+        result.hasGameResultAwardData = true;
+        result.gameResultAwardData_ = value;
         return this;
       }
-      public Builder setCardDatas(int index, com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.CardData.Builder builderForValue) {
-        result.cardDatas_.set(index, builderForValue.build());
+      public Builder setGameResultAwardData(com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResultAwardData.Builder builderForValue) {
+        result.hasGameResultAwardData = true;
+        result.gameResultAwardData_ = builderForValue.build();
         return this;
       }
-      public Builder addCardDatas(com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.CardData value) {
-        if (value == null) {
-          throw new NullPointerException();
+      public Builder mergeGameResultAwardData(com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResultAwardData value) {
+        if (result.hasGameResultAwardData() &&
+            result.gameResultAwardData_ != com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResultAwardData.getDefaultInstance()) {
+          result.gameResultAwardData_ =
+            com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResultAwardData.newBuilder(result.gameResultAwardData_).mergeFrom(value).buildPartial();
+        } else {
+          result.gameResultAwardData_ = value;
         }
-        if (result.cardDatas_.isEmpty()) {
-          result.cardDatas_ = new java.util.ArrayList<com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.CardData>();
-        }
-        result.cardDatas_.add(value);
+        result.hasGameResultAwardData = true;
         return this;
       }
-      public Builder addCardDatas(com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.CardData.Builder builderForValue) {
-        if (result.cardDatas_.isEmpty()) {
-          result.cardDatas_ = new java.util.ArrayList<com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.CardData>();
-        }
-        result.cardDatas_.add(builderForValue.build());
-        return this;
-      }
-      public Builder addAllCardDatas(
-          java.lang.Iterable<? extends com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.CardData> values) {
-        if (result.cardDatas_.isEmpty()) {
-          result.cardDatas_ = new java.util.ArrayList<com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.CardData>();
-        }
-        super.addAll(values, result.cardDatas_);
-        return this;
-      }
-      public Builder clearCardDatas() {
-        result.cardDatas_ = java.util.Collections.emptyList();
+      public Builder clearGameResultAwardData() {
+        result.hasGameResultAwardData = false;
+        result.gameResultAwardData_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResultAwardData.getDefaultInstance();
         return this;
       }
       
@@ -4906,6 +4870,741 @@ public final class Fight {
     }
     
     // @@protoc_insertion_point(class_scope:com.randioo.owlofwar_server_simplify_protobuf.protocol.FightGetGameAwardResponse)
+  }
+  
+  public static final class FightCountDownRequest extends
+      com.google.protobuf.GeneratedMessage {
+    // Use FightCountDownRequest.newBuilder() to construct.
+    private FightCountDownRequest() {
+      initFields();
+    }
+    private FightCountDownRequest(boolean noInit) {}
+    
+    private static final FightCountDownRequest defaultInstance;
+    public static FightCountDownRequest getDefaultInstance() {
+      return defaultInstance;
+    }
+    
+    public FightCountDownRequest getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+    
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_FightCountDownRequest_descriptor;
+    }
+    
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_FightCountDownRequest_fieldAccessorTable;
+    }
+    
+    private void initFields() {
+    }
+    public final boolean isInitialized() {
+      return true;
+    }
+    
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      getUnknownFields().writeTo(output);
+    }
+    
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+    
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+    
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+    
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> {
+      private com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest result;
+      
+      // Construct using com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest.newBuilder()
+      private Builder() {}
+      
+      private static Builder create() {
+        Builder builder = new Builder();
+        builder.result = new com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest();
+        return builder;
+      }
+      
+      protected com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest internalGetResult() {
+        return result;
+      }
+      
+      public Builder clear() {
+        if (result == null) {
+          throw new IllegalStateException(
+            "Cannot call clear() after build().");
+        }
+        result = new com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest();
+        return this;
+      }
+      
+      public Builder clone() {
+        return create().mergeFrom(result);
+      }
+      
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest.getDescriptor();
+      }
+      
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest getDefaultInstanceForType() {
+        return com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest.getDefaultInstance();
+      }
+      
+      public boolean isInitialized() {
+        return result.isInitialized();
+      }
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest build() {
+        if (result != null && !isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return buildPartial();
+      }
+      
+      private com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest buildParsed()
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        if (!isInitialized()) {
+          throw newUninitializedMessageException(
+            result).asInvalidProtocolBufferException();
+        }
+        return buildPartial();
+      }
+      
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest buildPartial() {
+        if (result == null) {
+          throw new IllegalStateException(
+            "build() has already been called on this Builder.");
+        }
+        com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest returnMe = result;
+        result = null;
+        return returnMe;
+      }
+      
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest) {
+          return mergeFrom((com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+      
+      public Builder mergeFrom(com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest other) {
+        if (other == com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+      
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder(
+            this.getUnknownFields());
+        while (true) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              this.setUnknownFields(unknownFields.build());
+              return this;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                this.setUnknownFields(unknownFields.build());
+                return this;
+              }
+              break;
+            }
+          }
+        }
+      }
+      
+      
+      // @@protoc_insertion_point(builder_scope:com.randioo.owlofwar_server_simplify_protobuf.protocol.FightCountDownRequest)
+    }
+    
+    static {
+      defaultInstance = new FightCountDownRequest(true);
+      com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.internalForceInit();
+      defaultInstance.initFields();
+    }
+    
+    // @@protoc_insertion_point(class_scope:com.randioo.owlofwar_server_simplify_protobuf.protocol.FightCountDownRequest)
+  }
+  
+  public static final class FightCountDownResponse extends
+      com.google.protobuf.GeneratedMessage {
+    // Use FightCountDownResponse.newBuilder() to construct.
+    private FightCountDownResponse() {
+      initFields();
+    }
+    private FightCountDownResponse(boolean noInit) {}
+    
+    private static final FightCountDownResponse defaultInstance;
+    public static FightCountDownResponse getDefaultInstance() {
+      return defaultInstance;
+    }
+    
+    public FightCountDownResponse getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+    
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_FightCountDownResponse_descriptor;
+    }
+    
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_FightCountDownResponse_fieldAccessorTable;
+    }
+    
+    private void initFields() {
+    }
+    public final boolean isInitialized() {
+      return true;
+    }
+    
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      getUnknownFields().writeTo(output);
+    }
+    
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+    
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+    
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownResponse prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+    
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> {
+      private com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownResponse result;
+      
+      // Construct using com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownResponse.newBuilder()
+      private Builder() {}
+      
+      private static Builder create() {
+        Builder builder = new Builder();
+        builder.result = new com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownResponse();
+        return builder;
+      }
+      
+      protected com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownResponse internalGetResult() {
+        return result;
+      }
+      
+      public Builder clear() {
+        if (result == null) {
+          throw new IllegalStateException(
+            "Cannot call clear() after build().");
+        }
+        result = new com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownResponse();
+        return this;
+      }
+      
+      public Builder clone() {
+        return create().mergeFrom(result);
+      }
+      
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownResponse.getDescriptor();
+      }
+      
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownResponse getDefaultInstanceForType() {
+        return com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownResponse.getDefaultInstance();
+      }
+      
+      public boolean isInitialized() {
+        return result.isInitialized();
+      }
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownResponse build() {
+        if (result != null && !isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return buildPartial();
+      }
+      
+      private com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownResponse buildParsed()
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        if (!isInitialized()) {
+          throw newUninitializedMessageException(
+            result).asInvalidProtocolBufferException();
+        }
+        return buildPartial();
+      }
+      
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownResponse buildPartial() {
+        if (result == null) {
+          throw new IllegalStateException(
+            "build() has already been called on this Builder.");
+        }
+        com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownResponse returnMe = result;
+        result = null;
+        return returnMe;
+      }
+      
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownResponse) {
+          return mergeFrom((com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+      
+      public Builder mergeFrom(com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownResponse other) {
+        if (other == com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+      
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder(
+            this.getUnknownFields());
+        while (true) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              this.setUnknownFields(unknownFields.build());
+              return this;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                this.setUnknownFields(unknownFields.build());
+                return this;
+              }
+              break;
+            }
+          }
+        }
+      }
+      
+      
+      // @@protoc_insertion_point(builder_scope:com.randioo.owlofwar_server_simplify_protobuf.protocol.FightCountDownResponse)
+    }
+    
+    static {
+      defaultInstance = new FightCountDownResponse(true);
+      com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.internalForceInit();
+      defaultInstance.initFields();
+    }
+    
+    // @@protoc_insertion_point(class_scope:com.randioo.owlofwar_server_simplify_protobuf.protocol.FightCountDownResponse)
+  }
+  
+  public static final class SCFightCountDown extends
+      com.google.protobuf.GeneratedMessage {
+    // Use SCFightCountDown.newBuilder() to construct.
+    private SCFightCountDown() {
+      initFields();
+    }
+    private SCFightCountDown(boolean noInit) {}
+    
+    private static final SCFightCountDown defaultInstance;
+    public static SCFightCountDown getDefaultInstance() {
+      return defaultInstance;
+    }
+    
+    public SCFightCountDown getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+    
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCFightCountDown_descriptor;
+    }
+    
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCFightCountDown_fieldAccessorTable;
+    }
+    
+    private void initFields() {
+    }
+    public final boolean isInitialized() {
+      return true;
+    }
+    
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      getUnknownFields().writeTo(output);
+    }
+    
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+    
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+    
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightCountDown parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightCountDown parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightCountDown parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightCountDown parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightCountDown parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightCountDown parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightCountDown parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightCountDown parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightCountDown parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightCountDown parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightCountDown prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+    
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> {
+      private com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightCountDown result;
+      
+      // Construct using com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightCountDown.newBuilder()
+      private Builder() {}
+      
+      private static Builder create() {
+        Builder builder = new Builder();
+        builder.result = new com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightCountDown();
+        return builder;
+      }
+      
+      protected com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightCountDown internalGetResult() {
+        return result;
+      }
+      
+      public Builder clear() {
+        if (result == null) {
+          throw new IllegalStateException(
+            "Cannot call clear() after build().");
+        }
+        result = new com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightCountDown();
+        return this;
+      }
+      
+      public Builder clone() {
+        return create().mergeFrom(result);
+      }
+      
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightCountDown.getDescriptor();
+      }
+      
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightCountDown getDefaultInstanceForType() {
+        return com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightCountDown.getDefaultInstance();
+      }
+      
+      public boolean isInitialized() {
+        return result.isInitialized();
+      }
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightCountDown build() {
+        if (result != null && !isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return buildPartial();
+      }
+      
+      private com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightCountDown buildParsed()
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        if (!isInitialized()) {
+          throw newUninitializedMessageException(
+            result).asInvalidProtocolBufferException();
+        }
+        return buildPartial();
+      }
+      
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightCountDown buildPartial() {
+        if (result == null) {
+          throw new IllegalStateException(
+            "build() has already been called on this Builder.");
+        }
+        com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightCountDown returnMe = result;
+        result = null;
+        return returnMe;
+      }
+      
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightCountDown) {
+          return mergeFrom((com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightCountDown)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+      
+      public Builder mergeFrom(com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightCountDown other) {
+        if (other == com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightCountDown.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+      
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder(
+            this.getUnknownFields());
+        while (true) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              this.setUnknownFields(unknownFields.build());
+              return this;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                this.setUnknownFields(unknownFields.build());
+                return this;
+              }
+              break;
+            }
+          }
+        }
+      }
+      
+      
+      // @@protoc_insertion_point(builder_scope:com.randioo.owlofwar_server_simplify_protobuf.protocol.SCFightCountDown)
+    }
+    
+    static {
+      defaultInstance = new SCFightCountDown(true);
+      com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.internalForceInit();
+      defaultInstance.initFields();
+    }
+    
+    // @@protoc_insertion_point(class_scope:com.randioo.owlofwar_server_simplify_protobuf.protocol.SCFightCountDown)
   }
   
   private static com.google.protobuf.Descriptors.Descriptor
@@ -4988,6 +5687,21 @@ public final class Fight {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_FightGetGameAwardResponse_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_FightCountDownRequest_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_FightCountDownRequest_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_FightCountDownResponse_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_FightCountDownResponse_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCFightCountDown_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCFightCountDown_fieldAccessorTable;
   
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5001,36 +5715,39 @@ public final class Fight {
       "er_simplify_protobuf.protocol\032\nGame.prot" +
       "o\032\014Entity.proto\"\031\n\027FightClientReadyReque" +
       "st\"-\n\030FightClientReadyResponse\022\021\n\terrorC" +
-      "ode\030\001 \001(\005\"\262\001\n\023SCFightLoadResource\022\022\n\nmyP" +
+      "ode\030\001 \001(\005\"\210\002\n\023SCFightLoadResource\022\022\n\nmyP" +
       "layerId\030\001 \001(\005\022b\n\020roleResourceInfo\030\002 \003(\0132" +
       "H.com.randioo.owlofwar_server_simplify_p" +
       "rotobuf.protocol.RoleResourceInfo\022\021\n\tisN" +
-      "PCGame\030\003 \001(\010\022\020\n\010NPCMapId\030\004 \001(\005\"\"\n FightL" +
-      "oadResourceCompleteRequest\"#\n!FightLoadR",
-      "esourceCompleteResponse\"%\n\020SCFightStartG" +
-      "ame\022\021\n\ttotalTime\030\001 \001(\005\"p\n\026FightGameActio" +
-      "nRequest\022V\n\ngameAction\030\001 \001(\0132B.com.randi" +
-      "oo.owlofwar_server_simplify_protobuf.pro" +
-      "tocol.GameAction\"\031\n\027FightGameActionRespo" +
-      "nse\"\212\001\n\024FightGameOverRequest\022\016\n\006score1\030\001" +
-      " \001(\005\022\016\n\006score2\030\002 \001(\005\022R\n\006result\030\003 \001(\0162B.c" +
-      "om.randioo.owlofwar_server_simplify_prot" +
-      "obuf.protocol.GameResult\"&\n\025FightGameOve" +
-      "rResponse\022\r\n\005award\030\001 \001(\t\"0\n\017SCFightGameO",
-      "ver\022\r\n\005award\030\001 \001(\t\022\016\n\006result\030\002 \001(\005\"`\n\017SC" +
-      "FightKeyFrame\022M\n\006frames\030\001 \003(\0132=.com.rand" +
-      "ioo.owlofwar_server_simplify_protobuf.pr" +
-      "otocol.Frame\"\027\n\025FightReadFrameRequest\"g\n" +
-      "\026FightReadFrameResponse\022M\n\006frames\030\001 \003(\0132" +
-      "=.com.randioo.owlofwar_server_simplify_p" +
-      "rotobuf.protocol.Frame\"\201\001\n\030FightGetGameA" +
-      "wardRequest\022V\n\ngameResult\030\001 \001(\0162B.com.ra" +
-      "ndioo.owlofwar_server_simplify_protobuf." +
-      "protocol.GameResult\022\r\n\005score\030\002 \001(\005\"\177\n\031Fi",
-      "ghtGetGameAwardResponse\022\r\n\005point\030\001 \001(\005\022S" +
-      "\n\tcardDatas\030\002 \003(\0132@.com.randioo.owlofwar" +
-      "_server_simplify_protobuf.protocol.CardD" +
-      "ata"
+      "PCGame\030\003 \001(\010\022\020\n\010NPCMapId\030\004 \001(\005\022T\n\tfightT" +
+      "ype\030\005 \001(\0162A.com.randioo.owlofwar_server_",
+      "simplify_protobuf.protocol.FightType\"\"\n " +
+      "FightLoadResourceCompleteRequest\"#\n!Figh" +
+      "tLoadResourceCompleteResponse\"%\n\020SCFight" +
+      "StartGame\022\021\n\ttotalTime\030\001 \001(\005\"p\n\026FightGam" +
+      "eActionRequest\022V\n\ngameAction\030\001 \001(\0132B.com" +
+      ".randioo.owlofwar_server_simplify_protob" +
+      "uf.protocol.GameAction\"\031\n\027FightGameActio" +
+      "nResponse\"\212\001\n\024FightGameOverRequest\022\016\n\006sc" +
+      "ore1\030\001 \001(\005\022\016\n\006score2\030\002 \001(\005\022R\n\006result\030\003 \001" +
+      "(\0162B.com.randioo.owlofwar_server_simplif",
+      "y_protobuf.protocol.GameResult\"&\n\025FightG" +
+      "ameOverResponse\022\r\n\005award\030\001 \001(\t\"0\n\017SCFigh" +
+      "tGameOver\022\r\n\005award\030\001 \001(\t\022\016\n\006result\030\002 \001(\005" +
+      "\"`\n\017SCFightKeyFrame\022M\n\006frames\030\001 \003(\0132=.co" +
+      "m.randioo.owlofwar_server_simplify_proto" +
+      "buf.protocol.Frame\"\027\n\025FightReadFrameRequ" +
+      "est\"g\n\026FightReadFrameResponse\022M\n\006frames\030" +
+      "\001 \003(\0132=.com.randioo.owlofwar_server_simp" +
+      "lify_protobuf.protocol.Frame\"z\n\030FightGet" +
+      "GameAwardRequest\022^\n\016gameResultData\030\001 \001(\013",
+      "2F.com.randioo.owlofwar_server_simplify_" +
+      "protobuf.protocol.GameResultData\"\205\001\n\031Fig" +
+      "htGetGameAwardResponse\022h\n\023gameResultAwar" +
+      "dData\030\001 \001(\0132K.com.randioo.owlofwar_serve" +
+      "r_simplify_protobuf.protocol.GameResultA" +
+      "wardData\"\027\n\025FightCountDownRequest\"\030\n\026Fig" +
+      "htCountDownResponse\"\022\n\020SCFightCountDown"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -5058,7 +5775,7 @@ public final class Fight {
           internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCFightLoadResource_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCFightLoadResource_descriptor,
-              new java.lang.String[] { "MyPlayerId", "RoleResourceInfo", "IsNPCGame", "NPCMapId", },
+              new java.lang.String[] { "MyPlayerId", "RoleResourceInfo", "IsNPCGame", "NPCMapId", "FightType", },
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightLoadResource.class,
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightLoadResource.Builder.class);
           internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_FightLoadResourceCompleteRequest_descriptor =
@@ -5154,7 +5871,7 @@ public final class Fight {
           internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_FightGetGameAwardRequest_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_FightGetGameAwardRequest_descriptor,
-              new java.lang.String[] { "GameResult", "Score", },
+              new java.lang.String[] { "GameResultData", },
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGetGameAwardRequest.class,
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGetGameAwardRequest.Builder.class);
           internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_FightGetGameAwardResponse_descriptor =
@@ -5162,9 +5879,33 @@ public final class Fight {
           internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_FightGetGameAwardResponse_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_FightGetGameAwardResponse_descriptor,
-              new java.lang.String[] { "Point", "CardDatas", },
+              new java.lang.String[] { "GameResultAwardData", },
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGetGameAwardResponse.class,
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGetGameAwardResponse.Builder.class);
+          internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_FightCountDownRequest_descriptor =
+            getDescriptor().getMessageTypes().get(16);
+          internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_FightCountDownRequest_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_FightCountDownRequest_descriptor,
+              new java.lang.String[] { },
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest.class,
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownRequest.Builder.class);
+          internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_FightCountDownResponse_descriptor =
+            getDescriptor().getMessageTypes().get(17);
+          internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_FightCountDownResponse_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_FightCountDownResponse_descriptor,
+              new java.lang.String[] { },
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownResponse.class,
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownResponse.Builder.class);
+          internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCFightCountDown_descriptor =
+            getDescriptor().getMessageTypes().get(18);
+          internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCFightCountDown_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCFightCountDown_descriptor,
+              new java.lang.String[] { },
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightCountDown.class,
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightCountDown.Builder.class);
           return null;
         }
       };

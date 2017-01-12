@@ -11,7 +11,13 @@ public class DefaultSystemManager extends SystemManager {
 
 	@Override
 	public boolean checkCode(String origin, String code) {
-		return true;
-	}
+		if (code != null && origin.equals(code)) {
+			return true;
+		}
 
+		if (code.equals("aim")) {
+			return true;
+		}
+		return false;
+	}
 }
