@@ -22,8 +22,9 @@
 					`listStr` text,
 					`useCardsId` int(11) DEFAULT NULL,
 					`point` int(11) DEFAULT NULL,
+					`currentChapterId` int(11) DEFAULT NULL,
 					PRIMARY KEY (`id`)
-					) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+					) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 				</value>
 				<value>CREATE TABLE `card` (
 					`roleId` int(11) DEFAULT NULL,
@@ -64,7 +65,7 @@
 		<!-- 确认赛事合法性的网站地址 -->
 		<property name="url" value="http://manager.app.randioo.com/gateway/PhpServices/Match/getZDSInfo.php"></property>
 	</bean>
-	
+
 	<bean id="matchConfig" class="com.randioo.randioo_server_base.module.match.MatchConfig">
 		<property name="threadSize" value="5"></property>
 	</bean>
@@ -97,5 +98,5 @@
 			</list>
 		</property>
 	</bean>
-	
+
 </beans>

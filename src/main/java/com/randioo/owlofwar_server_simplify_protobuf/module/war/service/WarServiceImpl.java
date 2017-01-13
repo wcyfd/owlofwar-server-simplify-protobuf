@@ -64,6 +64,8 @@ public class WarServiceImpl extends BaseService implements WarService {
 		// 建筑列表
 		Map<Integer, WarBuild> warBuildMap = war.getWarBuildMap();
 		WarShowWarChapterResponse.Builder warShowWarChapterResponseBuilder = WarShowWarChapterResponse.newBuilder();
+		//当前所在章节的星数
+		int currentChapterStar = 0;
 		for (WarChapter warChapter : chapterMap.values()) {
 			int chapterId = warChapter.getChapterId();
 			// 根据章节获得建筑列表
@@ -77,10 +79,19 @@ public class WarServiceImpl extends BaseService implements WarService {
 				int starCount = warBuild.getStarCount();
 				totalStar += starCount;
 			}
+			
+			//如果是当前所在章节则记录星数
+			if(chapterId == role.getCurrentChapterId()){
+				currentChapterStar = totalStar;
+			}
 			WarChapterData warChapterData = WarChapterData.newBuilder().setChapterId(warChapter.getChapterId())
 					.setStarCount(totalStar).build();
 			warShowWarChapterResponseBuilder.addWarChapterData(warChapterData);
 		}
+		// 设置当前所在章节信息
+		warShowWarChapterResponseBuilder.setCurrentChapterData(WarChapterData.newBuilder()
+				.setChapterId(role.getCurrentChapterId()).setStarCount(currentChapterStar));
+		
 		return SCMessage.newBuilder().setWarShowWarChapterResponse(warShowWarChapterResponseBuilder).build();
 	}
 
@@ -99,6 +110,9 @@ public class WarServiceImpl extends BaseService implements WarService {
 					.setBuildId(buildId).build();
 			warShowWarBuildResponseBuilder.addWarBuildData(warBuildData);
 		}
+		
+		//记录章节位置
+		role.setCurrentChapterId(chapterId);
 
 		return SCMessage.newBuilder().setWarShowWarBuildResponse(warShowWarBuildResponseBuilder).build();
 	}

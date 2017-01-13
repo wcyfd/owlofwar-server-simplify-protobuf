@@ -196,6 +196,7 @@ public class PillageServiceImpl extends BaseService implements PillageService {
 	}
 	
 	private boolean check(Role role1,Role role2,String info){
+		
 		return true;
 	}
 

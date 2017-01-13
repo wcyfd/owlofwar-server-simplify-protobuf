@@ -20,6 +20,7 @@ public class RoleConverter implements ResultConverter<Role> {
 		role.setRawListStr(rs.getString("listStr"));
 		role.setUseCardsId(rs.getInt("useCardsId"));
 		role.setPoint(rs.getInt("point"));
+		role.setCurrentChapterId(rs.getInt("currentChapterId"));
 
 		return role;
 	}

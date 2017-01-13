@@ -38,6 +38,8 @@ public class Role extends GameRole {
 	private Market market;
 	/** 战场 */
 	private War war;
+	/**当前打的章节*/
+	private int currentChapterId;
 
 	public void setMarket(Market market) {
 		this.market = market;
@@ -173,6 +175,15 @@ public class Role extends GameRole {
 	@Override
 	public boolean checkChange() {
 		return StringUtils.checkChange(rawListStr, getListStr());
+	}
+
+	public int getCurrentChapterId() {
+		return currentChapterId;
+	}
+
+	public void setCurrentChapterId(int currentChapterId) {
+		setChange(true);
+		this.currentChapterId = currentChapterId;
 	}
 
 }

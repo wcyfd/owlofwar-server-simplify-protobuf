@@ -14,6 +14,10 @@
 		<property name="cardService" ref="cardService"></property>
 		<property name="storeVideoDao" ref="storeVideoDao"></property>
 		<property name="loginModelService" ref="loginModelService"></property>
+		<property name="marketService" ref="marketService"></property>
+		<property name="warBuildDao" ref="warBuildDao"></property>
+		<property name="warChapterDao" ref="warChapterDao"></property>
+		
 	</bean>
 
 	<bean id="roleService" class="com.randioo.owlofwar_server_simplify_protobuf.module.role.service.RoleServiceImpl"></bean>

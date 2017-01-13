@@ -7,7 +7,8 @@ message WarShowWarChapterRequest{
 }
 
 message WarShowWarChapterResponse{
-	repeated WarChapterData warChapterData = 1;
+	optional WarChapterData currentChapterData = 1;
+	repeated WarChapterData warChapterData = 2;
 }
 
 message WarShowWarBuildRequest{

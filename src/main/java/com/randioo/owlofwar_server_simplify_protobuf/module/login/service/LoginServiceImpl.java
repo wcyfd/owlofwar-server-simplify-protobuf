@@ -17,15 +17,19 @@ import com.randioo.owlofwar_server_simplify_protobuf.common.ErrorCode;
 import com.randioo.owlofwar_server_simplify_protobuf.db.dao.CardDao;
 import com.randioo.owlofwar_server_simplify_protobuf.db.dao.RoleDao;
 import com.randioo.owlofwar_server_simplify_protobuf.db.dao.StoreVideoDao;
+import com.randioo.owlofwar_server_simplify_protobuf.db.dao.WarBuildDao;
+import com.randioo.owlofwar_server_simplify_protobuf.db.dao.WarChapterDao;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.bo.Card;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.bo.Role;
+import com.randioo.owlofwar_server_simplify_protobuf.entity.bo.WarBuild;
+import com.randioo.owlofwar_server_simplify_protobuf.entity.bo.WarChapter;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.CardList;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.Market;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.OwlofwarGame;
+import com.randioo.owlofwar_server_simplify_protobuf.entity.po.War;
 import com.randioo.owlofwar_server_simplify_protobuf.module.card.service.CardService;
 import com.randioo.owlofwar_server_simplify_protobuf.module.login.LoginConstant;
 import com.randioo.owlofwar_server_simplify_protobuf.module.market.service.MarketService;
-import com.randioo.owlofwar_server_simplify_protobuf.module.role.service.RoleService;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.CardData;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.CardListData;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.RoleData;
@@ -88,6 +92,15 @@ public class LoginServiceImpl extends BaseService implements LoginService {
 		this.loginModelService = loginModelService;
 	}
 	
+	private WarBuildDao warBuildDao;
+	public void setWarBuildDao(WarBuildDao warBuildDao) {
+		this.warBuildDao = warBuildDao;
+	}
+	
+	private WarChapterDao warChapterDao;
+	public void setWarChapterDao(WarChapterDao warChapterDao) {
+		this.warChapterDao = warChapterDao;
+	}
 
 	@Override
 	public void init() {
@@ -228,7 +241,7 @@ public class LoginServiceImpl extends BaseService implements LoginService {
 			}
 
 			RoleData.Builder roleDataBuilder = RoleData.newBuilder().setRoleId(role.getRoleId())
-					.setName(role.getName()).setCurrentChapterId(maxChapterId);
+					.setName(role.getName()).setCurrentChapterId(role.getCurrentChapterId()).setLatestChapterId(maxChapterId);
 			for (Card card : role.getCardMap().values()) {
 				roleDataBuilder.addCardDatas(CardData.newBuilder().setCardId(card.getCardId()).setLv(card.getLv())
 						.setNum(card.getNum()));
@@ -317,8 +330,18 @@ public class LoginServiceImpl extends BaseService implements LoginService {
 		// String name = this.getRandowName();
 		role.setName(name);
 
+		// 设置战场的第一章
+		role.setCurrentChapterId(WarChapterConfigCache.getMinChapterId());
+
 		int id = roleDao.insertRole(role, conn);
+
 		role.setRoleId(id);
+
+		// 初始化战场
+		War war = new War();
+		role.setWar(war);
+		war.setRoleId(id);
+		
 		return role;
 	}
 
@@ -374,6 +397,21 @@ public class LoginServiceImpl extends BaseService implements LoginService {
 		// 初始化卡组信息
 		List<Card> list = cardDao.getAllCardByRoleId(role.getRoleId());
 		cardService.initCard(role, list);
+		
+		//初始化战场信息
+		role.setWar(new War());
+		role.getWar().setRoleId(role.getRoleId());
+		
+		List<WarBuild> warBuildList = warBuildDao.getAllWarBuildByRoleId(role.getRoleId());
+		List<WarChapter> warChapterList = warChapterDao.getAllWarChapterByRoleId(role.getRoleId());
+		
+		for(WarBuild warBuild:warBuildList){
+			role.getWar().getWarBuildMap().put(warBuild.getBuildId(), warBuild);
+		}
+		
+		for(WarChapter warChapter:warChapterList){
+			role.getWar().getWarChapterMap().put(warChapter.getChapterId(),warChapter);
+		}
 	}
 
 	@Override

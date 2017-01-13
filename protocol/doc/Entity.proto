@@ -9,6 +9,7 @@ message RoleData{
 	//是否在战斗中
 	optional bool inFight = 5;
 	optional int32 currentChapterId = 6;
+	optional int32 latestChapterId = 7;
 }
 
 message CardData{

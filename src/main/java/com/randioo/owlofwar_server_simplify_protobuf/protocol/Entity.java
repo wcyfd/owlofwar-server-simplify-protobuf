@@ -357,6 +357,13 @@ public final class Entity {
     public boolean hasCurrentChapterId() { return hasCurrentChapterId; }
     public int getCurrentChapterId() { return currentChapterId_; }
     
+    // optional int32 latestChapterId = 7;
+    public static final int LATESTCHAPTERID_FIELD_NUMBER = 7;
+    private boolean hasLatestChapterId;
+    private int latestChapterId_ = 0;
+    public boolean hasLatestChapterId() { return hasLatestChapterId; }
+    public int getLatestChapterId() { return latestChapterId_; }
+    
     private void initFields() {
     }
     public final boolean isInitialized() {
@@ -383,6 +390,9 @@ public final class Entity {
       }
       if (hasCurrentChapterId()) {
         output.writeInt32(6, getCurrentChapterId());
+      }
+      if (hasLatestChapterId()) {
+        output.writeInt32(7, getLatestChapterId());
       }
       getUnknownFields().writeTo(output);
     }
@@ -416,6 +426,10 @@ public final class Entity {
       if (hasCurrentChapterId()) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(6, getCurrentChapterId());
+      }
+      if (hasLatestChapterId()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(7, getLatestChapterId());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -607,6 +621,9 @@ public final class Entity {
         if (other.hasCurrentChapterId()) {
           setCurrentChapterId(other.getCurrentChapterId());
         }
+        if (other.hasLatestChapterId()) {
+          setLatestChapterId(other.getLatestChapterId());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -658,6 +675,10 @@ public final class Entity {
             }
             case 48: {
               setCurrentChapterId(input.readInt32());
+              break;
+            }
+            case 56: {
+              setLatestChapterId(input.readInt32());
               break;
             }
           }
@@ -839,6 +860,24 @@ public final class Entity {
       public Builder clearCurrentChapterId() {
         result.hasCurrentChapterId = false;
         result.currentChapterId_ = 0;
+        return this;
+      }
+      
+      // optional int32 latestChapterId = 7;
+      public boolean hasLatestChapterId() {
+        return result.hasLatestChapterId();
+      }
+      public int getLatestChapterId() {
+        return result.getLatestChapterId();
+      }
+      public Builder setLatestChapterId(int value) {
+        result.hasLatestChapterId = true;
+        result.latestChapterId_ = value;
+        return this;
+      }
+      public Builder clearLatestChapterId() {
+        result.hasLatestChapterId = false;
+        result.latestChapterId_ = 0;
         return this;
       }
       
@@ -6021,56 +6060,57 @@ public final class Entity {
     java.lang.String[] descriptorData = {
       "\n\014Entity.proto\0226com.randioo.owlofwar_ser" +
       "ver_simplify_protobuf.protocol\032\nGame.pro" +
-      "to\"\205\002\n\010RoleData\022\016\n\006roleId\030\001 \001(\005\022\014\n\004name\030" +
+      "to\"\236\002\n\010RoleData\022\016\n\006roleId\030\001 \001(\005\022\014\n\004name\030" +
       "\002 \001(\t\022S\n\tcardDatas\030\003 \003(\0132@.com.randioo.o" +
       "wlofwar_server_simplify_protobuf.protoco" +
       "l.CardData\022[\n\rcardListDatas\030\004 \003(\0132D.com." +
       "randioo.owlofwar_server_simplify_protobu" +
       "f.protocol.CardListData\022\017\n\007inFight\030\005 \001(\010" +
-      "\022\030\n\020currentChapterId\030\006 \001(\005\"3\n\010CardData\022\016" +
-      "\n\006cardId\030\001 \001(\005\022\n\n\002lv\030\002 \001(\005\022\013\n\003num\030\003 \001(\005\"",
-      "F\n\014CardListData\022\025\n\rcardListIndex\030\001 \001(\005\022\016" +
-      "\n\006mainId\030\002 \001(\005\022\017\n\007cardIds\030\003 \003(\005\"\'\n\tFight" +
-      "Card\022\016\n\006cardId\030\001 \001(\005\022\n\n\002lv\030\002 \001(\005\"\246\002\n\020Rol" +
-      "eResourceInfo\022\014\n\004name\030\001 \001(\t\022\022\n\nfightPoin" +
-      "t\030\002 \001(\005\022V\n\013generalCard\030\003 \001(\0132A.com.randi" +
-      "oo.owlofwar_server_simplify_protobuf.pro" +
-      "tocol.FightCard\022T\n\thandCards\030\004 \003(\0132A.com" +
-      ".randioo.owlofwar_server_simplify_protob" +
-      "uf.protocol.FightCard\022\020\n\010corpName\030\005 \001(\t\022" +
-      "\016\n\006mainLv\030\006 \001(\005\022\020\n\010playerId\030\007 \001(\005\022\016\n\006cam",
-      "pId\030\010 \001(\005\"t\n\005Frame\022\022\n\nframeIndex\030\001 \001(\005\022W" +
-      "\n\013gameActions\030\002 \003(\0132B.com.randioo.owlofw" +
-      "ar_server_simplify_protobuf.protocol.Gam" +
-      "eAction\"\265\001\n\026StoreRoleResourceInfos\022\022\n\nmy" +
-      "PlayerId\030\001 \001(\005\022b\n\020roleResourceInfo\030\002 \003(\013" +
-      "2H.com.randioo.owlofwar_server_simplify_" +
-      "protobuf.protocol.RoleResourceInfo\022\021\n\tis" +
-      "NPCGame\030\003 \001(\010\022\020\n\010NPCMapId\030\004 \001(\005\"\\\n\013Store" +
-      "Frames\022M\n\006frames\030\001 \003(\0132=.com.randioo.owl" +
-      "ofwar_server_simplify_protobuf.protocol.",
-      "Frame\"<\n\rMatchRoleInfo\022\014\n\004name\030\001 \001(\t\022\016\n\006" +
-      "heroId\030\002 \001(\005\022\r\n\005point\030\003 \001(\005\"\225\001\n\016MarketIt" +
-      "emData\022\016\n\006cardId\030\001 \001(\005\022\023\n\013dayBuyCount\030\002 " +
-      "\001(\005\022^\n\007buyType\030\003 \001(\0162M.com.randioo.owlof" +
-      "war_server_simplify_protobuf.protocol.Ma" +
-      "rketItemDataBuyType\"6\n\016WarChapterData\022\021\n" +
-      "\tchapterId\030\001 \001(\005\022\021\n\tstarCount\030\002 \001(\005\"2\n\014W" +
-      "arBuildData\022\017\n\007buildId\030\001 \001(\005\022\021\n\tstarCoun" +
-      "t\030\002 \001(\005\"\342\001\n\016GameResultData\022V\n\ngameResult" +
-      "\030\001 \001(\0162B.com.randioo.owlofwar_server_sim",
-      "plify_protobuf.protocol.GameResult\022T\n\tfi" +
-      "ghtType\030\002 \001(\0162A.com.randioo.owlofwar_ser" +
-      "ver_simplify_protobuf.protocol.FightType" +
-      "\022\021\n\tstarCount\030\003 \001(\005\022\017\n\007buildId\030\004 \001(\005\"\210\001\n" +
-      "\023GameResultAwardData\022\r\n\005point\030\001 \001(\005\022S\n\tc" +
-      "ardDatas\030\002 \003(\0132@.com.randioo.owlofwar_se" +
-      "rver_simplify_protobuf.protocol.CardData" +
-      "\022\r\n\005money\030\003 \001(\005*,\n\nGameResult\022\007\n\003WIN\020\001\022\010" +
-      "\n\004LOSS\020\002\022\013\n\007DOGFALL\020\003*5\n\025MarketItemDataB" +
-      "uyType\022\010\n\004GOLD\020\001\022\t\n\005MONEY\020\002\022\007\n\003RMB\020\003*!\n\t",
-      "FightType\022\013\n\007PILLAGE\020\001\022\007\n\003WAR\020\002*\036\n\014RoleI" +
-      "nfoType\022\016\n\nINFO_MONEY\020\001"
+      "\022\030\n\020currentChapterId\030\006 \001(\005\022\027\n\017latestChap" +
+      "terId\030\007 \001(\005\"3\n\010CardData\022\016\n\006cardId\030\001 \001(\005\022",
+      "\n\n\002lv\030\002 \001(\005\022\013\n\003num\030\003 \001(\005\"F\n\014CardListData" +
+      "\022\025\n\rcardListIndex\030\001 \001(\005\022\016\n\006mainId\030\002 \001(\005\022" +
+      "\017\n\007cardIds\030\003 \003(\005\"\'\n\tFightCard\022\016\n\006cardId\030" +
+      "\001 \001(\005\022\n\n\002lv\030\002 \001(\005\"\246\002\n\020RoleResourceInfo\022\014" +
+      "\n\004name\030\001 \001(\t\022\022\n\nfightPoint\030\002 \001(\005\022V\n\013gene" +
+      "ralCard\030\003 \001(\0132A.com.randioo.owlofwar_ser" +
+      "ver_simplify_protobuf.protocol.FightCard" +
+      "\022T\n\thandCards\030\004 \003(\0132A.com.randioo.owlofw" +
+      "ar_server_simplify_protobuf.protocol.Fig" +
+      "htCard\022\020\n\010corpName\030\005 \001(\t\022\016\n\006mainLv\030\006 \001(\005",
+      "\022\020\n\010playerId\030\007 \001(\005\022\016\n\006campId\030\010 \001(\005\"t\n\005Fr" +
+      "ame\022\022\n\nframeIndex\030\001 \001(\005\022W\n\013gameActions\030\002" +
+      " \003(\0132B.com.randioo.owlofwar_server_simpl" +
+      "ify_protobuf.protocol.GameAction\"\265\001\n\026Sto" +
+      "reRoleResourceInfos\022\022\n\nmyPlayerId\030\001 \001(\005\022" +
+      "b\n\020roleResourceInfo\030\002 \003(\0132H.com.randioo." +
+      "owlofwar_server_simplify_protobuf.protoc" +
+      "ol.RoleResourceInfo\022\021\n\tisNPCGame\030\003 \001(\010\022\020" +
+      "\n\010NPCMapId\030\004 \001(\005\"\\\n\013StoreFrames\022M\n\006frame" +
+      "s\030\001 \003(\0132=.com.randioo.owlofwar_server_si",
+      "mplify_protobuf.protocol.Frame\"<\n\rMatchR" +
+      "oleInfo\022\014\n\004name\030\001 \001(\t\022\016\n\006heroId\030\002 \001(\005\022\r\n" +
+      "\005point\030\003 \001(\005\"\225\001\n\016MarketItemData\022\016\n\006cardI" +
+      "d\030\001 \001(\005\022\023\n\013dayBuyCount\030\002 \001(\005\022^\n\007buyType\030" +
+      "\003 \001(\0162M.com.randioo.owlofwar_server_simp" +
+      "lify_protobuf.protocol.MarketItemDataBuy" +
+      "Type\"6\n\016WarChapterData\022\021\n\tchapterId\030\001 \001(" +
+      "\005\022\021\n\tstarCount\030\002 \001(\005\"2\n\014WarBuildData\022\017\n\007" +
+      "buildId\030\001 \001(\005\022\021\n\tstarCount\030\002 \001(\005\"\342\001\n\016Gam" +
+      "eResultData\022V\n\ngameResult\030\001 \001(\0162B.com.ra",
+      "ndioo.owlofwar_server_simplify_protobuf." +
+      "protocol.GameResult\022T\n\tfightType\030\002 \001(\0162A" +
+      ".com.randioo.owlofwar_server_simplify_pr" +
+      "otobuf.protocol.FightType\022\021\n\tstarCount\030\003" +
+      " \001(\005\022\017\n\007buildId\030\004 \001(\005\"\210\001\n\023GameResultAwar" +
+      "dData\022\r\n\005point\030\001 \001(\005\022S\n\tcardDatas\030\002 \003(\0132" +
+      "@.com.randioo.owlofwar_server_simplify_p" +
+      "rotobuf.protocol.CardData\022\r\n\005money\030\003 \001(\005" +
+      "*,\n\nGameResult\022\007\n\003WIN\020\001\022\010\n\004LOSS\020\002\022\013\n\007DOG" +
+      "FALL\020\003*5\n\025MarketItemDataBuyType\022\010\n\004GOLD\020",
+      "\001\022\t\n\005MONEY\020\002\022\007\n\003RMB\020\003*!\n\tFightType\022\013\n\007PI" +
+      "LLAGE\020\001\022\007\n\003WAR\020\002*\036\n\014RoleInfoType\022\016\n\nINFO" +
+      "_MONEY\020\001"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -6082,7 +6122,7 @@ public final class Entity {
           internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_RoleData_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_RoleData_descriptor,
-              new java.lang.String[] { "RoleId", "Name", "CardDatas", "CardListDatas", "InFight", "CurrentChapterId", },
+              new java.lang.String[] { "RoleId", "Name", "CardDatas", "CardListDatas", "InFight", "CurrentChapterId", "LatestChapterId", },
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.RoleData.class,
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.RoleData.Builder.class);
           internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_CardData_descriptor =

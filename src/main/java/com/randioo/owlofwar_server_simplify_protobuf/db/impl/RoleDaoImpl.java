@@ -26,11 +26,11 @@ public class RoleDaoImpl extends DataAccess implements RoleDao {
 	@Override
 	public int insertRole(Role role, Connection conn) {
 		int id = 0;
-		final String sql = "insert into role(id,account,name,money,gold,food,useCardsId,listStr)"
-				+ "values(?,?,?,?,?,?,?,?)";
+		final String sql = "insert into role(id,account,name,money,gold,food,useCardsId,listStr,currentChapterId)"
+				+ "values(?,?,?,?,?,?,?,?,?)";
 		try {
 			id = super.insertNotCloseConn(sql, new IntegerConverter(), conn, null, role.getAccount(), role.getName(),
-					role.getMoney(), role.getGold(), role.getFood(), role.getUseCardsId(), role.getListStr());
+					role.getMoney(), role.getGold(), role.getFood(), role.getUseCardsId(), role.getListStr(),role.getCurrentChapterId());
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -39,12 +39,12 @@ public class RoleDaoImpl extends DataAccess implements RoleDao {
 
 	@Override
 	public void updateRole(Role role) {
-		final String sql = "update role set name=?,money=?,gold=?,food=?,listStr=?,useCardsId=?,point=?"
+		final String sql = "update role set name=?,money=?,gold=?,food=?,listStr=?,useCardsId=?,point=?,currentChapterId=?"
 				+ " where id=? limit 1";
 		try {
 			Connection conn = dataSource.getConnection();
 			super.update(sql, conn, role.getName(), role.getMoney(), role.getGold(), role.getFood(), role.getListStr(),
-					role.getUseCardsId(), role.getPoint(), role.getRoleId());
+					role.getUseCardsId(), role.getPoint(),role.getCurrentChapterId(), role.getRoleId());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
