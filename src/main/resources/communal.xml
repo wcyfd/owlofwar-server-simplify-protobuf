@@ -82,6 +82,11 @@
 
 	<bean id="systemManager" class="com.randioo.owlofwar_server_simplify_protobuf.utils.DefaultSystemManager"></bean>
 
+	<!-- JS脚本引擎 -->
+	<bean id="jsInvoker" class="com.randioo.owlofwar_server_simplify_protobuf.utils.JSInvoker" init-method="init">
+	    <property name="fileName" value="./function.js"></property>
+	</bean>
+	
 	<bean id="serviceManager" class="com.randioo.randioo_server_base.module.ServiceManager">
 		<property name="services">
 			<list>

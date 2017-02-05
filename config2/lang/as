@@ -37,12 +37,12 @@ declare_byte=public var ${CODE}:${BASE_TYPE};${DECLARE_BRACE}
 declare_bool=public var ${CODE}:${BASE_TYPE};${DECLARE_BRACE}
 declare_string=public var ${CODE}:${BASE_TYPE};${DECLARE_BRACE}
 
-assignment_int=${CONFIG}.${CODE}=${BUFFER}.readInt();${ASSIGNMENT_BRACE}
-assignment_double=${CONFIG}.${CODE}=${BUFFER}.readDouble();${ASSIGNMENT_BRACE}
-assignment_short=${CONFIG}.${CODE}=${BUFFER}.readShort();${ASSIGNMENT_BRACE}
-assignment_byte=${CONFIG}.${CODE}=${BUFFER}.readByte();${ASSIGNMENT_BRACE}
-assignment_bool=${CONFIG}.${CODE}=${BUFFER}.readBoolean();${ASSIGNMENT_BRACE}
-assignment_string=${CONFIG}.${CODE}=${BUFFER}.readUTFBytes(${BUFFER}.readUnsignedShort());${ASSIGNMENT_BRACE}
+assignment_int=${CONFIG}.${CODE} = ${BUFFER}.readInt();${ASSIGNMENT_BRACE}
+assignment_double=${CONFIG}.${CODE} = ${BUFFER}.readDouble();${ASSIGNMENT_BRACE}
+assignment_short=${CONFIG}.${CODE} = ${BUFFER}.readShort();${ASSIGNMENT_BRACE}
+assignment_byte=${CONFIG}.${CODE} = ${BUFFER}.readByte();${ASSIGNMENT_BRACE}
+assignment_bool=${CONFIG}.${CODE} = ${BUFFER}.readBoolean();${ASSIGNMENT_BRACE}
+assignment_string=${CONFIG}.${CODE} = ${BUFFER}.readUTFBytes(${BUFFER}.readUnsignedShort());${ASSIGNMENT_BRACE}
 
 prefix=.as
 
@@ -55,10 +55,10 @@ declare_brace=\n\t\t
 
 mapVarName=dic
 mapClass=Dictionary
-mapDeclareClass=${DIC_VAR_NAME}:Dictionary = new Dictionary();
-mapAddMethod=${DIC_VAR_NAME}[${CONFIG}.${KEY_CODE}]=${CONFIG};
+mapDeclareClass=var ${DIC_VAR_NAME}:Dictionary = new Dictionary();
+mapAddMethod=${DIC_VAR_NAME}[${CONFIG}.${KEY_CODE}] = ${CONFIG};
 
 listVarName=vect
 listClass=Vector.<${CLASS_NAME}>
-listDeclareClass=var ${DIC_VAR_NAME}:${CLASS_NAME} = new Vector.<${CLASS_NAME}>();
-listAddMethod=${DIC_VAR_NAME}.push(${CONFIG});
+listDeclareClass=var ${DIC_VAR_NAME}:Vector.<${CLASS_NAME}> = new Vector.<${CLASS_NAME}>();
+listAddMethod=${DIC_VAR_NAME}[${DIC_VAR_NAME}.length] = ${CONFIG};

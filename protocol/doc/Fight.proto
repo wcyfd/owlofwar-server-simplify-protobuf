@@ -15,7 +15,6 @@ message SCFightLoadResource{
 	repeated RoleResourceInfo roleResourceInfo = 2;
 	optional bool isNPCGame = 3;
 	optional int32 NPCMapId = 4;
-	optional FightType fightType = 5;
 }
 
 message FightLoadResourceCompleteRequest{
@@ -38,30 +37,14 @@ message FightGameActionResponse{
 }
 
 message FightGameOverRequest{
-	optional int32 score1 = 1;
-	optional int32 score2 = 2;
-	optional GameResult result = 3;
+	
 }
 
 message FightGameOverResponse{
-	optional string award = 1;
-}
-//zuofei
-message SCFightGameOver{
-	optional string award = 1;
-	optional int32 result = 2;
+
 }
 
 message SCFightKeyFrame{	
-	repeated Frame frames = 1;
-}
-
-//zuo fei
-message FightReadFrameRequest{
-	
-}
-//zuo fei
-message FightReadFrameResponse{
 	repeated Frame frames = 1;
 }
 

@@ -3,7 +3,7 @@ package com.randioo.owlofwar_server_simplify_protobuf.cache.file;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.randioo.owlofwar_server_simplify_protobuf.entity.po.ExtraCardConfig;
+import com.randioo.owlofwar_server_simplify_protobuf.entity.file.ExtraCardConfig;
 
 public class ExtraCardConfigCache {
 	private static Map<Integer, ExtraCardConfig> extraCardMap = new HashMap<>();

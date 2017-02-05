@@ -118,5 +118,7 @@ public interface RoleService extends BaseServiceInterface{
 	void addMoney(Role role, int value, byte payMethod);
 	
 	GeneratedMessage selectRoleInfo(Role role,List<RoleInfoType> roleInfoType);
+	
+	void addPoint(Role role,int addValue);
 
 }

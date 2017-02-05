@@ -22,6 +22,7 @@ import com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardChooseUse
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardEditCardListResponse;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardGetCardsInfoResponse;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardLvUpResponse;
+import com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.CardData;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.CardListData;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.ServerMessage.SCMessage;
 import com.randioo.randioo_server_base.module.BaseService;
@@ -88,7 +89,8 @@ public class CardServiceImpl extends BaseService implements CardService {
 			cardGetCardsInfoResponseBuilder.addCardListDatas(CardListData.newBuilder().setMainId(x.getMainId())
 					.setCardListIndex(x.getIndex()).addAllCardIds(x.getList()));
 		}
-		return SCMessage.newBuilder().setCardGetCardsInfoResponse(cardGetCardsInfoResponseBuilder).build();
+		
+		return SCMessage.newBuilder().setCardGetCardsInfoResponse(cardGetCardsInfoResponseBuilder.setUseCardId(role.getUseCardsId())).build();
 	}
 
 	@Override
@@ -249,6 +251,12 @@ public class CardServiceImpl extends BaseService implements CardService {
 		card.setRoleId(role.getRoleId());
 
 		cardDao.insertCardNormal(card);
+		return card;
+	}
+	
+	@Override
+	public Card createCard(Role role,int cardId){
+		Card card = this.createCard(role, cardId, (byte)1);
 		return card;
 	}
 	

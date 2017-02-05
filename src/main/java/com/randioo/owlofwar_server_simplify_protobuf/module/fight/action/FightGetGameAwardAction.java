@@ -2,6 +2,7 @@ package com.randioo.owlofwar_server_simplify_protobuf.module.fight.action;
 
 import org.apache.mina.core.session.IoSession;
 
+import com.google.protobuf.GeneratedMessage;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.bo.Role;
 import com.randioo.owlofwar_server_simplify_protobuf.module.fight.service.FightService;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGetGameAwardRequest;
@@ -23,6 +24,9 @@ public class FightGetGameAwardAction extends ActionSupport {
 		Role role = (Role)RoleCache.getRoleBySession(session);
 
 		
-		fightService.getGameAward(role, request.getGameResultData());
+		GeneratedMessage message = fightService.getGameAward(role, request.getGameResultData());
+		if(message!=null){
+			session.write(message);
+		}
 	}
 }

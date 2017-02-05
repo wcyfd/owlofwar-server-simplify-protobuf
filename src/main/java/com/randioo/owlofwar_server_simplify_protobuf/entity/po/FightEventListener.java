@@ -1,6 +1,7 @@
 package com.randioo.owlofwar_server_simplify_protobuf.entity.po;
 
 import com.randioo.owlofwar_server_simplify_protobuf.entity.bo.Role;
+import com.randioo.owlofwar_server_simplify_protobuf.module.fight.FightConstant.GameFightType;
 
 /**
  * 战斗监听器
@@ -14,7 +15,7 @@ public interface FightEventListener {
 
 	void setAward(String award);
 
-	byte getReturnType(Role role);
+	GameFightType getReturnType(Role role);
 
 	Role getRole();
 

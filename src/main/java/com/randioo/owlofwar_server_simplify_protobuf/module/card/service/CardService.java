@@ -89,6 +89,14 @@ public interface CardService extends BaseServiceInterface {
 	 */
 	Card createCard(Role role, int cardId, byte lv);
 
+	/**
+	 * 创建卡牌
+	 * @param role
+	 * @param cardId
+	 * @return
+	 */
+	Card createCard(Role role, int cardId);
+	
 	GeneratedMessage changeHero(Role role, int useCardListIndex, int cardId);
 
 

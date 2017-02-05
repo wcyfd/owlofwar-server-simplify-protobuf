@@ -17,6 +17,6 @@ public interface PillageService extends BaseServiceInterface{
 
 	void competitionNotice(Role role, int competitionId, IoSession session);
 
-	
+	public void practice(Role role,IoSession session);
 
 }

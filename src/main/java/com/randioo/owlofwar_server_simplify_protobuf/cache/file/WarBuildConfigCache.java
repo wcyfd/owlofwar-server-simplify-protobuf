@@ -32,8 +32,5 @@ public class WarBuildConfigCache {
 		return chapterBuildMap.get(chapterId);
 	}
 	
-	public static WarBuildConfig getWarBuildConfigByChapterId(int buildId){
-		return map.get(buildId);
-	}
 
 }

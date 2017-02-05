@@ -53,8 +53,8 @@ item节点:
 		<item type="int" name="资源名称" code="resourcesName" comment="资源名称"/>
         <item type="int" name="npc皮肤" code="npcFace" comment="建筑上的npc皮肤"/>
         <item type="int" name="奖励" code="award" comment="奖励银币数量"/>
-        <item type="int" name="战役" code="chapterId" comment="战场编号" replace="battle.xlsx|战场|战场id|战场编号"/>
-        <item type="int" name="据点顺序" code="buildIndex" comment="建筑顺序"/>
+        <item type="int" name="战役" code="chapterId" comment="战场编号" replace="battle.xlsx|战场|战役|战场编号"/>
+        <item type="int" name="建筑顺序" code="buildIndex" comment="建筑顺序"/>
 	</node>
 
 	<node type="as" xlsx="battle.xlsx" page="战场" key="战场编号" out="warchapter.tbl" code="WarChapterConfig">
@@ -62,20 +62,29 @@ item节点:
 		<item type="string" name="战场名" code="name" comment="章节名称"/>
         <item type="string" name="战场资源名" code="resourceName" comment="章节资源名"/>
         <item type="int" name="boss皮肤" code="bossSkin" comment="boss的id"/>
-        <item type="int" name="星级奖励" code="chapterAward" comment="章节奖励"/>
+        <item type="int" name="奖励" code="moneyAward" comment="章节银币奖励"/>
         <item type="int" name="战场顺序" code="chapterIndex" comment="章节顺序"/>
+        <item type="string" name="boss名称" code="bossName" comment="boss的名称"/>
+        <item type="int" name="星星总数" code="starMax" comment="星星总数"/>
+        <item type="string" name="卡牌奖励" code="cardAward" comment="卡牌奖励,(cardId,num)"/>
+	</node>
+	
+	<node type="as" xlsx="level.xlsx" page="等级" key="等级" out="roleLevel.tbl" code="ExpConfig">
+		<item type="int" name="等级" code="level" comment="等级"/>
+		<item type="int" name="经验" code="exp" comment="经验值"/>
 	</node>
 
 	<node type="java" xlsx="battle.xlsx" page="建筑" key="建筑编号" out="warbuild.tbl" code="WarBuildConfig">
 		<item type="int" name="建筑编号" code="buildId" comment="建筑id"/>
 		<item type="int" name="npc编号" code="npcTeam" comment="npc的队伍"/>
         <item type="int" name="奖励" code="award" comment="奖励银币数量"/>        
-        <item type="int" name="战役" code="chapterId" comment="战场编号" replace="battle.xlsx|战场|战场id|战场编号"/>
+        <item type="int" name="战役" code="chapterId" comment="战场编号" replace="battle.xlsx|战场|战役|战场编号"/>
 	</node>
 	
 	<node type="java" xlsx="battle.xlsx" page="战场" key="战场编号" out="warchapter.tbl" code="WarChapterConfig">
 		<item type="int" name="战场编号" code="chapterId" comment="章节id"/>
-        <item type="int" name="星级奖励" code="chapterAward" comment="章节奖励"/>
+        <item type="int" name="奖励" code="moneyAward" comment="章节银币奖励"/>
+        <item type="string" name="卡牌奖励" code="cardAward" comment="卡牌奖励,(cardId,num)"/>
 	</node>
 
 </data>

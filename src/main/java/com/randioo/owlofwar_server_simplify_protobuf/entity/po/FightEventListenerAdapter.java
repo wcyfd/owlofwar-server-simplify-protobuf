@@ -8,6 +8,7 @@ import com.randioo.owlofwar_server_simplify_protobuf.cache.file.AutoNpcConfigCac
 import com.randioo.owlofwar_server_simplify_protobuf.entity.bo.Role;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.file.AutoNpcConfig;
 import com.randioo.owlofwar_server_simplify_protobuf.formatter.ResourceFormatter;
+import com.randioo.owlofwar_server_simplify_protobuf.module.fight.FightConstant.GameFightType;
 import com.randioo.owlofwar_server_simplify_protobuf.utils.RandomUtils;
 
 public class FightEventListenerAdapter implements FightEventListener {
@@ -43,7 +44,7 @@ public class FightEventListenerAdapter implements FightEventListener {
 
 			int index = RandomUtils.getRandomNum(config.getNpcIdList().size());
 			mapsId = config.getNpcIdList().get(index);
-mapsId = 1101;
+//mapsId = 1101;
 			return mapsId;
 
 		}
@@ -51,7 +52,7 @@ mapsId = 1101;
 		AutoNpcConfig config = list.get(list.size() - 1);
 		int index = RandomUtils.getRandomNum(config.getNpcIdList().size());
 		mapsId = config.getNpcIdList().get(index);
-mapsId = 1101;
+//mapsId = 1101;
 		return mapsId;
 	}
 
@@ -61,8 +62,8 @@ mapsId = 1101;
 	}
 
 	@Override
-	public byte getReturnType(Role role) {
-		return 0;
+	public GameFightType getReturnType(Role role) {
+		return GameFightType.TEST;
 	}
 
 

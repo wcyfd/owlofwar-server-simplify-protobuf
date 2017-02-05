@@ -8,39 +8,39 @@ public final class Role {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public static final class SCRoleAddMoney extends
+  public static final class SCRoleMoney extends
       com.google.protobuf.GeneratedMessage {
-    // Use SCRoleAddMoney.newBuilder() to construct.
-    private SCRoleAddMoney() {
+    // Use SCRoleMoney.newBuilder() to construct.
+    private SCRoleMoney() {
       initFields();
     }
-    private SCRoleAddMoney(boolean noInit) {}
+    private SCRoleMoney(boolean noInit) {}
     
-    private static final SCRoleAddMoney defaultInstance;
-    public static SCRoleAddMoney getDefaultInstance() {
+    private static final SCRoleMoney defaultInstance;
+    public static SCRoleMoney getDefaultInstance() {
       return defaultInstance;
     }
     
-    public SCRoleAddMoney getDefaultInstanceForType() {
+    public SCRoleMoney getDefaultInstanceForType() {
       return defaultInstance;
     }
     
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCRoleAddMoney_descriptor;
+      return com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCRoleMoney_descriptor;
     }
     
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCRoleAddMoney_fieldAccessorTable;
+      return com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCRoleMoney_fieldAccessorTable;
     }
     
-    // optional int32 addValue = 1;
-    public static final int ADDVALUE_FIELD_NUMBER = 1;
-    private boolean hasAddValue;
-    private int addValue_ = 0;
-    public boolean hasAddValue() { return hasAddValue; }
-    public int getAddValue() { return addValue_; }
+    // optional int32 money = 1;
+    public static final int MONEY_FIELD_NUMBER = 1;
+    private boolean hasMoney;
+    private int money_ = 0;
+    public boolean hasMoney() { return hasMoney; }
+    public int getMoney() { return money_; }
     
     private void initFields() {
     }
@@ -51,8 +51,8 @@ public final class Role {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (hasAddValue()) {
-        output.writeInt32(1, getAddValue());
+      if (hasMoney()) {
+        output.writeInt32(1, getMoney());
       }
       getUnknownFields().writeTo(output);
     }
@@ -63,50 +63,50 @@ public final class Role {
       if (size != -1) return size;
     
       size = 0;
-      if (hasAddValue()) {
+      if (hasMoney()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, getAddValue());
+          .computeInt32Size(1, getMoney());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
       return size;
     }
     
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney parseFrom(
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney parseFrom(
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney parseFrom(byte[] data)
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney parseFrom(
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney parseFrom(java.io.InputStream input)
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney parseFrom(
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
     }
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney parseDelimitedFrom(java.io.InputStream input)
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       Builder builder = newBuilder();
       if (builder.mergeDelimitedFrom(input)) {
@@ -115,7 +115,7 @@ public final class Role {
         return null;
       }
     }
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney parseDelimitedFrom(
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -126,12 +126,12 @@ public final class Role {
         return null;
       }
     }
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney parseFrom(
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney parseFrom(
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -141,25 +141,25 @@ public final class Role {
     
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney prototype) {
+    public static Builder newBuilder(com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
     
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> {
-      private com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney result;
+      private com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney result;
       
-      // Construct using com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney.newBuilder()
+      // Construct using com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney.newBuilder()
       private Builder() {}
       
       private static Builder create() {
         Builder builder = new Builder();
-        builder.result = new com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney();
+        builder.result = new com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney();
         return builder;
       }
       
-      protected com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney internalGetResult() {
+      protected com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney internalGetResult() {
         return result;
       }
       
@@ -168,7 +168,7 @@ public final class Role {
           throw new IllegalStateException(
             "Cannot call clear() after build().");
         }
-        result = new com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney();
+        result = new com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney();
         return this;
       }
       
@@ -178,24 +178,24 @@ public final class Role {
       
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney.getDescriptor();
+        return com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney.getDescriptor();
       }
       
-      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney getDefaultInstanceForType() {
-        return com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney.getDefaultInstance();
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney getDefaultInstanceForType() {
+        return com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney.getDefaultInstance();
       }
       
       public boolean isInitialized() {
         return result.isInitialized();
       }
-      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney build() {
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney build() {
         if (result != null && !isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return buildPartial();
       }
       
-      private com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney buildParsed()
+      private com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney buildParsed()
           throws com.google.protobuf.InvalidProtocolBufferException {
         if (!isInitialized()) {
           throw newUninitializedMessageException(
@@ -204,29 +204,29 @@ public final class Role {
         return buildPartial();
       }
       
-      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney buildPartial() {
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney buildPartial() {
         if (result == null) {
           throw new IllegalStateException(
             "build() has already been called on this Builder.");
         }
-        com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney returnMe = result;
+        com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney returnMe = result;
         result = null;
         return returnMe;
       }
       
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney) {
-          return mergeFrom((com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney)other);
+        if (other instanceof com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney) {
+          return mergeFrom((com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
       
-      public Builder mergeFrom(com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney other) {
-        if (other == com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney.getDefaultInstance()) return this;
-        if (other.hasAddValue()) {
-          setAddValue(other.getAddValue());
+      public Builder mergeFrom(com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney other) {
+        if (other == com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney.getDefaultInstance()) return this;
+        if (other.hasMoney()) {
+          setMoney(other.getMoney());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -254,7 +254,7 @@ public final class Role {
               break;
             }
             case 8: {
-              setAddValue(input.readInt32());
+              setMoney(input.readInt32());
               break;
             }
           }
@@ -262,69 +262,69 @@ public final class Role {
       }
       
       
-      // optional int32 addValue = 1;
-      public boolean hasAddValue() {
-        return result.hasAddValue();
+      // optional int32 money = 1;
+      public boolean hasMoney() {
+        return result.hasMoney();
       }
-      public int getAddValue() {
-        return result.getAddValue();
+      public int getMoney() {
+        return result.getMoney();
       }
-      public Builder setAddValue(int value) {
-        result.hasAddValue = true;
-        result.addValue_ = value;
+      public Builder setMoney(int value) {
+        result.hasMoney = true;
+        result.money_ = value;
         return this;
       }
-      public Builder clearAddValue() {
-        result.hasAddValue = false;
-        result.addValue_ = 0;
+      public Builder clearMoney() {
+        result.hasMoney = false;
+        result.money_ = 0;
         return this;
       }
       
-      // @@protoc_insertion_point(builder_scope:com.randioo.owlofwar_server_simplify_protobuf.protocol.SCRoleAddMoney)
+      // @@protoc_insertion_point(builder_scope:com.randioo.owlofwar_server_simplify_protobuf.protocol.SCRoleMoney)
     }
     
     static {
-      defaultInstance = new SCRoleAddMoney(true);
+      defaultInstance = new SCRoleMoney(true);
       com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.internalForceInit();
       defaultInstance.initFields();
     }
     
-    // @@protoc_insertion_point(class_scope:com.randioo.owlofwar_server_simplify_protobuf.protocol.SCRoleAddMoney)
+    // @@protoc_insertion_point(class_scope:com.randioo.owlofwar_server_simplify_protobuf.protocol.SCRoleMoney)
   }
   
-  public static final class SCRoleAddGold extends
+  public static final class SCRoleGold extends
       com.google.protobuf.GeneratedMessage {
-    // Use SCRoleAddGold.newBuilder() to construct.
-    private SCRoleAddGold() {
+    // Use SCRoleGold.newBuilder() to construct.
+    private SCRoleGold() {
       initFields();
     }
-    private SCRoleAddGold(boolean noInit) {}
+    private SCRoleGold(boolean noInit) {}
     
-    private static final SCRoleAddGold defaultInstance;
-    public static SCRoleAddGold getDefaultInstance() {
+    private static final SCRoleGold defaultInstance;
+    public static SCRoleGold getDefaultInstance() {
       return defaultInstance;
     }
     
-    public SCRoleAddGold getDefaultInstanceForType() {
+    public SCRoleGold getDefaultInstanceForType() {
       return defaultInstance;
     }
     
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCRoleAddGold_descriptor;
+      return com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCRoleGold_descriptor;
     }
     
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCRoleAddGold_fieldAccessorTable;
+      return com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCRoleGold_fieldAccessorTable;
     }
     
-    // optional int32 addValue = 1;
-    public static final int ADDVALUE_FIELD_NUMBER = 1;
-    private boolean hasAddValue;
-    private int addValue_ = 0;
-    public boolean hasAddValue() { return hasAddValue; }
-    public int getAddValue() { return addValue_; }
+    // optional int32 gold = 1;
+    public static final int GOLD_FIELD_NUMBER = 1;
+    private boolean hasGold;
+    private int gold_ = 0;
+    public boolean hasGold() { return hasGold; }
+    public int getGold() { return gold_; }
     
     private void initFields() {
     }
@@ -335,8 +335,8 @@ public final class Role {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (hasAddValue()) {
-        output.writeInt32(1, getAddValue());
+      if (hasGold()) {
+        output.writeInt32(1, getGold());
       }
       getUnknownFields().writeTo(output);
     }
@@ -347,50 +347,50 @@ public final class Role {
       if (size != -1) return size;
     
       size = 0;
-      if (hasAddValue()) {
+      if (hasGold()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, getAddValue());
+          .computeInt32Size(1, getGold());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
       return size;
     }
     
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold parseFrom(
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold parseFrom(
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold parseFrom(byte[] data)
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold parseFrom(
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold parseFrom(java.io.InputStream input)
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold parseFrom(
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
     }
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold parseDelimitedFrom(java.io.InputStream input)
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       Builder builder = newBuilder();
       if (builder.mergeDelimitedFrom(input)) {
@@ -399,7 +399,7 @@ public final class Role {
         return null;
       }
     }
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold parseDelimitedFrom(
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -410,12 +410,12 @@ public final class Role {
         return null;
       }
     }
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold parseFrom(
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold parseFrom(
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -425,25 +425,25 @@ public final class Role {
     
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold prototype) {
+    public static Builder newBuilder(com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
     
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> {
-      private com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold result;
+      private com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold result;
       
-      // Construct using com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold.newBuilder()
+      // Construct using com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold.newBuilder()
       private Builder() {}
       
       private static Builder create() {
         Builder builder = new Builder();
-        builder.result = new com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold();
+        builder.result = new com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold();
         return builder;
       }
       
-      protected com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold internalGetResult() {
+      protected com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold internalGetResult() {
         return result;
       }
       
@@ -452,7 +452,7 @@ public final class Role {
           throw new IllegalStateException(
             "Cannot call clear() after build().");
         }
-        result = new com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold();
+        result = new com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold();
         return this;
       }
       
@@ -462,24 +462,24 @@ public final class Role {
       
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold.getDescriptor();
+        return com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold.getDescriptor();
       }
       
-      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold getDefaultInstanceForType() {
-        return com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold.getDefaultInstance();
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold getDefaultInstanceForType() {
+        return com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold.getDefaultInstance();
       }
       
       public boolean isInitialized() {
         return result.isInitialized();
       }
-      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold build() {
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold build() {
         if (result != null && !isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return buildPartial();
       }
       
-      private com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold buildParsed()
+      private com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold buildParsed()
           throws com.google.protobuf.InvalidProtocolBufferException {
         if (!isInitialized()) {
           throw newUninitializedMessageException(
@@ -488,29 +488,29 @@ public final class Role {
         return buildPartial();
       }
       
-      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold buildPartial() {
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold buildPartial() {
         if (result == null) {
           throw new IllegalStateException(
             "build() has already been called on this Builder.");
         }
-        com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold returnMe = result;
+        com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold returnMe = result;
         result = null;
         return returnMe;
       }
       
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold) {
-          return mergeFrom((com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold)other);
+        if (other instanceof com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold) {
+          return mergeFrom((com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
       
-      public Builder mergeFrom(com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold other) {
-        if (other == com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold.getDefaultInstance()) return this;
-        if (other.hasAddValue()) {
-          setAddValue(other.getAddValue());
+      public Builder mergeFrom(com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold other) {
+        if (other == com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold.getDefaultInstance()) return this;
+        if (other.hasGold()) {
+          setGold(other.getGold());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -538,7 +538,7 @@ public final class Role {
               break;
             }
             case 8: {
-              setAddValue(input.readInt32());
+              setGold(input.readInt32());
               break;
             }
           }
@@ -546,34 +546,34 @@ public final class Role {
       }
       
       
-      // optional int32 addValue = 1;
-      public boolean hasAddValue() {
-        return result.hasAddValue();
+      // optional int32 gold = 1;
+      public boolean hasGold() {
+        return result.hasGold();
       }
-      public int getAddValue() {
-        return result.getAddValue();
+      public int getGold() {
+        return result.getGold();
       }
-      public Builder setAddValue(int value) {
-        result.hasAddValue = true;
-        result.addValue_ = value;
+      public Builder setGold(int value) {
+        result.hasGold = true;
+        result.gold_ = value;
         return this;
       }
-      public Builder clearAddValue() {
-        result.hasAddValue = false;
-        result.addValue_ = 0;
+      public Builder clearGold() {
+        result.hasGold = false;
+        result.gold_ = 0;
         return this;
       }
       
-      // @@protoc_insertion_point(builder_scope:com.randioo.owlofwar_server_simplify_protobuf.protocol.SCRoleAddGold)
+      // @@protoc_insertion_point(builder_scope:com.randioo.owlofwar_server_simplify_protobuf.protocol.SCRoleGold)
     }
     
     static {
-      defaultInstance = new SCRoleAddGold(true);
+      defaultInstance = new SCRoleGold(true);
       com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.internalForceInit();
       defaultInstance.initFields();
     }
     
-    // @@protoc_insertion_point(class_scope:com.randioo.owlofwar_server_simplify_protobuf.protocol.SCRoleAddGold)
+    // @@protoc_insertion_point(class_scope:com.randioo.owlofwar_server_simplify_protobuf.protocol.SCRoleGold)
   }
   
   public static final class RoleInfoSelectRequest extends
@@ -1303,16 +1303,300 @@ public final class Role {
     // @@protoc_insertion_point(class_scope:com.randioo.owlofwar_server_simplify_protobuf.protocol.RoleInfoSelectResponse)
   }
   
+  public static final class SCRolePoint extends
+      com.google.protobuf.GeneratedMessage {
+    // Use SCRolePoint.newBuilder() to construct.
+    private SCRolePoint() {
+      initFields();
+    }
+    private SCRolePoint(boolean noInit) {}
+    
+    private static final SCRolePoint defaultInstance;
+    public static SCRolePoint getDefaultInstance() {
+      return defaultInstance;
+    }
+    
+    public SCRolePoint getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+    
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCRolePoint_descriptor;
+    }
+    
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCRolePoint_fieldAccessorTable;
+    }
+    
+    // optional int32 point = 1;
+    public static final int POINT_FIELD_NUMBER = 1;
+    private boolean hasPoint;
+    private int point_ = 0;
+    public boolean hasPoint() { return hasPoint; }
+    public int getPoint() { return point_; }
+    
+    private void initFields() {
+    }
+    public final boolean isInitialized() {
+      return true;
+    }
+    
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (hasPoint()) {
+        output.writeInt32(1, getPoint());
+      }
+      getUnknownFields().writeTo(output);
+    }
+    
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+    
+      size = 0;
+      if (hasPoint()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, getPoint());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+    
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+    
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> {
+      private com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint result;
+      
+      // Construct using com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint.newBuilder()
+      private Builder() {}
+      
+      private static Builder create() {
+        Builder builder = new Builder();
+        builder.result = new com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint();
+        return builder;
+      }
+      
+      protected com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint internalGetResult() {
+        return result;
+      }
+      
+      public Builder clear() {
+        if (result == null) {
+          throw new IllegalStateException(
+            "Cannot call clear() after build().");
+        }
+        result = new com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint();
+        return this;
+      }
+      
+      public Builder clone() {
+        return create().mergeFrom(result);
+      }
+      
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint.getDescriptor();
+      }
+      
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint getDefaultInstanceForType() {
+        return com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint.getDefaultInstance();
+      }
+      
+      public boolean isInitialized() {
+        return result.isInitialized();
+      }
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint build() {
+        if (result != null && !isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return buildPartial();
+      }
+      
+      private com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint buildParsed()
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        if (!isInitialized()) {
+          throw newUninitializedMessageException(
+            result).asInvalidProtocolBufferException();
+        }
+        return buildPartial();
+      }
+      
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint buildPartial() {
+        if (result == null) {
+          throw new IllegalStateException(
+            "build() has already been called on this Builder.");
+        }
+        com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint returnMe = result;
+        result = null;
+        return returnMe;
+      }
+      
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint) {
+          return mergeFrom((com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+      
+      public Builder mergeFrom(com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint other) {
+        if (other == com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint.getDefaultInstance()) return this;
+        if (other.hasPoint()) {
+          setPoint(other.getPoint());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+      
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder(
+            this.getUnknownFields());
+        while (true) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              this.setUnknownFields(unknownFields.build());
+              return this;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                this.setUnknownFields(unknownFields.build());
+                return this;
+              }
+              break;
+            }
+            case 8: {
+              setPoint(input.readInt32());
+              break;
+            }
+          }
+        }
+      }
+      
+      
+      // optional int32 point = 1;
+      public boolean hasPoint() {
+        return result.hasPoint();
+      }
+      public int getPoint() {
+        return result.getPoint();
+      }
+      public Builder setPoint(int value) {
+        result.hasPoint = true;
+        result.point_ = value;
+        return this;
+      }
+      public Builder clearPoint() {
+        result.hasPoint = false;
+        result.point_ = 0;
+        return this;
+      }
+      
+      // @@protoc_insertion_point(builder_scope:com.randioo.owlofwar_server_simplify_protobuf.protocol.SCRolePoint)
+    }
+    
+    static {
+      defaultInstance = new SCRolePoint(true);
+      com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.internalForceInit();
+      defaultInstance.initFields();
+    }
+    
+    // @@protoc_insertion_point(class_scope:com.randioo.owlofwar_server_simplify_protobuf.protocol.SCRolePoint)
+  }
+  
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCRoleAddMoney_descriptor;
+    internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCRoleMoney_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCRoleAddMoney_fieldAccessorTable;
+      internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCRoleMoney_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCRoleAddGold_descriptor;
+    internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCRoleGold_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCRoleAddGold_fieldAccessorTable;
+      internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCRoleGold_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_RoleInfoSelectRequest_descriptor;
   private static
@@ -1323,6 +1607,11 @@ public final class Role {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_RoleInfoSelectResponse_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCRolePoint_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCRolePoint_fieldAccessorTable;
   
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1334,37 +1623,37 @@ public final class Role {
     java.lang.String[] descriptorData = {
       "\n\nRole.proto\0226com.randioo.owlofwar_serve" +
       "r_simplify_protobuf.protocol\032\014Entity.pro" +
-      "to\"\"\n\016SCRoleAddMoney\022\020\n\010addValue\030\001 \001(\005\"!" +
-      "\n\rSCRoleAddGold\022\020\n\010addValue\030\001 \001(\005\"s\n\025Rol" +
-      "eInfoSelectRequest\022Z\n\014roleInfoType\030\001 \003(\016" +
-      "2D.com.randioo.owlofwar_server_simplify_" +
-      "protobuf.protocol.RoleInfoType\"\203\001\n\026RoleI" +
-      "nfoSelectResponse\022Z\n\014roleInfoType\030\001 \003(\0162" +
-      "D.com.randioo.owlofwar_server_simplify_p" +
-      "rotobuf.protocol.RoleInfoType\022\r\n\005money\030\002",
-      " \001(\005"
+      "to\"\034\n\013SCRoleMoney\022\r\n\005money\030\001 \001(\005\"\032\n\nSCRo" +
+      "leGold\022\014\n\004gold\030\001 \001(\005\"s\n\025RoleInfoSelectRe" +
+      "quest\022Z\n\014roleInfoType\030\001 \003(\0162D.com.randio" +
+      "o.owlofwar_server_simplify_protobuf.prot" +
+      "ocol.RoleInfoType\"\203\001\n\026RoleInfoSelectResp" +
+      "onse\022Z\n\014roleInfoType\030\001 \003(\0162D.com.randioo" +
+      ".owlofwar_server_simplify_protobuf.proto" +
+      "col.RoleInfoType\022\r\n\005money\030\002 \001(\005\"\034\n\013SCRol",
+      "ePoint\022\r\n\005point\030\001 \001(\005"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
         public com.google.protobuf.ExtensionRegistry assignDescriptors(
             com.google.protobuf.Descriptors.FileDescriptor root) {
           descriptor = root;
-          internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCRoleAddMoney_descriptor =
+          internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCRoleMoney_descriptor =
             getDescriptor().getMessageTypes().get(0);
-          internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCRoleAddMoney_fieldAccessorTable = new
+          internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCRoleMoney_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCRoleAddMoney_descriptor,
-              new java.lang.String[] { "AddValue", },
-              com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney.class,
-              com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney.Builder.class);
-          internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCRoleAddGold_descriptor =
+              internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCRoleMoney_descriptor,
+              new java.lang.String[] { "Money", },
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney.class,
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney.Builder.class);
+          internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCRoleGold_descriptor =
             getDescriptor().getMessageTypes().get(1);
-          internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCRoleAddGold_fieldAccessorTable = new
+          internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCRoleGold_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCRoleAddGold_descriptor,
-              new java.lang.String[] { "AddValue", },
-              com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold.class,
-              com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold.Builder.class);
+              internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCRoleGold_descriptor,
+              new java.lang.String[] { "Gold", },
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold.class,
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold.Builder.class);
           internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_RoleInfoSelectRequest_descriptor =
             getDescriptor().getMessageTypes().get(2);
           internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_RoleInfoSelectRequest_fieldAccessorTable = new
@@ -1381,6 +1670,14 @@ public final class Role {
               new java.lang.String[] { "RoleInfoType", "Money", },
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.RoleInfoSelectResponse.class,
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.RoleInfoSelectResponse.Builder.class);
+          internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCRolePoint_descriptor =
+            getDescriptor().getMessageTypes().get(4);
+          internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCRolePoint_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCRolePoint_descriptor,
+              new java.lang.String[] { "Point", },
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint.class,
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint.Builder.class);
           return null;
         }
       };

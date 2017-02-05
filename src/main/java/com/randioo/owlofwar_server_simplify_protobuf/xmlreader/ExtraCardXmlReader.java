@@ -9,7 +9,7 @@ import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 
 import com.randioo.owlofwar_server_simplify_protobuf.cache.file.ExtraCardConfigCache;
-import com.randioo.owlofwar_server_simplify_protobuf.entity.po.ExtraCardConfig;
+import com.randioo.owlofwar_server_simplify_protobuf.entity.file.ExtraCardConfig;
 import com.randioo.randioo_server_base.utils.XmlReader;
 
 public class ExtraCardXmlReader implements XmlReader{
@@ -25,8 +25,8 @@ public class ExtraCardXmlReader implements XmlReader{
 			Iterator<Element> itemIt = root.elementIterator("item");
 			while (itemIt.hasNext()) {
 				Element itemE = itemIt.next();
-				int extraCardId = Integer.parseInt(itemE.attributeValue("extraCardId"));
-				int cardId = Integer.parseInt(itemE.attributeValue("cardId"));
+				int extraCardId = Integer.parseInt(itemE.attributeValue("id"));
+				int cardId = Integer.parseInt(itemE.attributeValue("idOriginal"));
 				String name = itemE.element("name").getStringValue();
 
 				ExtraCardConfig config = new ExtraCardConfig();

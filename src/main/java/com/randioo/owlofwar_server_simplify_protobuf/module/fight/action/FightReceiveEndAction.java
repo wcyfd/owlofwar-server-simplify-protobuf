@@ -21,7 +21,7 @@ public class FightReceiveEndAction extends ActionSupport {
 	public void execute(Object data, IoSession session) {
 		FightGameOverRequest request = (FightGameOverRequest) data;
 		Role role = (Role)RoleCache.getRoleBySession(session);
-
+		
 		fightService.receiveGameEnd(role, session);
 	}
 }

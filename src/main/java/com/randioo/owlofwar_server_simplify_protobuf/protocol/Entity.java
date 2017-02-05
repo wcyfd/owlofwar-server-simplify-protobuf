@@ -150,6 +150,7 @@ public final class Entity {
       implements com.google.protobuf.ProtocolMessageEnum {
     PILLAGE(0, 1),
     WAR(1, 2),
+    TEST(2, 3),
     ;
     
     
@@ -159,6 +160,7 @@ public final class Entity {
       switch (value) {
         case 1: return PILLAGE;
         case 2: return WAR;
+        case 3: return TEST;
         default: return null;
       }
     }
@@ -189,7 +191,7 @@ public final class Entity {
     }
     
     private static final FightType[] VALUES = {
-      PILLAGE, WAR, 
+      PILLAGE, WAR, TEST, 
     };
     public static FightType valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
@@ -350,19 +352,19 @@ public final class Entity {
     public boolean hasInFight() { return hasInFight; }
     public boolean getInFight() { return inFight_; }
     
-    // optional int32 currentChapterId = 6;
-    public static final int CURRENTCHAPTERID_FIELD_NUMBER = 6;
-    private boolean hasCurrentChapterId;
-    private int currentChapterId_ = 0;
-    public boolean hasCurrentChapterId() { return hasCurrentChapterId; }
-    public int getCurrentChapterId() { return currentChapterId_; }
+    // optional int32 money = 6;
+    public static final int MONEY_FIELD_NUMBER = 6;
+    private boolean hasMoney;
+    private int money_ = 0;
+    public boolean hasMoney() { return hasMoney; }
+    public int getMoney() { return money_; }
     
-    // optional int32 latestChapterId = 7;
-    public static final int LATESTCHAPTERID_FIELD_NUMBER = 7;
-    private boolean hasLatestChapterId;
-    private int latestChapterId_ = 0;
-    public boolean hasLatestChapterId() { return hasLatestChapterId; }
-    public int getLatestChapterId() { return latestChapterId_; }
+    // optional int32 point = 7;
+    public static final int POINT_FIELD_NUMBER = 7;
+    private boolean hasPoint;
+    private int point_ = 0;
+    public boolean hasPoint() { return hasPoint; }
+    public int getPoint() { return point_; }
     
     private void initFields() {
     }
@@ -388,11 +390,11 @@ public final class Entity {
       if (hasInFight()) {
         output.writeBool(5, getInFight());
       }
-      if (hasCurrentChapterId()) {
-        output.writeInt32(6, getCurrentChapterId());
+      if (hasMoney()) {
+        output.writeInt32(6, getMoney());
       }
-      if (hasLatestChapterId()) {
-        output.writeInt32(7, getLatestChapterId());
+      if (hasPoint()) {
+        output.writeInt32(7, getPoint());
       }
       getUnknownFields().writeTo(output);
     }
@@ -423,13 +425,13 @@ public final class Entity {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(5, getInFight());
       }
-      if (hasCurrentChapterId()) {
+      if (hasMoney()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(6, getCurrentChapterId());
+          .computeInt32Size(6, getMoney());
       }
-      if (hasLatestChapterId()) {
+      if (hasPoint()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(7, getLatestChapterId());
+          .computeInt32Size(7, getPoint());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -618,11 +620,11 @@ public final class Entity {
         if (other.hasInFight()) {
           setInFight(other.getInFight());
         }
-        if (other.hasCurrentChapterId()) {
-          setCurrentChapterId(other.getCurrentChapterId());
+        if (other.hasMoney()) {
+          setMoney(other.getMoney());
         }
-        if (other.hasLatestChapterId()) {
-          setLatestChapterId(other.getLatestChapterId());
+        if (other.hasPoint()) {
+          setPoint(other.getPoint());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -674,11 +676,11 @@ public final class Entity {
               break;
             }
             case 48: {
-              setCurrentChapterId(input.readInt32());
+              setMoney(input.readInt32());
               break;
             }
             case 56: {
-              setLatestChapterId(input.readInt32());
+              setPoint(input.readInt32());
               break;
             }
           }
@@ -845,39 +847,39 @@ public final class Entity {
         return this;
       }
       
-      // optional int32 currentChapterId = 6;
-      public boolean hasCurrentChapterId() {
-        return result.hasCurrentChapterId();
+      // optional int32 money = 6;
+      public boolean hasMoney() {
+        return result.hasMoney();
       }
-      public int getCurrentChapterId() {
-        return result.getCurrentChapterId();
+      public int getMoney() {
+        return result.getMoney();
       }
-      public Builder setCurrentChapterId(int value) {
-        result.hasCurrentChapterId = true;
-        result.currentChapterId_ = value;
+      public Builder setMoney(int value) {
+        result.hasMoney = true;
+        result.money_ = value;
         return this;
       }
-      public Builder clearCurrentChapterId() {
-        result.hasCurrentChapterId = false;
-        result.currentChapterId_ = 0;
+      public Builder clearMoney() {
+        result.hasMoney = false;
+        result.money_ = 0;
         return this;
       }
       
-      // optional int32 latestChapterId = 7;
-      public boolean hasLatestChapterId() {
-        return result.hasLatestChapterId();
+      // optional int32 point = 7;
+      public boolean hasPoint() {
+        return result.hasPoint();
       }
-      public int getLatestChapterId() {
-        return result.getLatestChapterId();
+      public int getPoint() {
+        return result.getPoint();
       }
-      public Builder setLatestChapterId(int value) {
-        result.hasLatestChapterId = true;
-        result.latestChapterId_ = value;
+      public Builder setPoint(int value) {
+        result.hasPoint = true;
+        result.point_ = value;
         return this;
       }
-      public Builder clearLatestChapterId() {
-        result.hasLatestChapterId = false;
-        result.latestChapterId_ = 0;
+      public Builder clearPoint() {
+        result.hasPoint = false;
+        result.point_ = 0;
         return this;
       }
       
@@ -2070,8 +2072,16 @@ public final class Entity {
     public boolean hasCampId() { return hasCampId; }
     public int getCampId() { return campId_; }
     
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightType fightType = 9;
+    public static final int FIGHTTYPE_FIELD_NUMBER = 9;
+    private boolean hasFightType;
+    private com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.FightType fightType_;
+    public boolean hasFightType() { return hasFightType; }
+    public com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.FightType getFightType() { return fightType_; }
+    
     private void initFields() {
       generalCard_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.FightCard.getDefaultInstance();
+      fightType_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.FightType.PILLAGE;
     }
     public final boolean isInitialized() {
       return true;
@@ -2103,6 +2113,9 @@ public final class Entity {
       }
       if (hasCampId()) {
         output.writeInt32(8, getCampId());
+      }
+      if (hasFightType()) {
+        output.writeEnum(9, getFightType().getNumber());
       }
       getUnknownFields().writeTo(output);
     }
@@ -2144,6 +2157,10 @@ public final class Entity {
       if (hasCampId()) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(8, getCampId());
+      }
+      if (hasFightType()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(9, getFightType().getNumber());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -2334,6 +2351,9 @@ public final class Entity {
         if (other.hasCampId()) {
           setCampId(other.getCampId());
         }
+        if (other.hasFightType()) {
+          setFightType(other.getFightType());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -2396,6 +2416,16 @@ public final class Entity {
             }
             case 64: {
               setCampId(input.readInt32());
+              break;
+            }
+            case 72: {
+              int rawValue = input.readEnum();
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.FightType value = com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.FightType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(9, rawValue);
+              } else {
+                setFightType(value);
+              }
               break;
             }
           }
@@ -2602,6 +2632,27 @@ public final class Entity {
       public Builder clearCampId() {
         result.hasCampId = false;
         result.campId_ = 0;
+        return this;
+      }
+      
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightType fightType = 9;
+      public boolean hasFightType() {
+        return result.hasFightType();
+      }
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.FightType getFightType() {
+        return result.getFightType();
+      }
+      public Builder setFightType(com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.FightType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        result.hasFightType = true;
+        result.fightType_ = value;
+        return this;
+      }
+      public Builder clearFightType() {
+        result.hasFightType = false;
+        result.fightType_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.FightType.PILLAGE;
         return this;
       }
       
@@ -4165,12 +4216,12 @@ public final class Entity {
     public boolean hasCardId() { return hasCardId; }
     public int getCardId() { return cardId_; }
     
-    // optional int32 dayBuyCount = 2;
-    public static final int DAYBUYCOUNT_FIELD_NUMBER = 2;
-    private boolean hasDayBuyCount;
-    private int dayBuyCount_ = 0;
-    public boolean hasDayBuyCount() { return hasDayBuyCount; }
-    public int getDayBuyCount() { return dayBuyCount_; }
+    // optional int32 nextBuyMoney = 2;
+    public static final int NEXTBUYMONEY_FIELD_NUMBER = 2;
+    private boolean hasNextBuyMoney;
+    private int nextBuyMoney_ = 0;
+    public boolean hasNextBuyMoney() { return hasNextBuyMoney; }
+    public int getNextBuyMoney() { return nextBuyMoney_; }
     
     // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.MarketItemDataBuyType buyType = 3;
     public static final int BUYTYPE_FIELD_NUMBER = 3;
@@ -4192,8 +4243,8 @@ public final class Entity {
       if (hasCardId()) {
         output.writeInt32(1, getCardId());
       }
-      if (hasDayBuyCount()) {
-        output.writeInt32(2, getDayBuyCount());
+      if (hasNextBuyMoney()) {
+        output.writeInt32(2, getNextBuyMoney());
       }
       if (hasBuyType()) {
         output.writeEnum(3, getBuyType().getNumber());
@@ -4211,9 +4262,9 @@ public final class Entity {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, getCardId());
       }
-      if (hasDayBuyCount()) {
+      if (hasNextBuyMoney()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, getDayBuyCount());
+          .computeInt32Size(2, getNextBuyMoney());
       }
       if (hasBuyType()) {
         size += com.google.protobuf.CodedOutputStream
@@ -4380,8 +4431,8 @@ public final class Entity {
         if (other.hasCardId()) {
           setCardId(other.getCardId());
         }
-        if (other.hasDayBuyCount()) {
-          setDayBuyCount(other.getDayBuyCount());
+        if (other.hasNextBuyMoney()) {
+          setNextBuyMoney(other.getNextBuyMoney());
         }
         if (other.hasBuyType()) {
           setBuyType(other.getBuyType());
@@ -4416,7 +4467,7 @@ public final class Entity {
               break;
             }
             case 16: {
-              setDayBuyCount(input.readInt32());
+              setNextBuyMoney(input.readInt32());
               break;
             }
             case 24: {
@@ -4452,21 +4503,21 @@ public final class Entity {
         return this;
       }
       
-      // optional int32 dayBuyCount = 2;
-      public boolean hasDayBuyCount() {
-        return result.hasDayBuyCount();
+      // optional int32 nextBuyMoney = 2;
+      public boolean hasNextBuyMoney() {
+        return result.hasNextBuyMoney();
       }
-      public int getDayBuyCount() {
-        return result.getDayBuyCount();
+      public int getNextBuyMoney() {
+        return result.getNextBuyMoney();
       }
-      public Builder setDayBuyCount(int value) {
-        result.hasDayBuyCount = true;
-        result.dayBuyCount_ = value;
+      public Builder setNextBuyMoney(int value) {
+        result.hasNextBuyMoney = true;
+        result.nextBuyMoney_ = value;
         return this;
       }
-      public Builder clearDayBuyCount() {
-        result.hasDayBuyCount = false;
-        result.dayBuyCount_ = 0;
+      public Builder clearNextBuyMoney() {
+        result.hasNextBuyMoney = false;
+        result.nextBuyMoney_ = 0;
         return this;
       }
       
@@ -4530,6 +4581,75 @@ public final class Entity {
       return com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_WarChapterData_fieldAccessorTable;
     }
     
+    public enum ChapterAwardState
+        implements com.google.protobuf.ProtocolMessageEnum {
+      REJECT(0, 1),
+      ALLOW(1, 2),
+      GET(2, 3),
+      ;
+      
+      
+      public final int getNumber() { return value; }
+      
+      public static ChapterAwardState valueOf(int value) {
+        switch (value) {
+          case 1: return REJECT;
+          case 2: return ALLOW;
+          case 3: return GET;
+          default: return null;
+        }
+      }
+      
+      public static com.google.protobuf.Internal.EnumLiteMap<ChapterAwardState>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static com.google.protobuf.Internal.EnumLiteMap<ChapterAwardState>
+          internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<ChapterAwardState>() {
+              public ChapterAwardState findValueByNumber(int number) {
+                return ChapterAwardState.valueOf(number)
+      ;        }
+            };
+      
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(index);
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.WarChapterData.getDescriptor().getEnumTypes().get(0);
+      }
+      
+      private static final ChapterAwardState[] VALUES = {
+        REJECT, ALLOW, GET, 
+      };
+      public static ChapterAwardState valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+      private final int index;
+      private final int value;
+      private ChapterAwardState(int index, int value) {
+        this.index = index;
+        this.value = value;
+      }
+      
+      static {
+        com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.getDescriptor();
+      }
+      
+      // @@protoc_insertion_point(enum_scope:com.randioo.owlofwar_server_simplify_protobuf.protocol.WarChapterData.ChapterAwardState)
+    }
+    
     // optional int32 chapterId = 1;
     public static final int CHAPTERID_FIELD_NUMBER = 1;
     private boolean hasChapterId;
@@ -4544,7 +4664,15 @@ public final class Entity {
     public boolean hasStarCount() { return hasStarCount; }
     public int getStarCount() { return starCount_; }
     
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.WarChapterData.ChapterAwardState state = 3 [default = REJECT];
+    public static final int STATE_FIELD_NUMBER = 3;
+    private boolean hasState;
+    private com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.WarChapterData.ChapterAwardState state_;
+    public boolean hasState() { return hasState; }
+    public com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.WarChapterData.ChapterAwardState getState() { return state_; }
+    
     private void initFields() {
+      state_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.WarChapterData.ChapterAwardState.REJECT;
     }
     public final boolean isInitialized() {
       return true;
@@ -4558,6 +4686,9 @@ public final class Entity {
       }
       if (hasStarCount()) {
         output.writeInt32(2, getStarCount());
+      }
+      if (hasState()) {
+        output.writeEnum(3, getState().getNumber());
       }
       getUnknownFields().writeTo(output);
     }
@@ -4575,6 +4706,10 @@ public final class Entity {
       if (hasStarCount()) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(2, getStarCount());
+      }
+      if (hasState()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, getState().getNumber());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -4740,6 +4875,9 @@ public final class Entity {
         if (other.hasStarCount()) {
           setStarCount(other.getStarCount());
         }
+        if (other.hasState()) {
+          setState(other.getState());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -4771,6 +4909,16 @@ public final class Entity {
             }
             case 16: {
               setStarCount(input.readInt32());
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.WarChapterData.ChapterAwardState value = com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.WarChapterData.ChapterAwardState.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(3, rawValue);
+              } else {
+                setState(value);
+              }
               break;
             }
           }
@@ -4811,6 +4959,27 @@ public final class Entity {
       public Builder clearStarCount() {
         result.hasStarCount = false;
         result.starCount_ = 0;
+        return this;
+      }
+      
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.WarChapterData.ChapterAwardState state = 3 [default = REJECT];
+      public boolean hasState() {
+        return result.hasState();
+      }
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.WarChapterData.ChapterAwardState getState() {
+        return result.getState();
+      }
+      public Builder setState(com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.WarChapterData.ChapterAwardState value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        result.hasState = true;
+        result.state_ = value;
+        return this;
+      }
+      public Builder clearState() {
+        result.hasState = false;
+        result.state_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.WarChapterData.ChapterAwardState.REJECT;
         return this;
       }
       
@@ -5176,19 +5345,19 @@ public final class Entity {
       return com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_GameResultData_fieldAccessorTable;
     }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.GameResult gameResult = 1;
-    public static final int GAMERESULT_FIELD_NUMBER = 1;
-    private boolean hasGameResult;
-    private com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResult gameResult_;
-    public boolean hasGameResult() { return hasGameResult; }
-    public com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResult getGameResult() { return gameResult_; }
-    
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightType fightType = 2;
-    public static final int FIGHTTYPE_FIELD_NUMBER = 2;
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightType fightType = 1 [default = TEST];
+    public static final int FIGHTTYPE_FIELD_NUMBER = 1;
     private boolean hasFightType;
     private com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.FightType fightType_;
     public boolean hasFightType() { return hasFightType; }
     public com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.FightType getFightType() { return fightType_; }
+    
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.GameResult gameResult = 2;
+    public static final int GAMERESULT_FIELD_NUMBER = 2;
+    private boolean hasGameResult;
+    private com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResult gameResult_;
+    public boolean hasGameResult() { return hasGameResult; }
+    public com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResult getGameResult() { return gameResult_; }
     
     // optional int32 starCount = 3;
     public static final int STARCOUNT_FIELD_NUMBER = 3;
@@ -5197,16 +5366,9 @@ public final class Entity {
     public boolean hasStarCount() { return hasStarCount; }
     public int getStarCount() { return starCount_; }
     
-    // optional int32 buildId = 4;
-    public static final int BUILDID_FIELD_NUMBER = 4;
-    private boolean hasBuildId;
-    private int buildId_ = 0;
-    public boolean hasBuildId() { return hasBuildId; }
-    public int getBuildId() { return buildId_; }
-    
     private void initFields() {
+      fightType_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.FightType.TEST;
       gameResult_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResult.WIN;
-      fightType_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.FightType.PILLAGE;
     }
     public final boolean isInitialized() {
       return true;
@@ -5215,17 +5377,14 @@ public final class Entity {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (hasGameResult()) {
-        output.writeEnum(1, getGameResult().getNumber());
-      }
       if (hasFightType()) {
-        output.writeEnum(2, getFightType().getNumber());
+        output.writeEnum(1, getFightType().getNumber());
+      }
+      if (hasGameResult()) {
+        output.writeEnum(2, getGameResult().getNumber());
       }
       if (hasStarCount()) {
         output.writeInt32(3, getStarCount());
-      }
-      if (hasBuildId()) {
-        output.writeInt32(4, getBuildId());
       }
       getUnknownFields().writeTo(output);
     }
@@ -5236,21 +5395,17 @@ public final class Entity {
       if (size != -1) return size;
     
       size = 0;
-      if (hasGameResult()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, getGameResult().getNumber());
-      }
       if (hasFightType()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, getFightType().getNumber());
+          .computeEnumSize(1, getFightType().getNumber());
+      }
+      if (hasGameResult()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, getGameResult().getNumber());
       }
       if (hasStarCount()) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(3, getStarCount());
-      }
-      if (hasBuildId()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(4, getBuildId());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -5410,17 +5565,14 @@ public final class Entity {
       
       public Builder mergeFrom(com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResultData other) {
         if (other == com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResultData.getDefaultInstance()) return this;
-        if (other.hasGameResult()) {
-          setGameResult(other.getGameResult());
-        }
         if (other.hasFightType()) {
           setFightType(other.getFightType());
         }
+        if (other.hasGameResult()) {
+          setGameResult(other.getGameResult());
+        }
         if (other.hasStarCount()) {
           setStarCount(other.getStarCount());
-        }
-        if (other.hasBuildId()) {
-          setBuildId(other.getBuildId());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -5449,21 +5601,21 @@ public final class Entity {
             }
             case 8: {
               int rawValue = input.readEnum();
-              com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResult value = com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResult.valueOf(rawValue);
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.FightType value = com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.FightType.valueOf(rawValue);
               if (value == null) {
                 unknownFields.mergeVarintField(1, rawValue);
               } else {
-                setGameResult(value);
+                setFightType(value);
               }
               break;
             }
             case 16: {
               int rawValue = input.readEnum();
-              com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.FightType value = com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.FightType.valueOf(rawValue);
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResult value = com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResult.valueOf(rawValue);
               if (value == null) {
                 unknownFields.mergeVarintField(2, rawValue);
               } else {
-                setFightType(value);
+                setGameResult(value);
               }
               break;
             }
@@ -5471,16 +5623,33 @@ public final class Entity {
               setStarCount(input.readInt32());
               break;
             }
-            case 32: {
-              setBuildId(input.readInt32());
-              break;
-            }
           }
         }
       }
       
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.GameResult gameResult = 1;
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightType fightType = 1 [default = TEST];
+      public boolean hasFightType() {
+        return result.hasFightType();
+      }
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.FightType getFightType() {
+        return result.getFightType();
+      }
+      public Builder setFightType(com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.FightType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        result.hasFightType = true;
+        result.fightType_ = value;
+        return this;
+      }
+      public Builder clearFightType() {
+        result.hasFightType = false;
+        result.fightType_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.FightType.TEST;
+        return this;
+      }
+      
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.GameResult gameResult = 2;
       public boolean hasGameResult() {
         return result.hasGameResult();
       }
@@ -5501,27 +5670,6 @@ public final class Entity {
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightType fightType = 2;
-      public boolean hasFightType() {
-        return result.hasFightType();
-      }
-      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.FightType getFightType() {
-        return result.getFightType();
-      }
-      public Builder setFightType(com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.FightType value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        result.hasFightType = true;
-        result.fightType_ = value;
-        return this;
-      }
-      public Builder clearFightType() {
-        result.hasFightType = false;
-        result.fightType_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.FightType.PILLAGE;
-        return this;
-      }
-      
       // optional int32 starCount = 3;
       public boolean hasStarCount() {
         return result.hasStarCount();
@@ -5537,24 +5685,6 @@ public final class Entity {
       public Builder clearStarCount() {
         result.hasStarCount = false;
         result.starCount_ = 0;
-        return this;
-      }
-      
-      // optional int32 buildId = 4;
-      public boolean hasBuildId() {
-        return result.hasBuildId();
-      }
-      public int getBuildId() {
-        return result.getBuildId();
-      }
-      public Builder setBuildId(int value) {
-        result.hasBuildId = true;
-        result.buildId_ = value;
-        return this;
-      }
-      public Builder clearBuildId() {
-        result.hasBuildId = false;
-        result.buildId_ = 0;
         return this;
       }
       
@@ -6060,57 +6190,62 @@ public final class Entity {
     java.lang.String[] descriptorData = {
       "\n\014Entity.proto\0226com.randioo.owlofwar_ser" +
       "ver_simplify_protobuf.protocol\032\nGame.pro" +
-      "to\"\236\002\n\010RoleData\022\016\n\006roleId\030\001 \001(\005\022\014\n\004name\030" +
+      "to\"\211\002\n\010RoleData\022\016\n\006roleId\030\001 \001(\005\022\014\n\004name\030" +
       "\002 \001(\t\022S\n\tcardDatas\030\003 \003(\0132@.com.randioo.o" +
       "wlofwar_server_simplify_protobuf.protoco" +
       "l.CardData\022[\n\rcardListDatas\030\004 \003(\0132D.com." +
       "randioo.owlofwar_server_simplify_protobu" +
       "f.protocol.CardListData\022\017\n\007inFight\030\005 \001(\010" +
-      "\022\030\n\020currentChapterId\030\006 \001(\005\022\027\n\017latestChap" +
-      "terId\030\007 \001(\005\"3\n\010CardData\022\016\n\006cardId\030\001 \001(\005\022",
-      "\n\n\002lv\030\002 \001(\005\022\013\n\003num\030\003 \001(\005\"F\n\014CardListData" +
-      "\022\025\n\rcardListIndex\030\001 \001(\005\022\016\n\006mainId\030\002 \001(\005\022" +
-      "\017\n\007cardIds\030\003 \003(\005\"\'\n\tFightCard\022\016\n\006cardId\030" +
-      "\001 \001(\005\022\n\n\002lv\030\002 \001(\005\"\246\002\n\020RoleResourceInfo\022\014" +
-      "\n\004name\030\001 \001(\t\022\022\n\nfightPoint\030\002 \001(\005\022V\n\013gene" +
-      "ralCard\030\003 \001(\0132A.com.randioo.owlofwar_ser" +
-      "ver_simplify_protobuf.protocol.FightCard" +
-      "\022T\n\thandCards\030\004 \003(\0132A.com.randioo.owlofw" +
-      "ar_server_simplify_protobuf.protocol.Fig" +
-      "htCard\022\020\n\010corpName\030\005 \001(\t\022\016\n\006mainLv\030\006 \001(\005",
-      "\022\020\n\010playerId\030\007 \001(\005\022\016\n\006campId\030\010 \001(\005\"t\n\005Fr" +
-      "ame\022\022\n\nframeIndex\030\001 \001(\005\022W\n\013gameActions\030\002" +
-      " \003(\0132B.com.randioo.owlofwar_server_simpl" +
-      "ify_protobuf.protocol.GameAction\"\265\001\n\026Sto" +
-      "reRoleResourceInfos\022\022\n\nmyPlayerId\030\001 \001(\005\022" +
-      "b\n\020roleResourceInfo\030\002 \003(\0132H.com.randioo." +
-      "owlofwar_server_simplify_protobuf.protoc" +
-      "ol.RoleResourceInfo\022\021\n\tisNPCGame\030\003 \001(\010\022\020" +
-      "\n\010NPCMapId\030\004 \001(\005\"\\\n\013StoreFrames\022M\n\006frame" +
-      "s\030\001 \003(\0132=.com.randioo.owlofwar_server_si",
-      "mplify_protobuf.protocol.Frame\"<\n\rMatchR" +
-      "oleInfo\022\014\n\004name\030\001 \001(\t\022\016\n\006heroId\030\002 \001(\005\022\r\n" +
-      "\005point\030\003 \001(\005\"\225\001\n\016MarketItemData\022\016\n\006cardI" +
-      "d\030\001 \001(\005\022\023\n\013dayBuyCount\030\002 \001(\005\022^\n\007buyType\030" +
-      "\003 \001(\0162M.com.randioo.owlofwar_server_simp" +
-      "lify_protobuf.protocol.MarketItemDataBuy" +
-      "Type\"6\n\016WarChapterData\022\021\n\tchapterId\030\001 \001(" +
-      "\005\022\021\n\tstarCount\030\002 \001(\005\"2\n\014WarBuildData\022\017\n\007" +
-      "buildId\030\001 \001(\005\022\021\n\tstarCount\030\002 \001(\005\"\342\001\n\016Gam" +
-      "eResultData\022V\n\ngameResult\030\001 \001(\0162B.com.ra",
-      "ndioo.owlofwar_server_simplify_protobuf." +
-      "protocol.GameResult\022T\n\tfightType\030\002 \001(\0162A" +
+      "\022\r\n\005money\030\006 \001(\005\022\r\n\005point\030\007 \001(\005\"3\n\010CardDa" +
+      "ta\022\016\n\006cardId\030\001 \001(\005\022\n\n\002lv\030\002 \001(\005\022\013\n\003num\030\003 ",
+      "\001(\005\"F\n\014CardListData\022\025\n\rcardListIndex\030\001 \001" +
+      "(\005\022\016\n\006mainId\030\002 \001(\005\022\017\n\007cardIds\030\003 \003(\005\"\'\n\tF" +
+      "ightCard\022\016\n\006cardId\030\001 \001(\005\022\n\n\002lv\030\002 \001(\005\"\374\002\n" +
+      "\020RoleResourceInfo\022\014\n\004name\030\001 \001(\t\022\022\n\nfight" +
+      "Point\030\002 \001(\005\022V\n\013generalCard\030\003 \001(\0132A.com.r" +
+      "andioo.owlofwar_server_simplify_protobuf" +
+      ".protocol.FightCard\022T\n\thandCards\030\004 \003(\0132A" +
       ".com.randioo.owlofwar_server_simplify_pr" +
-      "otobuf.protocol.FightType\022\021\n\tstarCount\030\003" +
-      " \001(\005\022\017\n\007buildId\030\004 \001(\005\"\210\001\n\023GameResultAwar" +
-      "dData\022\r\n\005point\030\001 \001(\005\022S\n\tcardDatas\030\002 \003(\0132" +
-      "@.com.randioo.owlofwar_server_simplify_p" +
-      "rotobuf.protocol.CardData\022\r\n\005money\030\003 \001(\005" +
-      "*,\n\nGameResult\022\007\n\003WIN\020\001\022\010\n\004LOSS\020\002\022\013\n\007DOG" +
-      "FALL\020\003*5\n\025MarketItemDataBuyType\022\010\n\004GOLD\020",
-      "\001\022\t\n\005MONEY\020\002\022\007\n\003RMB\020\003*!\n\tFightType\022\013\n\007PI" +
-      "LLAGE\020\001\022\007\n\003WAR\020\002*\036\n\014RoleInfoType\022\016\n\nINFO" +
-      "_MONEY\020\001"
+      "otobuf.protocol.FightCard\022\020\n\010corpName\030\005 " +
+      "\001(\t\022\016\n\006mainLv\030\006 \001(\005\022\020\n\010playerId\030\007 \001(\005\022\016\n",
+      "\006campId\030\010 \001(\005\022T\n\tfightType\030\t \001(\0162A.com.r" +
+      "andioo.owlofwar_server_simplify_protobuf" +
+      ".protocol.FightType\"t\n\005Frame\022\022\n\nframeInd" +
+      "ex\030\001 \001(\005\022W\n\013gameActions\030\002 \003(\0132B.com.rand" +
+      "ioo.owlofwar_server_simplify_protobuf.pr" +
+      "otocol.GameAction\"\265\001\n\026StoreRoleResourceI" +
+      "nfos\022\022\n\nmyPlayerId\030\001 \001(\005\022b\n\020roleResource" +
+      "Info\030\002 \003(\0132H.com.randioo.owlofwar_server" +
+      "_simplify_protobuf.protocol.RoleResource" +
+      "Info\022\021\n\tisNPCGame\030\003 \001(\010\022\020\n\010NPCMapId\030\004 \001(",
+      "\005\"\\\n\013StoreFrames\022M\n\006frames\030\001 \003(\0132=.com.r" +
+      "andioo.owlofwar_server_simplify_protobuf" +
+      ".protocol.Frame\"<\n\rMatchRoleInfo\022\014\n\004name" +
+      "\030\001 \001(\t\022\016\n\006heroId\030\002 \001(\005\022\r\n\005point\030\003 \001(\005\"\226\001" +
+      "\n\016MarketItemData\022\016\n\006cardId\030\001 \001(\005\022\024\n\014next" +
+      "BuyMoney\030\002 \001(\005\022^\n\007buyType\030\003 \001(\0162M.com.ra" +
+      "ndioo.owlofwar_server_simplify_protobuf." +
+      "protocol.MarketItemDataBuyType\"\334\001\n\016WarCh" +
+      "apterData\022\021\n\tchapterId\030\001 \001(\005\022\021\n\tstarCoun" +
+      "t\030\002 \001(\005\022o\n\005state\030\003 \001(\0162X.com.randioo.owl",
+      "ofwar_server_simplify_protobuf.protocol." +
+      "WarChapterData.ChapterAwardState:\006REJECT" +
+      "\"3\n\021ChapterAwardState\022\n\n\006REJECT\020\001\022\t\n\005ALL" +
+      "OW\020\002\022\007\n\003GET\020\003\"2\n\014WarBuildData\022\017\n\007buildId" +
+      "\030\001 \001(\005\022\021\n\tstarCount\030\002 \001(\005\"\327\001\n\016GameResult" +
+      "Data\022Z\n\tfightType\030\001 \001(\0162A.com.randioo.ow" +
+      "lofwar_server_simplify_protobuf.protocol" +
+      ".FightType:\004TEST\022V\n\ngameResult\030\002 \001(\0162B.c" +
+      "om.randioo.owlofwar_server_simplify_prot" +
+      "obuf.protocol.GameResult\022\021\n\tstarCount\030\003 ",
+      "\001(\005\"\210\001\n\023GameResultAwardData\022\r\n\005point\030\001 \001" +
+      "(\005\022S\n\tcardDatas\030\002 \003(\0132@.com.randioo.owlo" +
+      "fwar_server_simplify_protobuf.protocol.C" +
+      "ardData\022\r\n\005money\030\003 \001(\005*,\n\nGameResult\022\007\n\003" +
+      "WIN\020\001\022\010\n\004LOSS\020\002\022\013\n\007DOGFALL\020\003*5\n\025MarketIt" +
+      "emDataBuyType\022\010\n\004GOLD\020\001\022\t\n\005MONEY\020\002\022\007\n\003RM" +
+      "B\020\003*+\n\tFightType\022\013\n\007PILLAGE\020\001\022\007\n\003WAR\020\002\022\010" +
+      "\n\004TEST\020\003*\036\n\014RoleInfoType\022\016\n\nINFO_MONEY\020\001"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -6122,7 +6257,7 @@ public final class Entity {
           internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_RoleData_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_RoleData_descriptor,
-              new java.lang.String[] { "RoleId", "Name", "CardDatas", "CardListDatas", "InFight", "CurrentChapterId", "LatestChapterId", },
+              new java.lang.String[] { "RoleId", "Name", "CardDatas", "CardListDatas", "InFight", "Money", "Point", },
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.RoleData.class,
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.RoleData.Builder.class);
           internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_CardData_descriptor =
@@ -6154,7 +6289,7 @@ public final class Entity {
           internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_RoleResourceInfo_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_RoleResourceInfo_descriptor,
-              new java.lang.String[] { "Name", "FightPoint", "GeneralCard", "HandCards", "CorpName", "MainLv", "PlayerId", "CampId", },
+              new java.lang.String[] { "Name", "FightPoint", "GeneralCard", "HandCards", "CorpName", "MainLv", "PlayerId", "CampId", "FightType", },
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.RoleResourceInfo.class,
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.RoleResourceInfo.Builder.class);
           internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_Frame_descriptor =
@@ -6194,7 +6329,7 @@ public final class Entity {
           internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketItemData_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketItemData_descriptor,
-              new java.lang.String[] { "CardId", "DayBuyCount", "BuyType", },
+              new java.lang.String[] { "CardId", "NextBuyMoney", "BuyType", },
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MarketItemData.class,
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MarketItemData.Builder.class);
           internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_WarChapterData_descriptor =
@@ -6202,7 +6337,7 @@ public final class Entity {
           internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_WarChapterData_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_WarChapterData_descriptor,
-              new java.lang.String[] { "ChapterId", "StarCount", },
+              new java.lang.String[] { "ChapterId", "StarCount", "State", },
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.WarChapterData.class,
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.WarChapterData.Builder.class);
           internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_WarBuildData_descriptor =
@@ -6218,7 +6353,7 @@ public final class Entity {
           internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_GameResultData_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_GameResultData_descriptor,
-              new java.lang.String[] { "GameResult", "FightType", "StarCount", "BuildId", },
+              new java.lang.String[] { "FightType", "GameResult", "StarCount", },
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResultData.class,
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResultData.Builder.class);
           internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_GameResultAwardData_descriptor =

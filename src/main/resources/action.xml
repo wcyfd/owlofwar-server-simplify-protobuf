@@ -15,7 +15,6 @@
 	<bean id="fightLoadCompleteAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.fight.action.FightLoadCompleteAction" p:fightService-ref="fightService"></bean>
 	<bean id="fightPutMonsterAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.fight.action.FightPutMonsterAction" p:fightService-ref="fightService"></bean>
 	<bean id="fightReceiveEndAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.fight.action.FightReceiveEndAction" p:fightService-ref="fightService"></bean>
-	<bean id="fightReadFramesAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.fight.action.FightReadFramesAction" p:fightService-ref="fightService"></bean>
 	<bean id="fightGetGameAwardAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.fight.action.FightGetGameAwardAction" p:fightService-ref="fightService"></bean>
 	<bean id="fightCountDownAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.fight.action.FightCountDownAction" p:fightService-ref="fightService"></bean>
 
@@ -29,6 +28,7 @@
 	<bean id="pillageRoleAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.pillage.action.PillageRoleAction" p:pillageService-ref="pillageService"></bean>
 	<bean id="pillageShowAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.pillage.action.PillageShowAction" p:pillageService-ref="pillageService"></bean>
 	<bean id="pillageCompetitionNoticeAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.pillage.action.PillageCompetitionNoticeAction" p:pillageService-ref="pillageService"></bean>
+	<bean id="pillagePracticeAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.pillage.action.PillagePracticeAction" p:pillageService-ref="pillageService"></bean>
 
 	<bean id="pingAction" class="com.randioo.owlofwar_server_simplify_protobuf.module.ping.action.PingAction" p:pingService-ref="pingService"></bean>
 

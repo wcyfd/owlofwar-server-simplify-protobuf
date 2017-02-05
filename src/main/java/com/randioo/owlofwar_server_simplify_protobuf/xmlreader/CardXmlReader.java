@@ -154,7 +154,7 @@ public class CardXmlReader implements XmlReader{
 				temp.setUnlockNeedMoney(money);
 				temp.setUnlockNeedRes(needRes);
 				temp.setUnlockNeedTime(needTime);
-
+				
 				CardConfigCache.putCardConfig(temp);
 			}
 		} catch (Exception e) {

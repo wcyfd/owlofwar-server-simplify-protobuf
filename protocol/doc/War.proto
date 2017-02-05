@@ -2,38 +2,36 @@ package com.randioo.owlofwar_server_simplify_protobuf.protocol;
 
 import "Entity.proto";
 
+//显示章节信息
 message WarShowWarChapterRequest{
 	
 }
 
 message WarShowWarChapterResponse{
-	optional WarChapterData currentChapterData = 1;
-	repeated WarChapterData warChapterData = 2;
+	optional int32 currentChapterId = 1;
+	//最新章节的id，如果没有下一章，就默认-1，如果本章没有通关，则是本章
+	optional int32 nextChapterId = 2;
+	repeated WarChapterData warChapterData = 3;
 }
 
+//显示建筑信息
 message WarShowWarBuildRequest{
-	optional int32 chapterId = 1;
+	//传入-1则表示显示当前章节信息
+	optional int32 chapterId = 1 [default=0];
 }
 
 message WarShowWarBuildResponse{
-	repeated WarBuildData warBuildData = 1;
+	optional WarChapterData currentChapterData = 1;
+	repeated WarBuildData warBuildData = 2;
 }
 
+//攻打
 message WarMarchRequest{
 	optional int32 buildId = 1;
 }
 
-message WarMatchResponse{
+message WarMarchResponse{
 	optional int32 errorCode = 1;
-}
-//更新建筑胜利信息
-message WarWinBuildRequest{
-	optional int32 buildId = 1;
-	optional int32 starCount = 2;
-}
-
-message WarWinBuildResponse{
-	optional int32 errorCode = 1 [default = 1];
 }
 
 //领取章节奖励

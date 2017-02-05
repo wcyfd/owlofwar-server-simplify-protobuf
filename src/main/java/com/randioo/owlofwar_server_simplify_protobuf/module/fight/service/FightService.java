@@ -37,14 +37,6 @@ public interface FightService extends BaseServiceInterface {
 	void sendKeyFrameInfo(RTSGame game);
 
 	/**
-	 * 获取所有帧
-	 * @param role
-	 * @return
-	 * @author wcy 2016年12月5日
-	 */
-	GeneratedMessage readFrames(Role role);
-
-	/**
 	 * 获得比赛奖励
 	 * @param gameId
 	 * @param role

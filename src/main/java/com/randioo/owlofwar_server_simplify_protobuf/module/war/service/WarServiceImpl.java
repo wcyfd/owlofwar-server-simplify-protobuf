@@ -11,21 +11,31 @@ import com.randioo.owlofwar_server_simplify_protobuf.cache.file.WarChapterConfig
 import com.randioo.owlofwar_server_simplify_protobuf.common.ErrorCode;
 import com.randioo.owlofwar_server_simplify_protobuf.db.dao.WarBuildDao;
 import com.randioo.owlofwar_server_simplify_protobuf.db.dao.WarChapterDao;
+import com.randioo.owlofwar_server_simplify_protobuf.entity.bo.Card;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.bo.Role;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.bo.WarBuild;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.bo.WarChapter;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.FightEventListener;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.FightEventListenerAdapter;
+import com.randioo.owlofwar_server_simplify_protobuf.entity.po.Market;
+import com.randioo.owlofwar_server_simplify_protobuf.entity.po.MarketItem;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.War;
+import com.randioo.owlofwar_server_simplify_protobuf.formatter.ChapterCardFormatter;
+import com.randioo.owlofwar_server_simplify_protobuf.module.card.service.CardService;
+import com.randioo.owlofwar_server_simplify_protobuf.module.fight.FightConstant.GameFightType;
+import com.randioo.owlofwar_server_simplify_protobuf.module.market.MarketConstant.MarketBuyType;
 import com.randioo.owlofwar_server_simplify_protobuf.module.match.service.MatchService;
 import com.randioo.owlofwar_server_simplify_protobuf.module.role.service.RoleService;
+import com.randioo.owlofwar_server_simplify_protobuf.module.war.WarConstant;
+import com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResult;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResultAwardData;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResultData;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.WarBuildData;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.WarChapterData;
+import com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.WarChapterData.ChapterAwardState;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.ServerMessage.SCMessage;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarGetChapterAwardResponse;
-import com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMatchResponse;
+import com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMarchResponse;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarBuildResponse;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarChapterResponse;
 import com.randioo.randioo_server_base.module.BaseService;
@@ -55,6 +65,11 @@ public class WarServiceImpl extends BaseService implements WarService {
 	public void setRoleService(RoleService roleService) {
 		this.roleService = roleService;
 	}
+	
+	private CardService cardService;
+	public void setCardService(CardService cardService) {
+		this.cardService = cardService;
+	}
 
 	@Override
 	public GeneratedMessage showWarChapterInfo(Role role) {
@@ -63,9 +78,10 @@ public class WarServiceImpl extends BaseService implements WarService {
 		Map<Integer, WarChapter> chapterMap = war.getWarChapterMap();
 		// 建筑列表
 		Map<Integer, WarBuild> warBuildMap = war.getWarBuildMap();
-		WarShowWarChapterResponse.Builder warShowWarChapterResponseBuilder = WarShowWarChapterResponse.newBuilder();
-		//当前所在章节的星数
-		int currentChapterStar = 0;
+		WarShowWarChapterResponse.Builder warShowWarChapterResponseBuilder = WarShowWarChapterResponse.newBuilder()
+				// 设置当前所在章节信息
+				.setCurrentChapterId(role.getCurrentChapterId());
+		// 当前所在章节的星数
 		for (WarChapter warChapter : chapterMap.values()) {
 			int chapterId = warChapter.getChapterId();
 			// 根据章节获得建筑列表
@@ -79,28 +95,56 @@ public class WarServiceImpl extends BaseService implements WarService {
 				int starCount = warBuild.getStarCount();
 				totalStar += starCount;
 			}
-			
-			//如果是当前所在章节则记录星数
-			if(chapterId == role.getCurrentChapterId()){
-				currentChapterStar = totalStar;
-			}
+
 			WarChapterData warChapterData = WarChapterData.newBuilder().setChapterId(warChapter.getChapterId())
-					.setStarCount(totalStar).build();
+					.setStarCount(totalStar).setState(this.getChapterAwardState(this.canGetChapterAward(role, chapterId))).build();
 			warShowWarChapterResponseBuilder.addWarChapterData(warChapterData);
 		}
-		// 设置当前所在章节信息
-		warShowWarChapterResponseBuilder.setCurrentChapterData(WarChapterData.newBuilder()
-				.setChapterId(role.getCurrentChapterId()).setStarCount(currentChapterStar));
-		
-		return SCMessage.newBuilder().setWarShowWarChapterResponse(warShowWarChapterResponseBuilder).build();
+
+		List<Integer> chapterIdList = this.getChapterId();
+		int newestChapterId = chapterIdList.get(0);		
+		// 先找到当前的最新章节
+		for(Integer chapterId : chapterIdList){
+			if(chapterMap.get(chapterId)!=null){
+				newestChapterId = chapterId;
+			}else{
+				break;
+			}
+		}
+
+		// 检查最新章节是否已经通关
+		boolean isPass = true;
+		List<Integer> buildIdList = this.getWarBuildByChapterId(newestChapterId);
+		// 只检查最后一个建筑
+		int buildId = buildIdList.get(buildIdList.size() - 1);
+		WarBuild warBuild = warBuildMap.get(buildId);
+		if (warBuild == null || warBuild.getStarCount() == 0) {
+			isPass = false;
+		}
+
+		if (isPass) {
+			// 如果最新的已经通关则显示下一章，如果没有下一章则显示-1
+			int index = chapterIdList.indexOf(newestChapterId);
+			newestChapterId = index >= chapterIdList.size()-1 ? -1 : chapterIdList.get(index + 1);
+		}
+
+		return SCMessage.newBuilder()
+				.setWarShowWarChapterResponse(warShowWarChapterResponseBuilder.setNextChapterId(newestChapterId))
+				.build();
 	}
 
 	@Override
 	public GeneratedMessage showWarBuildInfo(Role role, int chapterId) {
 		War war = role.getWar();
 		Map<Integer, WarBuild> warBuildMap = war.getWarBuildMap();
+		// 如果等于0则是当前的章节id
+		if (chapterId == 0) {
+			chapterId = role.getCurrentChapterId();
+		}
 		List<Integer> warBuildIdList = this.getWarBuildByChapterId(chapterId);
 		WarShowWarBuildResponse.Builder warShowWarBuildResponseBuilder = WarShowWarBuildResponse.newBuilder();
+		// 当前章节的星数
+		int chapterStarCount = 0;
 		for (Integer buildId : warBuildIdList) {
 			WarBuild warBuild = warBuildMap.get(buildId);
 			// 如果没有打过该建筑，或该建筑的星数为零则跳过
@@ -109,10 +153,14 @@ public class WarServiceImpl extends BaseService implements WarService {
 			WarBuildData warBuildData = WarBuildData.newBuilder().setStarCount(warBuild.getStarCount())
 					.setBuildId(buildId).build();
 			warShowWarBuildResponseBuilder.addWarBuildData(warBuildData);
+			chapterStarCount += warBuild.getStarCount();
 		}
-		
-		//记录章节位置
+
+		// 记录章节位置
 		role.setCurrentChapterId(chapterId);
+		WarChapterData currentChapterData = WarChapterData.newBuilder().setChapterId(chapterId)
+				.setStarCount(chapterStarCount).setState(this.getChapterAwardState(this.canGetChapterAward(role, chapterId))).build();
+		warShowWarBuildResponseBuilder.setCurrentChapterData(currentChapterData);
 
 		return SCMessage.newBuilder().setWarShowWarBuildResponse(warShowWarBuildResponseBuilder).build();
 	}
@@ -122,7 +170,8 @@ public class WarServiceImpl extends BaseService implements WarService {
 		int chapterId = this.getChapterIdByBuildId(buildId);
 		if (!this.checkBuild(role, chapterId, buildId)) {
 			session.write(SCMessage.newBuilder()
-					.setWarMatchResponse(WarMatchResponse.newBuilder().setErrorCode(ErrorCode.NO_MARCH_TARGET)).build());
+					.setWarMarchResponse(WarMarchResponse.newBuilder().setErrorCode(ErrorCode.NO_MARCH_TARGET))
+					.build());
 			return;
 		}
 
@@ -161,10 +210,17 @@ public class WarServiceImpl extends BaseService implements WarService {
 			public int getAI() {
 				return npcTeam;
 			}
+			
+			@Override
+			public GameFightType getReturnType(Role role) {
+				// TODO Auto-generated method stub
+				return GameFightType.WAR;
+			}
 		};
 		session.write(SCMessage.newBuilder()
-				.setWarMatchResponse(WarMatchResponse.newBuilder().setErrorCode(ErrorCode.SUCCESS)).build());
+				.setWarMarchResponse(WarMarchResponse.newBuilder().setErrorCode(ErrorCode.SUCCESS)).build());
 
+		role.getWar().setMarchBuildId(buildId);
 		matchService.matchRole(session, role, true, listener);
 	}
 
@@ -220,19 +276,33 @@ public class WarServiceImpl extends BaseService implements WarService {
 	@Override
 	public void refreshWarBuild(Role role, GameResultData gameResultData,
 			GameResultAwardData.Builder gameResultAwardDataBuilder) {
+		// 如果没有赢，则返回
+		if (gameResultData.getGameResult() != GameResult.WIN)
+			return;
+
 		War war = role.getWar();
-		int buildId = gameResultData.getBuildId();
+
+		// 获得行军的建筑
+		int buildId = war.getMarchBuildId();
+		if (buildId == 0) {
+			// error
+			return;
+		}
+		// 如果赢了，则获得比赛结果中的星数
 		int starCount = gameResultData.getStarCount();
 		WarBuild warBuild = war.getWarBuildMap().get(buildId);
+		// 如果是第一次胜利，则奖励
+		int money = 0;
 		if (warBuild.getStarCount() == 0 && starCount != 0) {
-			if (warBuild.getStarCount() < starCount) {
-				warBuild.setStarCount(starCount);
-			}
-			int money = this.getWarBuildWinMoney(buildId);
-			gameResultAwardDataBuilder.setMoney(money);
-			
+			money = this.getWarBuildWinMoney(buildId);
 			roleService.addMoney(role, money);
 		}
+
+		// 更新星数，只有超过才会更新
+		if (warBuild.getStarCount() < starCount) {
+			warBuild.setStarCount(starCount);
+		}
+		gameResultAwardDataBuilder.setMoney(money);
 	}
 
 	@Override
@@ -240,34 +310,110 @@ public class WarServiceImpl extends BaseService implements WarService {
 		War war = role.getWar();
 		WarChapter warChapter = war.getWarChapterMap().get(chapterId);
 
-		if (warChapter.getAward() != 0) {
-			return SCMessage
-					.newBuilder()
-					.setWarGetChapterAwardResponse(
-							WarGetChapterAwardResponse.newBuilder().setErrorCode(ErrorCode.REPEAT_GET_AWARD)).build();
+		if (warChapter.getAward() == WarConstant.CHPATER_AWARD_GET) {
+			return SCMessage.newBuilder().setWarGetChapterAwardResponse(
+					WarGetChapterAwardResponse.newBuilder().setErrorCode(ErrorCode.REPEAT_GET_AWARD)).build();
 		}
-		boolean allow = true;
 
+		// 是否可以领取章节奖励
+		if (this.canGetChapterAward(role, chapterId) == WarConstant.CHPATER_AWARD_REJECT) {
+			return SCMessage.newBuilder().setWarGetChapterAwardResponse(
+					WarGetChapterAwardResponse.newBuilder().setErrorCode(ErrorCode.CHAPTER_AWARD_NEED_STAR_FULL))
+					.build();
+		}
+		warChapter.setAward(WarConstant.CHPATER_AWARD_GET);
+
+		// 章节银币奖励
+		int money = this.getChapterWinMoney(chapterId);
+		roleService.addMoney(role, money);
+
+		// 章节卡牌奖励
+		List<Card> chapterAwardCardList = this.getChapterWinCard(chapterId);
+
+		for (Card chapterAwardCard : chapterAwardCardList) {
+			if (chapterAwardCard.getCardId() != 0) {
+				int cardId = chapterAwardCard.getCardId();
+				int cardNum = chapterAwardCard.getNum();
+
+				Card card = role.getCardMap().get(cardId);
+				if (card == null) {
+					card = cardService.createCard(role, cardId);
+					role.getCardMap().put(card.getCardId(), card);
+				}
+				card.setNum(card.getNum() + cardNum);
+
+				// 商城刷新
+				marketItemRefresh(role, cardId);
+			}
+		}
+
+		return SCMessage.newBuilder().setWarGetChapterAwardResponse(WarGetChapterAwardResponse.newBuilder()).build();
+	}
+
+	/**
+	 * 获取章节奖励信息
+	 * 
+	 * @param role
+	 * @param chapterId
+	 * @return
+	 */
+	private int canGetChapterAward(Role role, int chapterId) {
+		WarChapter warChapter = role.getWar().getWarChapterMap().get(chapterId);
+		
+		//没有章节，所以不可以领取
+		if(warChapter == null){
+			return WarConstant.CHPATER_AWARD_REJECT;
+		}
+		
+		// 如果已经领取过了或者可以领取的直接返回
+		if (warChapter.getAward() == WarConstant.CHPATER_AWARD_GET
+				|| warChapter.getAward() == WarConstant.CHPATER_AWARD_ALLOW) {
+			return warChapter.getAward();
+		}
+
+		//检查是否可以领取
 		List<Integer> warBuildIdList = this.getWarBuildByChapterId(chapterId);
 		for (Integer buildId : warBuildIdList) {
 			WarBuild warBuild = role.getWar().getWarBuildMap().get(buildId);
 			// 有建筑是空或者没有满星,则不能领取
 			if (warBuild == null || warBuild.getStarCount() != this.getWarBuildFullStar(buildId)) {
-				allow = false;
+				return WarConstant.CHPATER_AWARD_REJECT;
 			}
 		}
-		if (!allow) {
-			return SCMessage
-					.newBuilder()
-					.setWarGetChapterAwardResponse(
-							WarGetChapterAwardResponse.newBuilder()
-									.setErrorCode(ErrorCode.CHAPTER_AWARD_NEED_STAR_FULL)).build();
+		//可以领取则进行标记赋值
+		warChapter.setAward(WarConstant.CHPATER_AWARD_ALLOW);
+		return WarConstant.CHPATER_AWARD_ALLOW;
+	}
+	
+	private ChapterAwardState getChapterAwardState(int state) {
+		ChapterAwardState e = ChapterAwardState.REJECT;
+		if (state == WarConstant.CHPATER_AWARD_ALLOW) {
+			e = ChapterAwardState.ALLOW;
+		} else if (state == WarConstant.CHPATER_AWARD_GET) {
+			e = ChapterAwardState.GET;
+		} else if (state == WarConstant.CHPATER_AWARD_REJECT) {
+			e = ChapterAwardState.REJECT;
 		}
-		warChapter.setAward(1);
-		int money = this.getChapterWinMoney(chapterId);
-		roleService.addMoney(role, money);
-		
-		return SCMessage.newBuilder().setWarGetChapterAwardResponse(WarGetChapterAwardResponse.newBuilder()).build();
+		return e;
+	}
+	
+
+	/**
+	 * 检查领取的卡牌商城中是否要用人民币买的同一张，如果有则变成用银币买
+	 * 
+	 * @param role
+	 * @param cardId
+	 */
+	private void marketItemRefresh(Role role, int cardId) {
+		Market market = role.getMarket();
+		Map<Integer, MarketItem> marketItemMap = market.getMarketItemMap();
+
+		for (MarketItem marketItem : marketItemMap.values()) {
+			if (marketItem.getId() == cardId && marketItem.getBuyType() == MarketBuyType.RMB) {
+				marketItem.setDayBuyCount(0);
+				marketItem.setBuyType(MarketBuyType.MONEY);
+			}
+		}
 	}
 
 	/**
@@ -277,7 +423,7 @@ public class WarServiceImpl extends BaseService implements WarService {
 	 * @return
 	 * @author wcy 2017年1月10日
 	 */
-	private List<Integer> getWarBuildByChapterId(int chapterId) {		
+	private List<Integer> getWarBuildByChapterId(int chapterId) {
 		return WarBuildConfigCache.getBuildIdListByChapterId(chapterId);
 	}
 
@@ -286,11 +432,11 @@ public class WarServiceImpl extends BaseService implements WarService {
 	}
 
 	private int getChapterIdByBuildId(int buildId) {
-		return WarBuildConfigCache.getWarBuildConfigByChapterId(buildId).chapterId;
+		return WarBuildConfigCache.getWarBuildConfigByBuildId(buildId).chapterId;
 	}
 
 	private int getNPCTeam(int buildId) {
-		return WarBuildConfigCache.getWarBuildConfigByChapterId(buildId).npcTeam;
+		return WarBuildConfigCache.getWarBuildConfigByBuildId(buildId).npcTeam;
 	}
 
 	private int getWarBuildWinMoney(int buildId) {
@@ -298,7 +444,12 @@ public class WarServiceImpl extends BaseService implements WarService {
 	}
 
 	private int getChapterWinMoney(int chapterId) {
-		return WarChapterConfigCache.getChapterById(chapterId).chapterAward;
+		return WarChapterConfigCache.getChapterById(chapterId).moneyAward;
+	}
+	
+	private List<Card> getChapterWinCard(int chapterId){
+		return ChapterCardFormatter
+				.formatCard(WarChapterConfigCache.getChapterById(chapterId).cardAward);
 	}
 
 	private int getWarBuildFullStar(int buildId) {

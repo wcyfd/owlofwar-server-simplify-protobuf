@@ -40,6 +40,8 @@ public class Role extends GameRole {
 	private War war;
 	/**当前打的章节*/
 	private int currentChapterId;
+	
+	private boolean isGetAward;
 
 	public void setMarket(Market market) {
 		this.market = market;
@@ -184,6 +186,14 @@ public class Role extends GameRole {
 	public void setCurrentChapterId(int currentChapterId) {
 		setChange(true);
 		this.currentChapterId = currentChapterId;
+	}
+
+	public boolean isGetAward() {
+		return isGetAward;
+	}
+
+	public void setGetAward(boolean isGetAward) {
+		this.isGetAward = isGetAward;
 	}
 
 }

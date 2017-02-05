@@ -8,31 +8,31 @@ public final class Market {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public static final class MarketShowMarketItemRequest extends
+  public static final class MarketShowRequest extends
       com.google.protobuf.GeneratedMessage {
-    // Use MarketShowMarketItemRequest.newBuilder() to construct.
-    private MarketShowMarketItemRequest() {
+    // Use MarketShowRequest.newBuilder() to construct.
+    private MarketShowRequest() {
       initFields();
     }
-    private MarketShowMarketItemRequest(boolean noInit) {}
+    private MarketShowRequest(boolean noInit) {}
     
-    private static final MarketShowMarketItemRequest defaultInstance;
-    public static MarketShowMarketItemRequest getDefaultInstance() {
+    private static final MarketShowRequest defaultInstance;
+    public static MarketShowRequest getDefaultInstance() {
       return defaultInstance;
     }
     
-    public MarketShowMarketItemRequest getDefaultInstanceForType() {
+    public MarketShowRequest getDefaultInstanceForType() {
       return defaultInstance;
     }
     
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketShowMarketItemRequest_descriptor;
+      return com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketShowRequest_descriptor;
     }
     
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketShowMarketItemRequest_fieldAccessorTable;
+      return com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketShowRequest_fieldAccessorTable;
     }
     
     private void initFields() {
@@ -58,41 +58,41 @@ public final class Market {
       return size;
     }
     
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest parseFrom(
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest parseFrom(
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest parseFrom(byte[] data)
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest parseFrom(
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest parseFrom(java.io.InputStream input)
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest parseFrom(
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
     }
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       Builder builder = newBuilder();
       if (builder.mergeDelimitedFrom(input)) {
@@ -101,7 +101,7 @@ public final class Market {
         return null;
       }
     }
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest parseDelimitedFrom(
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -112,12 +112,12 @@ public final class Market {
         return null;
       }
     }
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest parseFrom(
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest parseFrom(
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -127,25 +127,25 @@ public final class Market {
     
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest prototype) {
+    public static Builder newBuilder(com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowRequest prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
     
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> {
-      private com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest result;
+      private com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowRequest result;
       
-      // Construct using com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest.newBuilder()
+      // Construct using com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowRequest.newBuilder()
       private Builder() {}
       
       private static Builder create() {
         Builder builder = new Builder();
-        builder.result = new com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest();
+        builder.result = new com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowRequest();
         return builder;
       }
       
-      protected com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest internalGetResult() {
+      protected com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowRequest internalGetResult() {
         return result;
       }
       
@@ -154,7 +154,7 @@ public final class Market {
           throw new IllegalStateException(
             "Cannot call clear() after build().");
         }
-        result = new com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest();
+        result = new com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowRequest();
         return this;
       }
       
@@ -164,24 +164,24 @@ public final class Market {
       
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest.getDescriptor();
+        return com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowRequest.getDescriptor();
       }
       
-      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest getDefaultInstanceForType() {
-        return com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest.getDefaultInstance();
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowRequest getDefaultInstanceForType() {
+        return com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowRequest.getDefaultInstance();
       }
       
       public boolean isInitialized() {
         return result.isInitialized();
       }
-      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest build() {
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowRequest build() {
         if (result != null && !isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return buildPartial();
       }
       
-      private com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest buildParsed()
+      private com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowRequest buildParsed()
           throws com.google.protobuf.InvalidProtocolBufferException {
         if (!isInitialized()) {
           throw newUninitializedMessageException(
@@ -190,27 +190,27 @@ public final class Market {
         return buildPartial();
       }
       
-      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest buildPartial() {
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowRequest buildPartial() {
         if (result == null) {
           throw new IllegalStateException(
             "build() has already been called on this Builder.");
         }
-        com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest returnMe = result;
+        com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowRequest returnMe = result;
         result = null;
         return returnMe;
       }
       
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest) {
-          return mergeFrom((com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest)other);
+        if (other instanceof com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowRequest) {
+          return mergeFrom((com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
       
-      public Builder mergeFrom(com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest other) {
-        if (other == com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowRequest other) {
+        if (other == com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowRequest.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -241,43 +241,43 @@ public final class Market {
       }
       
       
-      // @@protoc_insertion_point(builder_scope:com.randioo.owlofwar_server_simplify_protobuf.protocol.MarketShowMarketItemRequest)
+      // @@protoc_insertion_point(builder_scope:com.randioo.owlofwar_server_simplify_protobuf.protocol.MarketShowRequest)
     }
     
     static {
-      defaultInstance = new MarketShowMarketItemRequest(true);
+      defaultInstance = new MarketShowRequest(true);
       com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.internalForceInit();
       defaultInstance.initFields();
     }
     
-    // @@protoc_insertion_point(class_scope:com.randioo.owlofwar_server_simplify_protobuf.protocol.MarketShowMarketItemRequest)
+    // @@protoc_insertion_point(class_scope:com.randioo.owlofwar_server_simplify_protobuf.protocol.MarketShowRequest)
   }
   
-  public static final class MarketShowMarketItemResponse extends
+  public static final class MarketShowResponse extends
       com.google.protobuf.GeneratedMessage {
-    // Use MarketShowMarketItemResponse.newBuilder() to construct.
-    private MarketShowMarketItemResponse() {
+    // Use MarketShowResponse.newBuilder() to construct.
+    private MarketShowResponse() {
       initFields();
     }
-    private MarketShowMarketItemResponse(boolean noInit) {}
+    private MarketShowResponse(boolean noInit) {}
     
-    private static final MarketShowMarketItemResponse defaultInstance;
-    public static MarketShowMarketItemResponse getDefaultInstance() {
+    private static final MarketShowResponse defaultInstance;
+    public static MarketShowResponse getDefaultInstance() {
       return defaultInstance;
     }
     
-    public MarketShowMarketItemResponse getDefaultInstanceForType() {
+    public MarketShowResponse getDefaultInstanceForType() {
       return defaultInstance;
     }
     
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketShowMarketItemResponse_descriptor;
+      return com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketShowResponse_descriptor;
     }
     
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketShowMarketItemResponse_fieldAccessorTable;
+      return com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketShowResponse_fieldAccessorTable;
     }
     
     // optional bool isRefresh = 1;
@@ -294,8 +294,15 @@ public final class Market {
     public boolean hasRefreshCount() { return hasRefreshCount; }
     public int getRefreshCount() { return refreshCount_; }
     
-    // repeated .com.randioo.owlofwar_server_simplify_protobuf.protocol.MarketItemData marketItemData = 3;
-    public static final int MARKETITEMDATA_FIELD_NUMBER = 3;
+    // optional int32 needMoney = 3;
+    public static final int NEEDMONEY_FIELD_NUMBER = 3;
+    private boolean hasNeedMoney;
+    private int needMoney_ = 0;
+    public boolean hasNeedMoney() { return hasNeedMoney; }
+    public int getNeedMoney() { return needMoney_; }
+    
+    // repeated .com.randioo.owlofwar_server_simplify_protobuf.protocol.MarketItemData marketItemData = 4;
+    public static final int MARKETITEMDATA_FIELD_NUMBER = 4;
     private java.util.List<com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MarketItemData> marketItemData_ =
       java.util.Collections.emptyList();
     public java.util.List<com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MarketItemData> getMarketItemDataList() {
@@ -321,8 +328,11 @@ public final class Market {
       if (hasRefreshCount()) {
         output.writeInt32(2, getRefreshCount());
       }
+      if (hasNeedMoney()) {
+        output.writeInt32(3, getNeedMoney());
+      }
       for (com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MarketItemData element : getMarketItemDataList()) {
-        output.writeMessage(3, element);
+        output.writeMessage(4, element);
       }
       getUnknownFields().writeTo(output);
     }
@@ -341,50 +351,54 @@ public final class Market {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(2, getRefreshCount());
       }
+      if (hasNeedMoney()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, getNeedMoney());
+      }
       for (com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MarketItemData element : getMarketItemDataList()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, element);
+          .computeMessageSize(4, element);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
       return size;
     }
     
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse parseFrom(
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse parseFrom(
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse parseFrom(byte[] data)
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse parseFrom(
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse parseFrom(java.io.InputStream input)
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse parseFrom(
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
     }
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       Builder builder = newBuilder();
       if (builder.mergeDelimitedFrom(input)) {
@@ -393,7 +407,7 @@ public final class Market {
         return null;
       }
     }
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse parseDelimitedFrom(
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -404,12 +418,12 @@ public final class Market {
         return null;
       }
     }
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse parseFrom(
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
-    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse parseFrom(
+    public static com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -419,25 +433,25 @@ public final class Market {
     
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse prototype) {
+    public static Builder newBuilder(com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
     
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> {
-      private com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse result;
+      private com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse result;
       
-      // Construct using com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse.newBuilder()
+      // Construct using com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse.newBuilder()
       private Builder() {}
       
       private static Builder create() {
         Builder builder = new Builder();
-        builder.result = new com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse();
+        builder.result = new com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse();
         return builder;
       }
       
-      protected com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse internalGetResult() {
+      protected com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse internalGetResult() {
         return result;
       }
       
@@ -446,7 +460,7 @@ public final class Market {
           throw new IllegalStateException(
             "Cannot call clear() after build().");
         }
-        result = new com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse();
+        result = new com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse();
         return this;
       }
       
@@ -456,24 +470,24 @@ public final class Market {
       
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse.getDescriptor();
+        return com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse.getDescriptor();
       }
       
-      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse getDefaultInstanceForType() {
-        return com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse.getDefaultInstance();
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse getDefaultInstanceForType() {
+        return com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse.getDefaultInstance();
       }
       
       public boolean isInitialized() {
         return result.isInitialized();
       }
-      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse build() {
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse build() {
         if (result != null && !isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return buildPartial();
       }
       
-      private com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse buildParsed()
+      private com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse buildParsed()
           throws com.google.protobuf.InvalidProtocolBufferException {
         if (!isInitialized()) {
           throw newUninitializedMessageException(
@@ -482,7 +496,7 @@ public final class Market {
         return buildPartial();
       }
       
-      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse buildPartial() {
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse buildPartial() {
         if (result == null) {
           throw new IllegalStateException(
             "build() has already been called on this Builder.");
@@ -491,27 +505,30 @@ public final class Market {
           result.marketItemData_ =
             java.util.Collections.unmodifiableList(result.marketItemData_);
         }
-        com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse returnMe = result;
+        com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse returnMe = result;
         result = null;
         return returnMe;
       }
       
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse) {
-          return mergeFrom((com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse)other);
+        if (other instanceof com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse) {
+          return mergeFrom((com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
       
-      public Builder mergeFrom(com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse other) {
-        if (other == com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse other) {
+        if (other == com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse.getDefaultInstance()) return this;
         if (other.hasIsRefresh()) {
           setIsRefresh(other.getIsRefresh());
         }
         if (other.hasRefreshCount()) {
           setRefreshCount(other.getRefreshCount());
+        }
+        if (other.hasNeedMoney()) {
+          setNeedMoney(other.getNeedMoney());
         }
         if (!other.marketItemData_.isEmpty()) {
           if (result.marketItemData_.isEmpty()) {
@@ -552,7 +569,11 @@ public final class Market {
               setRefreshCount(input.readInt32());
               break;
             }
-            case 26: {
+            case 24: {
+              setNeedMoney(input.readInt32());
+              break;
+            }
+            case 34: {
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MarketItemData.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MarketItemData.newBuilder();
               input.readMessage(subBuilder, extensionRegistry);
               addMarketItemData(subBuilder.buildPartial());
@@ -599,7 +620,25 @@ public final class Market {
         return this;
       }
       
-      // repeated .com.randioo.owlofwar_server_simplify_protobuf.protocol.MarketItemData marketItemData = 3;
+      // optional int32 needMoney = 3;
+      public boolean hasNeedMoney() {
+        return result.hasNeedMoney();
+      }
+      public int getNeedMoney() {
+        return result.getNeedMoney();
+      }
+      public Builder setNeedMoney(int value) {
+        result.hasNeedMoney = true;
+        result.needMoney_ = value;
+        return this;
+      }
+      public Builder clearNeedMoney() {
+        result.hasNeedMoney = false;
+        result.needMoney_ = 0;
+        return this;
+      }
+      
+      // repeated .com.randioo.owlofwar_server_simplify_protobuf.protocol.MarketItemData marketItemData = 4;
       public java.util.List<com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MarketItemData> getMarketItemDataList() {
         return java.util.Collections.unmodifiableList(result.marketItemData_);
       }
@@ -650,16 +689,16 @@ public final class Market {
         return this;
       }
       
-      // @@protoc_insertion_point(builder_scope:com.randioo.owlofwar_server_simplify_protobuf.protocol.MarketShowMarketItemResponse)
+      // @@protoc_insertion_point(builder_scope:com.randioo.owlofwar_server_simplify_protobuf.protocol.MarketShowResponse)
     }
     
     static {
-      defaultInstance = new MarketShowMarketItemResponse(true);
+      defaultInstance = new MarketShowResponse(true);
       com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.internalForceInit();
       defaultInstance.initFields();
     }
     
-    // @@protoc_insertion_point(class_scope:com.randioo.owlofwar_server_simplify_protobuf.protocol.MarketShowMarketItemResponse)
+    // @@protoc_insertion_point(class_scope:com.randioo.owlofwar_server_simplify_protobuf.protocol.MarketShowResponse)
   }
   
   public static final class MarketBuyMarketItemRequest extends
@@ -696,6 +735,13 @@ public final class Market {
     public boolean hasIndex() { return hasIndex; }
     public int getIndex() { return index_; }
     
+    // optional int32 buyCount = 2;
+    public static final int BUYCOUNT_FIELD_NUMBER = 2;
+    private boolean hasBuyCount;
+    private int buyCount_ = 0;
+    public boolean hasBuyCount() { return hasBuyCount; }
+    public int getBuyCount() { return buyCount_; }
+    
     private void initFields() {
     }
     public final boolean isInitialized() {
@@ -707,6 +753,9 @@ public final class Market {
       getSerializedSize();
       if (hasIndex()) {
         output.writeInt32(1, getIndex());
+      }
+      if (hasBuyCount()) {
+        output.writeInt32(2, getBuyCount());
       }
       getUnknownFields().writeTo(output);
     }
@@ -720,6 +769,10 @@ public final class Market {
       if (hasIndex()) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, getIndex());
+      }
+      if (hasBuyCount()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, getBuyCount());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -882,6 +935,9 @@ public final class Market {
         if (other.hasIndex()) {
           setIndex(other.getIndex());
         }
+        if (other.hasBuyCount()) {
+          setBuyCount(other.getBuyCount());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -911,6 +967,10 @@ public final class Market {
               setIndex(input.readInt32());
               break;
             }
+            case 16: {
+              setBuyCount(input.readInt32());
+              break;
+            }
           }
         }
       }
@@ -931,6 +991,24 @@ public final class Market {
       public Builder clearIndex() {
         result.hasIndex = false;
         result.index_ = 0;
+        return this;
+      }
+      
+      // optional int32 buyCount = 2;
+      public boolean hasBuyCount() {
+        return result.hasBuyCount();
+      }
+      public int getBuyCount() {
+        return result.getBuyCount();
+      }
+      public Builder setBuyCount(int value) {
+        result.hasBuyCount = true;
+        result.buyCount_ = value;
+        return this;
+      }
+      public Builder clearBuyCount() {
+        result.hasBuyCount = false;
+        result.buyCount_ = 0;
         return this;
       }
       
@@ -973,10 +1051,10 @@ public final class Market {
       return com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketBuyMarketItemResponse_fieldAccessorTable;
     }
     
-    // optional int32 errorCode = 1;
+    // optional int32 errorCode = 1 [default = 1];
     public static final int ERRORCODE_FIELD_NUMBER = 1;
     private boolean hasErrorCode;
-    private int errorCode_ = 0;
+    private int errorCode_ = 1;
     public boolean hasErrorCode() { return hasErrorCode; }
     public int getErrorCode() { return errorCode_; }
     
@@ -987,14 +1065,22 @@ public final class Market {
     public boolean hasBuyCount() { return hasBuyCount; }
     public int getBuyCount() { return buyCount_; }
     
-    // optional int32 dayBuyCount = 3;
-    public static final int DAYBUYCOUNT_FIELD_NUMBER = 3;
-    private boolean hasDayBuyCount;
-    private int dayBuyCount_ = 0;
-    public boolean hasDayBuyCount() { return hasDayBuyCount; }
-    public int getDayBuyCount() { return dayBuyCount_; }
+    // optional int32 nextBuyMoney = 3;
+    public static final int NEXTBUYMONEY_FIELD_NUMBER = 3;
+    private boolean hasNextBuyMoney;
+    private int nextBuyMoney_ = 0;
+    public boolean hasNextBuyMoney() { return hasNextBuyMoney; }
+    public int getNextBuyMoney() { return nextBuyMoney_; }
+    
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.MarketItemDataBuyType buyType = 4;
+    public static final int BUYTYPE_FIELD_NUMBER = 4;
+    private boolean hasBuyType;
+    private com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MarketItemDataBuyType buyType_;
+    public boolean hasBuyType() { return hasBuyType; }
+    public com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MarketItemDataBuyType getBuyType() { return buyType_; }
     
     private void initFields() {
+      buyType_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MarketItemDataBuyType.GOLD;
     }
     public final boolean isInitialized() {
       return true;
@@ -1009,8 +1095,11 @@ public final class Market {
       if (hasBuyCount()) {
         output.writeInt32(2, getBuyCount());
       }
-      if (hasDayBuyCount()) {
-        output.writeInt32(3, getDayBuyCount());
+      if (hasNextBuyMoney()) {
+        output.writeInt32(3, getNextBuyMoney());
+      }
+      if (hasBuyType()) {
+        output.writeEnum(4, getBuyType().getNumber());
       }
       getUnknownFields().writeTo(output);
     }
@@ -1029,9 +1118,13 @@ public final class Market {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(2, getBuyCount());
       }
-      if (hasDayBuyCount()) {
+      if (hasNextBuyMoney()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, getDayBuyCount());
+          .computeInt32Size(3, getNextBuyMoney());
+      }
+      if (hasBuyType()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, getBuyType().getNumber());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1197,8 +1290,11 @@ public final class Market {
         if (other.hasBuyCount()) {
           setBuyCount(other.getBuyCount());
         }
-        if (other.hasDayBuyCount()) {
-          setDayBuyCount(other.getDayBuyCount());
+        if (other.hasNextBuyMoney()) {
+          setNextBuyMoney(other.getNextBuyMoney());
+        }
+        if (other.hasBuyType()) {
+          setBuyType(other.getBuyType());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -1234,7 +1330,17 @@ public final class Market {
               break;
             }
             case 24: {
-              setDayBuyCount(input.readInt32());
+              setNextBuyMoney(input.readInt32());
+              break;
+            }
+            case 32: {
+              int rawValue = input.readEnum();
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MarketItemDataBuyType value = com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MarketItemDataBuyType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(4, rawValue);
+              } else {
+                setBuyType(value);
+              }
               break;
             }
           }
@@ -1242,7 +1348,7 @@ public final class Market {
       }
       
       
-      // optional int32 errorCode = 1;
+      // optional int32 errorCode = 1 [default = 1];
       public boolean hasErrorCode() {
         return result.hasErrorCode();
       }
@@ -1256,7 +1362,7 @@ public final class Market {
       }
       public Builder clearErrorCode() {
         result.hasErrorCode = false;
-        result.errorCode_ = 0;
+        result.errorCode_ = 1;
         return this;
       }
       
@@ -1278,21 +1384,42 @@ public final class Market {
         return this;
       }
       
-      // optional int32 dayBuyCount = 3;
-      public boolean hasDayBuyCount() {
-        return result.hasDayBuyCount();
+      // optional int32 nextBuyMoney = 3;
+      public boolean hasNextBuyMoney() {
+        return result.hasNextBuyMoney();
       }
-      public int getDayBuyCount() {
-        return result.getDayBuyCount();
+      public int getNextBuyMoney() {
+        return result.getNextBuyMoney();
       }
-      public Builder setDayBuyCount(int value) {
-        result.hasDayBuyCount = true;
-        result.dayBuyCount_ = value;
+      public Builder setNextBuyMoney(int value) {
+        result.hasNextBuyMoney = true;
+        result.nextBuyMoney_ = value;
         return this;
       }
-      public Builder clearDayBuyCount() {
-        result.hasDayBuyCount = false;
-        result.dayBuyCount_ = 0;
+      public Builder clearNextBuyMoney() {
+        result.hasNextBuyMoney = false;
+        result.nextBuyMoney_ = 0;
+        return this;
+      }
+      
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.MarketItemDataBuyType buyType = 4;
+      public boolean hasBuyType() {
+        return result.hasBuyType();
+      }
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MarketItemDataBuyType getBuyType() {
+        return result.getBuyType();
+      }
+      public Builder setBuyType(com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MarketItemDataBuyType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        result.hasBuyType = true;
+        result.buyType_ = value;
+        return this;
+      }
+      public Builder clearBuyType() {
+        result.hasBuyType = false;
+        result.buyType_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MarketItemDataBuyType.GOLD;
         return this;
       }
       
@@ -1580,10 +1707,10 @@ public final class Market {
       return com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketArtificialRefreshResponse_fieldAccessorTable;
     }
     
-    // optional int32 errorCode = 1;
+    // optional int32 errorCode = 1 [default = 1];
     public static final int ERRORCODE_FIELD_NUMBER = 1;
     private boolean hasErrorCode;
-    private int errorCode_ = 0;
+    private int errorCode_ = 1;
     public boolean hasErrorCode() { return hasErrorCode; }
     public int getErrorCode() { return errorCode_; }
     
@@ -1594,8 +1721,15 @@ public final class Market {
     public boolean hasRefreshCount() { return hasRefreshCount; }
     public int getRefreshCount() { return refreshCount_; }
     
-    // repeated .com.randioo.owlofwar_server_simplify_protobuf.protocol.MarketItemData marketItemData = 3;
-    public static final int MARKETITEMDATA_FIELD_NUMBER = 3;
+    // optional int32 needMoney = 3;
+    public static final int NEEDMONEY_FIELD_NUMBER = 3;
+    private boolean hasNeedMoney;
+    private int needMoney_ = 0;
+    public boolean hasNeedMoney() { return hasNeedMoney; }
+    public int getNeedMoney() { return needMoney_; }
+    
+    // repeated .com.randioo.owlofwar_server_simplify_protobuf.protocol.MarketItemData marketItemData = 4;
+    public static final int MARKETITEMDATA_FIELD_NUMBER = 4;
     private java.util.List<com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MarketItemData> marketItemData_ =
       java.util.Collections.emptyList();
     public java.util.List<com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MarketItemData> getMarketItemDataList() {
@@ -1621,8 +1755,11 @@ public final class Market {
       if (hasRefreshCount()) {
         output.writeInt32(2, getRefreshCount());
       }
+      if (hasNeedMoney()) {
+        output.writeInt32(3, getNeedMoney());
+      }
       for (com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MarketItemData element : getMarketItemDataList()) {
-        output.writeMessage(3, element);
+        output.writeMessage(4, element);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1641,9 +1778,13 @@ public final class Market {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(2, getRefreshCount());
       }
+      if (hasNeedMoney()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, getNeedMoney());
+      }
       for (com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MarketItemData element : getMarketItemDataList()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, element);
+          .computeMessageSize(4, element);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1813,6 +1954,9 @@ public final class Market {
         if (other.hasRefreshCount()) {
           setRefreshCount(other.getRefreshCount());
         }
+        if (other.hasNeedMoney()) {
+          setNeedMoney(other.getNeedMoney());
+        }
         if (!other.marketItemData_.isEmpty()) {
           if (result.marketItemData_.isEmpty()) {
             result.marketItemData_ = new java.util.ArrayList<com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MarketItemData>();
@@ -1852,7 +1996,11 @@ public final class Market {
               setRefreshCount(input.readInt32());
               break;
             }
-            case 26: {
+            case 24: {
+              setNeedMoney(input.readInt32());
+              break;
+            }
+            case 34: {
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MarketItemData.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MarketItemData.newBuilder();
               input.readMessage(subBuilder, extensionRegistry);
               addMarketItemData(subBuilder.buildPartial());
@@ -1863,7 +2011,7 @@ public final class Market {
       }
       
       
-      // optional int32 errorCode = 1;
+      // optional int32 errorCode = 1 [default = 1];
       public boolean hasErrorCode() {
         return result.hasErrorCode();
       }
@@ -1877,7 +2025,7 @@ public final class Market {
       }
       public Builder clearErrorCode() {
         result.hasErrorCode = false;
-        result.errorCode_ = 0;
+        result.errorCode_ = 1;
         return this;
       }
       
@@ -1899,7 +2047,25 @@ public final class Market {
         return this;
       }
       
-      // repeated .com.randioo.owlofwar_server_simplify_protobuf.protocol.MarketItemData marketItemData = 3;
+      // optional int32 needMoney = 3;
+      public boolean hasNeedMoney() {
+        return result.hasNeedMoney();
+      }
+      public int getNeedMoney() {
+        return result.getNeedMoney();
+      }
+      public Builder setNeedMoney(int value) {
+        result.hasNeedMoney = true;
+        result.needMoney_ = value;
+        return this;
+      }
+      public Builder clearNeedMoney() {
+        result.hasNeedMoney = false;
+        result.needMoney_ = 0;
+        return this;
+      }
+      
+      // repeated .com.randioo.owlofwar_server_simplify_protobuf.protocol.MarketItemData marketItemData = 4;
       public java.util.List<com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MarketItemData> getMarketItemDataList() {
         return java.util.Collections.unmodifiableList(result.marketItemData_);
       }
@@ -1963,15 +2129,15 @@ public final class Market {
   }
   
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketShowMarketItemRequest_descriptor;
+    internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketShowRequest_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketShowMarketItemRequest_fieldAccessorTable;
+      internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketShowRequest_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketShowMarketItemResponse_descriptor;
+    internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketShowResponse_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketShowMarketItemResponse_fieldAccessorTable;
+      internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketShowResponse_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketBuyMarketItemRequest_descriptor;
   private static
@@ -2003,48 +2169,52 @@ public final class Market {
     java.lang.String[] descriptorData = {
       "\n\014Market.proto\0226com.randioo.owlofwar_ser" +
       "ver_simplify_protobuf.protocol\032\014Entity.p" +
-      "roto\"\035\n\033MarketShowMarketItemRequest\"\247\001\n\034" +
-      "MarketShowMarketItemResponse\022\021\n\tisRefres" +
-      "h\030\001 \001(\010\022\024\n\014refreshCount\030\002 \001(\005\022^\n\016marketI" +
-      "temData\030\003 \003(\0132F.com.randioo.owlofwar_ser" +
-      "ver_simplify_protobuf.protocol.MarketIte" +
-      "mData\"+\n\032MarketBuyMarketItemRequest\022\r\n\005i" +
-      "ndex\030\001 \001(\005\"W\n\033MarketBuyMarketItemRespons" +
-      "e\022\021\n\terrorCode\030\001 \001(\005\022\020\n\010buyCount\030\002 \001(\005\022\023",
-      "\n\013dayBuyCount\030\003 \001(\005\" \n\036MarketArtificialR" +
-      "efreshRequest\"\252\001\n\037MarketArtificialRefres" +
-      "hResponse\022\021\n\terrorCode\030\001 \001(\005\022\024\n\014refreshC" +
-      "ount\030\002 \001(\005\022^\n\016marketItemData\030\003 \003(\0132F.com" +
-      ".randioo.owlofwar_server_simplify_protob" +
-      "uf.protocol.MarketItemData"
+      "roto\"\023\n\021MarketShowRequest\"\260\001\n\022MarketShow" +
+      "Response\022\021\n\tisRefresh\030\001 \001(\010\022\024\n\014refreshCo" +
+      "unt\030\002 \001(\005\022\021\n\tneedMoney\030\003 \001(\005\022^\n\016marketIt" +
+      "emData\030\004 \003(\0132F.com.randioo.owlofwar_serv" +
+      "er_simplify_protobuf.protocol.MarketItem" +
+      "Data\"=\n\032MarketBuyMarketItemRequest\022\r\n\005in" +
+      "dex\030\001 \001(\005\022\020\n\010buyCount\030\002 \001(\005\"\273\001\n\033MarketBu" +
+      "yMarketItemResponse\022\024\n\terrorCode\030\001 \001(\005:\001",
+      "1\022\020\n\010buyCount\030\002 \001(\005\022\024\n\014nextBuyMoney\030\003 \001(" +
+      "\005\022^\n\007buyType\030\004 \001(\0162M.com.randioo.owlofwa" +
+      "r_server_simplify_protobuf.protocol.Mark" +
+      "etItemDataBuyType\" \n\036MarketArtificialRef" +
+      "reshRequest\"\300\001\n\037MarketArtificialRefreshR" +
+      "esponse\022\024\n\terrorCode\030\001 \001(\005:\0011\022\024\n\014refresh" +
+      "Count\030\002 \001(\005\022\021\n\tneedMoney\030\003 \001(\005\022^\n\016market" +
+      "ItemData\030\004 \003(\0132F.com.randioo.owlofwar_se" +
+      "rver_simplify_protobuf.protocol.MarketIt" +
+      "emData"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
         public com.google.protobuf.ExtensionRegistry assignDescriptors(
             com.google.protobuf.Descriptors.FileDescriptor root) {
           descriptor = root;
-          internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketShowMarketItemRequest_descriptor =
+          internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketShowRequest_descriptor =
             getDescriptor().getMessageTypes().get(0);
-          internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketShowMarketItemRequest_fieldAccessorTable = new
+          internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketShowRequest_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketShowMarketItemRequest_descriptor,
+              internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketShowRequest_descriptor,
               new java.lang.String[] { },
-              com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest.class,
-              com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest.Builder.class);
-          internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketShowMarketItemResponse_descriptor =
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowRequest.class,
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowRequest.Builder.class);
+          internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketShowResponse_descriptor =
             getDescriptor().getMessageTypes().get(1);
-          internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketShowMarketItemResponse_fieldAccessorTable = new
+          internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketShowResponse_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketShowMarketItemResponse_descriptor,
-              new java.lang.String[] { "IsRefresh", "RefreshCount", "MarketItemData", },
-              com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse.class,
-              com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse.Builder.class);
+              internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketShowResponse_descriptor,
+              new java.lang.String[] { "IsRefresh", "RefreshCount", "NeedMoney", "MarketItemData", },
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse.class,
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse.Builder.class);
           internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketBuyMarketItemRequest_descriptor =
             getDescriptor().getMessageTypes().get(2);
           internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketBuyMarketItemRequest_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketBuyMarketItemRequest_descriptor,
-              new java.lang.String[] { "Index", },
+              new java.lang.String[] { "Index", "BuyCount", },
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketBuyMarketItemRequest.class,
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketBuyMarketItemRequest.Builder.class);
           internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketBuyMarketItemResponse_descriptor =
@@ -2052,7 +2222,7 @@ public final class Market {
           internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketBuyMarketItemResponse_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketBuyMarketItemResponse_descriptor,
-              new java.lang.String[] { "ErrorCode", "BuyCount", "DayBuyCount", },
+              new java.lang.String[] { "ErrorCode", "BuyCount", "NextBuyMoney", "BuyType", },
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketBuyMarketItemResponse.class,
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketBuyMarketItemResponse.Builder.class);
           internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketArtificialRefreshRequest_descriptor =
@@ -2068,7 +2238,7 @@ public final class Market {
           internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketArtificialRefreshResponse_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_MarketArtificialRefreshResponse_descriptor,
-              new java.lang.String[] { "ErrorCode", "RefreshCount", "MarketItemData", },
+              new java.lang.String[] { "ErrorCode", "RefreshCount", "NeedMoney", "MarketItemData", },
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketArtificialRefreshResponse.class,
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketArtificialRefreshResponse.Builder.class);
           return null;

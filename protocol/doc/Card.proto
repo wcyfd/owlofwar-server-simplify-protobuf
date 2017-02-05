@@ -5,7 +5,8 @@ message CardGetCardsInfoRequest{
 }
 
 message CardGetCardsInfoResponse{
-	repeated CardListData cardListDatas = 1;
+	optional int32 useCardId = 1;
+	repeated CardListData cardListDatas = 2;
 }
 
 message CardEditCardListRequest{

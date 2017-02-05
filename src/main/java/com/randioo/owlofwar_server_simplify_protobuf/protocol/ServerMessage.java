@@ -112,75 +112,68 @@ public final class ServerMessage {
     public boolean hasFightGameOverResponse() { return hasFightGameOverResponse; }
     public com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGameOverResponse getFightGameOverResponse() { return fightGameOverResponse_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.SCFightGameOver scFightGameOver = 12;
-    public static final int SCFIGHTGAMEOVER_FIELD_NUMBER = 12;
-    private boolean hasScFightGameOver;
-    private com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightGameOver scFightGameOver_;
-    public boolean hasScFightGameOver() { return hasScFightGameOver; }
-    public com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightGameOver getScFightGameOver() { return scFightGameOver_; }
-    
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightReadFrameResponse FightReadFrameResponse = 13;
-    public static final int FIGHTREADFRAMERESPONSE_FIELD_NUMBER = 13;
-    private boolean hasFightReadFrameResponse;
-    private com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightReadFrameResponse fightReadFrameResponse_;
-    public boolean hasFightReadFrameResponse() { return hasFightReadFrameResponse; }
-    public com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightReadFrameResponse getFightReadFrameResponse() { return fightReadFrameResponse_; }
-    
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.SCFightKeyFrame scFightKeyFrame = 14;
-    public static final int SCFIGHTKEYFRAME_FIELD_NUMBER = 14;
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.SCFightKeyFrame scFightKeyFrame = 12;
+    public static final int SCFIGHTKEYFRAME_FIELD_NUMBER = 12;
     private boolean hasScFightKeyFrame;
     private com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightKeyFrame scFightKeyFrame_;
     public boolean hasScFightKeyFrame() { return hasScFightKeyFrame; }
     public com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightKeyFrame getScFightKeyFrame() { return scFightKeyFrame_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightGetGameAwardResponse fightGetGameAwardResponse = 15;
-    public static final int FIGHTGETGAMEAWARDRESPONSE_FIELD_NUMBER = 15;
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightGetGameAwardResponse fightGetGameAwardResponse = 13;
+    public static final int FIGHTGETGAMEAWARDRESPONSE_FIELD_NUMBER = 13;
     private boolean hasFightGetGameAwardResponse;
     private com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGetGameAwardResponse fightGetGameAwardResponse_;
     public boolean hasFightGetGameAwardResponse() { return hasFightGetGameAwardResponse; }
     public com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGetGameAwardResponse getFightGetGameAwardResponse() { return fightGetGameAwardResponse_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightCountDownResponse fightCountDownResponse = 16;
-    public static final int FIGHTCOUNTDOWNRESPONSE_FIELD_NUMBER = 16;
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightCountDownResponse fightCountDownResponse = 14;
+    public static final int FIGHTCOUNTDOWNRESPONSE_FIELD_NUMBER = 14;
     private boolean hasFightCountDownResponse;
     private com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownResponse fightCountDownResponse_;
     public boolean hasFightCountDownResponse() { return hasFightCountDownResponse; }
     public com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownResponse getFightCountDownResponse() { return fightCountDownResponse_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.SCFightCountDown scFightCountDown = 17;
-    public static final int SCFIGHTCOUNTDOWN_FIELD_NUMBER = 17;
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.SCFightCountDown scFightCountDown = 15;
+    public static final int SCFIGHTCOUNTDOWN_FIELD_NUMBER = 15;
     private boolean hasScFightCountDown;
     private com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightCountDown scFightCountDown_;
     public boolean hasScFightCountDown() { return hasScFightCountDown; }
     public com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightCountDown getScFightCountDown() { return scFightCountDown_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.PillageRoleResponse pillageRoleResponse = 18;
-    public static final int PILLAGEROLERESPONSE_FIELD_NUMBER = 18;
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.PillageRoleResponse pillageRoleResponse = 16;
+    public static final int PILLAGEROLERESPONSE_FIELD_NUMBER = 16;
     private boolean hasPillageRoleResponse;
     private com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageRoleResponse pillageRoleResponse_;
     public boolean hasPillageRoleResponse() { return hasPillageRoleResponse; }
     public com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageRoleResponse getPillageRoleResponse() { return pillageRoleResponse_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.PillageCancelResponse pillageCancelResponse = 19;
-    public static final int PILLAGECANCELRESPONSE_FIELD_NUMBER = 19;
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.PillageCancelResponse pillageCancelResponse = 17;
+    public static final int PILLAGECANCELRESPONSE_FIELD_NUMBER = 17;
     private boolean hasPillageCancelResponse;
     private com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCancelResponse pillageCancelResponse_;
     public boolean hasPillageCancelResponse() { return hasPillageCancelResponse; }
     public com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCancelResponse getPillageCancelResponse() { return pillageCancelResponse_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.PillageShowResponse pillageShowResponse = 20;
-    public static final int PILLAGESHOWRESPONSE_FIELD_NUMBER = 20;
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.PillageShowResponse pillageShowResponse = 18;
+    public static final int PILLAGESHOWRESPONSE_FIELD_NUMBER = 18;
     private boolean hasPillageShowResponse;
     private com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageShowResponse pillageShowResponse_;
     public boolean hasPillageShowResponse() { return hasPillageShowResponse; }
     public com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageShowResponse getPillageShowResponse() { return pillageShowResponse_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.PillageCompetitionNoticeResponse pillageCompetitionNoticeResponse = 38;
-    public static final int PILLAGECOMPETITIONNOTICERESPONSE_FIELD_NUMBER = 38;
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.PillageCompetitionNoticeResponse pillageCompetitionNoticeResponse = 19;
+    public static final int PILLAGECOMPETITIONNOTICERESPONSE_FIELD_NUMBER = 19;
     private boolean hasPillageCompetitionNoticeResponse;
     private com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse pillageCompetitionNoticeResponse_;
     public boolean hasPillageCompetitionNoticeResponse() { return hasPillageCompetitionNoticeResponse; }
     public com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse getPillageCompetitionNoticeResponse() { return pillageCompetitionNoticeResponse_; }
+    
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.PillagePracticeResponse pillagePracticeResponse = 20;
+    public static final int PILLAGEPRACTICERESPONSE_FIELD_NUMBER = 20;
+    private boolean hasPillagePracticeResponse;
+    private com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillagePracticeResponse pillagePracticeResponse_;
+    public boolean hasPillagePracticeResponse() { return hasPillagePracticeResponse; }
+    public com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillagePracticeResponse getPillagePracticeResponse() { return pillagePracticeResponse_; }
     
     // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.CardGetCardsInfoResponse cardGetCardsInfoResponse = 21;
     public static final int CARDGETCARDSINFORESPONSE_FIELD_NUMBER = 21;
@@ -224,12 +217,12 @@ public final class ServerMessage {
     public boolean hasPingResponse() { return hasPingResponse; }
     public com.randioo.owlofwar_server_simplify_protobuf.protocol.Ping.PingResponse getPingResponse() { return pingResponse_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.MarketShowMarketItemResponse marketShowMarketItemResponse = 27;
-    public static final int MARKETSHOWMARKETITEMRESPONSE_FIELD_NUMBER = 27;
-    private boolean hasMarketShowMarketItemResponse;
-    private com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse marketShowMarketItemResponse_;
-    public boolean hasMarketShowMarketItemResponse() { return hasMarketShowMarketItemResponse; }
-    public com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse getMarketShowMarketItemResponse() { return marketShowMarketItemResponse_; }
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.MarketShowResponse marketShowResponse = 27;
+    public static final int MARKETSHOWRESPONSE_FIELD_NUMBER = 27;
+    private boolean hasMarketShowResponse;
+    private com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse marketShowResponse_;
+    public boolean hasMarketShowResponse() { return hasMarketShowResponse; }
+    public com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse getMarketShowResponse() { return marketShowResponse_; }
     
     // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.MarketBuyMarketItemResponse marketBuyMarketItemResponse = 28;
     public static final int MARKETBUYMARKETITEMRESPONSE_FIELD_NUMBER = 28;
@@ -238,64 +231,64 @@ public final class ServerMessage {
     public boolean hasMarketBuyMarketItemResponse() { return hasMarketBuyMarketItemResponse; }
     public com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketBuyMarketItemResponse getMarketBuyMarketItemResponse() { return marketBuyMarketItemResponse_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.MarketArtificialRefreshResponse MarketArtificialRefreshResponse = 31;
-    public static final int MARKETARTIFICIALREFRESHRESPONSE_FIELD_NUMBER = 31;
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.MarketArtificialRefreshResponse MarketArtificialRefreshResponse = 29;
+    public static final int MARKETARTIFICIALREFRESHRESPONSE_FIELD_NUMBER = 29;
     private boolean hasMarketArtificialRefreshResponse;
     private com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketArtificialRefreshResponse marketArtificialRefreshResponse_;
     public boolean hasMarketArtificialRefreshResponse() { return hasMarketArtificialRefreshResponse; }
     public com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketArtificialRefreshResponse getMarketArtificialRefreshResponse() { return marketArtificialRefreshResponse_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.SCRoleAddMoney scRoleAddMoney = 29;
-    public static final int SCROLEADDMONEY_FIELD_NUMBER = 29;
-    private boolean hasScRoleAddMoney;
-    private com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney scRoleAddMoney_;
-    public boolean hasScRoleAddMoney() { return hasScRoleAddMoney; }
-    public com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney getScRoleAddMoney() { return scRoleAddMoney_; }
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.SCRoleMoney scRoleMoney = 30;
+    public static final int SCROLEMONEY_FIELD_NUMBER = 30;
+    private boolean hasScRoleMoney;
+    private com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney scRoleMoney_;
+    public boolean hasScRoleMoney() { return hasScRoleMoney; }
+    public com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney getScRoleMoney() { return scRoleMoney_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.SCRoleAddGold scRoleAddGold = 30;
-    public static final int SCROLEADDGOLD_FIELD_NUMBER = 30;
-    private boolean hasScRoleAddGold;
-    private com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold scRoleAddGold_;
-    public boolean hasScRoleAddGold() { return hasScRoleAddGold; }
-    public com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold getScRoleAddGold() { return scRoleAddGold_; }
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.SCRoleGold scRoleGold = 31;
+    public static final int SCROLEGOLD_FIELD_NUMBER = 31;
+    private boolean hasScRoleGold;
+    private com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold scRoleGold_;
+    public boolean hasScRoleGold() { return hasScRoleGold; }
+    public com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold getScRoleGold() { return scRoleGold_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.RoleInfoSelectResponse roleInfoSelectResponse = 37;
-    public static final int ROLEINFOSELECTRESPONSE_FIELD_NUMBER = 37;
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.RoleInfoSelectResponse roleInfoSelectResponse = 32;
+    public static final int ROLEINFOSELECTRESPONSE_FIELD_NUMBER = 32;
     private boolean hasRoleInfoSelectResponse;
     private com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.RoleInfoSelectResponse roleInfoSelectResponse_;
     public boolean hasRoleInfoSelectResponse() { return hasRoleInfoSelectResponse; }
     public com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.RoleInfoSelectResponse getRoleInfoSelectResponse() { return roleInfoSelectResponse_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.WarShowWarChapterResponse warShowWarChapterResponse = 32;
-    public static final int WARSHOWWARCHAPTERRESPONSE_FIELD_NUMBER = 32;
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.SCRolePoint scRolePoint = 33;
+    public static final int SCROLEPOINT_FIELD_NUMBER = 33;
+    private boolean hasScRolePoint;
+    private com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint scRolePoint_;
+    public boolean hasScRolePoint() { return hasScRolePoint; }
+    public com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint getScRolePoint() { return scRolePoint_; }
+    
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.WarShowWarChapterResponse warShowWarChapterResponse = 34;
+    public static final int WARSHOWWARCHAPTERRESPONSE_FIELD_NUMBER = 34;
     private boolean hasWarShowWarChapterResponse;
     private com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarChapterResponse warShowWarChapterResponse_;
     public boolean hasWarShowWarChapterResponse() { return hasWarShowWarChapterResponse; }
     public com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarChapterResponse getWarShowWarChapterResponse() { return warShowWarChapterResponse_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.WarShowWarBuildResponse WarShowWarBuildResponse = 33;
-    public static final int WARSHOWWARBUILDRESPONSE_FIELD_NUMBER = 33;
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.WarShowWarBuildResponse WarShowWarBuildResponse = 36;
+    public static final int WARSHOWWARBUILDRESPONSE_FIELD_NUMBER = 36;
     private boolean hasWarShowWarBuildResponse;
     private com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarBuildResponse warShowWarBuildResponse_;
     public boolean hasWarShowWarBuildResponse() { return hasWarShowWarBuildResponse; }
     public com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarBuildResponse getWarShowWarBuildResponse() { return warShowWarBuildResponse_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.WarMatchResponse warMatchResponse = 34;
-    public static final int WARMATCHRESPONSE_FIELD_NUMBER = 34;
-    private boolean hasWarMatchResponse;
-    private com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMatchResponse warMatchResponse_;
-    public boolean hasWarMatchResponse() { return hasWarMatchResponse; }
-    public com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMatchResponse getWarMatchResponse() { return warMatchResponse_; }
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.WarMarchResponse warMarchResponse = 37;
+    public static final int WARMARCHRESPONSE_FIELD_NUMBER = 37;
+    private boolean hasWarMarchResponse;
+    private com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMarchResponse warMarchResponse_;
+    public boolean hasWarMarchResponse() { return hasWarMarchResponse; }
+    public com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMarchResponse getWarMarchResponse() { return warMarchResponse_; }
     
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.WarWinBuildResponse warWinBuildResponse = 35;
-    public static final int WARWINBUILDRESPONSE_FIELD_NUMBER = 35;
-    private boolean hasWarWinBuildResponse;
-    private com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarWinBuildResponse warWinBuildResponse_;
-    public boolean hasWarWinBuildResponse() { return hasWarWinBuildResponse; }
-    public com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarWinBuildResponse getWarWinBuildResponse() { return warWinBuildResponse_; }
-    
-    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.WarGetChapterAwardResponse warGetChapterAwardResponse = 36;
-    public static final int WARGETCHAPTERAWARDRESPONSE_FIELD_NUMBER = 36;
+    // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.WarGetChapterAwardResponse warGetChapterAwardResponse = 38;
+    public static final int WARGETCHAPTERAWARDRESPONSE_FIELD_NUMBER = 38;
     private boolean hasWarGetChapterAwardResponse;
     private com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarGetChapterAwardResponse warGetChapterAwardResponse_;
     public boolean hasWarGetChapterAwardResponse() { return hasWarGetChapterAwardResponse; }
@@ -313,8 +306,6 @@ public final class ServerMessage {
       scFightStartGame_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightStartGame.getDefaultInstance();
       fightGameActionResponse_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGameActionResponse.getDefaultInstance();
       fightGameOverResponse_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGameOverResponse.getDefaultInstance();
-      scFightGameOver_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightGameOver.getDefaultInstance();
-      fightReadFrameResponse_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightReadFrameResponse.getDefaultInstance();
       scFightKeyFrame_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightKeyFrame.getDefaultInstance();
       fightGetGameAwardResponse_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGetGameAwardResponse.getDefaultInstance();
       fightCountDownResponse_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownResponse.getDefaultInstance();
@@ -323,22 +314,23 @@ public final class ServerMessage {
       pillageCancelResponse_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCancelResponse.getDefaultInstance();
       pillageShowResponse_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageShowResponse.getDefaultInstance();
       pillageCompetitionNoticeResponse_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse.getDefaultInstance();
+      pillagePracticeResponse_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillagePracticeResponse.getDefaultInstance();
       cardGetCardsInfoResponse_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardGetCardsInfoResponse.getDefaultInstance();
       cardEditCardListResponse_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardEditCardListResponse.getDefaultInstance();
       cardLvUpResponse_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardLvUpResponse.getDefaultInstance();
       cardChooseUseCardListResponse_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardChooseUseCardListResponse.getDefaultInstance();
       cardChangeMainCardResponse_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardChangeMainCardResponse.getDefaultInstance();
       pingResponse_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Ping.PingResponse.getDefaultInstance();
-      marketShowMarketItemResponse_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse.getDefaultInstance();
+      marketShowResponse_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse.getDefaultInstance();
       marketBuyMarketItemResponse_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketBuyMarketItemResponse.getDefaultInstance();
       marketArtificialRefreshResponse_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketArtificialRefreshResponse.getDefaultInstance();
-      scRoleAddMoney_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney.getDefaultInstance();
-      scRoleAddGold_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold.getDefaultInstance();
+      scRoleMoney_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney.getDefaultInstance();
+      scRoleGold_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold.getDefaultInstance();
       roleInfoSelectResponse_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.RoleInfoSelectResponse.getDefaultInstance();
+      scRolePoint_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint.getDefaultInstance();
       warShowWarChapterResponse_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarChapterResponse.getDefaultInstance();
       warShowWarBuildResponse_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarBuildResponse.getDefaultInstance();
-      warMatchResponse_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMatchResponse.getDefaultInstance();
-      warWinBuildResponse_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarWinBuildResponse.getDefaultInstance();
+      warMarchResponse_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMarchResponse.getDefaultInstance();
       warGetChapterAwardResponse_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarGetChapterAwardResponse.getDefaultInstance();
     }
     public final boolean isInitialized() {
@@ -381,32 +373,32 @@ public final class ServerMessage {
       if (hasFightGameOverResponse()) {
         output.writeMessage(11, getFightGameOverResponse());
       }
-      if (hasScFightGameOver()) {
-        output.writeMessage(12, getScFightGameOver());
-      }
-      if (hasFightReadFrameResponse()) {
-        output.writeMessage(13, getFightReadFrameResponse());
-      }
       if (hasScFightKeyFrame()) {
-        output.writeMessage(14, getScFightKeyFrame());
+        output.writeMessage(12, getScFightKeyFrame());
       }
       if (hasFightGetGameAwardResponse()) {
-        output.writeMessage(15, getFightGetGameAwardResponse());
+        output.writeMessage(13, getFightGetGameAwardResponse());
       }
       if (hasFightCountDownResponse()) {
-        output.writeMessage(16, getFightCountDownResponse());
+        output.writeMessage(14, getFightCountDownResponse());
       }
       if (hasScFightCountDown()) {
-        output.writeMessage(17, getScFightCountDown());
+        output.writeMessage(15, getScFightCountDown());
       }
       if (hasPillageRoleResponse()) {
-        output.writeMessage(18, getPillageRoleResponse());
+        output.writeMessage(16, getPillageRoleResponse());
       }
       if (hasPillageCancelResponse()) {
-        output.writeMessage(19, getPillageCancelResponse());
+        output.writeMessage(17, getPillageCancelResponse());
       }
       if (hasPillageShowResponse()) {
-        output.writeMessage(20, getPillageShowResponse());
+        output.writeMessage(18, getPillageShowResponse());
+      }
+      if (hasPillageCompetitionNoticeResponse()) {
+        output.writeMessage(19, getPillageCompetitionNoticeResponse());
+      }
+      if (hasPillagePracticeResponse()) {
+        output.writeMessage(20, getPillagePracticeResponse());
       }
       if (hasCardGetCardsInfoResponse()) {
         output.writeMessage(21, getCardGetCardsInfoResponse());
@@ -426,41 +418,38 @@ public final class ServerMessage {
       if (hasPingResponse()) {
         output.writeMessage(26, getPingResponse());
       }
-      if (hasMarketShowMarketItemResponse()) {
-        output.writeMessage(27, getMarketShowMarketItemResponse());
+      if (hasMarketShowResponse()) {
+        output.writeMessage(27, getMarketShowResponse());
       }
       if (hasMarketBuyMarketItemResponse()) {
         output.writeMessage(28, getMarketBuyMarketItemResponse());
       }
-      if (hasScRoleAddMoney()) {
-        output.writeMessage(29, getScRoleAddMoney());
-      }
-      if (hasScRoleAddGold()) {
-        output.writeMessage(30, getScRoleAddGold());
-      }
       if (hasMarketArtificialRefreshResponse()) {
-        output.writeMessage(31, getMarketArtificialRefreshResponse());
+        output.writeMessage(29, getMarketArtificialRefreshResponse());
       }
-      if (hasWarShowWarChapterResponse()) {
-        output.writeMessage(32, getWarShowWarChapterResponse());
+      if (hasScRoleMoney()) {
+        output.writeMessage(30, getScRoleMoney());
       }
-      if (hasWarShowWarBuildResponse()) {
-        output.writeMessage(33, getWarShowWarBuildResponse());
-      }
-      if (hasWarMatchResponse()) {
-        output.writeMessage(34, getWarMatchResponse());
-      }
-      if (hasWarWinBuildResponse()) {
-        output.writeMessage(35, getWarWinBuildResponse());
-      }
-      if (hasWarGetChapterAwardResponse()) {
-        output.writeMessage(36, getWarGetChapterAwardResponse());
+      if (hasScRoleGold()) {
+        output.writeMessage(31, getScRoleGold());
       }
       if (hasRoleInfoSelectResponse()) {
-        output.writeMessage(37, getRoleInfoSelectResponse());
+        output.writeMessage(32, getRoleInfoSelectResponse());
       }
-      if (hasPillageCompetitionNoticeResponse()) {
-        output.writeMessage(38, getPillageCompetitionNoticeResponse());
+      if (hasScRolePoint()) {
+        output.writeMessage(33, getScRolePoint());
+      }
+      if (hasWarShowWarChapterResponse()) {
+        output.writeMessage(34, getWarShowWarChapterResponse());
+      }
+      if (hasWarShowWarBuildResponse()) {
+        output.writeMessage(36, getWarShowWarBuildResponse());
+      }
+      if (hasWarMarchResponse()) {
+        output.writeMessage(37, getWarMarchResponse());
+      }
+      if (hasWarGetChapterAwardResponse()) {
+        output.writeMessage(38, getWarGetChapterAwardResponse());
       }
       getUnknownFields().writeTo(output);
     }
@@ -515,41 +504,41 @@ public final class ServerMessage {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, getFightGameOverResponse());
       }
-      if (hasScFightGameOver()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(12, getScFightGameOver());
-      }
-      if (hasFightReadFrameResponse()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(13, getFightReadFrameResponse());
-      }
       if (hasScFightKeyFrame()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(14, getScFightKeyFrame());
+          .computeMessageSize(12, getScFightKeyFrame());
       }
       if (hasFightGetGameAwardResponse()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(15, getFightGetGameAwardResponse());
+          .computeMessageSize(13, getFightGetGameAwardResponse());
       }
       if (hasFightCountDownResponse()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(16, getFightCountDownResponse());
+          .computeMessageSize(14, getFightCountDownResponse());
       }
       if (hasScFightCountDown()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(17, getScFightCountDown());
+          .computeMessageSize(15, getScFightCountDown());
       }
       if (hasPillageRoleResponse()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(18, getPillageRoleResponse());
+          .computeMessageSize(16, getPillageRoleResponse());
       }
       if (hasPillageCancelResponse()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(19, getPillageCancelResponse());
+          .computeMessageSize(17, getPillageCancelResponse());
       }
       if (hasPillageShowResponse()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(20, getPillageShowResponse());
+          .computeMessageSize(18, getPillageShowResponse());
+      }
+      if (hasPillageCompetitionNoticeResponse()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(19, getPillageCompetitionNoticeResponse());
+      }
+      if (hasPillagePracticeResponse()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(20, getPillagePracticeResponse());
       }
       if (hasCardGetCardsInfoResponse()) {
         size += com.google.protobuf.CodedOutputStream
@@ -575,53 +564,49 @@ public final class ServerMessage {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(26, getPingResponse());
       }
-      if (hasMarketShowMarketItemResponse()) {
+      if (hasMarketShowResponse()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(27, getMarketShowMarketItemResponse());
+          .computeMessageSize(27, getMarketShowResponse());
       }
       if (hasMarketBuyMarketItemResponse()) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(28, getMarketBuyMarketItemResponse());
       }
-      if (hasScRoleAddMoney()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(29, getScRoleAddMoney());
-      }
-      if (hasScRoleAddGold()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(30, getScRoleAddGold());
-      }
       if (hasMarketArtificialRefreshResponse()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(31, getMarketArtificialRefreshResponse());
+          .computeMessageSize(29, getMarketArtificialRefreshResponse());
       }
-      if (hasWarShowWarChapterResponse()) {
+      if (hasScRoleMoney()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(32, getWarShowWarChapterResponse());
+          .computeMessageSize(30, getScRoleMoney());
       }
-      if (hasWarShowWarBuildResponse()) {
+      if (hasScRoleGold()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(33, getWarShowWarBuildResponse());
-      }
-      if (hasWarMatchResponse()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(34, getWarMatchResponse());
-      }
-      if (hasWarWinBuildResponse()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(35, getWarWinBuildResponse());
-      }
-      if (hasWarGetChapterAwardResponse()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(36, getWarGetChapterAwardResponse());
+          .computeMessageSize(31, getScRoleGold());
       }
       if (hasRoleInfoSelectResponse()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(37, getRoleInfoSelectResponse());
+          .computeMessageSize(32, getRoleInfoSelectResponse());
       }
-      if (hasPillageCompetitionNoticeResponse()) {
+      if (hasScRolePoint()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(38, getPillageCompetitionNoticeResponse());
+          .computeMessageSize(33, getScRolePoint());
+      }
+      if (hasWarShowWarChapterResponse()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(34, getWarShowWarChapterResponse());
+      }
+      if (hasWarShowWarBuildResponse()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(36, getWarShowWarBuildResponse());
+      }
+      if (hasWarMarchResponse()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(37, getWarMarchResponse());
+      }
+      if (hasWarGetChapterAwardResponse()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(38, getWarGetChapterAwardResponse());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -814,12 +799,6 @@ public final class ServerMessage {
         if (other.hasFightGameOverResponse()) {
           mergeFightGameOverResponse(other.getFightGameOverResponse());
         }
-        if (other.hasScFightGameOver()) {
-          mergeScFightGameOver(other.getScFightGameOver());
-        }
-        if (other.hasFightReadFrameResponse()) {
-          mergeFightReadFrameResponse(other.getFightReadFrameResponse());
-        }
         if (other.hasScFightKeyFrame()) {
           mergeScFightKeyFrame(other.getScFightKeyFrame());
         }
@@ -844,6 +823,9 @@ public final class ServerMessage {
         if (other.hasPillageCompetitionNoticeResponse()) {
           mergePillageCompetitionNoticeResponse(other.getPillageCompetitionNoticeResponse());
         }
+        if (other.hasPillagePracticeResponse()) {
+          mergePillagePracticeResponse(other.getPillagePracticeResponse());
+        }
         if (other.hasCardGetCardsInfoResponse()) {
           mergeCardGetCardsInfoResponse(other.getCardGetCardsInfoResponse());
         }
@@ -862,8 +844,8 @@ public final class ServerMessage {
         if (other.hasPingResponse()) {
           mergePingResponse(other.getPingResponse());
         }
-        if (other.hasMarketShowMarketItemResponse()) {
-          mergeMarketShowMarketItemResponse(other.getMarketShowMarketItemResponse());
+        if (other.hasMarketShowResponse()) {
+          mergeMarketShowResponse(other.getMarketShowResponse());
         }
         if (other.hasMarketBuyMarketItemResponse()) {
           mergeMarketBuyMarketItemResponse(other.getMarketBuyMarketItemResponse());
@@ -871,14 +853,17 @@ public final class ServerMessage {
         if (other.hasMarketArtificialRefreshResponse()) {
           mergeMarketArtificialRefreshResponse(other.getMarketArtificialRefreshResponse());
         }
-        if (other.hasScRoleAddMoney()) {
-          mergeScRoleAddMoney(other.getScRoleAddMoney());
+        if (other.hasScRoleMoney()) {
+          mergeScRoleMoney(other.getScRoleMoney());
         }
-        if (other.hasScRoleAddGold()) {
-          mergeScRoleAddGold(other.getScRoleAddGold());
+        if (other.hasScRoleGold()) {
+          mergeScRoleGold(other.getScRoleGold());
         }
         if (other.hasRoleInfoSelectResponse()) {
           mergeRoleInfoSelectResponse(other.getRoleInfoSelectResponse());
+        }
+        if (other.hasScRolePoint()) {
+          mergeScRolePoint(other.getScRolePoint());
         }
         if (other.hasWarShowWarChapterResponse()) {
           mergeWarShowWarChapterResponse(other.getWarShowWarChapterResponse());
@@ -886,11 +871,8 @@ public final class ServerMessage {
         if (other.hasWarShowWarBuildResponse()) {
           mergeWarShowWarBuildResponse(other.getWarShowWarBuildResponse());
         }
-        if (other.hasWarMatchResponse()) {
-          mergeWarMatchResponse(other.getWarMatchResponse());
-        }
-        if (other.hasWarWinBuildResponse()) {
-          mergeWarWinBuildResponse(other.getWarWinBuildResponse());
+        if (other.hasWarMarchResponse()) {
+          mergeWarMarchResponse(other.getWarMarchResponse());
         }
         if (other.hasWarGetChapterAwardResponse()) {
           mergeWarGetChapterAwardResponse(other.getWarGetChapterAwardResponse());
@@ -1020,24 +1002,6 @@ public final class ServerMessage {
               break;
             }
             case 98: {
-              com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightGameOver.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightGameOver.newBuilder();
-              if (hasScFightGameOver()) {
-                subBuilder.mergeFrom(getScFightGameOver());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setScFightGameOver(subBuilder.buildPartial());
-              break;
-            }
-            case 106: {
-              com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightReadFrameResponse.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightReadFrameResponse.newBuilder();
-              if (hasFightReadFrameResponse()) {
-                subBuilder.mergeFrom(getFightReadFrameResponse());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setFightReadFrameResponse(subBuilder.buildPartial());
-              break;
-            }
-            case 114: {
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightKeyFrame.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightKeyFrame.newBuilder();
               if (hasScFightKeyFrame()) {
                 subBuilder.mergeFrom(getScFightKeyFrame());
@@ -1046,7 +1010,7 @@ public final class ServerMessage {
               setScFightKeyFrame(subBuilder.buildPartial());
               break;
             }
-            case 122: {
+            case 106: {
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGetGameAwardResponse.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGetGameAwardResponse.newBuilder();
               if (hasFightGetGameAwardResponse()) {
                 subBuilder.mergeFrom(getFightGetGameAwardResponse());
@@ -1055,7 +1019,7 @@ public final class ServerMessage {
               setFightGetGameAwardResponse(subBuilder.buildPartial());
               break;
             }
-            case 130: {
+            case 114: {
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownResponse.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightCountDownResponse.newBuilder();
               if (hasFightCountDownResponse()) {
                 subBuilder.mergeFrom(getFightCountDownResponse());
@@ -1064,7 +1028,7 @@ public final class ServerMessage {
               setFightCountDownResponse(subBuilder.buildPartial());
               break;
             }
-            case 138: {
+            case 122: {
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightCountDown.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightCountDown.newBuilder();
               if (hasScFightCountDown()) {
                 subBuilder.mergeFrom(getScFightCountDown());
@@ -1073,7 +1037,7 @@ public final class ServerMessage {
               setScFightCountDown(subBuilder.buildPartial());
               break;
             }
-            case 146: {
+            case 130: {
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageRoleResponse.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageRoleResponse.newBuilder();
               if (hasPillageRoleResponse()) {
                 subBuilder.mergeFrom(getPillageRoleResponse());
@@ -1082,7 +1046,7 @@ public final class ServerMessage {
               setPillageRoleResponse(subBuilder.buildPartial());
               break;
             }
-            case 154: {
+            case 138: {
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCancelResponse.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCancelResponse.newBuilder();
               if (hasPillageCancelResponse()) {
                 subBuilder.mergeFrom(getPillageCancelResponse());
@@ -1091,13 +1055,31 @@ public final class ServerMessage {
               setPillageCancelResponse(subBuilder.buildPartial());
               break;
             }
-            case 162: {
+            case 146: {
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageShowResponse.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageShowResponse.newBuilder();
               if (hasPillageShowResponse()) {
                 subBuilder.mergeFrom(getPillageShowResponse());
               }
               input.readMessage(subBuilder, extensionRegistry);
               setPillageShowResponse(subBuilder.buildPartial());
+              break;
+            }
+            case 154: {
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse.newBuilder();
+              if (hasPillageCompetitionNoticeResponse()) {
+                subBuilder.mergeFrom(getPillageCompetitionNoticeResponse());
+              }
+              input.readMessage(subBuilder, extensionRegistry);
+              setPillageCompetitionNoticeResponse(subBuilder.buildPartial());
+              break;
+            }
+            case 162: {
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillagePracticeResponse.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillagePracticeResponse.newBuilder();
+              if (hasPillagePracticeResponse()) {
+                subBuilder.mergeFrom(getPillagePracticeResponse());
+              }
+              input.readMessage(subBuilder, extensionRegistry);
+              setPillagePracticeResponse(subBuilder.buildPartial());
               break;
             }
             case 170: {
@@ -1155,12 +1137,12 @@ public final class ServerMessage {
               break;
             }
             case 218: {
-              com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse.newBuilder();
-              if (hasMarketShowMarketItemResponse()) {
-                subBuilder.mergeFrom(getMarketShowMarketItemResponse());
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse.newBuilder();
+              if (hasMarketShowResponse()) {
+                subBuilder.mergeFrom(getMarketShowResponse());
               }
               input.readMessage(subBuilder, extensionRegistry);
-              setMarketShowMarketItemResponse(subBuilder.buildPartial());
+              setMarketShowResponse(subBuilder.buildPartial());
               break;
             }
             case 226: {
@@ -1173,24 +1155,6 @@ public final class ServerMessage {
               break;
             }
             case 234: {
-              com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney.newBuilder();
-              if (hasScRoleAddMoney()) {
-                subBuilder.mergeFrom(getScRoleAddMoney());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setScRoleAddMoney(subBuilder.buildPartial());
-              break;
-            }
-            case 242: {
-              com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold.newBuilder();
-              if (hasScRoleAddGold()) {
-                subBuilder.mergeFrom(getScRoleAddGold());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setScRoleAddGold(subBuilder.buildPartial());
-              break;
-            }
-            case 250: {
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketArtificialRefreshResponse.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketArtificialRefreshResponse.newBuilder();
               if (hasMarketArtificialRefreshResponse()) {
                 subBuilder.mergeFrom(getMarketArtificialRefreshResponse());
@@ -1199,52 +1163,25 @@ public final class ServerMessage {
               setMarketArtificialRefreshResponse(subBuilder.buildPartial());
               break;
             }
+            case 242: {
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney.newBuilder();
+              if (hasScRoleMoney()) {
+                subBuilder.mergeFrom(getScRoleMoney());
+              }
+              input.readMessage(subBuilder, extensionRegistry);
+              setScRoleMoney(subBuilder.buildPartial());
+              break;
+            }
+            case 250: {
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold.newBuilder();
+              if (hasScRoleGold()) {
+                subBuilder.mergeFrom(getScRoleGold());
+              }
+              input.readMessage(subBuilder, extensionRegistry);
+              setScRoleGold(subBuilder.buildPartial());
+              break;
+            }
             case 258: {
-              com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarChapterResponse.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarChapterResponse.newBuilder();
-              if (hasWarShowWarChapterResponse()) {
-                subBuilder.mergeFrom(getWarShowWarChapterResponse());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setWarShowWarChapterResponse(subBuilder.buildPartial());
-              break;
-            }
-            case 266: {
-              com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarBuildResponse.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarBuildResponse.newBuilder();
-              if (hasWarShowWarBuildResponse()) {
-                subBuilder.mergeFrom(getWarShowWarBuildResponse());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setWarShowWarBuildResponse(subBuilder.buildPartial());
-              break;
-            }
-            case 274: {
-              com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMatchResponse.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMatchResponse.newBuilder();
-              if (hasWarMatchResponse()) {
-                subBuilder.mergeFrom(getWarMatchResponse());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setWarMatchResponse(subBuilder.buildPartial());
-              break;
-            }
-            case 282: {
-              com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarWinBuildResponse.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarWinBuildResponse.newBuilder();
-              if (hasWarWinBuildResponse()) {
-                subBuilder.mergeFrom(getWarWinBuildResponse());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setWarWinBuildResponse(subBuilder.buildPartial());
-              break;
-            }
-            case 290: {
-              com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarGetChapterAwardResponse.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarGetChapterAwardResponse.newBuilder();
-              if (hasWarGetChapterAwardResponse()) {
-                subBuilder.mergeFrom(getWarGetChapterAwardResponse());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setWarGetChapterAwardResponse(subBuilder.buildPartial());
-              break;
-            }
-            case 298: {
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.RoleInfoSelectResponse.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.RoleInfoSelectResponse.newBuilder();
               if (hasRoleInfoSelectResponse()) {
                 subBuilder.mergeFrom(getRoleInfoSelectResponse());
@@ -1253,13 +1190,49 @@ public final class ServerMessage {
               setRoleInfoSelectResponse(subBuilder.buildPartial());
               break;
             }
-            case 306: {
-              com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse.newBuilder();
-              if (hasPillageCompetitionNoticeResponse()) {
-                subBuilder.mergeFrom(getPillageCompetitionNoticeResponse());
+            case 266: {
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint.newBuilder();
+              if (hasScRolePoint()) {
+                subBuilder.mergeFrom(getScRolePoint());
               }
               input.readMessage(subBuilder, extensionRegistry);
-              setPillageCompetitionNoticeResponse(subBuilder.buildPartial());
+              setScRolePoint(subBuilder.buildPartial());
+              break;
+            }
+            case 274: {
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarChapterResponse.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarChapterResponse.newBuilder();
+              if (hasWarShowWarChapterResponse()) {
+                subBuilder.mergeFrom(getWarShowWarChapterResponse());
+              }
+              input.readMessage(subBuilder, extensionRegistry);
+              setWarShowWarChapterResponse(subBuilder.buildPartial());
+              break;
+            }
+            case 290: {
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarBuildResponse.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarShowWarBuildResponse.newBuilder();
+              if (hasWarShowWarBuildResponse()) {
+                subBuilder.mergeFrom(getWarShowWarBuildResponse());
+              }
+              input.readMessage(subBuilder, extensionRegistry);
+              setWarShowWarBuildResponse(subBuilder.buildPartial());
+              break;
+            }
+            case 298: {
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMarchResponse.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMarchResponse.newBuilder();
+              if (hasWarMarchResponse()) {
+                subBuilder.mergeFrom(getWarMarchResponse());
+              }
+              input.readMessage(subBuilder, extensionRegistry);
+              setWarMarchResponse(subBuilder.buildPartial());
+              break;
+            }
+            case 306: {
+              com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarGetChapterAwardResponse.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarGetChapterAwardResponse.newBuilder();
+              if (hasWarGetChapterAwardResponse()) {
+                subBuilder.mergeFrom(getWarGetChapterAwardResponse());
+              }
+              input.readMessage(subBuilder, extensionRegistry);
+              setWarGetChapterAwardResponse(subBuilder.buildPartial());
               break;
             }
           }
@@ -1674,81 +1647,7 @@ public final class ServerMessage {
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.SCFightGameOver scFightGameOver = 12;
-      public boolean hasScFightGameOver() {
-        return result.hasScFightGameOver();
-      }
-      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightGameOver getScFightGameOver() {
-        return result.getScFightGameOver();
-      }
-      public Builder setScFightGameOver(com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightGameOver value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        result.hasScFightGameOver = true;
-        result.scFightGameOver_ = value;
-        return this;
-      }
-      public Builder setScFightGameOver(com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightGameOver.Builder builderForValue) {
-        result.hasScFightGameOver = true;
-        result.scFightGameOver_ = builderForValue.build();
-        return this;
-      }
-      public Builder mergeScFightGameOver(com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightGameOver value) {
-        if (result.hasScFightGameOver() &&
-            result.scFightGameOver_ != com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightGameOver.getDefaultInstance()) {
-          result.scFightGameOver_ =
-            com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightGameOver.newBuilder(result.scFightGameOver_).mergeFrom(value).buildPartial();
-        } else {
-          result.scFightGameOver_ = value;
-        }
-        result.hasScFightGameOver = true;
-        return this;
-      }
-      public Builder clearScFightGameOver() {
-        result.hasScFightGameOver = false;
-        result.scFightGameOver_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightGameOver.getDefaultInstance();
-        return this;
-      }
-      
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightReadFrameResponse FightReadFrameResponse = 13;
-      public boolean hasFightReadFrameResponse() {
-        return result.hasFightReadFrameResponse();
-      }
-      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightReadFrameResponse getFightReadFrameResponse() {
-        return result.getFightReadFrameResponse();
-      }
-      public Builder setFightReadFrameResponse(com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightReadFrameResponse value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        result.hasFightReadFrameResponse = true;
-        result.fightReadFrameResponse_ = value;
-        return this;
-      }
-      public Builder setFightReadFrameResponse(com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightReadFrameResponse.Builder builderForValue) {
-        result.hasFightReadFrameResponse = true;
-        result.fightReadFrameResponse_ = builderForValue.build();
-        return this;
-      }
-      public Builder mergeFightReadFrameResponse(com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightReadFrameResponse value) {
-        if (result.hasFightReadFrameResponse() &&
-            result.fightReadFrameResponse_ != com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightReadFrameResponse.getDefaultInstance()) {
-          result.fightReadFrameResponse_ =
-            com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightReadFrameResponse.newBuilder(result.fightReadFrameResponse_).mergeFrom(value).buildPartial();
-        } else {
-          result.fightReadFrameResponse_ = value;
-        }
-        result.hasFightReadFrameResponse = true;
-        return this;
-      }
-      public Builder clearFightReadFrameResponse() {
-        result.hasFightReadFrameResponse = false;
-        result.fightReadFrameResponse_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightReadFrameResponse.getDefaultInstance();
-        return this;
-      }
-      
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.SCFightKeyFrame scFightKeyFrame = 14;
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.SCFightKeyFrame scFightKeyFrame = 12;
       public boolean hasScFightKeyFrame() {
         return result.hasScFightKeyFrame();
       }
@@ -1785,7 +1684,7 @@ public final class ServerMessage {
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightGetGameAwardResponse fightGetGameAwardResponse = 15;
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightGetGameAwardResponse fightGetGameAwardResponse = 13;
       public boolean hasFightGetGameAwardResponse() {
         return result.hasFightGetGameAwardResponse();
       }
@@ -1822,7 +1721,7 @@ public final class ServerMessage {
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightCountDownResponse fightCountDownResponse = 16;
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.FightCountDownResponse fightCountDownResponse = 14;
       public boolean hasFightCountDownResponse() {
         return result.hasFightCountDownResponse();
       }
@@ -1859,7 +1758,7 @@ public final class ServerMessage {
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.SCFightCountDown scFightCountDown = 17;
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.SCFightCountDown scFightCountDown = 15;
       public boolean hasScFightCountDown() {
         return result.hasScFightCountDown();
       }
@@ -1896,7 +1795,7 @@ public final class ServerMessage {
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.PillageRoleResponse pillageRoleResponse = 18;
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.PillageRoleResponse pillageRoleResponse = 16;
       public boolean hasPillageRoleResponse() {
         return result.hasPillageRoleResponse();
       }
@@ -1933,7 +1832,7 @@ public final class ServerMessage {
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.PillageCancelResponse pillageCancelResponse = 19;
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.PillageCancelResponse pillageCancelResponse = 17;
       public boolean hasPillageCancelResponse() {
         return result.hasPillageCancelResponse();
       }
@@ -1970,7 +1869,7 @@ public final class ServerMessage {
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.PillageShowResponse pillageShowResponse = 20;
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.PillageShowResponse pillageShowResponse = 18;
       public boolean hasPillageShowResponse() {
         return result.hasPillageShowResponse();
       }
@@ -2007,7 +1906,7 @@ public final class ServerMessage {
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.PillageCompetitionNoticeResponse pillageCompetitionNoticeResponse = 38;
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.PillageCompetitionNoticeResponse pillageCompetitionNoticeResponse = 19;
       public boolean hasPillageCompetitionNoticeResponse() {
         return result.hasPillageCompetitionNoticeResponse();
       }
@@ -2041,6 +1940,43 @@ public final class ServerMessage {
       public Builder clearPillageCompetitionNoticeResponse() {
         result.hasPillageCompetitionNoticeResponse = false;
         result.pillageCompetitionNoticeResponse_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse.getDefaultInstance();
+        return this;
+      }
+      
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.PillagePracticeResponse pillagePracticeResponse = 20;
+      public boolean hasPillagePracticeResponse() {
+        return result.hasPillagePracticeResponse();
+      }
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillagePracticeResponse getPillagePracticeResponse() {
+        return result.getPillagePracticeResponse();
+      }
+      public Builder setPillagePracticeResponse(com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillagePracticeResponse value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        result.hasPillagePracticeResponse = true;
+        result.pillagePracticeResponse_ = value;
+        return this;
+      }
+      public Builder setPillagePracticeResponse(com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillagePracticeResponse.Builder builderForValue) {
+        result.hasPillagePracticeResponse = true;
+        result.pillagePracticeResponse_ = builderForValue.build();
+        return this;
+      }
+      public Builder mergePillagePracticeResponse(com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillagePracticeResponse value) {
+        if (result.hasPillagePracticeResponse() &&
+            result.pillagePracticeResponse_ != com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillagePracticeResponse.getDefaultInstance()) {
+          result.pillagePracticeResponse_ =
+            com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillagePracticeResponse.newBuilder(result.pillagePracticeResponse_).mergeFrom(value).buildPartial();
+        } else {
+          result.pillagePracticeResponse_ = value;
+        }
+        result.hasPillagePracticeResponse = true;
+        return this;
+      }
+      public Builder clearPillagePracticeResponse() {
+        result.hasPillagePracticeResponse = false;
+        result.pillagePracticeResponse_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillagePracticeResponse.getDefaultInstance();
         return this;
       }
       
@@ -2266,40 +2202,40 @@ public final class ServerMessage {
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.MarketShowMarketItemResponse marketShowMarketItemResponse = 27;
-      public boolean hasMarketShowMarketItemResponse() {
-        return result.hasMarketShowMarketItemResponse();
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.MarketShowResponse marketShowResponse = 27;
+      public boolean hasMarketShowResponse() {
+        return result.hasMarketShowResponse();
       }
-      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse getMarketShowMarketItemResponse() {
-        return result.getMarketShowMarketItemResponse();
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse getMarketShowResponse() {
+        return result.getMarketShowResponse();
       }
-      public Builder setMarketShowMarketItemResponse(com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse value) {
+      public Builder setMarketShowResponse(com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse value) {
         if (value == null) {
           throw new NullPointerException();
         }
-        result.hasMarketShowMarketItemResponse = true;
-        result.marketShowMarketItemResponse_ = value;
+        result.hasMarketShowResponse = true;
+        result.marketShowResponse_ = value;
         return this;
       }
-      public Builder setMarketShowMarketItemResponse(com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse.Builder builderForValue) {
-        result.hasMarketShowMarketItemResponse = true;
-        result.marketShowMarketItemResponse_ = builderForValue.build();
+      public Builder setMarketShowResponse(com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse.Builder builderForValue) {
+        result.hasMarketShowResponse = true;
+        result.marketShowResponse_ = builderForValue.build();
         return this;
       }
-      public Builder mergeMarketShowMarketItemResponse(com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse value) {
-        if (result.hasMarketShowMarketItemResponse() &&
-            result.marketShowMarketItemResponse_ != com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse.getDefaultInstance()) {
-          result.marketShowMarketItemResponse_ =
-            com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse.newBuilder(result.marketShowMarketItemResponse_).mergeFrom(value).buildPartial();
+      public Builder mergeMarketShowResponse(com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse value) {
+        if (result.hasMarketShowResponse() &&
+            result.marketShowResponse_ != com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse.getDefaultInstance()) {
+          result.marketShowResponse_ =
+            com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse.newBuilder(result.marketShowResponse_).mergeFrom(value).buildPartial();
         } else {
-          result.marketShowMarketItemResponse_ = value;
+          result.marketShowResponse_ = value;
         }
-        result.hasMarketShowMarketItemResponse = true;
+        result.hasMarketShowResponse = true;
         return this;
       }
-      public Builder clearMarketShowMarketItemResponse() {
-        result.hasMarketShowMarketItemResponse = false;
-        result.marketShowMarketItemResponse_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse.getDefaultInstance();
+      public Builder clearMarketShowResponse() {
+        result.hasMarketShowResponse = false;
+        result.marketShowResponse_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse.getDefaultInstance();
         return this;
       }
       
@@ -2340,7 +2276,7 @@ public final class ServerMessage {
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.MarketArtificialRefreshResponse MarketArtificialRefreshResponse = 31;
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.MarketArtificialRefreshResponse MarketArtificialRefreshResponse = 29;
       public boolean hasMarketArtificialRefreshResponse() {
         return result.hasMarketArtificialRefreshResponse();
       }
@@ -2377,81 +2313,81 @@ public final class ServerMessage {
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.SCRoleAddMoney scRoleAddMoney = 29;
-      public boolean hasScRoleAddMoney() {
-        return result.hasScRoleAddMoney();
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.SCRoleMoney scRoleMoney = 30;
+      public boolean hasScRoleMoney() {
+        return result.hasScRoleMoney();
       }
-      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney getScRoleAddMoney() {
-        return result.getScRoleAddMoney();
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney getScRoleMoney() {
+        return result.getScRoleMoney();
       }
-      public Builder setScRoleAddMoney(com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney value) {
+      public Builder setScRoleMoney(com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney value) {
         if (value == null) {
           throw new NullPointerException();
         }
-        result.hasScRoleAddMoney = true;
-        result.scRoleAddMoney_ = value;
+        result.hasScRoleMoney = true;
+        result.scRoleMoney_ = value;
         return this;
       }
-      public Builder setScRoleAddMoney(com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney.Builder builderForValue) {
-        result.hasScRoleAddMoney = true;
-        result.scRoleAddMoney_ = builderForValue.build();
+      public Builder setScRoleMoney(com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney.Builder builderForValue) {
+        result.hasScRoleMoney = true;
+        result.scRoleMoney_ = builderForValue.build();
         return this;
       }
-      public Builder mergeScRoleAddMoney(com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney value) {
-        if (result.hasScRoleAddMoney() &&
-            result.scRoleAddMoney_ != com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney.getDefaultInstance()) {
-          result.scRoleAddMoney_ =
-            com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney.newBuilder(result.scRoleAddMoney_).mergeFrom(value).buildPartial();
+      public Builder mergeScRoleMoney(com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney value) {
+        if (result.hasScRoleMoney() &&
+            result.scRoleMoney_ != com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney.getDefaultInstance()) {
+          result.scRoleMoney_ =
+            com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney.newBuilder(result.scRoleMoney_).mergeFrom(value).buildPartial();
         } else {
-          result.scRoleAddMoney_ = value;
+          result.scRoleMoney_ = value;
         }
-        result.hasScRoleAddMoney = true;
+        result.hasScRoleMoney = true;
         return this;
       }
-      public Builder clearScRoleAddMoney() {
-        result.hasScRoleAddMoney = false;
-        result.scRoleAddMoney_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney.getDefaultInstance();
+      public Builder clearScRoleMoney() {
+        result.hasScRoleMoney = false;
+        result.scRoleMoney_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney.getDefaultInstance();
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.SCRoleAddGold scRoleAddGold = 30;
-      public boolean hasScRoleAddGold() {
-        return result.hasScRoleAddGold();
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.SCRoleGold scRoleGold = 31;
+      public boolean hasScRoleGold() {
+        return result.hasScRoleGold();
       }
-      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold getScRoleAddGold() {
-        return result.getScRoleAddGold();
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold getScRoleGold() {
+        return result.getScRoleGold();
       }
-      public Builder setScRoleAddGold(com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold value) {
+      public Builder setScRoleGold(com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold value) {
         if (value == null) {
           throw new NullPointerException();
         }
-        result.hasScRoleAddGold = true;
-        result.scRoleAddGold_ = value;
+        result.hasScRoleGold = true;
+        result.scRoleGold_ = value;
         return this;
       }
-      public Builder setScRoleAddGold(com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold.Builder builderForValue) {
-        result.hasScRoleAddGold = true;
-        result.scRoleAddGold_ = builderForValue.build();
+      public Builder setScRoleGold(com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold.Builder builderForValue) {
+        result.hasScRoleGold = true;
+        result.scRoleGold_ = builderForValue.build();
         return this;
       }
-      public Builder mergeScRoleAddGold(com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold value) {
-        if (result.hasScRoleAddGold() &&
-            result.scRoleAddGold_ != com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold.getDefaultInstance()) {
-          result.scRoleAddGold_ =
-            com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold.newBuilder(result.scRoleAddGold_).mergeFrom(value).buildPartial();
+      public Builder mergeScRoleGold(com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold value) {
+        if (result.hasScRoleGold() &&
+            result.scRoleGold_ != com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold.getDefaultInstance()) {
+          result.scRoleGold_ =
+            com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold.newBuilder(result.scRoleGold_).mergeFrom(value).buildPartial();
         } else {
-          result.scRoleAddGold_ = value;
+          result.scRoleGold_ = value;
         }
-        result.hasScRoleAddGold = true;
+        result.hasScRoleGold = true;
         return this;
       }
-      public Builder clearScRoleAddGold() {
-        result.hasScRoleAddGold = false;
-        result.scRoleAddGold_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold.getDefaultInstance();
+      public Builder clearScRoleGold() {
+        result.hasScRoleGold = false;
+        result.scRoleGold_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold.getDefaultInstance();
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.RoleInfoSelectResponse roleInfoSelectResponse = 37;
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.RoleInfoSelectResponse roleInfoSelectResponse = 32;
       public boolean hasRoleInfoSelectResponse() {
         return result.hasRoleInfoSelectResponse();
       }
@@ -2488,7 +2424,44 @@ public final class ServerMessage {
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.WarShowWarChapterResponse warShowWarChapterResponse = 32;
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.SCRolePoint scRolePoint = 33;
+      public boolean hasScRolePoint() {
+        return result.hasScRolePoint();
+      }
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint getScRolePoint() {
+        return result.getScRolePoint();
+      }
+      public Builder setScRolePoint(com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        result.hasScRolePoint = true;
+        result.scRolePoint_ = value;
+        return this;
+      }
+      public Builder setScRolePoint(com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint.Builder builderForValue) {
+        result.hasScRolePoint = true;
+        result.scRolePoint_ = builderForValue.build();
+        return this;
+      }
+      public Builder mergeScRolePoint(com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint value) {
+        if (result.hasScRolePoint() &&
+            result.scRolePoint_ != com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint.getDefaultInstance()) {
+          result.scRolePoint_ =
+            com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint.newBuilder(result.scRolePoint_).mergeFrom(value).buildPartial();
+        } else {
+          result.scRolePoint_ = value;
+        }
+        result.hasScRolePoint = true;
+        return this;
+      }
+      public Builder clearScRolePoint() {
+        result.hasScRolePoint = false;
+        result.scRolePoint_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint.getDefaultInstance();
+        return this;
+      }
+      
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.WarShowWarChapterResponse warShowWarChapterResponse = 34;
       public boolean hasWarShowWarChapterResponse() {
         return result.hasWarShowWarChapterResponse();
       }
@@ -2525,7 +2498,7 @@ public final class ServerMessage {
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.WarShowWarBuildResponse WarShowWarBuildResponse = 33;
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.WarShowWarBuildResponse WarShowWarBuildResponse = 36;
       public boolean hasWarShowWarBuildResponse() {
         return result.hasWarShowWarBuildResponse();
       }
@@ -2562,81 +2535,44 @@ public final class ServerMessage {
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.WarMatchResponse warMatchResponse = 34;
-      public boolean hasWarMatchResponse() {
-        return result.hasWarMatchResponse();
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.WarMarchResponse warMarchResponse = 37;
+      public boolean hasWarMarchResponse() {
+        return result.hasWarMarchResponse();
       }
-      public com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMatchResponse getWarMatchResponse() {
-        return result.getWarMatchResponse();
+      public com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMarchResponse getWarMarchResponse() {
+        return result.getWarMarchResponse();
       }
-      public Builder setWarMatchResponse(com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMatchResponse value) {
+      public Builder setWarMarchResponse(com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMarchResponse value) {
         if (value == null) {
           throw new NullPointerException();
         }
-        result.hasWarMatchResponse = true;
-        result.warMatchResponse_ = value;
+        result.hasWarMarchResponse = true;
+        result.warMarchResponse_ = value;
         return this;
       }
-      public Builder setWarMatchResponse(com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMatchResponse.Builder builderForValue) {
-        result.hasWarMatchResponse = true;
-        result.warMatchResponse_ = builderForValue.build();
+      public Builder setWarMarchResponse(com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMarchResponse.Builder builderForValue) {
+        result.hasWarMarchResponse = true;
+        result.warMarchResponse_ = builderForValue.build();
         return this;
       }
-      public Builder mergeWarMatchResponse(com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMatchResponse value) {
-        if (result.hasWarMatchResponse() &&
-            result.warMatchResponse_ != com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMatchResponse.getDefaultInstance()) {
-          result.warMatchResponse_ =
-            com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMatchResponse.newBuilder(result.warMatchResponse_).mergeFrom(value).buildPartial();
+      public Builder mergeWarMarchResponse(com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMarchResponse value) {
+        if (result.hasWarMarchResponse() &&
+            result.warMarchResponse_ != com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMarchResponse.getDefaultInstance()) {
+          result.warMarchResponse_ =
+            com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMarchResponse.newBuilder(result.warMarchResponse_).mergeFrom(value).buildPartial();
         } else {
-          result.warMatchResponse_ = value;
+          result.warMarchResponse_ = value;
         }
-        result.hasWarMatchResponse = true;
+        result.hasWarMarchResponse = true;
         return this;
       }
-      public Builder clearWarMatchResponse() {
-        result.hasWarMatchResponse = false;
-        result.warMatchResponse_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMatchResponse.getDefaultInstance();
+      public Builder clearWarMarchResponse() {
+        result.hasWarMarchResponse = false;
+        result.warMarchResponse_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarMarchResponse.getDefaultInstance();
         return this;
       }
       
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.WarWinBuildResponse warWinBuildResponse = 35;
-      public boolean hasWarWinBuildResponse() {
-        return result.hasWarWinBuildResponse();
-      }
-      public com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarWinBuildResponse getWarWinBuildResponse() {
-        return result.getWarWinBuildResponse();
-      }
-      public Builder setWarWinBuildResponse(com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarWinBuildResponse value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        result.hasWarWinBuildResponse = true;
-        result.warWinBuildResponse_ = value;
-        return this;
-      }
-      public Builder setWarWinBuildResponse(com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarWinBuildResponse.Builder builderForValue) {
-        result.hasWarWinBuildResponse = true;
-        result.warWinBuildResponse_ = builderForValue.build();
-        return this;
-      }
-      public Builder mergeWarWinBuildResponse(com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarWinBuildResponse value) {
-        if (result.hasWarWinBuildResponse() &&
-            result.warWinBuildResponse_ != com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarWinBuildResponse.getDefaultInstance()) {
-          result.warWinBuildResponse_ =
-            com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarWinBuildResponse.newBuilder(result.warWinBuildResponse_).mergeFrom(value).buildPartial();
-        } else {
-          result.warWinBuildResponse_ = value;
-        }
-        result.hasWarWinBuildResponse = true;
-        return this;
-      }
-      public Builder clearWarWinBuildResponse() {
-        result.hasWarWinBuildResponse = false;
-        result.warWinBuildResponse_ = com.randioo.owlofwar_server_simplify_protobuf.protocol.War.WarWinBuildResponse.getDefaultInstance();
-        return this;
-      }
-      
-      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.WarGetChapterAwardResponse warGetChapterAwardResponse = 36;
+      // optional .com.randioo.owlofwar_server_simplify_protobuf.protocol.WarGetChapterAwardResponse warGetChapterAwardResponse = 38;
       public boolean hasWarGetChapterAwardResponse() {
         return result.hasWarGetChapterAwardResponse();
       }
@@ -2703,7 +2639,7 @@ public final class ServerMessage {
       "war_server_simplify_protobuf.protocol\032\013L" +
       "ogin.proto\032\013Match.proto\032\013Fight.proto\032\rPi" +
       "llage.proto\032\nCard.proto\032\nPing.proto\032\014Mar" +
-      "ket.proto\032\nRole.proto\032\tWar.proto\"\210!\n\tSCM" +
+      "ket.proto\032\nRole.proto\032\tWar.proto\"\370\037\n\tSCM" +
       "essage\022t\n\031loginCheckAccountResponse\030\001 \001(" +
       "\0132Q.com.randioo.owlofwar_server_simplify" +
       "_protobuf.protocol.LoginCheckAccountResp" +
@@ -2734,82 +2670,79 @@ public final class ServerMessage {
       "obuf.protocol.FightGameActionResponse\022l\n" +
       "\025fightGameOverResponse\030\013 \001(\0132M.com.randi" +
       "oo.owlofwar_server_simplify_protobuf.pro" +
-      "tocol.FightGameOverResponse\022`\n\017scFightGa" +
-      "meOver\030\014 \001(\0132G.com.randioo.owlofwar_serv" +
-      "er_simplify_protobuf.protocol.SCFightGam" +
-      "eOver\022n\n\026FightReadFrameResponse\030\r \001(\0132N." +
-      "com.randioo.owlofwar_server_simplify_pro",
-      "tobuf.protocol.FightReadFrameResponse\022`\n" +
-      "\017scFightKeyFrame\030\016 \001(\0132G.com.randioo.owl" +
-      "ofwar_server_simplify_protobuf.protocol." +
-      "SCFightKeyFrame\022t\n\031fightGetGameAwardResp" +
-      "onse\030\017 \001(\0132Q.com.randioo.owlofwar_server" +
-      "_simplify_protobuf.protocol.FightGetGame" +
-      "AwardResponse\022n\n\026fightCountDownResponse\030" +
-      "\020 \001(\0132N.com.randioo.owlofwar_server_simp" +
-      "lify_protobuf.protocol.FightCountDownRes" +
-      "ponse\022b\n\020scFightCountDown\030\021 \001(\0132H.com.ra",
-      "ndioo.owlofwar_server_simplify_protobuf." +
-      "protocol.SCFightCountDown\022h\n\023pillageRole" +
-      "Response\030\022 \001(\0132K.com.randioo.owlofwar_se" +
-      "rver_simplify_protobuf.protocol.PillageR" +
-      "oleResponse\022l\n\025pillageCancelResponse\030\023 \001" +
-      "(\0132M.com.randioo.owlofwar_server_simplif" +
-      "y_protobuf.protocol.PillageCancelRespons" +
-      "e\022h\n\023pillageShowResponse\030\024 \001(\0132K.com.ran" +
-      "dioo.owlofwar_server_simplify_protobuf.p" +
-      "rotocol.PillageShowResponse\022\202\001\n pillageC",
-      "ompetitionNoticeResponse\030& \001(\0132X.com.ran" +
-      "dioo.owlofwar_server_simplify_protobuf.p" +
-      "rotocol.PillageCompetitionNoticeResponse" +
-      "\022r\n\030cardGetCardsInfoResponse\030\025 \001(\0132P.com" +
-      ".randioo.owlofwar_server_simplify_protob" +
-      "uf.protocol.CardGetCardsInfoResponse\022r\n\030" +
-      "cardEditCardListResponse\030\026 \001(\0132P.com.ran" +
-      "dioo.owlofwar_server_simplify_protobuf.p" +
-      "rotocol.CardEditCardListResponse\022b\n\020card" +
-      "LvUpResponse\030\027 \001(\0132H.com.randioo.owlofwa",
-      "r_server_simplify_protobuf.protocol.Card" +
-      "LvUpResponse\022|\n\035cardChooseUseCardListRes" +
-      "ponse\030\030 \001(\0132U.com.randioo.owlofwar_serve" +
-      "r_simplify_protobuf.protocol.CardChooseU" +
-      "seCardListResponse\022v\n\032cardChangeMainCard" +
-      "Response\030\031 \001(\0132R.com.randioo.owlofwar_se" +
-      "rver_simplify_protobuf.protocol.CardChan" +
-      "geMainCardResponse\022Z\n\014pingResponse\030\032 \001(\013" +
-      "2D.com.randioo.owlofwar_server_simplify_" +
-      "protobuf.protocol.PingResponse\022z\n\034market",
-      "ShowMarketItemResponse\030\033 \001(\0132T.com.randi" +
-      "oo.owlofwar_server_simplify_protobuf.pro" +
-      "tocol.MarketShowMarketItemResponse\022x\n\033ma" +
-      "rketBuyMarketItemResponse\030\034 \001(\0132S.com.ra" +
-      "ndioo.owlofwar_server_simplify_protobuf." +
-      "protocol.MarketBuyMarketItemResponse\022\200\001\n" +
-      "\037MarketArtificialRefreshResponse\030\037 \001(\0132W" +
-      ".com.randioo.owlofwar_server_simplify_pr" +
-      "otobuf.protocol.MarketArtificialRefreshR" +
-      "esponse\022^\n\016scRoleAddMoney\030\035 \001(\0132F.com.ra",
-      "ndioo.owlofwar_server_simplify_protobuf." +
-      "protocol.SCRoleAddMoney\022\\\n\rscRoleAddGold" +
-      "\030\036 \001(\0132E.com.randioo.owlofwar_server_sim" +
-      "plify_protobuf.protocol.SCRoleAddGold\022n\n" +
-      "\026roleInfoSelectResponse\030% \001(\0132N.com.rand" +
-      "ioo.owlofwar_server_simplify_protobuf.pr" +
-      "otocol.RoleInfoSelectResponse\022t\n\031warShow" +
-      "WarChapterResponse\030  \001(\0132Q.com.randioo.o" +
-      "wlofwar_server_simplify_protobuf.protoco" +
-      "l.WarShowWarChapterResponse\022p\n\027WarShowWa",
-      "rBuildResponse\030! \001(\0132O.com.randioo.owlof" +
-      "war_server_simplify_protobuf.protocol.Wa" +
-      "rShowWarBuildResponse\022b\n\020warMatchRespons" +
-      "e\030\" \001(\0132H.com.randioo.owlofwar_server_si" +
-      "mplify_protobuf.protocol.WarMatchRespons" +
-      "e\022h\n\023warWinBuildResponse\030# \001(\0132K.com.ran" +
-      "dioo.owlofwar_server_simplify_protobuf.p" +
-      "rotocol.WarWinBuildResponse\022v\n\032warGetCha" +
-      "pterAwardResponse\030$ \001(\0132R.com.randioo.ow" +
+      "tocol.FightGameOverResponse\022`\n\017scFightKe" +
+      "yFrame\030\014 \001(\0132G.com.randioo.owlofwar_serv" +
+      "er_simplify_protobuf.protocol.SCFightKey" +
+      "Frame\022t\n\031fightGetGameAwardResponse\030\r \001(\013" +
+      "2Q.com.randioo.owlofwar_server_simplify_",
+      "protobuf.protocol.FightGetGameAwardRespo" +
+      "nse\022n\n\026fightCountDownResponse\030\016 \001(\0132N.co" +
+      "m.randioo.owlofwar_server_simplify_proto" +
+      "buf.protocol.FightCountDownResponse\022b\n\020s" +
+      "cFightCountDown\030\017 \001(\0132H.com.randioo.owlo" +
+      "fwar_server_simplify_protobuf.protocol.S" +
+      "CFightCountDown\022h\n\023pillageRoleResponse\030\020" +
+      " \001(\0132K.com.randioo.owlofwar_server_simpl" +
+      "ify_protobuf.protocol.PillageRoleRespons" +
+      "e\022l\n\025pillageCancelResponse\030\021 \001(\0132M.com.r",
+      "andioo.owlofwar_server_simplify_protobuf" +
+      ".protocol.PillageCancelResponse\022h\n\023pilla" +
+      "geShowResponse\030\022 \001(\0132K.com.randioo.owlof" +
+      "war_server_simplify_protobuf.protocol.Pi" +
+      "llageShowResponse\022\202\001\n pillageCompetition" +
+      "NoticeResponse\030\023 \001(\0132X.com.randioo.owlof" +
+      "war_server_simplify_protobuf.protocol.Pi" +
+      "llageCompetitionNoticeResponse\022p\n\027pillag" +
+      "ePracticeResponse\030\024 \001(\0132O.com.randioo.ow" +
       "lofwar_server_simplify_protobuf.protocol",
-      ".WarGetChapterAwardResponse"
+      ".PillagePracticeResponse\022r\n\030cardGetCards" +
+      "InfoResponse\030\025 \001(\0132P.com.randioo.owlofwa" +
+      "r_server_simplify_protobuf.protocol.Card" +
+      "GetCardsInfoResponse\022r\n\030cardEditCardList" +
+      "Response\030\026 \001(\0132P.com.randioo.owlofwar_se" +
+      "rver_simplify_protobuf.protocol.CardEdit" +
+      "CardListResponse\022b\n\020cardLvUpResponse\030\027 \001" +
+      "(\0132H.com.randioo.owlofwar_server_simplif" +
+      "y_protobuf.protocol.CardLvUpResponse\022|\n\035" +
+      "cardChooseUseCardListResponse\030\030 \001(\0132U.co",
+      "m.randioo.owlofwar_server_simplify_proto" +
+      "buf.protocol.CardChooseUseCardListRespon" +
+      "se\022v\n\032cardChangeMainCardResponse\030\031 \001(\0132R" +
+      ".com.randioo.owlofwar_server_simplify_pr" +
+      "otobuf.protocol.CardChangeMainCardRespon" +
+      "se\022Z\n\014pingResponse\030\032 \001(\0132D.com.randioo.o" +
+      "wlofwar_server_simplify_protobuf.protoco" +
+      "l.PingResponse\022f\n\022marketShowResponse\030\033 \001" +
+      "(\0132J.com.randioo.owlofwar_server_simplif" +
+      "y_protobuf.protocol.MarketShowResponse\022x",
+      "\n\033marketBuyMarketItemResponse\030\034 \001(\0132S.co" +
+      "m.randioo.owlofwar_server_simplify_proto" +
+      "buf.protocol.MarketBuyMarketItemResponse" +
+      "\022\200\001\n\037MarketArtificialRefreshResponse\030\035 \001" +
+      "(\0132W.com.randioo.owlofwar_server_simplif" +
+      "y_protobuf.protocol.MarketArtificialRefr" +
+      "eshResponse\022X\n\013scRoleMoney\030\036 \001(\0132C.com.r" +
+      "andioo.owlofwar_server_simplify_protobuf" +
+      ".protocol.SCRoleMoney\022V\n\nscRoleGold\030\037 \001(" +
+      "\0132B.com.randioo.owlofwar_server_simplify",
+      "_protobuf.protocol.SCRoleGold\022n\n\026roleInf" +
+      "oSelectResponse\030  \001(\0132N.com.randioo.owlo" +
+      "fwar_server_simplify_protobuf.protocol.R" +
+      "oleInfoSelectResponse\022X\n\013scRolePoint\030! \001" +
+      "(\0132C.com.randioo.owlofwar_server_simplif" +
+      "y_protobuf.protocol.SCRolePoint\022t\n\031warSh" +
+      "owWarChapterResponse\030\" \001(\0132Q.com.randioo" +
+      ".owlofwar_server_simplify_protobuf.proto" +
+      "col.WarShowWarChapterResponse\022p\n\027WarShow" +
+      "WarBuildResponse\030$ \001(\0132O.com.randioo.owl",
+      "ofwar_server_simplify_protobuf.protocol." +
+      "WarShowWarBuildResponse\022b\n\020warMarchRespo" +
+      "nse\030% \001(\0132H.com.randioo.owlofwar_server_" +
+      "simplify_protobuf.protocol.WarMarchRespo" +
+      "nse\022v\n\032warGetChapterAwardResponse\030& \001(\0132" +
+      "R.com.randioo.owlofwar_server_simplify_p" +
+      "rotobuf.protocol.WarGetChapterAwardRespo" +
+      "nse"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -2821,7 +2754,7 @@ public final class ServerMessage {
           internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCMessage_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_SCMessage_descriptor,
-              new java.lang.String[] { "LoginCheckAccountResponse", "LoginCreateRoleResponse", "LoginGetRoleDataResponse", "ScMatchComplete", "ScMatchCancel", "FightClientReadyResponse", "ScFightLoadResource", "FightLoadResourceCompleteResponse", "ScFightStartGame", "FightGameActionResponse", "FightGameOverResponse", "ScFightGameOver", "FightReadFrameResponse", "ScFightKeyFrame", "FightGetGameAwardResponse", "FightCountDownResponse", "ScFightCountDown", "PillageRoleResponse", "PillageCancelResponse", "PillageShowResponse", "PillageCompetitionNoticeResponse", "CardGetCardsInfoResponse", "CardEditCardListResponse", "CardLvUpResponse", "CardChooseUseCardListResponse", "CardChangeMainCardResponse", "PingResponse", "MarketShowMarketItemResponse", "MarketBuyMarketItemResponse", "MarketArtificialRefreshResponse", "ScRoleAddMoney", "ScRoleAddGold", "RoleInfoSelectResponse", "WarShowWarChapterResponse", "WarShowWarBuildResponse", "WarMatchResponse", "WarWinBuildResponse", "WarGetChapterAwardResponse", },
+              new java.lang.String[] { "LoginCheckAccountResponse", "LoginCreateRoleResponse", "LoginGetRoleDataResponse", "ScMatchComplete", "ScMatchCancel", "FightClientReadyResponse", "ScFightLoadResource", "FightLoadResourceCompleteResponse", "ScFightStartGame", "FightGameActionResponse", "FightGameOverResponse", "ScFightKeyFrame", "FightGetGameAwardResponse", "FightCountDownResponse", "ScFightCountDown", "PillageRoleResponse", "PillageCancelResponse", "PillageShowResponse", "PillageCompetitionNoticeResponse", "PillagePracticeResponse", "CardGetCardsInfoResponse", "CardEditCardListResponse", "CardLvUpResponse", "CardChooseUseCardListResponse", "CardChangeMainCardResponse", "PingResponse", "MarketShowResponse", "MarketBuyMarketItemResponse", "MarketArtificialRefreshResponse", "ScRoleMoney", "ScRoleGold", "RoleInfoSelectResponse", "ScRolePoint", "WarShowWarChapterResponse", "WarShowWarBuildResponse", "WarMarchResponse", "WarGetChapterAwardResponse", },
               com.randioo.owlofwar_server_simplify_protobuf.protocol.ServerMessage.SCMessage.class,
               com.randioo.owlofwar_server_simplify_protobuf.protocol.ServerMessage.SCMessage.Builder.class);
           return null;

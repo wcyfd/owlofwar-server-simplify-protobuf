@@ -45,8 +45,24 @@ public class MailCardListFormatter {
 		}
 		StringBuilder sb = new StringBuilder();
 		for (MailCard card : result) {
-			sb.append(card.getCardId()).append(",").append(card.getLv()).append(";");
+			sb.append(card.getCardId()).append(",").append(card.getLv()).append(",");
 		}
 		return sb.toString();
+	}
+	
+	/**
+	 * 随机卡牌顺序
+	 * @param mailCardList
+	 * @return
+	 */
+	public static List<MailCard> randomMailCardList(MailCardList mailCardList){
+		List<MailCard> list = new ArrayList<>(mailCardList.getList().size());
+		List<MailCard> temp = new ArrayList<>(mailCardList.getList());
+		while(temp.size()!=0){
+			int index = RandomUtils.getRandomNum(temp.size());
+			list.add(temp.remove(index));
+		}
+		
+		return list;
 	}
 }

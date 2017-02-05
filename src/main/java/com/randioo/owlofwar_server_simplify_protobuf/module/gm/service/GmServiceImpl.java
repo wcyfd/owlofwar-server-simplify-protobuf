@@ -93,6 +93,7 @@ public class GmServiceImpl extends BaseService implements GmService {
 			
 		};
 		
+		//命令关闭信号
 		try {
 			System.out.println(Platform.getOS());
 			if (Platform.getOS() == OS.WIN)

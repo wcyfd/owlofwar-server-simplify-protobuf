@@ -5,6 +5,10 @@ import java.nio.charset.Charset;
 
 import org.apache.mina.filter.codec.ProtocolCodecFilter;
 
+import com.randioo.owlofwar_server_simplify_protobuf.module.login.service.LoginService;
+import com.randioo.owlofwar_server_simplify_protobuf.protocol.ClientMessage.CSMessage;
+import com.randioo.owlofwar_server_simplify_protobuf.protocol.Login.LoginCreateRoleRequest;
+import com.randioo.owlofwar_server_simplify_protobuf.utils.JSInvoker;
 import com.randioo.owlofwar_server_simplify_protobuf.xmlreader.ReadXml;
 import com.randioo.randioo_server_base.module.ServiceManager;
 import com.randioo.randioo_server_base.net.ServerConfig;
@@ -49,6 +53,7 @@ public class OwlofwarSimplifyProtobufApp {
 				new ProtocolCodecFilter(new ServerMessageCodecFactory(Charset.forName(ServerConfig.getCharSet()))),
 				new ServerHandler(), new InetSocketAddress(port));
 		systemManager.open();
+		
 	}
 
 }

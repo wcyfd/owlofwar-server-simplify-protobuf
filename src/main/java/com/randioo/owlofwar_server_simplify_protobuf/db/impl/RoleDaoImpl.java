@@ -26,11 +26,11 @@ public class RoleDaoImpl extends DataAccess implements RoleDao {
 	@Override
 	public int insertRole(Role role, Connection conn) {
 		int id = 0;
-		final String sql = "insert into role(id,account,name,money,gold,food,useCardsId,listStr,currentChapterId)"
-				+ "values(?,?,?,?,?,?,?,?,?)";
+		final String sql = "insert into role(id,account,name,money,gold,food,useCardsId,listStr,point,currentChapterId)"
+				+ "values(?,?,?,?,?,?,?,?,?,?)";
 		try {
 			id = super.insertNotCloseConn(sql, new IntegerConverter(), conn, null, role.getAccount(), role.getName(),
-					role.getMoney(), role.getGold(), role.getFood(), role.getUseCardsId(), role.getListStr(),role.getCurrentChapterId());
+					role.getMoney(), role.getGold(), role.getFood(), role.getUseCardsId(), role.getListStr(),role.getPoint(),role.getCurrentChapterId());
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

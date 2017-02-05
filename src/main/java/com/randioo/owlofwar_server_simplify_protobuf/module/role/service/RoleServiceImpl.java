@@ -2,20 +2,18 @@ package com.randioo.owlofwar_server_simplify_protobuf.module.role.service;
 
 
 
-import java.util.Arrays;
 import java.util.List;
 
 import org.apache.mina.core.session.IoSession;
 
 import com.google.protobuf.GeneratedMessage;
-import com.randioo.owlofwar_server_simplify_protobuf.db.dao.RoleDao;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.bo.Role;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.RoleInfoType;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.RoleInfoSelectResponse;
-import com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddGold;
-import com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleAddMoney;
+import com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleGold;
+import com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRoleMoney;
+import com.randioo.owlofwar_server_simplify_protobuf.protocol.Role.SCRolePoint;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.ServerMessage.SCMessage;
-import com.randioo.randioo_server_base.cache.RoleCache;
 import com.randioo.randioo_server_base.cache.SessionCache;
 import com.randioo.randioo_server_base.module.BaseService;
 
@@ -158,7 +156,7 @@ public class RoleServiceImpl extends BaseService implements RoleService {
 		IoSession ioSession = SessionCache.getSessionById(role.getRoleId());		
 		
 		if (ioSession != null) {
-			ioSession.write(SCMessage.newBuilder().setScRoleAddMoney(SCRoleAddMoney.newBuilder().setAddValue(value)).build());
+			ioSession.write(SCMessage.newBuilder().setScRoleMoney(SCRoleMoney.newBuilder().setMoney(total)).build());
 		}
 	}
 
@@ -177,7 +175,7 @@ public class RoleServiceImpl extends BaseService implements RoleService {
 		role.setGold(total);
 		IoSession ioSession = SessionCache.getSessionById(role.getRoleId());
 		if (ioSession != null) {
-			ioSession.write(SCMessage.newBuilder().setScRoleAddGold(SCRoleAddGold.newBuilder().setAddValue(value))
+			ioSession.write(SCMessage.newBuilder().setScRoleGold(SCRoleGold.newBuilder().setGold(total))
 					.build());
 		}
 	}
@@ -194,7 +192,17 @@ public class RoleServiceImpl extends BaseService implements RoleService {
 		}
 		return SCMessage.newBuilder().setRoleInfoSelectResponse(response).build();
 	}
-//
+
+	@Override
+	public void addPoint(Role role, int addValue) {
+		role.setPoint(role.getPoint() + addValue);
+		IoSession ioSession = SessionCache.getSessionById(role.getRoleId());
+		if (ioSession != null) {
+			ioSession.write(
+					SCMessage.newBuilder().setScRolePoint(SCRolePoint.newBuilder().setPoint(role.getPoint())).build());
+		}
+	}
+	//
 //	private boolean checkCapacity(Role role, int total, byte resType) {
 //		Income income = role.getIncome();
 //		int lv = income.getBuildLvMap().get(IncomeConstant.BUILD_TYPE_STORE);

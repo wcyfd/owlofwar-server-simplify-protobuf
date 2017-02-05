@@ -13,9 +13,9 @@ import com.randioo.owlofwar_server_simplify_protobuf.cache.file.ExtraCardConfigC
 import com.randioo.owlofwar_server_simplify_protobuf.cache.file.MapsConfigCache;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.bo.Role;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.file.CardConfig;
+import com.randioo.owlofwar_server_simplify_protobuf.entity.file.ExtraCardConfig;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.file.MapsConfig;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.file.MapsConfig.CardType;
-import com.randioo.owlofwar_server_simplify_protobuf.entity.po.ExtraCardConfig;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.FightEventListener;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.OwlofwarGame;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.OwlofwarGameInfo;

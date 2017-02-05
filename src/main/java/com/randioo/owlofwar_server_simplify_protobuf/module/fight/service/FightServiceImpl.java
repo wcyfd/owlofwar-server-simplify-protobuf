@@ -21,10 +21,13 @@ import com.randioo.owlofwar_server_simplify_protobuf.entity.po.OwlofwarGameInfo;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.Video;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.VideoManager;
 import com.randioo.owlofwar_server_simplify_protobuf.formatter.MailCardListFormatter;
+import com.randioo.owlofwar_server_simplify_protobuf.module.fight.FightConstant.GameFightType;
+import com.randioo.owlofwar_server_simplify_protobuf.module.role.service.RoleService;
 import com.randioo.owlofwar_server_simplify_protobuf.module.war.service.WarService;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.FightCard;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.FightType;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.Frame;
+import com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResult;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResultAwardData;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.GameResultData;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.RoleResourceInfo;
@@ -34,13 +37,13 @@ import com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGameAct
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGameOverResponse;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightGetGameAwardResponse;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightLoadResourceCompleteResponse;
-import com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.FightReadFrameResponse;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightCountDown;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightKeyFrame;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightLoadResource;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Fight.SCFightStartGame;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Game.GameAction;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.ServerMessage.SCMessage;
+import com.randioo.owlofwar_server_simplify_protobuf.utils.JSInvoker;
 import com.randioo.randioo_server_base.cache.SessionCache;
 import com.randioo.randioo_server_base.module.BaseService;
 import com.randioo.randioo_server_base.utils.game.game_type.GameBase;
@@ -69,6 +72,16 @@ public class FightServiceImpl extends BaseService implements FightService {
 
 	public void setWarService(WarService warService) {
 		this.warService = warService;
+	}
+	
+	private RoleService roleService;
+	public void setRoleService(RoleService roleService) {
+		this.roleService = roleService;
+	}
+	
+	private JSInvoker jsInvoker;
+	public void setJsInvoker(JSInvoker jsInvoker) {
+		this.jsInvoker = jsInvoker;
 	}
 
 	@Override
@@ -234,11 +247,11 @@ public class FightServiceImpl extends BaseService implements FightService {
 	@Override
 	public void loadResource(OwlofwarGame game) {
 		List<Integer> roleIdList = game.getRolePositionList();
-		Map<Integer, String> cardListStrMap = new HashMap<>();
+		Map<Integer, List<MailCard>> randomCardListMap = new HashMap<>();
 		Map<Integer, MailCardList> mailCardListMap = new HashMap<>();
 		for (Role role : game.getRoleMap().values()) {
 			MailCardList mailCardList = this.getUseCardList(role);
-			cardListStrMap.put(role.getRoleId(), MailCardListFormatter.formatRandomMaiLCardList(mailCardList));
+			randomCardListMap.put(role.getRoleId(),MailCardListFormatter.randomMailCardList(mailCardList));
 			mailCardListMap.put(role.getRoleId(), mailCardList);
 		}
 		for (Integer roleId : roleIdList) {
@@ -250,13 +263,28 @@ public class FightServiceImpl extends BaseService implements FightService {
 				}
 
 				Role role = game.getRoleMap().get(roleIdList.get(i));
-				RoleResourceInfo.Builder roleResourceInfoBuilder = RoleResourceInfo.newBuilder()
-						.setName(role.getName()).setFightPoint(0).setCorpName("").setMainLv(1).setPlayerId(i + 1)
-						.setCampId(i + 1);
+				
+				RoleResourceInfo.Builder roleResourceInfoBuilder = RoleResourceInfo.newBuilder().setName(role.getName())
+						.setFightPoint(0).setCorpName("").setMainLv(1).setPlayerId(i + 1).setCampId(i + 1);
+				OwlofwarGameInfo owlofwarGameInfo = game.getRoleGameInfoMap().get(role.getRoleId());
+				//注入战斗类型,没有则不注入
+				if (owlofwarGameInfo != null) {
+					FightEventListener listener = owlofwarGameInfo.getListener();
+					if (listener != null) {
+						GameFightType gameFightType = listener.getReturnType(role);
+						if(gameFightType == GameFightType.PILLAGE){
+							roleResourceInfoBuilder.setFightType(FightType.PILLAGE);
+						}else if(gameFightType == GameFightType.WAR){
+							roleResourceInfoBuilder.setFightType(FightType.WAR);
+						}else if(gameFightType == GameFightType.TEST){
+							roleResourceInfoBuilder.setFightType(FightType.TEST);
+						}
+					}
+				}
 				MailCard mainCard = mailCardListMap.get(roleIdList.get(i)).getMainCard();
 				roleResourceInfoBuilder.setGeneralCard(FightCard.newBuilder().setCardId(mainCard.getCardId())
 						.setLv(mainCard.getLv()));
-				List<MailCard> list = mailCardListMap.get(roleIdList.get(i)).getList();
+				List<MailCard> list = randomCardListMap.get(roleIdList.get(i));
 				for (int index = 0; index < list.size(); index++) {
 					MailCard mailCard = list.get(index);
 					roleResourceInfoBuilder.addHandCards(FightCard.newBuilder().setCardId(mailCard.getCardId())
@@ -629,65 +657,39 @@ public class FightServiceImpl extends BaseService implements FightService {
 	// });
 	// }
 
-	@Override
-	public GeneratedMessage readFrames(Role role) {
-		OwlofwarGame game = role.getOwlofwarGame();
-		List<Frame> allFrames = game.getVideo().getFrames();
 
-		FightReadFrameResponse.Builder builder = FightReadFrameResponse.newBuilder();
-		for (Frame frame : allFrames) {
-			builder.addFrames(frame);
-		}
-		return SCMessage.newBuilder().setFightReadFrameResponse(builder).build();
-	}
 
 	@Override
 	public void receiveGameEnd(Role role, IoSession session) {
-		session.write(SCMessage.newBuilder().setFightGameOverResponse(FightGameOverResponse.newBuilder().setAward(""))
+		session.write(SCMessage.newBuilder().setFightGameOverResponse(FightGameOverResponse.newBuilder())
 				.build());
 		OwlofwarGame game = role.getOwlofwarGame();
+		role.setGetAward(true);
 		gameOver(game);
-
 		// this.sendEnd(game, role, result, score1, score2);
 	}
 
 	@Override
 	public GeneratedMessage getGameAward(Role role, GameResultData result) {
-		// Video video = VideoManager.getVideoById(gameId);
-		// if (video != null) {
-		// SCFightLoadResourceResponse info =
-		// video.getRoleResourceInfoMap().get(role.getRoleId());
-		// int index = info.getIndex();
-		// //获得另一个玩家的信息
-		// RoleResourceInfo roleResourceInfo = null;
-		// for(int i = 0;i<info.getRoleResourceInfoList().size();i++){
-		// if(index!=i){
-		// roleResourceInfo = info.getRoleResourceInfo(i);
-		// break;
-		// }
-		// }
-		//
-		// int palaceLv = roleResourceInfo.getPalaceLv();
-		// }
-		int point = 0;
 		GameResultAwardData.Builder gameResultAwardDataBuilder = GameResultAwardData.newBuilder();
-		if (result.getFightType() == FightType.PILLAGE) {
-			switch (result.getGameResult()) {
-			case WIN:
-				point = 20;
-				break;
-			case LOSS:
-				point = -20;
-				break;
-			case DOGFALL:
-				point = 0;
-				break;
-			default:
-				break;
-			}
+		//如果已经领过奖励,则不能重复
+		if(!role.isGetAward())
+			return SCMessage.newBuilder()
+					.setFightGetGameAwardResponse(
+							FightGetGameAwardResponse.newBuilder().setGameResultAwardData(gameResultAwardDataBuilder))
+					.build();
+		
+		role.setGetAward(false);
+		FightType fightType = result.getFightType();
+
+		if (fightType == FightType.PILLAGE) {
+			int point = this.getPillagePoint(result.getGameResult());
+			roleService.addPoint(role, point);
 			gameResultAwardDataBuilder.setPoint(point);
-		}else{
+		}else if(fightType==FightType.WAR){
 			warService.refreshWarBuild(role, result, gameResultAwardDataBuilder);
+		}else if(fightType == FightType.TEST){
+			
 		}
 
 		return SCMessage
@@ -696,7 +698,11 @@ public class FightServiceImpl extends BaseService implements FightService {
 						FightGetGameAwardResponse.newBuilder().setGameResultAwardData(gameResultAwardDataBuilder))
 				.build();
 	}
-
+	
+	private int getPillagePoint(GameResult gameResult){
+		return (int)(double)jsInvoker.invoke("getPillagePoint", gameResult.getNumber());
+	}
+	
 	private void gameOver(OwlofwarGame game) {
 		if (game == null)
 			return;

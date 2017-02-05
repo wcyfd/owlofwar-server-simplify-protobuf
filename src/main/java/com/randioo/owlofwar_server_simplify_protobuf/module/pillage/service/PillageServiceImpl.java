@@ -18,9 +18,11 @@ import com.randioo.owlofwar_server_simplify_protobuf.entity.po.FightEventListene
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.FightEventListenerAdapter;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.OwlofwarGame;
 import com.randioo.owlofwar_server_simplify_protobuf.module.card.service.CardService;
+import com.randioo.owlofwar_server_simplify_protobuf.module.fight.FightConstant.GameFightType;
 import com.randioo.owlofwar_server_simplify_protobuf.module.match.service.MatchService;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCancelResponse;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageCompetitionNoticeResponse;
+import com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillagePracticeResponse;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageRoleResponse;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Pillage.PillageShowResponse;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.ServerMessage.SCMessage;
@@ -119,12 +121,43 @@ public class PillageServiceImpl extends BaseService implements PillageService {
 			public int getAI() {
 				return this.getAIMapIdByPoint();
 			}
+			
+			@Override
+			public GameFightType getReturnType(Role role) {
+				// TODO Auto-generated method stub
+				return GameFightType.PILLAGE;
+			}
 
 		};
 
 		// RoomCache.addRoom(role, isAI, listener);
 		matchService.matchRole(session, role, isAI, listener);
 
+	}
+	
+	@Override
+	public void practice(Role role, IoSession session) {
+		// TODO Auto-generated method stub
+		role.setOwlofwarGame(null);
+		session.write(SCMessage.newBuilder()
+				.setPillagePracticeResponse(PillagePracticeResponse.newBuilder()).build());
+
+		FightEventListener listener = new FightEventListenerAdapter(role) {
+
+			@Override
+			public int getAI() {
+				return this.getAIMapIdByPoint();
+			}
+			
+			@Override
+			public GameFightType getReturnType(Role role) {
+				// TODO Auto-generated method stub
+				return GameFightType.TEST;
+			}
+
+		};
+
+		matchService.matchRole(session, role, true, listener);
 	}
 
 	@Override
@@ -178,6 +211,12 @@ public class PillageServiceImpl extends BaseService implements PillageService {
 					@Override
 					public int getAI() {
 						return this.getAIMapIdByPoint();
+					}
+					
+					@Override
+					public GameFightType getReturnType(Role role) {
+						// TODO Auto-generated method stub
+						return GameFightType.PILLAGE;
 					}
 				});
 			}

@@ -2,12 +2,12 @@ package com.randioo.owlofwar_server_simplify_protobuf.protocol;
 
 import "Entity.proto";
 
-message SCRoleAddMoney{
-	optional int32 addValue = 1;
+message SCRoleMoney{
+	optional int32 money = 1;
 }
 
-message SCRoleAddGold{
-	optional int32 addValue = 1;
+message SCRoleGold{
+	optional int32 gold = 1;
 }
 
 message RoleInfoSelectRequest{
@@ -17,4 +17,8 @@ message RoleInfoSelectRequest{
 message RoleInfoSelectResponse{
 	repeated RoleInfoType roleInfoType = 1;
 	optional int32 money = 2;
+}
+
+message SCRolePoint{
+	optional int32 point = 1;
 }

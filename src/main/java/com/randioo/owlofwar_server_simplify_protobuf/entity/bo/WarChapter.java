@@ -1,6 +1,8 @@
 package com.randioo.owlofwar_server_simplify_protobuf.entity.bo;
 
-public class WarChapter {
+import com.randioo.randioo_server_base.utils.db.Saveable;
+
+public class WarChapter implements Saveable {
 	/** 玩家id */
 	private int roleId;
 	/** 章节id */
@@ -29,7 +31,27 @@ public class WarChapter {
 	}
 
 	public void setAward(int award) {
+		setChange(true);
 		this.award = award;
+	}
+
+	private boolean change;
+	@Override
+	public void setChange(boolean change) {
+		// TODO Auto-generated method stub
+		this.change = change;
+	}
+
+	@Override
+	public boolean isChange() {
+		// TODO Auto-generated method stub
+		return change;
+	}
+
+	@Override
+	public boolean checkChange() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }

@@ -9,7 +9,7 @@ import "Market.proto";
 import "War.proto";
 import "Role.proto";
 
-//30
+//29
 message CSMessage{
 	optional int32 type = 1 [default = 0];
 	optional LoginCheckAccountRequest loginCheckAccountRequest=2;
@@ -20,37 +20,37 @@ message CSMessage{
 	optional FightLoadResourceCompleteRequest fightLoadResourceCompleteRequest=6;
 	optional FightGameActionRequest fightGameActionRequest = 7;
 	optional FightGameOverRequest fightGameOverRequest = 8;
-	optional FightReadFrameRequest fightReadFrameRequest = 9;
-	optional FightGetGameAwardRequest fightGetGameAwardRequest = 10;
-	optional FightCountDownRequest fightCountDownRequest = 11;
+	optional FightGetGameAwardRequest fightGetGameAwardRequest = 9;
+	optional FightCountDownRequest fightCountDownRequest = 10;
 
-	optional PillageRoleRequest pillageRoleRequest=12;
-	optional PillageCancelRequest pillageCancelRequest =13;
-	optional PillageShowRequest pillageShowRequest=14;
-	optional PillageCompetitionNoticeRequest pillageCompetitionNoticeRequest = 30;
+	optional PillageRoleRequest pillageRoleRequest=11;
+	optional PillageCancelRequest pillageCancelRequest =12;
+	optional PillageShowRequest pillageShowRequest=13;
+	optional PillageCompetitionNoticeRequest pillageCompetitionNoticeRequest = 14;
+	optional PillagePracticeRequest pillagePracticeRequest = 15;
 
-	optional CardGetCardsInfoRequest cardGetCardsInfoRequest = 15;
-	optional CardEditCardListRequest cardEditCardListRequest = 16;
-	optional CardLvUpRequest cardLvUpRequest = 17;
-	optional CardChooseUseCardListRequest cardChooseUseCardListRequest = 18;
-	optional CardChangeMainCardRequest cardChangeMainCardRequest = 19;
+	optional CardGetCardsInfoRequest cardGetCardsInfoRequest = 16;
+	optional CardEditCardListRequest cardEditCardListRequest = 17;
+	optional CardLvUpRequest cardLvUpRequest = 18;
+	optional CardChooseUseCardListRequest cardChooseUseCardListRequest = 19;
+	optional CardChangeMainCardRequest cardChangeMainCardRequest = 20;
 
-	optional PingRequest pingRequest = 20;
+	optional PingRequest pingRequest = 21;
 	
-	//显示商品信息
-	optional MarketShowMarketItemRequest marketShowMarketItemReqeust= 21;
 	//购买商品
 	optional MarketBuyMarketItemRequest marketBuyMarketItemRequest = 22;
 	//手动刷新
 	optional MarketArtificialRefreshRequest marketArtificialRefreshRequest = 23;
+	//显示商品信息
+	optional MarketShowRequest marketShowRequest= 24;
 
 	//显示战场章节信息
-	optional WarShowWarChapterRequest warShowWarChapterRequest = 24;
+	optional WarShowWarChapterRequest warShowWarChapterRequest = 25;
 	//显示战场建筑信息
-	optional WarShowWarBuildRequest warShowWarBuildRequest=25;
+	optional WarShowWarBuildRequest warShowWarBuildRequest=26;
 	//攻打建筑
-	optional WarMarchRequest warMarchRequest = 26;	
-	optional WarWinBuildRequest warWinBuildRequest = 27;	
+	optional WarMarchRequest warMarchRequest = 27;
+	
 	optional WarGetChapterAwardRequest warGetChapterAwardRequest = 28;
 	
 	optional RoleInfoSelectRequest roleInfoSelectRequest = 29;

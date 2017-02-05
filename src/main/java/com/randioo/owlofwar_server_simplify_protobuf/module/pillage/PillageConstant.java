@@ -8,4 +8,6 @@ public class PillageConstant {
 	/** 每日最大匹配次数 */
 	//TODO
 	public static final int MAX_MATCHING_COUNT = Integer.MAX_VALUE;
+	
+	
 }

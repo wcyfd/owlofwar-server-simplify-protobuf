@@ -35,3 +35,12 @@ message PillageCompetitionNoticeRequest{
 message PillageCompetitionNoticeResponse{
 
 }
+
+//训练模式匹配
+message PillagePracticeRequest{
+	
+}
+
+message PillagePracticeResponse{
+	
+}

@@ -11,6 +11,7 @@ import javax.sql.DataSource;
 import org.apache.mina.core.session.IoSession;
 
 import com.google.protobuf.GeneratedMessage;
+import com.mysql.jdbc.TimeUtil;
 import com.randioo.owlofwar_server_simplify_protobuf.cache.file.CardInitConfigCache;
 import com.randioo.owlofwar_server_simplify_protobuf.cache.file.WarChapterConfigCache;
 import com.randioo.owlofwar_server_simplify_protobuf.common.ErrorCode;
@@ -229,19 +230,10 @@ public class LoginServiceImpl extends BaseService implements LoginService {
 		public GeneratedMessage getRoleData(Ref<RoleInterface> ref) {
 			Role role = (Role) ref.get();
 			
-			//知道最新进度的章节id
-			List<Integer> chapterIdList= WarChapterConfigCache.getChapterIdList();
-			int maxChapterId = WarChapterConfigCache.getMinChapterId();
-			for(Integer chapterId:chapterIdList){
-				if(role.getWar().getWarChapterMap().containsKey(chapterId)){
-					maxChapterId = chapterId;
-				}else{
-					break;
-				}
-			}
+			
 
 			RoleData.Builder roleDataBuilder = RoleData.newBuilder().setRoleId(role.getRoleId())
-					.setName(role.getName()).setCurrentChapterId(role.getCurrentChapterId()).setLatestChapterId(maxChapterId);
+					.setName(role.getName()).setMoney(role.getMoney()).setPoint(role.getPoint());
 			for (Card card : role.getCardMap().values()) {
 				roleDataBuilder.addCardDatas(CardData.newBuilder().setCardId(card.getCardId()).setLv(card.getLv())
 						.setNum(card.getNum()));
@@ -310,7 +302,7 @@ public class LoginServiceImpl extends BaseService implements LoginService {
 							.newBuilder()
 							.setLoginGetRoleDataResponse(
 									LoginGetRoleDataResponse.newBuilder().setErrorCode(ErrorCode.IN_LOGIN)).build());
-			return false;
+			return true;
 		}
 
 	}
@@ -412,6 +404,11 @@ public class LoginServiceImpl extends BaseService implements LoginService {
 		for(WarChapter warChapter:warChapterList){
 			role.getWar().getWarChapterMap().put(warChapter.getChapterId(),warChapter);
 		}
+		
+		Market market = new Market();
+		market.setRoleId(role.getRoleId());
+		role.setMarket(market);
+		marketService.marketInit(role, TimeUtils.getNowTime());
 	}
 
 	@Override

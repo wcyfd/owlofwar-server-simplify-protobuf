@@ -6,7 +6,6 @@ import com.google.protobuf.GeneratedMessage;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.bo.Role;
 import com.randioo.owlofwar_server_simplify_protobuf.module.market.service.MarketService;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketArtificialRefreshRequest;
-import com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemRequest;
 import com.randioo.randioo_server_base.cache.RoleCache;
 import com.randioo.randioo_server_base.net.ActionSupport;
 import com.randioo.randioo_server_base.net.PTAnnotation;

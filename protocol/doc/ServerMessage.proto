@@ -24,17 +24,16 @@ message SCMessage{
 	optional SCFightStartGame scFightStartGame = 9;
 	optional FightGameActionResponse fightGameActionResponse = 10;
 	optional FightGameOverResponse fightGameOverResponse = 11;
-	optional SCFightGameOver scFightGameOver = 12;
-	optional FightReadFrameResponse FightReadFrameResponse = 13;
-	optional SCFightKeyFrame scFightKeyFrame = 14;
-	optional FightGetGameAwardResponse fightGetGameAwardResponse = 15;
-	optional FightCountDownResponse fightCountDownResponse = 16;
-	optional SCFightCountDown scFightCountDown = 17;
+	optional SCFightKeyFrame scFightKeyFrame = 12;
+	optional FightGetGameAwardResponse fightGetGameAwardResponse = 13;
+	optional FightCountDownResponse fightCountDownResponse = 14;
+	optional SCFightCountDown scFightCountDown = 15;
 
-	optional PillageRoleResponse pillageRoleResponse = 18;
-	optional PillageCancelResponse pillageCancelResponse = 19;
-	optional PillageShowResponse pillageShowResponse = 20;
-	optional PillageCompetitionNoticeResponse pillageCompetitionNoticeResponse= 38;
+	optional PillageRoleResponse pillageRoleResponse = 16;
+	optional PillageCancelResponse pillageCancelResponse = 17;
+	optional PillageShowResponse pillageShowResponse = 18;
+	optional PillageCompetitionNoticeResponse pillageCompetitionNoticeResponse= 19;
+	optional PillagePracticeResponse pillagePracticeResponse = 20;
 
 	optional CardGetCardsInfoResponse cardGetCardsInfoResponse = 21;
 	optional CardEditCardListResponse cardEditCardListResponse = 22;
@@ -45,25 +44,27 @@ message SCMessage{
 	optional PingResponse pingResponse = 26;
 	
 	//显示商店信息
-	optional MarketShowMarketItemResponse marketShowMarketItemResponse = 27;
+	optional MarketShowResponse marketShowResponse = 27;
 	//购买商品
 	optional MarketBuyMarketItemResponse marketBuyMarketItemResponse = 28;
 	//手动刷新
-	optional MarketArtificialRefreshResponse MarketArtificialRefreshResponse = 31;
+	optional MarketArtificialRefreshResponse MarketArtificialRefreshResponse = 29;
 	
 	//添加金币
-	optional SCRoleAddMoney scRoleAddMoney = 29;
+	optional SCRoleMoney scRoleMoney = 30;
 	//添加银币
-	optional SCRoleAddGold scRoleAddGold = 30;
+	optional SCRoleGold scRoleGold = 31;
 	//查询用户信息
-	optional RoleInfoSelectResponse roleInfoSelectResponse = 37;
+	optional RoleInfoSelectResponse roleInfoSelectResponse = 32;
+	//增加积分
+	optional SCRolePoint scRolePoint = 33;
 	
 	//显示章节信息
-	optional WarShowWarChapterResponse warShowWarChapterResponse = 32;
+	optional WarShowWarChapterResponse warShowWarChapterResponse = 34;
 	//显示建筑信息
-	optional WarShowWarBuildResponse WarShowWarBuildResponse = 33;
+	optional WarShowWarBuildResponse WarShowWarBuildResponse = 36;
 	//攻打建筑
-	optional WarMatchResponse warMatchResponse = 34;
-	optional WarWinBuildResponse warWinBuildResponse = 35;
-	optional WarGetChapterAwardResponse warGetChapterAwardResponse = 36;
+	optional WarMarchResponse warMarchResponse = 37;
+
+	optional WarGetChapterAwardResponse warGetChapterAwardResponse = 38;
 }

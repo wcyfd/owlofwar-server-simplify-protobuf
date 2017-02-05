@@ -15,94 +15,232 @@ import com.randioo.owlofwar_server_simplify_protobuf.entity.file.CardConfig;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.Market;
 import com.randioo.owlofwar_server_simplify_protobuf.entity.po.MarketItem;
 import com.randioo.owlofwar_server_simplify_protobuf.module.card.service.CardService;
-import com.randioo.owlofwar_server_simplify_protobuf.module.market.MarketConstant;
 import com.randioo.owlofwar_server_simplify_protobuf.module.market.MarketConstant.MarketBuyType;
 import com.randioo.owlofwar_server_simplify_protobuf.module.role.service.RoleService;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MarketItemData;
+import com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.MarketItemDataBuyType;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketArtificialRefreshResponse;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketBuyMarketItemResponse;
-import com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowMarketItemResponse;
+import com.randioo.owlofwar_server_simplify_protobuf.protocol.Market.MarketShowResponse;
 import com.randioo.owlofwar_server_simplify_protobuf.protocol.ServerMessage.SCMessage;
 import com.randioo.owlofwar_server_simplify_protobuf.utils.JSInvoker;
 import com.randioo.randioo_server_base.module.BaseService;
 import com.randioo.randioo_server_base.utils.RandomUtils;
 import com.randioo.randioo_server_base.utils.TimeUtils;
 
-
 public class MarketServiceImpl extends BaseService implements MarketService {
 
 	private RoleService roleService;
+
 	public void setRoleService(RoleService roleService) {
 		this.roleService = roleService;
 	}
-	
+
 	private CardService cardService;
+
 	public void setCardService(CardService cardService) {
 		this.cardService = cardService;
 	}
+
 	@Override
 	public void marketInit(Role role, int nowTime) {
 		this.refreshMarketItem(role, nowTime);
 	}
+	
+	private JSInvoker jsInvoker;
+	
+	public void setJsInvoker(JSInvoker jsInvoker) {
+		this.jsInvoker = jsInvoker;
+	}
 
 	@Override
 	public void refreshMarketItem(Role role, int nowTime) {
-		// TODO Auto-generated method stub
 		Market market = role.getMarket();
-		//获得上次刷新时间
+		// 获得上次刷新时间
 		int refreshTime = market.getRefreshTime();
-		//获得零点时间
+		// 获得零点时间
 		int todayZeroTime = getTodayZeroTime(nowTime);
 
 		// 检查是否要刷新时间
-		//如果今天的零点时间小于上次的刷新时间，则不用刷新
+		// 如果今天的零点时间小于上次的刷新时间，则不用刷新
 		if (todayZeroTime < refreshTime) {
 			return;
 		}
-		
+
 		// 重置刷新次数
 		market.setRefreshCount(0);
 		// 刷新时间戳
 		market.setRefreshTime(nowTime);
-//		// 设置需要显示动画
-//		market.setShowAnimation(true);
-//		// 克隆所有卡片id
-//		List<Integer> cardIdList = new ArrayList<>(CardConfigCache.getMap().keySet());
-//		for (int i = 0; i < MarketConstant.MARKET_ITEM_COUNT; i++) {
-//			// 随机一个索引
-//			int randIndex = RandomUtils.getRandomNum(cardIdList.size());
-//			int cardId = cardIdList.get(randIndex);
-//			// 取出这个索引便得到一个值
-//			cardIdList.remove(randIndex);
-//			// 重置对应卡片的信息
-//			MarketItem marketItem = market.getMarketItemMap().get(i);
-//			// 如果没有对象则新建
-//			if (marketItem == null) {
-//				marketItem = new MarketItem();
-//				market.getMarketItemMap().put(i, marketItem);
-//			}
-//			// 设置商品id
-//			marketItem.setId(cardId);
-//			// 设置今日该商品购买的次数
-//			marketItem.setDayBuyCount(0);
-//			// 设置货币类型
-//			// 如果是第一个就得花钱
-//			MarketBuyType buyType = i == 0 ? MarketBuyType.RMB : MarketBuyType.MONEY;
-//			marketItem.setBuyType(buyType);
-//		}
-		
-		//刷新卡牌
+
+		// 刷新卡牌
 		this.basicRefresh(role);
 	}
+
+	@Override
+	public GeneratedMessage showMarketItem(Role role) {
+		int nowTime = TimeUtils.getNowTime();
+		// 刷新商城
+		this.refreshMarketItem(role, nowTime);
+		Market market = role.getMarket();
+		MarketShowResponse.Builder response = MarketShowResponse.newBuilder();
 	
-	private void basicRefresh(Role role) {
+		// 是否显示动画
+		boolean isShowAnimation = market.isShowAnimation();
+		response.setIsRefresh(isShowAnimation);
+		// 设置剩余免费刷新的次数
+		int remainRefreshCount = this.getFreeRefreshCount() - market.getRefreshCount();
+		remainRefreshCount = remainRefreshCount < 0 ? 0 : remainRefreshCount;
+		response.setRefreshCount(remainRefreshCount);
+		// 刷新需要的银币数
+		int needMoney = this.getRefreshNeedMoney(market.getRefreshCount());
+		response.setNeedMoney(needMoney);
+		// 显示过以后就不显示动画了，知道下一次更新
+		market.setShowAnimation(false);
+		int MARKET_ITEM_COUNT = this.getMarketItemCount();
+		// 卡片信息序列化
+		for (int i = 0; i < MARKET_ITEM_COUNT; i++) {
+			MarketItem item = role.getMarket().getMarketItemMap().get(i);
+	
+			int nextBuyMoney = this.getCost(item.getId(), item.getDayBuyCount()+1,item.getBuyType());
+			MarketItemData marketItemData = MarketItemData.newBuilder()
+					.setBuyType(this.getBuyType(item.getBuyType())).setCardId(item.getId())
+					.setNextBuyMoney(nextBuyMoney).build();
+	
+			response.addMarketItemData(marketItemData);
+		}
+		return SCMessage.newBuilder().setMarketShowResponse(response).build();
+	}
+
+	@Override
+	public GeneratedMessage artificalRefreshMarketItem(Role role) {
+	
+		Market market = role.getMarket();
+		// 先检查是否到了每日刷新时间，如果是，则直接刷新不算次数
+		this.refreshMarketItem(role, TimeUtils.getNowTime());
+		// 如果没有要求显示动画,则说明没有到重置时间,说明是人工刷新
+		if (!market.isShowAnimation()) {
+			int needMoney = this.getRefreshNeedMoney(market.getRefreshCount());
+			// 检查银币是否足够
+			if (role.getMoney() < needMoney) {
+				// 不足则返回错误码
+				return SCMessage.newBuilder().setMarketArtificialRefreshResponse(
+						MarketArtificialRefreshResponse.newBuilder().setErrorCode(ErrorCode.NO_MONEY)).build();
+			}
+	
+			if (needMoney != 0)
+				roleService.addMoney(role, -needMoney);
+	
+			// 今日刷新次数加1
+			market.setRefreshCount(market.getRefreshCount() + 1);
+			// 刷新卡牌
+			this.basicRefresh(role);
+		}
+	
+		//人工刷新也算显示，有客户端必须每次播放动画，此处直接设为false
+		market.setShowAnimation(false);
+		
+		// 获得剩余免费刷新次数
+		int remainRefreshCount = this.getFreeRefreshCount() - market.getRefreshCount();
+		remainRefreshCount = remainRefreshCount < 0 ? 0 : remainRefreshCount;
+	
+		// 获得下次刷新需要多少花费
+		int nextNeedMoney = this.getRefreshNeedMoney(market.getRefreshCount());
+	
+		MarketArtificialRefreshResponse.Builder response = MarketArtificialRefreshResponse.newBuilder()
+				.setErrorCode(ErrorCode.SUCCESS).setRefreshCount(remainRefreshCount).setNeedMoney(nextNeedMoney);
+		// 商品数量
+		int MARKET_ITEM_COUNT = this.getMarketItemCount();
+		for (int i = 0; i < MARKET_ITEM_COUNT; i++) {
+			MarketItem item = role.getMarket().getMarketItemMap().get(i);
+	
+			int nextBuyMoney = this.getCost(item.getId(), item.getDayBuyCount()+1,item.getBuyType());
+			MarketItemData marketItemData = MarketItemData.newBuilder()
+					.setBuyType(this.getBuyType(item.getBuyType())).setCardId(item.getId())
+					.setNextBuyMoney(nextBuyMoney).build();
+	
+			
+			response.addMarketItemData(marketItemData);
+		}
+		return SCMessage.newBuilder().setMarketArtificialRefreshResponse(response).build();
+	}
+
+	@Override
+	public GeneratedMessage buyMarketItem(Role role, IoSession session, int index) {
+		Market market = role.getMarket();
+		Map<Integer, MarketItem> marketItemMap = market.getMarketItemMap();
+		MarketItem marketItem = marketItemMap.get(index);
+		// 获得卡片id
+		int cardId = marketItem.getId();
+		//购买数量，现在只能一次买一张
+		int buyCount = 1;
+		if (marketItem.getBuyType() == MarketBuyType.RMB) {
+			// TODO 如果没有卡片则需要进行人民币购买流程
+			// 必须是客户端已经支付完成才会调用该方法,所以我直接默认它已经支付完毕,给一张卡片
+			Card card = cardService.createCard(role, cardId);
+			card.setNum(1);
+			role.getCardMap().put(card.getCardId(), card);
+			
+			//购买完后用银币买
+			marketItem.setBuyType(MarketBuyType.MONEY);
+			//购买次数置0
+			marketItem.setDayBuyCount(0);
+
+			int nextBuyMoney = this.getCost(cardId, marketItem.getDayBuyCount() + 1, marketItem.getBuyType());
+			return SCMessage.newBuilder()
+					.setMarketBuyMarketItemResponse(MarketBuyMarketItemResponse.newBuilder()
+							.setErrorCode(ErrorCode.SUCCESS).setNextBuyMoney(nextBuyMoney).setBuyCount(buyCount)
+							.setBuyType(this.getBuyType(marketItem.getBuyType())))
+					.build();
+
+		}
+		int dayBuyCount = marketItem.getDayBuyCount();
+		int costMoney = getCost(cardId, dayBuyCount + 1, marketItem.getBuyType());
+
+		// 如果钱不够则返回错误信息
+		if (role.getMoney() < costMoney) {
+			return SCMessage.newBuilder().setMarketBuyMarketItemResponse(
+					MarketBuyMarketItemResponse.newBuilder().setErrorCode(ErrorCode.NO_MONEY)).build();
+		}
+
+		Card card = role.getCardMap().get(cardId);
+		// 该商品购买次数加1
+		dayBuyCount += 1;
+		marketItem.setDayBuyCount(dayBuyCount);
+		// 卡片数量增加
+		card.setNum(card.getNum() + buyCount);
+
+		// 扣除银币
+		roleService.addMoney(role, -costMoney);
+
+		int nextBuyNeedMoney = this.getCost(cardId, dayBuyCount + 1, marketItem.getBuyType());
+
+		return SCMessage.newBuilder()
+				.setMarketBuyMarketItemResponse(MarketBuyMarketItemResponse.newBuilder().setErrorCode(ErrorCode.SUCCESS)
+						.setNextBuyMoney(nextBuyNeedMoney).setBuyCount(buyCount)
+						.setBuyType(this.getBuyType(marketItem.getBuyType())))
+				.build();
+	}
+
+	/**
+	 * 卡牌刷新
+	 * 
+	 * @param role
+	 */
+	
+	private void basicRefresh(Role role){
+		basicRefresh2(role);
+	}
+	private void basicRefresh1(Role role) {
 		Market market = role.getMarket();
 
 		// 设置需要显示动画
 		market.setShowAnimation(true);
 		// 克隆所有卡片id
-		List<Integer> cardIdList = new ArrayList<>(CardConfigCache.getMap().keySet());
-		for (int i = 0; i < MarketConstant.MARKET_ITEM_COUNT; i++) {
+		List<Integer> cardIdList = new ArrayList<>(CardConfigCache.getResMap().keySet());
+
+		// 获得刷新卡牌的数量
+		int MARKET_ITEM_COUNT = this.getMarketItemCount();
+		for (int i = 0; i < MARKET_ITEM_COUNT; i++) {
 			// 随机一个索引
 			int randIndex = RandomUtils.getRandomNum(cardIdList.size());
 			int cardId = cardIdList.get(randIndex);
@@ -117,7 +255,7 @@ public class MarketServiceImpl extends BaseService implements MarketService {
 			}
 			// 设置商品id
 			marketItem.setId(cardId);
-			// 设置今日该商品购买的次数
+			//重置这张牌的购买次数
 			marketItem.setDayBuyCount(0);
 			// 设置货币类型
 			// 如果是第一个就得花钱
@@ -126,386 +264,101 @@ public class MarketServiceImpl extends BaseService implements MarketService {
 		}
 	}
 	
-	@Override
-	public GeneratedMessage artificalRefreshMarketItem(Role role) {
+	private void basicRefresh2(Role role){
 		Market market = role.getMarket();
-		int needGood = 9;
-		if (market.getRefreshCount() >= MarketConstant.MAX_FREE_REFRESH_COUNT) {
-			// 检查金币是否足够
-			if (role.getGold() < needGood) {
-				// 不足则返回错误码
-				return SCMessage
-						.newBuilder()
-						.setMarketArtificialRefreshResponse(
-								MarketArtificialRefreshResponse.newBuilder().setErrorCode(ErrorCode.NO_GOLD)).build();
+
+		// 设置需要显示动画
+		market.setShowAnimation(true);
+		// 克隆所有卡片id
+		List<Integer> cardIdList = new ArrayList<>(CardConfigCache.getResMap().keySet());
+
+		// 获得刷新卡牌的数量
+		int MARKET_ITEM_COUNT = this.getMarketItemCount();
+		for (int i = 0; i < MARKET_ITEM_COUNT; i++) {
+			// 随机一个索引
+			int randIndex = RandomUtils.getRandomNum(cardIdList.size());
+			int cardId = cardIdList.get(randIndex);
+			// 取出这个索引便得到一个值
+			cardIdList.remove(randIndex);
+			// 重置对应卡片的信息
+			MarketItem marketItem = market.getMarketItemMap().get(i);
+			// 如果没有对象则新建
+			if (marketItem == null) {
+				marketItem = new MarketItem();
+				market.getMarketItemMap().put(i, marketItem);
 			}
-
-			roleService.addGold(role, -needGood);
-
+			// 设置商品id
+			marketItem.setId(cardId);
+			//重置这张牌的购买次数
+			marketItem.setDayBuyCount(0);
+			// 设置货币类型
+			// 如果没有这张卡牌就得用rmb				
+			MarketBuyType buyType = role.getCardMap().containsKey(cardId) ? MarketBuyType.MONEY : MarketBuyType.RMB;
+			marketItem.setBuyType(buyType);
 		}
-		// 今日刷新次数加1
-		market.setRefreshCount(market.getRefreshCount() + 1);
-		// 刷新卡牌
-		this.basicRefresh(role);
+	}
 
-		MarketArtificialRefreshResponse.Builder response = MarketArtificialRefreshResponse.newBuilder()
-				.setErrorCode(ErrorCode.SUCCESS).setRefreshCount(market.getRefreshCount());
+	private MarketItemDataBuyType getBuyType(MarketBuyType buyType){
+		MarketItemDataBuyType type = null;
+		if(buyType == MarketBuyType.GOLD){
+			type = MarketItemDataBuyType.GOLD;
+		}else if(buyType ==MarketBuyType.MONEY){
+			type = MarketItemDataBuyType.MONEY;
+		}else if(buyType == MarketBuyType.RMB){
+			type = MarketItemDataBuyType.RMB;
+		}
 		
-		for (int i = 0; i < MarketConstant.MARKET_ITEM_COUNT; i++) {
-			MarketItem item = role.getMarket().getMarketItemMap().get(i);
-
-			MarketItemData marketItemData = MarketItemData.newBuilder()
-					.setBuyType(MarketConstant.buyTypeMap.get(item.getBuyType())).setCardId(item.getId())
-					.setDayBuyCount(item.getDayBuyCount()).build();
-
-			response.addMarketItemData(marketItemData);
-		}
-		return SCMessage.newBuilder().setMarketArtificialRefreshResponse(response).build();
+		return type;
 	}
 
 	/**
 	 * 获得今日零点时间
+	 * 
 	 * @param nowTime
 	 * @return
 	 * @author wcy 2017年1月9日
 	 */
-	private int getTodayZeroTime(int nowTime){
+	private int getTodayZeroTime(int nowTime) {
 		int zeroTime = TimeUtils.getTodayTimePointByRegex(nowTime, "00:00:00", "HH:mm:ss");
-		
+
 		return zeroTime;
 	}
 
-	@Override
-	public GeneratedMessage showMarketItem(Role role) {
-		int nowTime = TimeUtils.getNowTime();
-		this.refreshMarketItem(role, nowTime);
-		Market market = role.getMarket();
-		MarketShowMarketItemResponse.Builder response = MarketShowMarketItemResponse.newBuilder();
-		
-		//是否显示动画
-		boolean isShowAnimation = market.isShowAnimation();
-		response.setIsRefresh(isShowAnimation);
-		//设置今天刷新的次数
-		response.setRefreshCount(market.getRefreshCount());
-		//显示过以后就不显示动画了，知道下一次更新
-		market.setShowAnimation(false);
-		//卡片信息序列化
-		for(int i = 0;i<MarketConstant.MARKET_ITEM_COUNT;i++){
-			MarketItem item = role.getMarket().getMarketItemMap().get(i);
-
-			MarketItemData marketItemData = MarketItemData.newBuilder()
-					.setBuyType(MarketConstant.buyTypeMap.get(item.getBuyType())).setCardId(item.getId())
-					.setDayBuyCount(item.getDayBuyCount()).build();
-			
-			response.addMarketItemData(marketItemData);
-		}
-		return SCMessage.newBuilder().setMarketShowMarketItemResponse(response).build();
-	}
-
-	@Override
-	public GeneratedMessage buyMarketItem(Role role, IoSession session, int index) {
-		Market market = role.getMarket();
-		Map<Integer, MarketItem> marketItemMap = market.getMarketItemMap();
-		MarketItem marketItem = marketItemMap.get(index);
-		// 获得卡片id
-		int cardId = marketItem.getId();
-		Card card = role.getCardMap().get(cardId);
-		if (card == null || (card.getNum() == 0 && card.getLv() == 0)) {
-			// TODO 如果没有卡片则需要进行购买流程
-			//必须是客户端已经支付完成才会调用该方法,所以我直接默认它已经支付完毕,给一张卡片
-			card = cardService.createCard(role, cardId,(byte)1);
-			return SCMessage
-					.newBuilder()
-					.setMarketBuyMarketItemResponse(
-							MarketBuyMarketItemResponse.newBuilder().setErrorCode(ErrorCode.SUCCESS)
-									.setDayBuyCount(0).setBuyCount(0)).build();
-		}
-		int dayBuyCount = marketItem.getDayBuyCount();
-		int buyCardCount = 1;
-		int costMoney = getCost(cardId, dayBuyCount);
-		// 如果钱不够则返回错误信息
-		if (role.getMoney() < costMoney) {
-			return SCMessage
-					.newBuilder()
-					.setMarketBuyMarketItemResponse(
-							MarketBuyMarketItemResponse.newBuilder().setErrorCode(ErrorCode.NO_MONEY)
-									.setDayBuyCount(dayBuyCount)).build();
-		}
-		
-		//该商品购买次数加1
-		dayBuyCount++;
-		marketItem.setDayBuyCount(dayBuyCount);
-		//卡片数量增加
-		card.setNum(card.getNum() + buyCardCount);
-		
-		//扣除银币
-		roleService.addMoney(role, -costMoney);
-
-		return SCMessage
-				.newBuilder()
-				.setMarketBuyMarketItemResponse(
-						MarketBuyMarketItemResponse.newBuilder().setErrorCode(ErrorCode.SUCCESS)
-								.setDayBuyCount(dayBuyCount).setBuyCount(buyCardCount)).build();
-	}
-	
 	/**
 	 * 获得花费
+	 * 
 	 * @param cardId
 	 * @param dayBuyCount
 	 * @return
 	 * @author wcy 2017年1月9日
 	 */
-	private int getCost(int cardId, int dayBuyCount) {
+	private int getCost(int cardId, int dayBuyCount,MarketBuyType marketBuyType) {
 		CardConfig config = CardConfigCache.getConfigById(cardId);
-		return (int) JSInvoker.getInstance().invoke("getCostMoney", config.getQuality(), dayBuyCount);
+		int type = 1;
+		if (marketBuyType == MarketBuyType.MONEY) {
+			type = 1;
+		} else if (marketBuyType == MarketBuyType.RMB) {
+			type = 2;
+		}
+		return (int) (double) jsInvoker.invoke("getCostMoney", config.getQuality(), dayBuyCount,type);
 	}
 
-//	private RoleService roleService;
-//
-//	public void setRoleService(RoleService roleService) {
-//		this.roleService = roleService;
-//	}
-//
-//	private PropService propService;
-//
-//	public void setPropService(PropService propService) {
-//		this.propService = propService;
-//	}
-//
-//	private IncomeService incomeService;
-//
-//	public void setIncomeService(IncomeService incomeService) {
-//		this.incomeService = incomeService;
-//	}
-//
-//	@Override
-//	public void marketInit(Role role, int nowTime) {
-//		this.refreshMarketItem(role, nowTime);
-//	}
-//
-//	@Override
-//	public void refreshMarketItem(Role role, int nowTime) {
-//		Market market = role.getMarket();
-//		int refreshTime = market.getRefreshTime();
-//		market.setRefreshTime(nowTime);
-//
-//		Map<Integer, MarketConfig> notRefreshConfigMap = MarketConfigCache.getNotRefreshMap();
-//		Map<Integer, MarketConfig> refreshConfigMap = MarketConfigCache.getRefreshMap();
-//		Map<Integer, MarketItem> notRefreshMarketItemMap = market.getNotRefreshMarketItemMap();
-//		Map<Integer, MarketItem> refreshMarketItemMap = market.getRefreshMarketItemMap();
-//
-//		for (MarketConfig marketConfig : notRefreshConfigMap.values()) {
-//			int startTime = marketConfig.getStartTime();
-//			// 刷新时间小于物品出现时间，则说明是新加的上的商品，需要添加
-//			if (refreshTime < startTime) {
-//				int id = marketConfig.getId();
-//				int dayBuyCount = marketConfig.getDayBuyCount();
-//
-//				MarketItem item = new MarketItem();
-//				item.setDayBuyCount(dayBuyCount);
-//				item.setId(id);
-//
-//				notRefreshMarketItemMap.put(id, item);
-//			}
-//		}
-//
-//		for (MarketConfig marketConfig : refreshConfigMap.values()) {
-//			int id = marketConfig.getId();
-//			int dayBuyCount = marketConfig.getDayBuyCount();
-//
-//			MarketItem item = new MarketItem();
-//			item.setId(id);
-//			item.setDayBuyCount(dayBuyCount);
-//
-//			refreshMarketItemMap.put(id, item);
-//
-//		}
-//
-//		market.setChange(true);
-//	}
-//
-//	/**
-//	 * 重置刷新次数
-//	 * 
-//	 * @param role
-//	 * @param nowTime
-//	 */
-//	private void resetMarketItem(Role role, int nowTime) {
-//		Market market = role.getMarket();
-//		int time = this.getMarketTodayRefreshTime(nowTime);
-//		int refreshTime = market.getRefreshTime();
-//
-//		// 刷新时间如果小于需要刷新的时间点而现在的时间大于需要刷新的时间点时，说明还需要重置次数
-//		if (refreshTime < time && nowTime >= time) {
-//			Map<Integer, MarketConfig> marketConfigMap = MarketConfigCache.getRefreshMap();
-//			Map<Integer, MarketItem> refreshMarketItemMap = market.getRefreshMarketItemMap();
-//			for (MarketItem item : refreshMarketItemMap.values()) {
-//				int id = item.getId();
-//				MarketConfig marketConfig = marketConfigMap.get(id);
-//				int dayBuyCount = marketConfig.getDayBuyCount();
-//				item.setDayBuyCount(dayBuyCount);
-//			}
-//		}
-//	}
-//
-//	@Override
-//	public Message buyMarketItem(Role role, IoSession session, int id) {
-//		Message message = new Message();
-//		message.setType(MarketConstant.BUY_MARKET_ITEM);
-//		Market market = role.getMarket();
-//
-//		Map<Integer, MarketItem> refreshMarketItemMap = market.getRefreshMarketItemMap();
-//		Map<Integer, MarketItem> notRefreshMarketItemMap = market.getNotRefreshMarketItemMap();
-//		Map<Integer, MarketItem> tempMarketItemMap = null;
-//		boolean isNotRefreshMarketItem = false;
-//		if (refreshMarketItemMap.containsKey(id)) {
-//			tempMarketItemMap = refreshMarketItemMap;
-//		} else if (notRefreshMarketItemMap.containsKey(id)) {
-//			isNotRefreshMarketItem = true;
-//			tempMarketItemMap = notRefreshMarketItemMap;
-//		}
-//
-//		if (tempMarketItemMap == null) {
-//			return null;
-//		}
-//
-//		MarketItem marketItem = tempMarketItemMap.get(id);
-//		int dayBuyCount = marketItem.getDayBuyCount();
-//		// 检查限购
-//		if (dayBuyCount != -1) {
-//			// 如果是永久可以购买
-//			if (dayBuyCount == 0) {
-//				message.putShort(ErrorCode.MARKET_ITEM_OUT_OF_DAY_BUY_COUNT);
-//				return message;
-//			}
-//		}
-//
-//		MarketConfig config = MarketConfigCache.getMarketConfigById(id);
-//		byte itemType = config.getItemType();
-//		int singleBuyNum = config.getSingleBuyNum();
-//		byte payMethod = config.getPayMethod();
-//		int cost = config.getCost();
-//		int itemId = config.getItemId();
-//
-//		// 检查是否超过物品上线或库存上限
-//		if (!incomeService.checkItemLimit(role, itemType, itemId, payMethod)) {
-//			message.putShort(ErrorCode.MAX_CAPACITY);
-//			return message;
-//		}
-//
-//		// 检查货币是否足够
-//		if (payMethod == MarketConstant.PAY_METHOD_MONEY) {
-//			int money = role.getMoney();
-//			if (money < cost) {
-//				message.putShort(ErrorCode.NO_MONEY);
-//				return message;
-//			}
-//		} else if (payMethod == MarketConstant.PAY_METHOD_GOLD) {
-//			int gold = role.getGold();
-//			if (gold < cost) {
-//				message.putShort(ErrorCode.NO_GOLD);
-//				return message;
-//			}
-//		}
-//		// else if(payMethod == MarketConstant.PAY_METHOD_RMB){
-//		// message.putShort(ErrorCode.NO_RMB);
-//		// return message;
-//		// }
-//
-//		// 扣除
-//		if (payMethod == MarketConstant.PAY_METHOD_MONEY) {
-//			roleService.addMoney(role, -cost);
-//		} else if (payMethod == MarketConstant.PAY_METHOD_GOLD) {
-//			roleService.addGold(role, -cost);
-//		}
-//
-//		// 扣除限购
-//		if (dayBuyCount != -1) {
-//			dayBuyCount--;
-//			marketItem.setDayBuyCount(dayBuyCount);
-//		}
-//
-//		// 给玩家商品
-//		byte method = (byte) (payMethod == MarketConstant.PAY_METHOD_GOLD ? 1 : 0);
-//		incomeService.award(role, itemType, itemId, singleBuyNum, method);
-//
-//		// 如果不是常驻商品则检查去除
-//		if (isNotRefreshMarketItem) {
-//			if (marketItem.getDayBuyCount() == 0) {
-//				notRefreshMarketItemMap.remove(id);
-//			}
-//		}
-//
-//		market.setChange(true);
-//		// 替换商品的信息
-//		int bindId = MarketConfigCache.getMarketConfigById(id).getBindId();
-//		int bindDayBuyCount = 0;
-//		Map<Integer, MarketItem> tempBindMarketItemMap = null;
-//		if (bindId != 0) {
-//			if (refreshMarketItemMap.containsKey(bindId)) {
-//				tempBindMarketItemMap = refreshMarketItemMap;
-//			} else if (notRefreshMarketItemMap.containsKey(bindId)) {
-//				tempBindMarketItemMap = notRefreshMarketItemMap;
-//			}
-//			bindDayBuyCount = tempBindMarketItemMap.get(bindId).getDayBuyCount();
-//		}
-//
-//		message.putShort(ErrorCode.SUCCESS);
-//		message.putInt(marketItem.getDayBuyCount());
-//		message.putInt(bindId);
-//		message.putInt(bindDayBuyCount);
-//
-//		return message;
-//	}
-//
-//	@Override
-//	public Message showMarketItem(Role role) {
-//		Message message = new Message();
-//		message.setType(MarketConstant.SHOW_MARKET_ITEM);
-//		Market market = role.getMarket();
-//
-//		int nowTime = Utils.getNowTime();
-//		this.resetMarketItem(role, nowTime);
-//		Map<Integer, MarketItem> notRefreshMarketItemMap = market.getNotRefreshMarketItemMap();
-//		Map<Integer, MarketItem> refreshMarketItemMap = market.getRefreshMarketItemMap();
-//
-//		Map<Integer, MarketItem> tempRefreshMarketItemMap = new HashMap<>();
-//		tempRefreshMarketItemMap.putAll(refreshMarketItemMap);
-//		// 当首冲存在时只显示首冲的
-//		for (MarketItem item : notRefreshMarketItemMap.values()) {
-//			int id = item.getId();
-//			MarketConfig config = MarketConfigCache.getMarketConfigById(id);
-//			int bindId = config.getBindId();
-//			if (bindId != 0) {
-//				tempRefreshMarketItemMap.remove(bindId);
-//			}
-//		}
-//
-//		Map<Integer, MarketItem> allItem = new HashMap<>();
-//		allItem.putAll(notRefreshMarketItemMap);
-//		allItem.putAll(tempRefreshMarketItemMap);
-//		List<Integer> itemList = new ArrayList<>(allItem.keySet());
-//		Collections.sort(itemList);
-//		message.putInt(itemList.size());
-//		for (Integer id : itemList) {
-//			MarketItem item = allItem.get(id);
-//			int count = item.getDayBuyCount();
-//			message.putInt(id);
-//			message.putInt(count);
-//		}
-//
-//		return message;
-//	}
-//
-//	/**
-//	 * 获得商城今天的刷新时间
-//	 * 
-//	 * @param nowTime
-//	 * @return
-//	 */
-//	private int getMarketTodayRefreshTime(int nowTime) {
-//		int time = Utils.getTodayTimePoint(nowTime, 0, 0);
-//		return time;
-//	}
+	/**
+	 * 获得刷新需要的钱
+	 * 
+	 * @param refreshCount
+	 * @return
+	 */
+	private int getRefreshNeedMoney(int refreshCount) {
+		return (int) ((double) jsInvoker.invoke("refreshMarketNeedMoney", refreshCount));
+	}
+
+	private int getFreeRefreshCount() {
+		return (int) (double) jsInvoker.invoke("getMarketFreeRefreshMaxCount");
+	}
+
+	private int getMarketItemCount() {
+		return (int) (double) jsInvoker.invoke("getMarketItemCount");
+	}
 
 }

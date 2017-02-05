@@ -280,8 +280,15 @@ public final class Card {
       return com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_CardGetCardsInfoResponse_fieldAccessorTable;
     }
     
-    // repeated .com.randioo.owlofwar_server_simplify_protobuf.protocol.CardListData cardListDatas = 1;
-    public static final int CARDLISTDATAS_FIELD_NUMBER = 1;
+    // optional int32 useCardId = 1;
+    public static final int USECARDID_FIELD_NUMBER = 1;
+    private boolean hasUseCardId;
+    private int useCardId_ = 0;
+    public boolean hasUseCardId() { return hasUseCardId; }
+    public int getUseCardId() { return useCardId_; }
+    
+    // repeated .com.randioo.owlofwar_server_simplify_protobuf.protocol.CardListData cardListDatas = 2;
+    public static final int CARDLISTDATAS_FIELD_NUMBER = 2;
     private java.util.List<com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.CardListData> cardListDatas_ =
       java.util.Collections.emptyList();
     public java.util.List<com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.CardListData> getCardListDatasList() {
@@ -301,8 +308,11 @@ public final class Card {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
+      if (hasUseCardId()) {
+        output.writeInt32(1, getUseCardId());
+      }
       for (com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.CardListData element : getCardListDatasList()) {
-        output.writeMessage(1, element);
+        output.writeMessage(2, element);
       }
       getUnknownFields().writeTo(output);
     }
@@ -313,9 +323,13 @@ public final class Card {
       if (size != -1) return size;
     
       size = 0;
+      if (hasUseCardId()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, getUseCardId());
+      }
       for (com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.CardListData element : getCardListDatasList()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, element);
+          .computeMessageSize(2, element);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -479,6 +493,9 @@ public final class Card {
       
       public Builder mergeFrom(com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardGetCardsInfoResponse other) {
         if (other == com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardGetCardsInfoResponse.getDefaultInstance()) return this;
+        if (other.hasUseCardId()) {
+          setUseCardId(other.getUseCardId());
+        }
         if (!other.cardListDatas_.isEmpty()) {
           if (result.cardListDatas_.isEmpty()) {
             result.cardListDatas_ = new java.util.ArrayList<com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.CardListData>();
@@ -510,7 +527,11 @@ public final class Card {
               }
               break;
             }
-            case 10: {
+            case 8: {
+              setUseCardId(input.readInt32());
+              break;
+            }
+            case 18: {
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.CardListData.Builder subBuilder = com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.CardListData.newBuilder();
               input.readMessage(subBuilder, extensionRegistry);
               addCardListDatas(subBuilder.buildPartial());
@@ -521,7 +542,25 @@ public final class Card {
       }
       
       
-      // repeated .com.randioo.owlofwar_server_simplify_protobuf.protocol.CardListData cardListDatas = 1;
+      // optional int32 useCardId = 1;
+      public boolean hasUseCardId() {
+        return result.hasUseCardId();
+      }
+      public int getUseCardId() {
+        return result.getUseCardId();
+      }
+      public Builder setUseCardId(int value) {
+        result.hasUseCardId = true;
+        result.useCardId_ = value;
+        return this;
+      }
+      public Builder clearUseCardId() {
+        result.hasUseCardId = false;
+        result.useCardId_ = 0;
+        return this;
+      }
+      
+      // repeated .com.randioo.owlofwar_server_simplify_protobuf.protocol.CardListData cardListDatas = 2;
       public java.util.List<com.randioo.owlofwar_server_simplify_protobuf.protocol.Entity.CardListData> getCardListDatasList() {
         return java.util.Collections.unmodifiableList(result.cardListDatas_);
       }
@@ -3098,23 +3137,23 @@ public final class Card {
     java.lang.String[] descriptorData = {
       "\n\nCard.proto\0226com.randioo.owlofwar_serve" +
       "r_simplify_protobuf.protocol\032\014Entity.pro" +
-      "to\"\031\n\027CardGetCardsInfoRequest\"w\n\030CardGet" +
-      "CardsInfoResponse\022[\n\rcardListDatas\030\001 \003(\013" +
-      "2D.com.randioo.owlofwar_server_simplify_" +
-      "protobuf.protocol.CardListData\"D\n\027CardEd" +
-      "itCardListRequest\022\n\n\002id\030\001 \001(\005\022\r\n\005index\030\002" +
-      " \001(\005\022\016\n\006cardId\030\003 \001(\005\"\211\001\n\030CardEditCardLis" +
-      "tResponse\022\021\n\terrorCode\030\001 \001(\005\022Z\n\014CardList" +
-      "Data\030\002 \001(\0132D.com.randioo.owlofwar_server",
-      "_simplify_protobuf.protocol.CardListData" +
-      "\"!\n\017CardLvUpRequest\022\016\n\006cardId\030\001 \001(\005\"5\n\020C" +
-      "ardLvUpResponse\022\021\n\terrorCode\030\001 \001(\005\022\016\n\006ca" +
-      "rdId\030\002 \001(\005\"-\n\034CardChooseUseCardListReque" +
-      "st\022\r\n\005index\030\001 \001(\005\"\037\n\035CardChooseUseCardLi" +
-      "stResponse\"B\n\031CardChangeMainCardRequest\022" +
-      "\025\n\rcardListIndex\030\001 \001(\005\022\016\n\006cardId\030\002 \001(\005\"/" +
-      "\n\032CardChangeMainCardResponse\022\021\n\terrorCod" +
-      "e\030\001 \001(\005"
+      "to\"\031\n\027CardGetCardsInfoRequest\"\212\001\n\030CardGe" +
+      "tCardsInfoResponse\022\021\n\tuseCardId\030\001 \001(\005\022[\n" +
+      "\rcardListDatas\030\002 \003(\0132D.com.randioo.owlof" +
+      "war_server_simplify_protobuf.protocol.Ca" +
+      "rdListData\"D\n\027CardEditCardListRequest\022\n\n" +
+      "\002id\030\001 \001(\005\022\r\n\005index\030\002 \001(\005\022\016\n\006cardId\030\003 \001(\005" +
+      "\"\211\001\n\030CardEditCardListResponse\022\021\n\terrorCo" +
+      "de\030\001 \001(\005\022Z\n\014CardListData\030\002 \001(\0132D.com.ran",
+      "dioo.owlofwar_server_simplify_protobuf.p" +
+      "rotocol.CardListData\"!\n\017CardLvUpRequest\022" +
+      "\016\n\006cardId\030\001 \001(\005\"5\n\020CardLvUpResponse\022\021\n\te" +
+      "rrorCode\030\001 \001(\005\022\016\n\006cardId\030\002 \001(\005\"-\n\034CardCh" +
+      "ooseUseCardListRequest\022\r\n\005index\030\001 \001(\005\"\037\n" +
+      "\035CardChooseUseCardListResponse\"B\n\031CardCh" +
+      "angeMainCardRequest\022\025\n\rcardListIndex\030\001 \001" +
+      "(\005\022\016\n\006cardId\030\002 \001(\005\"/\n\032CardChangeMainCard" +
+      "Response\022\021\n\terrorCode\030\001 \001(\005"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -3134,7 +3173,7 @@ public final class Card {
           internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_CardGetCardsInfoResponse_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_CardGetCardsInfoResponse_descriptor,
-              new java.lang.String[] { "CardListDatas", },
+              new java.lang.String[] { "UseCardId", "CardListDatas", },
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardGetCardsInfoResponse.class,
               com.randioo.owlofwar_server_simplify_protobuf.protocol.Card.CardGetCardsInfoResponse.Builder.class);
           internal_static_com_randioo_owlofwar_server_simplify_protobuf_protocol_CardEditCardListRequest_descriptor =

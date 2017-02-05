@@ -8,8 +8,8 @@ message RoleData{
 	repeated CardListData cardListDatas = 4;
 	//是否在战斗中
 	optional bool inFight = 5;
-	optional int32 currentChapterId = 6;
-	optional int32 latestChapterId = 7;
+	optional int32 money = 6;
+	optional int32 point=7;
 }
 
 message CardData{
@@ -39,6 +39,8 @@ message RoleResourceInfo{
 	optional int32 mainLv = 6;
 	optional int32 playerId = 7;
 	optional int32 campId = 8;
+	//战斗类型
+	optional FightType fightType = 9;
 }
 
 message Frame{
@@ -77,13 +79,19 @@ enum MarketItemDataBuyType{
 
 message MarketItemData{
 	optional int32 cardId = 1;
-	optional int32 dayBuyCount = 2;
+	optional int32 nextBuyMoney = 2;
 	optional MarketItemDataBuyType buyType = 3;
 }
 
 message WarChapterData{
 	optional int32 chapterId = 1;
-	optional int32 starCount = 2;
+	optional int32 starCount = 2;	
+	optional ChapterAwardState state = 3 [default = REJECT];
+	enum ChapterAwardState{
+		REJECT=1;
+		ALLOW=2;
+		GET=3;
+	}
 }
 
 message WarBuildData{
@@ -94,13 +102,13 @@ message WarBuildData{
 enum FightType{
 	PILLAGE = 1;
 	WAR = 2;
+	TEST = 3;
 }
 
 message GameResultData{
-	optional GameResult gameResult = 1;
-	optional FightType fightType = 2;
+	optional FightType fightType = 1 [default = TEST];
+	optional GameResult gameResult = 2;
 	optional int32 starCount = 3;
-	optional int32 buildId = 4;
 }
 
 message GameResultAwardData{

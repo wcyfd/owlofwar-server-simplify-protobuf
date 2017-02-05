@@ -1,6 +1,8 @@
 package com.randioo.owlofwar_server_simplify_protobuf.entity.bo;
 
-public class WarBuild {
+import com.randioo.randioo_server_base.utils.db.Saveable;
+
+public class WarBuild implements Saveable{
 	/** 玩家id */
 	private int roleId;
 	/** 建筑id */
@@ -29,7 +31,27 @@ public class WarBuild {
 	}
 
 	public void setStarCount(int starCount) {
+		setChange(true);
 		this.starCount = starCount;
+	}
+
+	private boolean change;
+	@Override
+	public void setChange(boolean change) {
+		// TODO Auto-generated method stub
+		this.change = change;
+	}
+
+	@Override
+	public boolean isChange() {
+		// TODO Auto-generated method stub
+		return change;
+	}
+
+	@Override
+	public boolean checkChange() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }

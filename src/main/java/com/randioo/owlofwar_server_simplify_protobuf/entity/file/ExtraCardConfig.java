@@ -1,4 +1,4 @@
-package com.randioo.owlofwar_server_simplify_protobuf.entity.po;
+package com.randioo.owlofwar_server_simplify_protobuf.entity.file;
 
 public class ExtraCardConfig {
 
