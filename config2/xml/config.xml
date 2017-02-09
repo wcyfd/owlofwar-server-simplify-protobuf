@@ -69,7 +69,7 @@ item节点:
         <item type="string" name="卡牌奖励" code="cardAward" comment="卡牌奖励,(cardId,num)"/>
 	</node>
 	
-	<node type="as" xlsx="level.xlsx" page="等级" key="等级" out="roleLevel.tbl" code="ExpConfig">
+	<node type="as" xlsx="level.xlsx" page="等级" out="roleLevel.tbl" code="ExpConfig">
 		<item type="int" name="等级" code="level" comment="等级"/>
 		<item type="int" name="经验" code="exp" comment="经验值"/>
 	</node>

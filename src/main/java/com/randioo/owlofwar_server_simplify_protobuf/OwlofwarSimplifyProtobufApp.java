@@ -52,6 +52,7 @@ public class OwlofwarSimplifyProtobufApp {
 		WanServer.startServer(
 				new ProtocolCodecFilter(new ServerMessageCodecFactory(Charset.forName(ServerConfig.getCharSet()))),
 				new ServerHandler(), new InetSocketAddress(port));
+		System.out.println(port);
 		systemManager.open();
 		
 	}

@@ -6,7 +6,7 @@ set TARGET=as
 rem 源码的输出位置
 set code_target_dir=..\src\com\randioo\configClass
 rem 压缩包存放位置
-set assets_zip_target_dir=..\..\RandiooTest\src\assets\gameRes\RDOwlFight
+set assets_zip_target_dir=..\..\测试器\src\assets\gameRes\RDOwlFight
 rem =================================================
 
 set ZIP_SOURCE_DIR=.\out
